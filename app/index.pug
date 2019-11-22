@@ -1,0 +1,227 @@
+extends _layouts/home
+
+block styles
+	link(rel="stylesheet", href="css/index.css")
+block content
+
+	include _partials/header.pug
+
+	main
+		.container
+			section.category-links
+				.category-h1
+					a(href="#") Женщинам
+					a(href="#").active Мужчинам
+					a(href="#") Детям
+				.category-h2
+					a(href="#").btn-category
+						span.g Новинки
+					a(href="#").btn-category
+						span Одежда
+					a(href="#").btn-category
+						span Обувь
+					a(href="#").btn-category
+						span Сумки
+					a(href="#").btn-category
+						span Аксессуары
+					a(href="#").btn-category
+						span Часы
+					a(href="#").btn-category
+						span Ювелирные украшения
+					a(href="#").btn-category
+						span Парфюмерия
+					a(href="#").btn-category
+						span Красота
+					a(href="#").btn-category
+						span.r Sale
+				.subCategory-popup#subCategory-popup
+					.contentblock
+						.subCategory-outer
+							span.popup-head Категории
+							.subCategory-section
+								.subCategory-column
+									.section-item.section-head
+										a(href="#").section-link Макияж
+									.section-links
+										.section-item
+											a(href="#").section-link Аксессуары
+										.section-item
+											a(href="#").section-link Брови
+										.section-item
+											a(href="#").section-link Глаза
+										.section-item
+											a(href="#").section-link Губы
+										.section-item
+											a(href="#").section-link Лицо
+								.subCategory-column
+									.section-item.section-head
+										a(href="#").section-link Уход за кожей
+									.section-links
+										.section-item
+											a(href="#").section-link Борьба с несовершенствами
+										.section-item
+											a(href="#").section-link Бронзанты и автозагар
+										.section-item
+											a(href="#").section-link Дезодоранты
+										.section-item
+											a(href="#").section-link Для ванны и душа
+										.section-item
+											a(href="#").section-link Косметические пренадлежности
+										.section-item
+											a(href="#").section-link Удаление волос
+										.section-item
+											a(href="#").section-link Уход для глаз и бровей
+										.section-item
+											a(href="#").section-link Уход для губ
+										.section-item
+											a(href="#").section-link Уход за лицом
+										.section-item
+											a(href="#").section-link Уход за ногами
+										.section-item
+											a(href="#").section-link Уход за руками
+										.section-item
+											a(href="#").section-link Уход за телом	
+						.offer-section
+							img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
+							.desctext
+								.text.headtext Предложение дня
+								.text.name Mango: одежда и обувь онлайн
+
+
+			section.swiper-block
+				img.slide(src="img/index/slide-img1.jpg", alt="slide-img1.jpg")
+				img.slide(src="img/index/slide-img2.jpg", alt="slide-img2.jpg")
+				img.slide(src="img/index/slide-img3.jpg", alt="slide-img3.jpg")
+				img.slide(src="img/index/slide-img4.jpg", alt="slide-img4.jpg")
+				img.slide(src="img/index/slide-img5.jpg", alt="slide-img5.jpg")
+				img.slide(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
+				.slide.slide-more
+					|Смотреть
+					br
+					|всё
+			section.marketing-table
+				.marketing-navbar
+					.input-outer
+						input.input-search(type="search" placeholder="Поиск по магазинам")
+						a(href="#").buttonSearch
+							img.icon(src="img/search.jpg", alt="search.jpg")
+					.buttonSwitch.active
+						span Магазины
+					.buttonSwitch
+						span Моллы
+				.main-content
+					.sidebar
+						.number
+							span.name Количество:
+							span.value 2328
+						.options
+							.line
+								span Монобрендовые
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox")
+									.knobs
+									.layer
+							.line
+								span Мультибрендовые
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox")
+									.knobs
+									.layer
+							.line
+								span Бутики
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox")
+									.knobs
+									.layer
+							.line.checked
+								span Аутлеты
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox" checked)
+									.knobs
+									.layer
+							.line.checked
+								span Онлайн
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox" checked)
+									.knobs
+									.layer
+					.items-table
+						- for(var i = 1; i <= 12; i++)
+							.item
+								img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
+								.head
+									span.name Affiction
+									span.desc Russia, Moscow, Ходынский бульвар, д. 4
+								.tags
+									.category-text Монобрендовый
+									img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
+									img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
+									img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+				.marketing-navbar-bottom
+					.button.buttonMore
+						span Показать ещё
+					.pages
+						.page.active
+							span 1
+						.page
+							span 2
+						.page
+							span 3
+						.page
+							span 4
+						.page
+							span 5
+						.page
+							span 6
+						.page
+							span 7
+						.page
+							span 8
+						.page
+							span 8
+						.page
+							span 99
+					.buttonsPN
+						.button.buttonPrev
+							span Предыдущая
+						.button.buttonNext
+							span Следующая
+
+
+
+
+	include _partials/footer.pug
+
+block scripts
+	script.
+		$(document).ready(function(){
+			$('.buttonOpSw').click(function(){
+				if($(this).parents('.line').hasClass('checked')){
+					$(this).parents('.line').removeClass('checked')
+				}else{
+					$(this).parents('.line').addClass('checked')
+				}
+			})
+
+			$('.btn-category').click(function(){
+				if($(this).hasClass('active')){
+					$(this).removeClass('active')
+					$('#subCategory-popup').fadeOut(100)
+				}else{
+					$('.btn-category').removeClass('active')
+					$(this).addClass('active')
+					$('#subCategory-popup').fadeOut(100)
+					$('#subCategory-popup').fadeIn(50)
+				}
+			});
+			$(document).click(function(e){
+				if ( $(event.target).closest('.btn-category').length )
+					return;
+
+				if (!$('#subCategory-popup').is(e.target) && $('#subCategory-popup').has(e.target).length === 0 && !$('.btn-category').is(e.target) && $('.btn-category').has(e.target).length === 0) {
+					$('.btn-category').removeClass('active')
+					$('#subCategory-popup').fadeOut(100)
+				}
+			});
+		});
+

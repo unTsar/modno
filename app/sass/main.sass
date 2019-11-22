@@ -1,0 +1,636 @@
+@import "vars"
+@import "fonts"
+
+
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	margin: 0
+	padding: 0
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: #000
+	background-color: #F7F7F7
+	img
+		user-select: none
+	a
+		text-decoration: none
+		outline: none
+		color: #000
+	input, textarea
+		border: #000 1px solid
+		outline: none
+	input:not([type=checkbox]):not([type=radio]), textarea, select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+	input[type=text]::-ms-clear
+		display: none
+		width : 0
+		height: 0
+	input[type=text]::-ms-reveal
+		display: none
+		width : 0
+		height: 0
+	input[type=text]::-ms-clear
+		display: none
+		width : 0
+		height: 0
+	input[type=text]::-ms-reveal
+		display: none
+		width : 0
+		height: 0
+	input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
+		display: none
+	.select2-container, .select2-container--default, .select2-container--open
+		z-index: 10000
+	.select2-container--default
+		.select2-results__option--highlighted[aria-selected]
+			background-color: $accent-blue
+	.container
+		width: 1140px
+		margin-left: auto
+		margin-right: auto
+	.popup-map
+		width: 738px
+		.topline
+			span
+				font-size: 20px
+				font-weight: bold
+		.main-content
+			padding-left: 38px
+			padding-right: 38px
+			padding-bottom: 25px
+			.mapOuter
+				height: 334px
+				width: 100%
+				margin-top: 5px
+				.map
+					height: 100%
+			.selectOuter
+				padding-top: 36px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				.selectItem
+					margin-right: 48px
+					.headtext
+						padding: 7px 0
+						font-size: 15px
+					select.mapSelect
+						width: 261px
+					.select2-container, .select2-container--default
+						.select2-selection--single
+							border: 0.5px solid rgba(0, 0, 0, 0.3)
+							border-radius: 5px
+							box-sizing: content-box
+						.select2-selection, .select2-selection--single
+							outline: none
+							height: 31px
+							.select2-selection__rendered
+								line-height: 31px
+								font-size: 15px
+								color: #000
+							.select2-selection__arrow
+								height: 29px
+								background-image: url('../img/select-arrow_down.svg')
+								background-repeat: no-repeat
+								background-position: center
+								width: 8px
+								margin-right: 11px
+								transition: 0.3s
+								b
+									display: none
+					.select2-container--open
+						.select2-selection, .select2-selection--single
+							.select2-selection__arrow
+								transform: rotate(-180deg)
+			.map-buttons
+				margin-top: 38px
+	.Log-form
+		position: relative
+		display: none
+		transform: translate(-50%, -50%)
+		background-color: #fff
+		img.img-close
+			position: absolute
+			width: 17px
+			top: 0
+			right: 0
+			margin-top: 16px
+			margin-right: 16px
+		.topline
+			text-align: center
+			padding: 23px 0
+			line-height: 1
+			span
+				font-size: 20px
+				font-weight: bold
+				color: #000
+				line-height: 23px
+		img.separ
+			width: 100%
+			display: block
+		form.form-block
+			padding: 0 38px
+			padding-bottom: 27px
+			.input-item
+				margin-bottom: 28px
+				.input-head
+					padding: 4px 0
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					span
+						font-size: 15px
+					span.red
+						color: #FF0000
+				input
+					height: 31px
+					border: 0.5px solid rgba(0, 0, 0, 0.3)
+					background-color: #FFF
+					width: 100%
+					border-radius: 5px
+					padding-left: 9px
+				input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder
+					font-size: 12px
+					color: #808080
+		.form-buttons, .map-buttons
+			.form-btn, .map-btn
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 5px
+				background-color: $accent-blue
+				width: 100%
+				height: 34px
+				span
+					font-size: 15px
+					font-weight: bold
+					color: #fff
+	.LogIn-form
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		width: 374px
+		form.form-block
+			.input-item
+				.input-head
+					a
+						font-size: 11px
+						color: #808080
+						margin-left: auto
+					a.a-logup
+						color: $accent-blue
+			.form-options
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				margin-top: 2px
+				input
+					display: none
+				label
+					font-size: 11px
+					padding-left: 30px
+					color: #000
+					position: relative
+					display: inline-block
+					cursor: pointer
+				label:before
+					content: ''
+					position: absolute
+					display: inline-block
+					top: -1px
+					left: 0
+					width: 20px
+					height: 20px
+					border-radius: 5px
+					border: 0.5px solid #000
+				label::after
+					content: ''
+					display: inline-block
+					position: absolute
+					display: none
+					left: 3px
+					top: 2px
+					width: 15px
+					height: 15px
+					background-repeat: no-repeat
+					background-size: cover
+					background-image: url('../img/checkbox-img.svg')
+				input:checked + label::after
+					display: block
+			.form-buttons
+				margin-top: 30px
+				margin-bottom: -5px
+				.form-btn
+					margin-bottom: 5px
+	.LogUp-form
+		width: 738px
+		form.form-block
+			.input-item
+				margin-bottom: 28px
+				input
+					width: 270px
+				.radio
+					padding-top: 11px
+					input
+						display: none
+					label
+						transition: 0.3s
+						font-size: 13px
+						color: #808080
+						padding-left: 54px
+						margin-right: 75px
+						position: relative
+						display: inline-block
+						cursor: pointer
+					label::before
+						transition: 0.3s
+						content: ''
+						position: absolute
+						display: inline-block
+						top: -4px
+						left: 0
+						width: 29px
+						height: 29px
+						border-radius: 5px
+						border: 0.5px solid #808080
+					label::after
+						content: ''
+						position: absolute
+						display: inline-block
+						display: none
+						top: -1px
+						left: 3px
+						width: 24px
+						height: 24px
+						background-repeat: no-repeat
+						background-size: cover
+						background-image: url('../img/checkbox-img.svg')
+					input:checked + label::after
+						display: block
+					input:checked + label::before
+						border-color: #000
+					input:checked + label
+						color: #000
+			.p-policy
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				input
+					display: none
+				label
+					font-size: 11px
+					padding-left: 32px
+					margin-top: 5px
+					color: #000
+					position: relative
+					display: inline-block
+					max-height: 20px
+					cursor: pointer
+				label:before
+					content: ''
+					position: absolute
+					display: inline-block
+					top: -1px
+					left: 0
+					width: 20px
+					height: 20px
+					border-radius: 5px
+					border: 0.5px solid #000
+				label::after
+					content: ''
+					display: inline-block
+					position: absolute
+					display: none
+					left: 3px
+					top: 2px
+					width: 15px
+					height: 15px
+					background-repeat: no-repeat
+					background-size: cover
+					background-image: url('../img/checkbox-img.svg')
+				input:checked + label::after
+					display: block
+				.textblock
+					line-height: 1.2
+					padding-right: 35px
+					.headtext
+						font-size: 15px
+						span.red
+							color: #FF0000
+					.desctext
+						margin-top: 5px
+						font-size: 13px
+						color: #808080
+						a
+							color: $accent-blue
+							text-decoration: underline
+			.form-buttons
+				.form-btn
+					margin-top: 35px
+	main
+		padding-top: 16px
+	header
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25)
+		background-color: #fff
+		.headerLine
+			position: relative
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			height: 50px
+			align-items: center
+			a.logo
+				img.img-logo
+					width: 70px
+					height: auto
+			.languageSettings
+				user-select: none
+				position: relative
+				margin-left: 45px
+				.languageSettings-button
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					cursor: pointer
+					align-items: center
+					width: 158px
+					height: 26px
+					padding-left: 7px
+					border: 0.5px solid #f2f2f2
+					border-radius: 3px
+					img.flag
+						width: 15px
+						height: auto
+					span.cityName
+						font-size: 11px
+						color: #808080
+						margin-left: 4px
+					.buttonOpen
+						margin-left: auto
+						margin-right: 7px
+						.circle
+							border-radius: 50%
+							background-color: #808080
+							width: 3px
+							height: 3px
+							margin-bottom: 2px
+				.dropmenu.hide
+					display: none
+					opacity: 0
+				.dropmenu
+					cursor: auto
+					position: absolute
+					z-index: 99
+					bottom: -135px
+					left: 0
+					padding: 0
+					margin: 0
+					width: 300px
+					background-color: #fff
+					display: none
+					transition: 0.3s
+					border-radius: 5px
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+					.line
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						cursor: pointer
+						padding-top: 12px
+						padding-bottom: 12px
+						padding-left: 18px
+						span
+							font-size: 12px
+							color: #808080
+						span.b
+							color: #000
+						span, img.img-arrow
+							vertical-align: middle
+						img.img-arrow
+							margin-left: auto
+							margin-right: 20px
+					img.separ
+						width: 100%
+						max-height: 2px
+						display: block
+			.input-outer
+				position: relative
+				margin-left: 13%
+				input.input-search
+					width: 298px
+					height: 30px
+					padding-left: 14px
+					padding-right: 25px
+					border-radius: 3px
+					border: none
+					background-color: #e6e6e6
+				a.buttonSearch
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					padding-left: 5px
+					padding-right: 7px
+					img.icon
+						vertical-align: middle
+						width: 14px
+						height: auto
+				input.input-search::-webkit-input-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+				input.input-search:-moz-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+				input.input-search::-moz-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+				input.input-search:-ms-input-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+
+			.options
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				margin-left: auto
+				a.button-like
+					img
+						width: 15px
+						height: auto
+				a.button-shopCart
+					img
+						width: 12px
+						height: auto
+				a.button-like, a.button-shopCart
+					padding: 0 5px
+				a.buttonLogIn, a.button-shopCart, a.buttonProfile
+					margin-left: 25px
+				a.buttonLogIn
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+					align-items: center
+					background-color: $accent-blue
+					border-radius: 3px
+					width: 72px
+					height: 26px
+					transition: 0.3s
+					span
+						font-size: 12px
+						font-weight: bold
+						color: #fff
+				a.buttonProfile
+					width: 32px
+					height: 32px
+					border-radius: 50%
+					background-color: #E6E6E6
+			.profile-dropdown
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+				display: none
+				position: absolute
+				top: 100%
+				right: 0
+				z-index: 99
+				background-color: #fff
+				border-radius: 5px
+				width: 278px
+				a.dd-link
+					display: block
+					padding: 9px 0
+					padding-left: 20px
+					font-size: 13px
+				a.dd-link.g
+					color: #55BB00
+				img.separ
+					width: 100%
+					max-height: 2px
+					display: block
+				.track-input
+					padding: 0 20px
+					input.dd-search
+						padding: 0 25px
+						width: 100%
+						height: 31px
+						border: 0.5px solid rgba(0, 0, 0, 0.3)
+						border-radius: 5px
+					input.dd-search::-webkit-input-placeholder
+						font-size: 10px
+						color: #808080
+					input.dd-search:-moz-placeholder
+						font-size: 10px
+						color: #808080
+					input.dd-search::-moz-placeholder
+						font-size: 10px
+						color: #808080
+					input.dd-search:-ms-input-placeholder
+						font-size: 10px
+						color: #808080
+				.exit-block
+					margin-top: 34px
+					padding-bottom: 4px
+	footer
+		.footer-content
+			padding-top: 23px
+			padding-bottom: 14px
+			.footer-content-wrapper
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-between
+				position: relative
+				padding-right: 130px
+				.applinks
+					position: absolute
+					bottom: 0
+					right: 0
+					margin-right: 130px
+					img
+						width: 76px
+						height: auto
+						margin-left: 16px
+				.banners
+					margin-top: -21px
+					img
+						display: block
+						width: 240px
+						height: auto
+						margin-top: 21px
+						pointer-events: none
+				.links
+					line-height: 1
+					span.linkHead
+						text-transform: uppercase
+						font-weight: bold
+						font-size: 12px
+					.list
+						margin-top: 13px
+						line-height: 1.4
+						a
+							font-size: 12px
+							transition: 0.3s
+						a:hover
+							color: #808080
+		.footer-bottomLine
+			position: relative
+			height: 35px
+			background-color: #fff
+			border-top: 0.5px solid #cccccc
+			text-align: center
+			span
+				font-size: 10px
+				color: #000
+			.payments
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				padding-top: 3px
+				padding-right: 20.5%
+				img.payment-img
+					width: 32px
+					height: auto
+					vertical-align: middle
+					margin-left: 13px
+					pointer-events: none

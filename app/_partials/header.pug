@@ -1,0 +1,37 @@
+header
+	.container
+		.headerLine
+			a(href="#").logo
+				img.img-logo(src="img/logo.jpg", alt="logo.jpg")
+			.languageSettings
+				.languageSettings-button#languageSettings-button
+					img.flag(src="img/flag-russia.jpg", alt="flag-russia.jpg")
+					span.cityName Москва
+					.buttonOpen
+						.circle
+						.circle
+						.circle
+				.dropmenu#languageSettings-dropmenu.hide
+					.line#header-popup-map
+						span Город: Москва
+						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.line
+						span.b Язык: Русский
+						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.line
+						span Валюта: RUB (Russian Rouble)
+						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+			.input-outer
+				input.input-search(type="search" placeholder="Поиск по товарам")
+				a(href="#").buttonSearch
+					img.icon(src="img/search.jpg", alt="search.jpg")
+			.options
+				a(href="#").button-like
+					img(src="img/like.jpg", alt="like.jpg")
+				a(href="#").button-shopCart
+					img(src="img/shopCart.jpg", alt="shopCart.jpg")
+				a(href="#").buttonLogIn#header-btnLogIn
+					span Войти
+

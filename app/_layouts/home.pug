@@ -1,0 +1,207 @@
+doctype html
+html(lang="de")
+	head
+		meta(charset="utf-8")
+
+		title Modno
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		meta(name="author" content="Front-end by unTsar")
+		meta(name="robots" content ="index, follow")
+
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+		//- Chrome, Firefox OS and Opera
+		meta(name="theme-color" content="#000")
+		//- Windows Phone
+		meta(name="msapplication-navbutton-color" content="#000")
+		//- iOS Safari
+		meta(name="apple-mobile-web-app-status-bar-style" content="#000")
+
+
+		link(rel="stylesheet", href="css/select2.min.css")
+		link(rel="stylesheet", href="css/main.css")
+
+		block styles
+
+		//- //- Favicons
+		//- link(rel="icon", sizes="48x48", type="image/png", href="img/fav/ws_48x48.png")
+		//- link(rel="icon", sizes="57x57", type="image/png", href="img/fav/ws_57x57.png")
+		//- link(rel="icon", sizes="72x72", type="image/png", href="img/fav/ws_72x72.png")
+		//- link(rel="icon", sizes="114x114", type="image/png", href="img/fav/ws_114x114.png")
+		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
+	
+	body
+		.popup-map#popup-map.Log-form
+			a.popup-map_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Местоположение
+			.main-content
+				.mapOuter
+					.map#map
+				.selectOuter
+					.selectItem
+						.headtext Выберите город для поиска
+						select#mapSelect1.mapSelect(name="state")
+							option(value="Moscow" selected) Москва
+							option(value="SPB") Санкт-Петербург
+							option(value="Vladivostok") Владивосток
+					.selectItem
+						.headtext Выберите город для доставки
+						select#mapSelect2.mapSelect(name="state")
+							option(value="Moscow" selected) Москва
+							option(value="SPB") Санкт-Петербург
+							option(value="Vladivostok") Владивосток
+				.map-buttons
+					a(href="#").map-btn.popup-map_close-btn
+						span Готово
+		.Log-form.LogIn-form#LogIn-form
+			a.LogIn-form_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Войти
+			form(action="#").form-block
+				.input-item
+					.input-head 
+						span Логин #[span.red *] 
+						a(href="#").a-logup Создать учетную запись
+					input(type="text")
+				.input-item
+					.input-head 
+						span Пароль #[span.red *]
+						a(href="#") Забыли пароль?
+					input(type="password")
+				.form-options
+					input#LogIn-form_checkbox(type="checkbox")
+					label(for="LogIn-form_checkbox") Запомнить
+				.form-buttons
+					a(href="#").form-btn.form-btnLogIn#LogIn-form_btnLogIn.LogIn-form_close-btn
+						span Вход
+					a(href="#").form-btn.form-btnLogUp#LogIn-form_btnLogUp.LogIn-form_close-btn
+						span Регистрация
+		.Log-form.LogUp-form#LogUp-form
+			a.LogUp-form_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Создать учетную запись
+			form(action="#").form-block
+				.input-item
+					.input-head 
+						span Тип учётной записи
+					.radio
+						input#LogUp-form_radio1(type="radio" name="logup-type")
+						label(for="LogUp-form_radio1") Покупатель
+						input#LogUp-form_radio2(type="radio" name="logup-type")
+						label(for="LogUp-form_radio2") Продавец
+				.input-item
+					.input-head
+						span E-mail #[span.red *] 
+					input(type="email")
+				.input-item
+					.input-head
+						span Пароль #[span.red *]
+					input(type="password")
+				.input-item
+					.input-head
+						span Подтверждение пароля #[span.red *]
+					input(type="password")
+				.p-policy
+					input#LogUp-form_checkbox(type="checkbox")
+					label(for="LogUp-form_checkbox")
+					.textblock
+						.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. #[span.red *]
+						.desctext Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным #[a(href="#") здесь текстом]
+				.form-buttons
+					a(href="#").form-btn.form-btnLogUp#LogUp-form_btnLogUp.LogUp-form_close-btn
+						span Регистрация
+		block content
+	
+	//- Scripts
+	script(src="js/jquery.min.js")
+	script(src="js/svg4everybody.min.js")
+	script(src="js/jquery.bpopup.js")
+	script(src="js/select2.full.min.js")
+	script.
+		$(document).ready(function(){
+
+			svg4everybody();
+
+			var lSbtn = $('#languageSettings-button');
+			var lSdropmenu = $('#languageSettings-dropmenu');
+
+			lSbtn.click(function(){
+				if (lSdropmenu.hasClass('hide')){
+					lSdropmenu.fadeIn(50)
+					lSdropmenu.removeClass('hide');
+				}else{
+					lSdropmenu.fadeOut(100)
+					lSdropmenu.addClass('hide')
+				}
+			});
+
+			$('#buttonProfile').click(function(){
+				if ($('#profile-dropdown').hasClass('hide')){
+					$('#profile-dropdown').fadeIn(50)
+					$('#profile-dropdown').removeClass('hide');
+				}else{
+					$('#profile-dropdown').fadeOut(100)
+					$('#profile-dropdown').addClass('hide')
+				}
+			});
+
+			$(document).click(function (e){
+				if (!lSbtn.is(e.target) && lSbtn.has(e.target).length === 0) {
+					lSdropmenu.fadeOut(100);
+					lSdropmenu.addClass('hide')
+				}
+				if (!$('#profile-dropdown').is(e.target) && $('#profile-dropdown').has(e.target).length === 0 && !$('#buttonProfile').is(e.target) && $('#buttonProfile').has(e.target).length === 0) {
+					$('#profile-dropdown').fadeOut(100);
+					$('#profile-dropdown').addClass('hide')
+				}
+			});
+
+			$('#header-btnLogIn').click(function(){
+				$('#LogIn-form').bPopup({
+					position: ['50%', '50%'],
+					positionStyle: 'fixed',
+					closeClass: 'LogIn-form_close-btn'
+				});
+			});
+			$('#LogIn-form_btnLogUp').click(function(){
+				$('#LogUp-form').bPopup({
+					position: ['50%', '50%'],
+					positionStyle: 'fixed',
+					closeClass: 'LogUp-form_close-btn'
+				});
+			});
+
+			$('#header-popup-map').click(function(){
+				$('#popup-map').bPopup({
+					position: ['50%', '50%'],
+					positionStyle: 'fixed',
+					closeClass: 'popup-map_close-btn'
+				});
+			});
+
+
+			$('.mapSelect').select2();
+
+		});
+
+	script.
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 55.754095, lng: 37.616722},
+				zoom: 12,
+				streetViewControl: false,
+				mapTypeControl: false
+			});
+		}
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKhp6yO-hzgForGQ3ZJrBGj-QrUCUbZeQ&callback=initMap" async defer></script>
+
+	block scripts
+
+

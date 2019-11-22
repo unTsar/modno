@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Modno</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Front-end by unTsar">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="popup-map Log-form" id="popup-map"><a class="popup-map_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Местоположение</span></div>
+      <div class="main-content">
+        <div class="mapOuter">
+          <div class="map" id="map"></div>
+        </div>
+        <div class="selectOuter">
+          <div class="selectItem">
+            <div class="headtext">Выберите город для поиска</div>
+            <select class="mapSelect" id="mapSelect1" name="state">
+              <option value="Moscow" selected>Москва</option>
+              <option value="SPB">Санкт-Петербург</option>
+              <option value="Vladivostok">Владивосток</option>
+            </select>
+          </div>
+          <div class="selectItem">
+            <div class="headtext">Выберите город для доставки</div>
+            <select class="mapSelect" id="mapSelect2" name="state">
+              <option value="Moscow" selected>Москва</option>
+              <option value="SPB">Санкт-Петербург</option>
+              <option value="Vladivostok">Владивосток</option>
+            </select>
+          </div>
+        </div>
+        <div class="map-buttons"><a class="map-btn popup-map_close-btn" href="#"><span>Готово</span></a></div>
+      </div>
+    </div>
+    <div class="Log-form LogIn-form" id="LogIn-form"><a class="LogIn-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Войти</span></div>
+      <form class="form-block" action="#">
+        <div class="input-item">
+          <div class="input-head"> <span>Логин <span class="red">*</span> </span><a class="a-logup" href="#">Создать учетную запись</a></div>
+          <input type="text">
+        </div>
+        <div class="input-item">
+          <div class="input-head"> <span>Пароль <span class="red">*</span></span><a href="#">Забыли пароль?</a></div>
+          <input type="password">
+        </div>
+        <div class="form-options">
+          <input id="LogIn-form_checkbox" type="checkbox">
+          <label for="LogIn-form_checkbox">Запомнить</label>
+        </div>
+        <div class="form-buttons"><a class="form-btn form-btnLogIn LogIn-form_close-btn" href="#" id="LogIn-form_btnLogIn"><span>Вход</span></a><a class="form-btn form-btnLogUp LogIn-form_close-btn" href="#" id="LogIn-form_btnLogUp"><span>Регистрация</span></a></div>
+      </form>
+    </div>
+    <div class="Log-form LogUp-form" id="LogUp-form"><a class="LogUp-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Создать учетную запись</span></div>
+      <form class="form-block" action="#">
+        <div class="input-item">
+          <div class="input-head"> <span>Тип учётной записи</span></div>
+          <div class="radio">
+            <input id="LogUp-form_radio1" type="radio" name="logup-type">
+            <label for="LogUp-form_radio1">Покупатель</label>
+            <input id="LogUp-form_radio2" type="radio" name="logup-type">
+            <label for="LogUp-form_radio2">Продавец</label>
+          </div>
+        </div>
+        <div class="input-item">
+          <div class="input-head"><span>E-mail <span class="red">*</span> </span></div>
+          <input type="email">
+        </div>
+        <div class="input-item">
+          <div class="input-head"><span>Пароль <span class="red">*</span></span></div>
+          <input type="password">
+        </div>
+        <div class="input-item">
+          <div class="input-head"><span>Подтверждение пароля <span class="red">*</span></span></div>
+          <input type="password">
+        </div>
+        <div class="p-policy">
+          <input id="LogUp-form_checkbox" type="checkbox">
+          <label for="LogUp-form_checkbox"></label>
+          <div class="textblock">
+            <div class="headtext">Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <span class="red">*</span></div>
+            <div class="desctext">Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным <a href="#">здесь текстом</a></div>
+          </div>
+        </div>
+        <div class="form-buttons"><a class="form-btn form-btnLogUp LogUp-form_close-btn" href="#" id="LogUp-form_btnLogUp"><span>Регистрация</span></a></div>
+      </form>
+    </div>
+    <header>
+      <div class="container">
+        <div class="headerLine"><a class="logo" href="#"><img class="img-logo" src="img/logo.jpg" alt="logo.jpg"></a>
+          <div class="languageSettings">
+            <div class="languageSettings-button" id="languageSettings-button"><img class="flag" src="img/flag-russia.jpg" alt="flag-russia.jpg"><span class="cityName">Москва</span>
+              <div class="buttonOpen">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="dropmenu hide" id="languageSettings-dropmenu">
+              <div class="line" id="header-popup-map"><span>Город: Москва</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+              <div class="line"><span class="b">Язык: Русский</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+              <div class="line"><span>Валюта: RUB (Russian Rouble)</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
+            </div>
+          </div>
+          <div class="input-outer">
+            <input class="input-search" type="search" placeholder="Поиск по товарам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.jpg" alt="search.jpg"></a>
+          </div>
+          <div class="options"><a class="button-like" href="#"><img src="img/like.jpg" alt="like.jpg"></a><a class="button-shopCart" href="#"><img src="img/shopCart.jpg" alt="shopCart.jpg"></a><a class="buttonLogIn" href="#" id="header-btnLogIn"><span>Войти</span></a></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="category-links">
+          <div class="category-h1"><a href="#">Женщинам</a><a class="active" href="#">Мужчинам</a><a href="#">Детям</a></div>
+          <div class="category-h2"><a class="btn-category" href="#"><span class="g">Новинки</span></a><a class="btn-category" href="#"><span>Одежда</span></a><a class="btn-category" href="#"><span>Обувь</span></a><a class="btn-category" href="#"><span>Сумки</span></a><a class="btn-category" href="#"><span>Аксессуары</span></a><a class="btn-category" href="#"><span>Часы</span></a><a class="btn-category" href="#"><span>Ювелирные украшения</span></a><a class="btn-category" href="#"><span>Парфюмерия</span></a><a class="btn-category" href="#"><span>Красота</span></a><a class="btn-category" href="#"><span class="r">Sale</span></a></div>
+          <div class="subCategory-popup" id="subCategory-popup">
+            <div class="contentblock">
+              <div class="subCategory-outer"><span class="popup-head">Категории</span>
+                <div class="subCategory-section">
+                  <div class="subCategory-column">
+                    <div class="section-item section-head"><a class="section-link" href="#">Макияж</a></div>
+                    <div class="section-links">
+                      <div class="section-item"><a class="section-link" href="#">Аксессуары</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Брови</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Глаза</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Губы</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Лицо</a></div>
+                    </div>
+                  </div>
+                  <div class="subCategory-column">
+                    <div class="section-item section-head"><a class="section-link" href="#">Уход за кожей</a></div>
+                    <div class="section-links">
+                      <div class="section-item"><a class="section-link" href="#">Борьба с несовершенствами</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Бронзанты и автозагар</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Дезодоранты</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Для ванны и душа</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Косметические пренадлежности</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Удаление волос</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Уход для глаз и бровей</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Уход для губ</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Уход за лицом</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Уход за ногами</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Уход за руками</a></div>
+                      <div class="section-item"><a class="section-link" href="#">Уход за телом	</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offer-section"><img src="img/index/offer-section-img.jpg" alt="offer-section-img.jpg">
+                <div class="desctext">
+                  <div class="text headtext">Предложение дня</div>
+                  <div class="text name">Mango: одежда и обувь онлайн</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="swiper-block"><img class="slide" src="img/index/slide-img1.jpg" alt="slide-img1.jpg"><img class="slide" src="img/index/slide-img2.jpg" alt="slide-img2.jpg"><img class="slide" src="img/index/slide-img3.jpg" alt="slide-img3.jpg"><img class="slide" src="img/index/slide-img4.jpg" alt="slide-img4.jpg"><img class="slide" src="img/index/slide-img5.jpg" alt="slide-img5.jpg"><img class="slide" src="img/index/slide-img6.jpg" alt="slide-img6.jpg">
+          <div class="slide slide-more">Смотреть<br>всё</div>
+        </section>
+        <section class="marketing-table">
+          <div class="marketing-navbar">
+            <div class="input-outer">
+              <input class="input-search" type="search" placeholder="Поиск по магазинам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.jpg" alt="search.jpg"></a>
+            </div>
+            <div class="buttonSwitch active"><span>Магазины</span></div>
+            <div class="buttonSwitch"><span>Моллы</span></div>
+          </div>
+          <div class="main-content">
+            <div class="sidebar">
+              <div class="number"><span class="name">Количество:</span><span class="value">2328</span></div>
+              <div class="options">
+                <div class="line"><span>Монобрендовые</span>
+                  <div class="buttonOpSw r">
+                    <input class="option-checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+                <div class="line"><span>Мультибрендовые</span>
+                  <div class="buttonOpSw r">
+                    <input class="option-checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+                <div class="line"><span>Бутики</span>
+                  <div class="buttonOpSw r">
+                    <input class="option-checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+                <div class="line checked"><span>Аутлеты</span>
+                  <div class="buttonOpSw r">
+                    <input class="option-checkbox" type="checkbox" checked>
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+                <div class="line checked"><span>Онлайн</span>
+                  <div class="buttonOpSw r">
+                    <input class="option-checkbox" type="checkbox" checked>
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="items-table">
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                <div class="tags">
+                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="marketing-navbar-bottom">
+            <div class="button buttonMore"><span>Показать ещё</span></div>
+            <div class="pages">
+              <div class="page active"><span>1</span></div>
+              <div class="page"><span>2</span></div>
+              <div class="page"><span>3</span></div>
+              <div class="page"><span>4</span></div>
+              <div class="page"><span>5</span></div>
+              <div class="page"><span>6</span></div>
+              <div class="page"><span>7</span></div>
+              <div class="page"><span>8</span></div>
+              <div class="page"><span>8</span></div>
+              <div class="page"><span>99</span></div>
+            </div>
+            <div class="buttonsPN">
+              <div class="button buttonPrev"><span>Предыдущая</span></div>
+              <div class="button buttonNext"><span>Следующая</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="container">
+          <div class="footer-content-wrapper">
+            <div class="banners"><img class="b1" src="img/banner1.jpg" alt="banner1.jpg"><img class="b2" src="img/banner2.jpg" alt="banner2.jpg"></div>
+            <div class="links"><span class="linkHead">О компании </span>
+              <div class="list"><a href="#">О нас </a><br><a href="#">Оферта </a><br><a href="#">Политика конфидециальности </a><br><a href="#">Бонусные баллы </a><br><a href="#">Подарочные сертификаты </a><br><a href="#">Карта сайта </a><br><a href="#">Контакты </a></div>
+            </div>
+            <div class="links"><span class="linkHead">Оформление заказа </span>
+              <div class="list"><a href="#">Доставка и оплата </a><br><a href="#">Возврат </a><br><a href="#">Способы оплаты </a><br><a href="#">Вопросы и ответы </a></div><br>
+            </div>
+            <div class="links"><span class="linkHead">Партнёрам </span>
+              <div class="list"><a href="#">Магазинам </a><br><a href="#">Моллам </a><br><a href="#">Веб мастерам </a><br><a href="#">Войти как партнер </a></div>
+            </div>
+            <div class="applinks"><a href="#"><img src="img/googleplay.jpg" alt="googleplay.jpg"></a><a href="#"><img src="img/appstore.jpg" alt="appstore.jpg"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottomLine"><span>&copy; 2010 - 2019 GoGroup.  Платформа для интернет-магазинов</span>
+        <div class="payments"><img class="payment-img" src="img/paypal.jpg" alt="paypal.jpg"><img class="payment-img" src="img/mastercard.jpg" alt="mastercard.jpg"><img class="payment-img" src="img/visa.jpg" alt="visa.jpg"></div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script src="js/jquery.bpopup.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    
+    	svg4everybody();
+    
+    	var lSbtn = $('#languageSettings-button');
+    	var lSdropmenu = $('#languageSettings-dropmenu');
+    
+    	lSbtn.click(function(){
+    		if (lSdropmenu.hasClass('hide')){
+    			lSdropmenu.fadeIn(50)
+    			lSdropmenu.removeClass('hide');
+    		}else{
+    			lSdropmenu.fadeOut(100)
+    			lSdropmenu.addClass('hide')
+    		}
+    	});
+    
+    	$('#buttonProfile').click(function(){
+    		if ($('#profile-dropdown').hasClass('hide')){
+    			$('#profile-dropdown').fadeIn(50)
+    			$('#profile-dropdown').removeClass('hide');
+    		}else{
+    			$('#profile-dropdown').fadeOut(100)
+    			$('#profile-dropdown').addClass('hide')
+    		}
+    	});
+    
+    	$(document).click(function (e){
+    		if (!lSbtn.is(e.target) && lSbtn.has(e.target).length === 0) {
+    			lSdropmenu.fadeOut(100);
+    			lSdropmenu.addClass('hide')
+    		}
+    		if (!$('#profile-dropdown').is(e.target) && $('#profile-dropdown').has(e.target).length === 0 && !$('#buttonProfile').is(e.target) && $('#buttonProfile').has(e.target).length === 0) {
+    			$('#profile-dropdown').fadeOut(100);
+    			$('#profile-dropdown').addClass('hide')
+    		}
+    	});
+    
+    	$('#header-btnLogIn').click(function(){
+    		$('#LogIn-form').bPopup({
+    			position: ['50%', '50%'],
+    			positionStyle: 'fixed',
+    			closeClass: 'LogIn-form_close-btn'
+    		});
+    	});
+    	$('#LogIn-form_btnLogUp').click(function(){
+    		$('#LogUp-form').bPopup({
+    			position: ['50%', '50%'],
+    			positionStyle: 'fixed',
+    			closeClass: 'LogUp-form_close-btn'
+    		});
+    	});
+    
+    	$('#header-popup-map').click(function(){
+    		$('#popup-map').bPopup({
+    			position: ['50%', '50%'],
+    			positionStyle: 'fixed',
+    			closeClass: 'popup-map_close-btn'
+    		});
+    	});
+    
+    
+    	$('.mapSelect').select2();
+    
+    });
+    
+  </script>
+  <script>
+    var map;
+    function initMap() {
+    	map = new google.maps.Map(document.getElementById('map'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    }
+  </script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKhp6yO-hzgForGQ3ZJrBGj-QrUCUbZeQ&callback=initMap" async defer></script>
+  <script>
+    $(document).ready(function(){
+    	$('.buttonOpSw').click(function(){
+    		if($(this).parents('.line').hasClass('checked')){
+    			$(this).parents('.line').removeClass('checked')
+    		}else{
+    			$(this).parents('.line').addClass('checked')
+    		}
+    	})
+    
+    	$('.btn-category').click(function(){
+    		if($(this).hasClass('active')){
+    			$(this).removeClass('active')
+    			$('#subCategory-popup').fadeOut(100)
+    		}else{
+    			$('.btn-category').removeClass('active')
+    			$(this).addClass('active')
+    			$('#subCategory-popup').fadeOut(100)
+    			$('#subCategory-popup').fadeIn(50)
+    		}
+    	});
+    	$(document).click(function(e){
+    		if ( $(event.target).closest('.btn-category').length )
+    			return;
+    
+    		if (!$('#subCategory-popup').is(e.target) && $('#subCategory-popup').has(e.target).length === 0 && !$('.btn-category').is(e.target) && $('.btn-category').has(e.target).length === 0) {
+    			$('.btn-category').removeClass('active')
+    			$('#subCategory-popup').fadeOut(100)
+    		}
+    	});
+    });
+  </script>
+</html>

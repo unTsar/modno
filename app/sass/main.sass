@@ -52,7 +52,7 @@ body
 	input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
 		display: none
 	.select2-container, .select2-container--default, .select2-container--open
-		z-index: 10000
+		z-index: 22222
 	.select2-container--default
 		.select2-results__option--highlighted[aria-selected]
 			background-color: $accent-blue
@@ -67,9 +67,7 @@ body
 				font-size: 20px
 				font-weight: bold
 		.main-content
-			padding-left: 38px
-			padding-right: 38px
-			padding-bottom: 25px
+			padding: 0 25px 28px 25px
 			.mapOuter
 				height: 334px
 				width: 100%
@@ -83,13 +81,13 @@ body
 				display: -ms-flex
 				display: -o-flex
 				display: flex
+				justify-content: space-between
 				.selectItem
-					margin-right: 48px
 					.headtext
 						padding: 7px 0
 						font-size: 15px
 					select.mapSelect
-						width: 261px
+						width: 315px
 					.select2-container, .select2-container--default
 						.select2-selection--single
 							border: 0.5px solid rgba(0, 0, 0, 0.3)
@@ -121,7 +119,6 @@ body
 	.Log-form
 		position: relative
 		display: none
-		transform: translate(-50%, -50%)
 		background-color: #fff
 		img.img-close
 			position: absolute
@@ -143,7 +140,7 @@ body
 			width: 100%
 			display: block
 		form.form-block
-			padding: 0 38px
+			padding: 0 25px
 			padding-bottom: 27px
 			.input-item
 				margin-bottom: 28px
@@ -188,7 +185,7 @@ body
 					color: #fff
 	.LogIn-form
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-		width: 374px
+		width: 331px
 		form.form-block
 			.input-item
 				.input-head
@@ -241,9 +238,6 @@ body
 					display: block
 			.form-buttons
 				margin-top: 30px
-				margin-bottom: -5px
-				.form-btn
-					margin-bottom: 5px
 	.LogUp-form
 		width: 738px
 		form.form-block
@@ -528,6 +522,7 @@ body
 				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 				display: none
 				position: absolute
+				margin-top: 1px
 				top: 100%
 				right: 0
 				z-index: 99

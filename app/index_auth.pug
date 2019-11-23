@@ -146,7 +146,7 @@ block content
 									.knobs
 									.layer
 					.items-table
-						- for(var i = 1; i <= 12; i++)
+						- for(var i = 1; i <= 20; i++)
 							.item
 								img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
 								.head
@@ -215,9 +215,6 @@ block scripts
 				}
 			});
 			$(document).click(function(e){
-				if ( $(event.target).closest('.btn-category').length )
-					return;
-
 				if (!$('#subCategory-popup').is(e.target) && $('#subCategory-popup').has(e.target).length === 0 && !$('.btn-category').is(e.target) && $('.btn-category').has(e.target).length === 0) {
 					$('.btn-category').removeClass('active')
 					$('#subCategory-popup').fadeOut(100)

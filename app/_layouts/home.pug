@@ -66,7 +66,7 @@ html(lang="de")
 				.input-item
 					.input-head 
 						span Логин #[span.red *] 
-						a(href="#").a-logup Создать учетную запись
+						a(href="#").a-logup#LogIn-form_btnLogUp.LogIn-form_close-btn Создать учетную запись
 					input(type="text")
 				.input-item
 					.input-head 
@@ -79,8 +79,6 @@ html(lang="de")
 				.form-buttons
 					a(href="#").form-btn.form-btnLogIn#LogIn-form_btnLogIn.LogIn-form_close-btn
 						span Вход
-					a(href="#").form-btn.form-btnLogUp#LogIn-form_btnLogUp.LogIn-form_close-btn
-						span Регистрация
 		.Log-form.LogUp-form#LogUp-form
 			a.LogUp-form_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -156,7 +154,8 @@ html(lang="de")
 					lSdropmenu.fadeOut(100);
 					lSdropmenu.addClass('hide')
 				}
-				if (!$('#profile-dropdown').is(e.target) && $('#profile-dropdown').has(e.target).length === 0 && !$('#buttonProfile').is(e.target) && $('#buttonProfile').has(e.target).length === 0) {
+
+				if ($('#dd-exit-btn').is(e.target) || !$('#profile-dropdown').is(e.target) && $('#profile-dropdown').has(e.target).length === 0 && !$('#buttonProfile').is(e.target) && $('#buttonProfile').has(e.target).length === 0) {
 					$('#profile-dropdown').fadeOut(100);
 					$('#profile-dropdown').addClass('hide')
 				}
@@ -164,14 +163,12 @@ html(lang="de")
 
 			$('#header-btnLogIn').click(function(){
 				$('#LogIn-form').bPopup({
-					position: ['50%', '50%'],
 					positionStyle: 'fixed',
 					closeClass: 'LogIn-form_close-btn'
 				});
 			});
 			$('#LogIn-form_btnLogUp').click(function(){
 				$('#LogUp-form').bPopup({
-					position: ['50%', '50%'],
 					positionStyle: 'fixed',
 					closeClass: 'LogUp-form_close-btn'
 				});
@@ -179,7 +176,6 @@ html(lang="de")
 
 			$('#header-popup-map').click(function(){
 				$('#popup-map').bPopup({
-					position: ['50%', '50%'],
 					positionStyle: 'fixed',
 					closeClass: 'popup-map_close-btn'
 				});

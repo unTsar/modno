@@ -86,7 +86,7 @@ body input::-webkit-search-decoration, body input::-webkit-search-cancel-button,
 }
 
 body .select2-container, body .select2-container--default, body .select2-container--open {
-  z-index: 10000;
+  z-index: 22222;
 }
 
 body .select2-container--default .select2-results__option--highlighted[aria-selected] {
@@ -109,9 +109,7 @@ body .popup-map .topline span {
 }
 
 body .popup-map .main-content {
-  padding-left: 38px;
-  padding-right: 38px;
-  padding-bottom: 25px;
+  padding: 0 25px 28px 25px;
 }
 
 body .popup-map .main-content .mapOuter {
@@ -133,10 +131,10 @@ body .popup-map .main-content .selectOuter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-body .popup-map .main-content .selectOuter .selectItem {
-  margin-right: 48px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body .popup-map .main-content .selectOuter .selectItem .headtext {
@@ -145,7 +143,7 @@ body .popup-map .main-content .selectOuter .selectItem .headtext {
 }
 
 body .popup-map .main-content .selectOuter .selectItem select.mapSelect {
-  width: 261px;
+  width: 315px;
 }
 
 body .popup-map .main-content .selectOuter .selectItem .select2-container .select2-selection--single, body .popup-map .main-content .selectOuter .selectItem .select2-container--default .select2-selection--single {
@@ -196,9 +194,6 @@ body .popup-map .main-content .map-buttons {
 body .Log-form {
   position: relative;
   display: none;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background-color: #fff;
 }
 
@@ -230,7 +225,7 @@ body .Log-form img.separ {
 }
 
 body .Log-form form.form-block {
-  padding: 0 38px;
+  padding: 0 25px;
   padding-bottom: 27px;
 }
 
@@ -308,7 +303,7 @@ body .Log-form .form-buttons .form-btn span, body .Log-form .form-buttons .map-b
 body .LogIn-form {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 374px;
+  width: 331px;
 }
 
 body .LogIn-form form.form-block .input-item .input-head a {
@@ -383,11 +378,6 @@ body .LogIn-form form.form-block .form-options input:checked + label::after {
 
 body .LogIn-form form.form-block .form-buttons {
   margin-top: 30px;
-  margin-bottom: -5px;
-}
-
-body .LogIn-form form.form-block .form-buttons .form-btn {
-  margin-bottom: 5px;
 }
 
 body .LogUp-form {
@@ -833,6 +823,7 @@ body header .headerLine .profile-dropdown {
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   display: none;
   position: absolute;
+  margin-top: 1px;
   top: 100%;
   right: 0;
   z-index: 99;

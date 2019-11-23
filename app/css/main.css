@@ -648,8 +648,8 @@ body header .headerLine .languageSettings .dropmenu {
   transition: 0.3s;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 body header .headerLine .languageSettings .dropmenu .line {
@@ -824,6 +824,7 @@ body header .headerLine .profile-dropdown {
   display: none;
   position: absolute;
   margin-top: 1px;
+  padding: 4px 0;
   top: 100%;
   right: 0;
   z-index: 99;
@@ -885,7 +886,6 @@ body header .headerLine .profile-dropdown .track-input input.dd-search:-ms-input
 
 body header .headerLine .profile-dropdown .exit-block {
   margin-top: 34px;
-  padding-bottom: 4px;
 }
 
 body footer .footer-content {
@@ -988,4 +988,16 @@ body footer .footer-bottomLine .payments img.payment-img {
   vertical-align: middle;
   margin-left: 13px;
   pointer-events: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  body header .container .headerLine {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  body .container {
+    width: 1024px;
+  }
 }

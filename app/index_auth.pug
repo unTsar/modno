@@ -203,22 +203,10 @@ block scripts
 				}
 			})
 
-			$('.btn-category').click(function(){
-				if($(this).hasClass('active')){
-					$(this).removeClass('active')
-					$('#subCategory-popup').fadeOut(100)
-				}else{
-					$('.btn-category').removeClass('active')
-					$(this).addClass('active')
-					$('#subCategory-popup').fadeOut(100)
-					$('#subCategory-popup').fadeIn(50)
-				}
-			});
-			$(document).click(function(e){
-				if (!$('#subCategory-popup').is(e.target) && $('#subCategory-popup').has(e.target).length === 0 && !$('.btn-category').is(e.target) && $('.btn-category').has(e.target).length === 0) {
-					$('.btn-category').removeClass('active')
-					$('#subCategory-popup').fadeOut(100)
-				}
+			$('.btn-category').mouseenter(function(){
+				$('#subCategory-popup').show();
+			}).mouseleave(function(){
+				$('#subCategory-popup').hide();
 			});
 		});
 

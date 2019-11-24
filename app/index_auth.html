@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#000">
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/select2.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
   </head>
@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="input-outer">
-            <input class="input-search" type="search" placeholder="Поиск по товарам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.jpg" alt="search.jpg"></a>
+            <input class="input-search" type="search" placeholder="Поиск по товарам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.svg" alt="search.svg"></a>
           </div>
           <div class="options"><a class="button-like" href="#"><img src="img/like.jpg" alt="like.jpg"></a><a class="button-shopCart" href="#"><img src="img/shopCart.jpg" alt="shopCart.jpg"></a><a class="buttonProfile" href="#" id="buttonProfile"></a></div>
           <div class="profile-dropdown hide" id="profile-dropdown"><a class="dd-link" href="#">Мои заказы</a><a class="dd-link" href="#">Мои данные</a><a class="dd-link" href="#">Мои сообщения</a><a class="dd-link" href="#">Отложенные товары</a><a class="dd-link" href="#">Подарочные сертификаты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="dd-link g" href="#">Подписки</a><a class="dd-link" href="#">Мои баллы</a><a class="dd-link" href="#">Отслеживание заказов</a>
@@ -461,6 +461,26 @@
     
     	$('.mapSelect').select2();
     
+    	$('.select2').one('click', function(){
+    		$('.select2-search--dropdown').prepend('<div class="select2-search--dropdown__search-img">')
+    		$('.select2-search--dropdown').append('<div class="select2-search--dropdown__cross">')
+    	});	
+    	$('.select2').click(function(){
+    		$('.select2-search__field').on('input', function(){
+    			if(this.value.length){
+    				$(this).next().css('display', 'block')
+    			}else{
+    				$(this).next().css('display', 'none')
+    			}
+    		});
+    		$('.select2-search--dropdown__cross').click(function(){
+    			$(this).prev().val('');
+    			$(this).prev().trigger('input')
+    		})
+    	});
+    
+    
+    
     });
     
   </script>
@@ -485,22 +505,10 @@
     		}
     	})
     
-    	$('.btn-category').click(function(){
-    		if($(this).hasClass('active')){
-    			$(this).removeClass('active')
-    			$('#subCategory-popup').fadeOut(100)
-    		}else{
-    			$('.btn-category').removeClass('active')
-    			$(this).addClass('active')
-    			$('#subCategory-popup').fadeOut(100)
-    			$('#subCategory-popup').fadeIn(50)
-    		}
-    	});
-    	$(document).click(function(e){
-    		if (!$('#subCategory-popup').is(e.target) && $('#subCategory-popup').has(e.target).length === 0 && !$('.btn-category').is(e.target) && $('.btn-category').has(e.target).length === 0) {
-    			$('.btn-category').removeClass('active')
-    			$('#subCategory-popup').fadeOut(100)
-    		}
+    	$('.btn-category').mouseenter(function(){
+    		$('#subCategory-popup').show();
+    	}).mouseleave(function(){
+    		$('#subCategory-popup').hide();
     	});
     });
   </script>

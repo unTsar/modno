@@ -20,7 +20,7 @@ html(lang="de")
 		meta(name="apple-mobile-web-app-status-bar-style" content="#000")
 
 
-		link(rel="stylesheet", href="css/select2.min.css")
+		link(rel="stylesheet", href="css/select2.css")
 		link(rel="stylesheet", href="css/main.css")
 
 		block styles
@@ -183,6 +183,26 @@ html(lang="de")
 
 
 			$('.mapSelect').select2();
+
+			$('.select2').one('click', function(){
+				$('.select2-search--dropdown').prepend('<div class="select2-search--dropdown__search-img">')
+				$('.select2-search--dropdown').append('<div class="select2-search--dropdown__cross">')
+			});	
+			$('.select2').click(function(){
+				$('.select2-search__field').on('input', function(){
+					if(this.value.length){
+						$(this).next().css('display', 'block')
+					}else{
+						$(this).next().css('display', 'none')
+					}
+				});
+				$('.select2-search--dropdown__cross').click(function(){
+					$(this).prev().val('');
+					$(this).prev().trigger('input')
+				})
+			});
+
+
 
 		});
 

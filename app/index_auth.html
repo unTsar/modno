@@ -469,34 +469,49 @@
     	$('#header-btnLogIn').click(function(){
     		$('#LogIn-form').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'LogIn-form_close-btn'
+    			closeClass: 'LogIn-form_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
     		});
     	});
     	$('#LogIn-form_btnLogUp').click(function(){
     		$('#LogUp-form').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'LogUp-form_close-btn'
+    			closeClass: 'LogUp-form_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
     		});
     	});
     
     	$('#header-popup-map').click(function(){
     		$('#popup-map').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'popup-map_close-btn'
+    			closeClass: 'popup-map_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
     		});
     	});
     
     	$('#header-language-popup').click(function(){
     		$('#language-popup').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'language-popup_close-btn'
+    			closeClass: 'language-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
     		});
     	});
     
     	$('#header-currency-popup').click(function(){
     		$('#currency-popup').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'currency-popup_close-btn'
+    			closeClass: 'currency-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
     		});
     	});
     
@@ -518,7 +533,7 @@
     		$('.select2-search--dropdown__cross').click(function(){
     			$(this).prev().val('');
     			$(this).prev().trigger('input')
-    		})
+    		});
     	});
     
     	$('.dd-popup-search').on('input', function(){

@@ -1155,3 +1155,13 @@ body footer .footer-bottomLine .payments img.payment-img {
     padding: 0 15px;
   }
 }
+
+@media only screen and (max-width: 1140px) {
+  body .container {
+    width: 100%;
+  }
+  body main section.category-links .category-h2 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

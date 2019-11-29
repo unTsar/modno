@@ -175,6 +175,85 @@ body .container {
   margin-right: auto;
 }
 
+body .dd-popup {
+  position: relative;
+  display: none;
+  width: 330px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #fff;
+}
+
+body .dd-popup img.img-close {
+  position: absolute;
+  width: 15px;
+  top: 0;
+  right: 0;
+  margin-top: 21px;
+  margin-right: 24px;
+}
+
+body .dd-popup .topline {
+  text-align: center;
+  padding: 20px 0;
+  line-height: 1;
+}
+
+body .dd-popup .topline span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body .dd-popup .input-search {
+  position: relative;
+}
+
+body .dd-popup .input-search input {
+  border: none;
+  height: 43px;
+  width: 100%;
+  padding-left: 50px;
+}
+
+body .dd-popup .input-search img.img-search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-left: 25px;
+  width: 16px;
+}
+
+body .dd-popup .search-items {
+  position: relative;
+  -webkit-box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body .dd-popup .search-items .search-item {
+  position: relative;
+  height: 43px;
+  line-height: 40px;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+body .dd-popup .search-items .search-item span {
+  font-size: 12px;
+}
+
+body .dd-popup .search-items .search-item img.separ {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-height: 2px;
+}
+
 body .popup-map {
   width: 738px;
 }
@@ -750,10 +829,6 @@ body header .headerLine .languageSettings .dropmenu .line span {
   color: #808080;
 }
 
-body header .headerLine .languageSettings .dropmenu .line span.b {
-  color: #000;
-}
-
 body header .headerLine .languageSettings .dropmenu .line span, body header .headerLine .languageSettings .dropmenu .line img.img-arrow {
   vertical-align: middle;
 }
@@ -1073,11 +1148,5 @@ body footer .footer-bottomLine .payments img.payment-img {
 @media only screen and (max-width: 1200px) {
   body header .container .headerLine {
     padding: 0 15px;
-  }
-}
-
-@media only screen and (max-width: 1140px) {
-  body .container {
-    width: 1024px;
   }
 }

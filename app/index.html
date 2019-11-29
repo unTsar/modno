@@ -17,6 +17,34 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
+    <div class="dd-popup currency-popup" id="currency-popup"><a class="currency-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Валюта</span></div>
+      <div class="input-search"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="dd-popup-search" type="search">
+      </div>
+      <div class="search-items dd-search-items">
+        <div class="search-item dd-search-item currency-popup_close-btn"><span>EUR (Euro)</span></div>
+        <div class="search-item dd-search-item currency-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>USD (US Dollar)</span></div>
+        <div class="search-item dd-search-item currency-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>RUB (Russian Rouble)</span></div>
+        <div class="search-item dd-search-item"></div>
+        <div class="search-item dd-search-item"></div>
+        <div class="search-item dd-search-item"></div>
+      </div>
+    </div>
+    <div class="dd-popup language-popup" id="language-popup"><a class="language-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Язык</span></div>
+      <div class="input-search"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="dd-popup-search" type="search">
+      </div>
+      <div class="search-items dd-search-items">
+        <div class="search-item dd-search-item language-popup_close-btn"><span>Русский</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>English</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>Deutsch</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>Italiano</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>Español</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>中文</span></div>
+      </div>
+    </div>
     <div class="popup-map Log-form" id="popup-map"><a class="popup-map_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
       <div class="topline"><span>Местоположение</span></div>
       <div class="main-content">
@@ -110,8 +138,8 @@
             </div>
             <div class="dropmenu hide" id="languageSettings-dropmenu">
               <div class="line" id="header-popup-map"><span>Город: Москва</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
-              <div class="line"><span class="b">Язык: Русский</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
-              <div class="line"><span>Валюта: RUB (Russian Rouble)</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
+              <div class="line" id="header-language-popup"><span>Язык: Русский</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+              <div class="line" id="header-currency-popup"><span>Валюта: RUB (Russian Rouble)</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
             </div>
           </div>
           <div class="input-outer">
@@ -452,6 +480,20 @@
     		});
     	});
     
+    	$('#header-language-popup').click(function(){
+    		$('#language-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'language-popup_close-btn'
+    		});
+    	});
+    
+    	$('#header-currency-popup').click(function(){
+    		$('#currency-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'currency-popup_close-btn'
+    		});
+    	});
+    
     
     	$('.mapSelect').select2();
     
@@ -471,6 +513,18 @@
     			$(this).prev().val('');
     			$(this).prev().trigger('input')
     		})
+    	});
+    
+    	$('.dd-popup-search').on('input', function(){
+    		var str = $(this).val().toLowerCase();
+    		if (str.length <= 1){
+    			$('.dd-search-items .dd-search-item').show();
+    		}
+    		$('.dd-search-items .dd-search-item').each(function(){
+    			if ($(this).text().toLowerCase().indexOf(str) < 0){
+    				$(this).hide();
+    			}
+    		});
     	});
     
     
@@ -501,9 +555,11 @@
     
     	$('.btn-category').mouseenter(function(){
     		$('#subCategory-popup').show();
-    	}).mouseleave(function(){
+    	});
+    	$('.category-links').mouseleave(function(){
     		$('#subCategory-popup').hide();
     	});
+    
     });
   </script>
 </html>

@@ -53,8 +53,7 @@ body section.category-links .category-h1 a.active {
 
 body section.category-links .category-h2 {
   margin-top: 20px;
-  padding-left: 9%;
-  padding-right: 9%;
+  text-align: center;
 }
 
 body section.category-links .category-h2 a.btn-category {
@@ -94,12 +93,14 @@ body section.category-links .category-h2 a.btn-category.active {
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-body section.category-links .subCategory-popup {
+body section.category-links .category-h2 .subCategory-popup {
+  text-align: left;
   display: none;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   position: absolute;
   z-index: 300;
+  margin-top: -19px;
   top: 100%;
   left: 0;
   -webkit-border-radius: 5px;
@@ -111,13 +112,13 @@ body section.category-links .subCategory-popup {
   padding-right: 28px;
 }
 
-body section.category-links .subCategory-popup span.popup-head {
+body section.category-links .category-h2 .subCategory-popup span.popup-head {
   width: 100%;
   font-weight: bold;
   font-size: 20px;
 }
 
-body section.category-links .subCategory-popup .contentblock {
+body section.category-links .category-h2 .subCategory-popup .contentblock {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -127,11 +128,11 @@ body section.category-links .subCategory-popup .contentblock {
   display: flex;
 }
 
-body section.category-links .subCategory-popup .contentblock .subCategory-outer {
+body section.category-links .category-h2 .subCategory-popup .contentblock .subCategory-outer {
   width: 61%;
 }
 
-body section.category-links .subCategory-popup .contentblock .subCategory-outer .subCategory-section {
+body section.category-links .category-h2 .subCategory-popup .contentblock .subCategory-outer .subCategory-section {
   padding-top: 30px;
   padding-bottom: 15px;
   display: -webkit-flex;
@@ -143,22 +144,22 @@ body section.category-links .subCategory-popup .contentblock .subCategory-outer 
   display: flex;
 }
 
-body section.category-links .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column {
+body section.category-links .category-h2 .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column {
   width: 37%;
 }
 
-body section.category-links .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column .section-item.section-head {
+body section.category-links .category-h2 .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column .section-item.section-head {
   font-weight: bold;
   display: inline-block;
 }
 
-body section.category-links .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column .section-item {
+body section.category-links .category-h2 .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column .section-item {
   font-size: 13px;
   padding: 11px 0;
   width: 100%;
 }
 
-body section.category-links .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column .section-links {
+body section.category-links .category-h2 .subCategory-popup .contentblock .subCategory-outer .subCategory-section .subCategory-column .section-links {
   max-height: 320px;
   display: -webkit-flex;
   display: -moz-flex;
@@ -177,20 +178,20 @@ body section.category-links .subCategory-popup .contentblock .subCategory-outer 
           flex-wrap: wrap;
 }
 
-body section.category-links .subCategory-popup .contentblock .offer-section {
+body section.category-links .category-h2 .subCategory-popup .contentblock .offer-section {
   padding-top: 8px;
 }
 
-body section.category-links .subCategory-popup .contentblock .offer-section .desctext .text {
+body section.category-links .category-h2 .subCategory-popup .contentblock .offer-section .desctext .text {
   font-size: 13px;
   margin-top: 15px;
 }
 
-body section.category-links .subCategory-popup .contentblock .offer-section .desctext .headtext {
+body section.category-links .category-h2 .subCategory-popup .contentblock .offer-section .desctext .headtext {
   color: #808080;
 }
 
-body section.category-links .subCategory-popup .contentblock .offer-section .desctext .name {
+body section.category-links .category-h2 .subCategory-popup .contentblock .offer-section .desctext .name {
   font-weight: bold;
 }
 

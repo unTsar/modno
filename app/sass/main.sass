@@ -753,8 +753,14 @@ body
 	body
 		.container
 			width: 100%
-		main
-			section.category-links
-				.category-h2
-					padding-left: 5%
-					padding-right: 5%
+
+@media only screen and(max-width: 1024px)
+	body
+		header
+			.container
+				.languageSettings
+					display: none
+				.input-outer
+					display: none
+				a.logo
+					margin: 0 auto

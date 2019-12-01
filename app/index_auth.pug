@@ -34,58 +34,58 @@ block content
 						span Красота
 					a(href="#").btn-category
 						span.r Sale
-				.subCategory-popup#subCategory-popup
-					.contentblock
-						.subCategory-outer
-							span.popup-head Категории
-							.subCategory-section
-								.subCategory-column
-									.section-item.section-head
-										a(href="#").section-link Макияж
-									.section-links
-										.section-item
-											a(href="#").section-link Аксессуары
-										.section-item
-											a(href="#").section-link Брови
-										.section-item
-											a(href="#").section-link Глаза
-										.section-item
-											a(href="#").section-link Губы
-										.section-item
-											a(href="#").section-link Лицо
-								.subCategory-column
-									.section-item.section-head
-										a(href="#").section-link Уход за кожей
-									.section-links
-										.section-item
-											a(href="#").section-link Борьба с несовершенствами
-										.section-item
-											a(href="#").section-link Бронзанты и автозагар
-										.section-item
-											a(href="#").section-link Дезодоранты
-										.section-item
-											a(href="#").section-link Для ванны и душа
-										.section-item
-											a(href="#").section-link Косметические пренадлежности
-										.section-item
-											a(href="#").section-link Удаление волос
-										.section-item
-											a(href="#").section-link Уход для глаз и бровей
-										.section-item
-											a(href="#").section-link Уход для губ
-										.section-item
-											a(href="#").section-link Уход за лицом
-										.section-item
-											a(href="#").section-link Уход за ногами
-										.section-item
-											a(href="#").section-link Уход за руками
-										.section-item
-											a(href="#").section-link Уход за телом	
-						.offer-section
-							img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
-							.desctext
-								.text.headtext Предложение дня
-								.text.name Mango: одежда и обувь онлайн
+					.subCategory-popup#subCategory-popup
+						.contentblock
+							.subCategory-outer
+								span.popup-head Категории
+								.subCategory-section
+									.subCategory-column
+										.section-item.section-head
+											a(href="#").section-link Макияж
+										.section-links
+											.section-item
+												a(href="#").section-link Аксессуары
+											.section-item
+												a(href="#").section-link Брови
+											.section-item
+												a(href="#").section-link Глаза
+											.section-item
+												a(href="#").section-link Губы
+											.section-item
+												a(href="#").section-link Лицо
+									.subCategory-column
+										.section-item.section-head
+											a(href="#").section-link Уход за кожей
+										.section-links
+											.section-item
+												a(href="#").section-link Борьба с несовершенствами
+											.section-item
+												a(href="#").section-link Бронзанты и автозагар
+											.section-item
+												a(href="#").section-link Дезодоранты
+											.section-item
+												a(href="#").section-link Для ванны и душа
+											.section-item
+												a(href="#").section-link Косметические пренадлежности
+											.section-item
+												a(href="#").section-link Удаление волос
+											.section-item
+												a(href="#").section-link Уход для глаз и бровей
+											.section-item
+												a(href="#").section-link Уход для губ
+											.section-item
+												a(href="#").section-link Уход за лицом
+											.section-item
+												a(href="#").section-link Уход за ногами
+											.section-item
+												a(href="#").section-link Уход за руками
+											.section-item
+												a(href="#").section-link Уход за телом	
+							.offer-section
+								img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
+								.desctext
+									.text.headtext Предложение дня
+									.text.name Mango: одежда и обувь онлайн
 
 
 			section.swiper-block
@@ -204,9 +204,12 @@ block scripts
 			})
 
 			$('.btn-category').mouseenter(function(){
-				$('#subCategory-popup').show();
+				timeoutID = setTimeout(function(){
+					$('#subCategory-popup').show();
+				}, 100);
 			});
-			$('.category-links').mouseleave(function(){
+			$('.category-h2').mouseleave(function(){
+				clearTimeout(timeoutID);
 				$('#subCategory-popup').hide();
 			});
 

@@ -1162,8 +1162,16 @@ body footer .footer-bottomLine .payments img.payment-img {
   body .container {
     width: 100%;
   }
-  body main section.category-links .category-h2 {
-    padding-left: 5%;
-    padding-right: 5%;
+}
+
+@media only screen and (max-width: 1024px) {
+  body header .container .languageSettings {
+    display: none;
+  }
+  body header .container .input-outer {
+    display: none;
+  }
+  body header .container a.logo {
+    margin: 0 auto;
   }
 }

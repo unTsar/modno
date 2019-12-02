@@ -96,7 +96,7 @@ body section.category-links .category-h2 a.btn-category.active {
 body section.category-links .category-h2 .subCategory-popup {
   display: none;
   margin-top: -20px;
-  padding-top: 20px;
+  padding-top: 4px;
   position: absolute;
   z-index: 300;
   top: 100%;

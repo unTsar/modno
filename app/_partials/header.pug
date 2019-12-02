@@ -1,8 +1,12 @@
 header
 	.container
 		.headerLine
+			a.menu
+				button.hamburger.hamburger--elastic#header-menu-button(type="button")
+					span.hamburger-box
+						span.hamburger-inner
 			a(href="#").logo
-				img.img-logo(src="img/logo.jpg", alt="logo.jpg")
+				img.img-logo(src="img/logo.svg", alt="logo.svg")
 			.languageSettings
 				.languageSettings-button#languageSettings-button
 					img.flag(src="img/flag-russia.jpg", alt="flag-russia.jpg")
@@ -29,9 +33,9 @@ header
 					img.icon(src="img/search.svg", alt="search.svg")
 			.options
 				a(href="#").button-like
-					img(src="img/like.jpg", alt="like.jpg")
+					img(src="img/like.svg", alt="like.svg")
 				a(href="#").button-shopCart
-					img(src="img/shopCart.jpg", alt="shopCart.jpg")
+					img(src="img/shopCart.svg", alt="shopCart.svg")
 				a(href="#").buttonLogIn#header-btnLogIn
 					span Войти
 

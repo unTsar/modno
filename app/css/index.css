@@ -94,22 +94,14 @@ body section.category-links .category-h2 a.btn-category.active {
 }
 
 body section.category-links .category-h2 .subCategory-popup {
-  text-align: left;
   display: none;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin-top: -20px;
+  padding-top: 20px;
   position: absolute;
   z-index: 300;
-  margin-top: -19px;
   top: 100%;
   left: 0;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  background-color: #fff;
   width: 100%;
-  padding-top: 20px;
-  padding-left: 29px;
-  padding-right: 28px;
 }
 
 body section.category-links .category-h2 .subCategory-popup span.popup-head {
@@ -119,6 +111,15 @@ body section.category-links .category-h2 .subCategory-popup span.popup-head {
 }
 
 body section.category-links .category-h2 .subCategory-popup .contentblock {
+  text-align: left;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  padding-top: 20px;
+  padding-left: 29px;
+  padding-right: 28px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -212,6 +213,9 @@ body section.swiper-block {
 }
 
 body section.swiper-block .slide {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
   outline: none;
   vertical-align: top;
@@ -220,6 +224,11 @@ body section.swiper-block .slide {
   width: 150px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+}
+
+body section.swiper-block .slide:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 body section.swiper-block .slide-more {
@@ -520,6 +529,9 @@ body section.marketing-table .main-content .items-table {
 }
 
 body section.marketing-table .main-content .items-table .item {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -584,6 +596,11 @@ body section.marketing-table .main-content .items-table .item .tags .tag-img {
   width: 25px;
   height: 25px;
   margin-right: 3px;
+}
+
+body section.marketing-table .main-content .items-table .item:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 body section.marketing-table .marketing-navbar-bottom {

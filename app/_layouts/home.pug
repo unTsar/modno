@@ -21,6 +21,7 @@ html(lang="de")
 
 
 		link(rel="stylesheet", href="css/select2.css")
+		link(rel="stylesheet", href="css/hamburgers.min.css")
 		link(rel="stylesheet", href="css/main.css")
 
 		block styles
@@ -33,6 +34,85 @@ html(lang="de")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
+		.header-menu-popup-category#header-menu-popup-category
+			.head 
+				a(href="#").header-menu-category-close
+					img(src="img/arrow-left.svg", alt="arrow-left.svg")
+				span Бренды
+			.input-outer
+				img.img-search(src="img/search.svg", alt="search.svg")
+				input.input-search(type="search" placeholder="Поиск по брендам")
+			.links
+				a.link.header-menu-category-link(href="#") ACNE STUDIOS
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Absolutex
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Adidas
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Alexander MrQueen
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Alexander Wang
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Ann Demeulemeester
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Armani
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Asos
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Bagozza
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Balenciaga
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") ACNE STUDIOS
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Absolutex
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Adidas
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Alexander MrQueen
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Alexander Wang
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Ann Demeulemeester
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Armani
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Asos
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Bagozza
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-category-link(href="#") Balenciaga
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+			.offer-section
+				img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
+				.desctext
+					.text.headtext Предложение дня
+					.text.name Mango: одежда и обувь онлайн
+		.header-menu-popup#header-menu-popup
+			.head 
+				span Категории
+			.links
+				a.link.header-menu-link(href="#").g Новинки
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Бренды
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Одежда
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Обувь 
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Сумки
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Аксессуары
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Часы 
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Ювелирные украшения
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Парфюмерия
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#") Красота
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link.header-menu-link(href="#").r Sale
 		.dd-popup.currency-popup#currency-popup
 			a.currency-popup_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -288,6 +368,38 @@ html(lang="de")
 					}
 				});
 			});
+
+
+			//- Mobile
+
+			$('#header-menu-button').click(function(){
+				$(this).toggleClass('is-active');
+				if($('#header-menu-popup').hasClass('active')){
+					$('#header-menu-popup').hide();
+					$('body').removeClass('fixed');
+					$('#header-menu-popup').removeClass('active')
+				}else{
+					$('#header-menu-popup').show();
+					$('body').addClass('fixed');
+					$('#header-menu-popup').addClass('active')
+				}
+			});
+			$('.header-menu-link').click(function(){
+				if($('#header-menu-popup-category').hasClass('active')){
+					$('#header-menu-popup-category').hide();
+					$('#header-menu-popup-category').removeClass('active')
+				}else{
+					$('#header-menu-popup-category').show();
+					$('#header-menu-popup-category').addClass('active')
+				}
+			});
+			$('.header-menu-category-close').click(function(){
+				$('#header-menu-popup-category').hide();
+				$('#header-menu-popup-category').removeClass('active')
+			});
+
+
+
 
 
 

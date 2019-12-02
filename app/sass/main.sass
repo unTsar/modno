@@ -460,6 +460,112 @@ body
 					margin-top: 35px
 	main
 		padding-top: 16px
+	.header-menu-popup-category::-webkit-scrollbar
+		width: 0px
+		background: transparent
+	.header-menu-popup-category
+		overflow-y: scroll
+		position: absolute
+		z-index: 200
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: none
+		background-color: #fff
+		border-radius: 5px
+		margin-top: 90px
+		margin-left: 15px
+		margin-right: 15px
+		padding: 0 38px
+		padding-bottom: 15px
+		.head
+			padding: 22px 0
+			a.header-menu-category-close
+				margin-right: 40px
+			span
+				font-size: 30px
+				font-weight: bold
+		.input-outer
+			position: relative
+			margin-bottom: 25px
+			img.img-search
+				position: absolute
+				top: 0
+				bottom: 0
+				margin: auto
+				left: 0
+				margin-left: 13px
+				width: 18px
+			input.input-search
+				padding-left: 54px
+				height: 45px
+				width: 100%
+				border: 0.5px solid rgba(0, 0, 0, 0.3)
+				border-radius: 5px
+			input.input-search::-webkit-input-placeholder, input.input-search:-moz-placeholder, input.input-search::-moz-placeholder, input.input-search:-ms-input-placeholder
+				font-size: 15px
+				color: #808080
+		.links
+			a.link
+				width: 100%
+				font-size: 25px
+				display: inline-block
+				padding: 11px 0
+			img.separ
+				display: block
+				width: 100%
+				max-height: 2px
+		.offer-section
+			margin-top: 86px
+			.desctext
+				.text
+					font-size: 20px
+				.headtext
+					color: #808080
+				.name
+					font-size: 25px
+					font-weight: bold
+	.header-menu-popup::-webkit-scrollbar
+		width: 0px
+		background: transparent
+	.header-menu-popup
+		-ms-overflow-style: none
+		scrollbar-width: none
+		overflow-y: scroll
+		position: absolute
+		z-index: 100
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		display: none
+		background-color: #fff
+		border-radius: 5px
+		margin-top: 90px
+		margin-left: 15px
+		margin-right: 15px
+		padding: 0 38px
+		padding-bottom: 15px
+		.head
+			padding: 22px 0
+			span
+				font-size: 30px
+				font-weight: bold
+		.links
+			a.link
+				width: 100%
+				font-size: 25px
+				display: inline-block
+				padding: 11px 0
+			a.link.r
+				color: #ED1C24
+			a.link.g
+				color: #55BB00
+			img.separ
+				display: block
+				width: 100%
+				max-height: 2px
 	header
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25)
 		background-color: #fff
@@ -472,6 +578,21 @@ body
 			display: flex
 			height: 50px
 			align-items: center
+			a.menu
+				display: none
+				margin-top: 13px
+				button.hamburger
+					margin-left: 19px
+					padding: 0
+					outline: none
+					span.hamburger-box
+						width: 39px
+						height: 33px
+						span.hamburger-inner, span.hamburger-inner:after, span.hamburger-inner:before
+							width: 39px
+							height: 5px
+							background-color: #808080
+							border-radius: 5px
 			a.logo
 				img.img-logo
 					width: 70px
@@ -758,9 +879,37 @@ body
 	body
 		header
 			.container
-				.languageSettings
-					display: none
-				.input-outer
-					display: none
-				a.logo
-					margin: 0 auto
+				.headerLine
+					height: 75px
+					padding-right: 35px
+					a.menu
+						display: block
+					a.logo
+						margin-left: auto
+						margin-right: 10%	
+						img.img-logo
+							width: auto
+							height: 33px
+					.languageSettings
+						display: none
+					.input-outer
+						display: none
+					.options
+						margin: 0
+						a.button-like
+							height: 30px
+							img
+								width: auto
+								height: 30px
+						a.button-shopCart
+							height: 35px
+							img
+								width: auto
+								height: 35px
+						a.button-shopCart, a.buttonLogIn
+							margin-left: 55px
+						a.buttonLogIn
+							width: 126px
+							height: 45px
+							span
+								font-size: 20px

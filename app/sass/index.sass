@@ -47,25 +47,26 @@ body
 				background-color: rgba(0, 0, 0, 0.1)
 				box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 			.subCategory-popup
-				text-align: left
 				display: none
-				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+				margin-top: -20px
+				padding-top: 20px
 				position: absolute
 				z-index: 300
-				margin-top: -19px
 				top: 100%
 				left: 0
-				border-radius: 5px
-				background-color: #fff
 				width: 100%
-				padding-top: 20px
-				padding-left: 29px	
-				padding-right: 28px
 				span.popup-head
 					width: 100%
 					font-weight: bold
 					font-size: 20px
 				.contentblock
+					text-align: left
+					border-radius: 5px
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+					background-color: #fff
+					padding-top: 20px
+					padding-left: 29px
+					padding-right: 28px
 					display: -webkit-flex
 					display: -moz-flex
 					display: -ms-flex
@@ -119,6 +120,7 @@ body
 		padding-top: 15px
 		padding-bottom: 15px
 		.slide
+			transition: 0.3s
 			cursor: pointer
 			outline: none
 			vertical-align: top
@@ -126,6 +128,8 @@ body
 			height: 150px
 			width: 150px
 			border-radius: 5px
+		.slide:hover
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 		.slide-more
 			display: -webkit-inline-flex
 			display: -moz-inline-flex
@@ -321,6 +325,7 @@ body
 				width: 100%
 				flex-wrap: wrap
 				.item
+					transition: 0.3s
 					display: -webkit-flex
 					display: -moz-flex
 					display: -ms-flex
@@ -364,6 +369,8 @@ body
 							width: 25px
 							height: 25px
 							margin-right: 3px
+				.item:hover
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 		.marketing-navbar-bottom
 			position: relative
 			margin-bottom: 35px

@@ -13,10 +13,28 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
+    <div class="header-menu-popup-category" id="header-menu-popup-category">
+      <div class="head"> <a class="header-menu-category-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Бренды</span></div>
+      <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="input-search" type="search" placeholder="Поиск по брендам">
+      </div>
+      <div class="links"><a class="link header-menu-category-link" href="#">ACNE STUDIOS</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Absolutex</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Adidas</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Alexander MrQueen</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Alexander Wang</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Ann Demeulemeester</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Armani</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Asos</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Bagozza</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Balenciaga</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">ACNE STUDIOS</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Absolutex</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Adidas</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Alexander MrQueen</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Alexander Wang</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Ann Demeulemeester</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Armani</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Asos</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Bagozza</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-category-link" href="#">Balenciaga</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"></div>
+      <div class="offer-section"><img src="img/index/offer-section-img.jpg" alt="offer-section-img.jpg">
+        <div class="desctext">
+          <div class="text headtext">Предложение дня</div>
+          <div class="text name">Mango: одежда и обувь онлайн</div>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-popup" id="header-menu-popup">
+      <div class="head"> <span>Категории</span></div>
+      <div class="links"><a class="link header-menu-link g" href="#">Новинки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Бренды</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Обувь </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Сумки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Аксессуары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Часы </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Ювелирные украшения</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Парфюмерия</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link" href="#">Красота</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link header-menu-link r" href="#">Sale</a></div>
+    </div>
     <div class="dd-popup currency-popup" id="currency-popup"><a class="currency-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
       <div class="topline"><span>Валюта</span></div>
       <div class="input-search"><img class="img-search" src="img/search.svg" alt="search.svg">
@@ -127,7 +145,8 @@
     </div>
     <header>
       <div class="container">
-        <div class="headerLine"><a class="logo" href="#"><img class="img-logo" src="img/logo.jpg" alt="logo.jpg"></a>
+        <div class="headerLine"><a class="menu">
+            <button class="hamburger hamburger--elastic" id="header-menu-button" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a><a class="logo" href="#"><img class="img-logo" src="img/logo.svg" alt="logo.svg"></a>
           <div class="languageSettings">
             <div class="languageSettings-button" id="languageSettings-button"><img class="flag" src="img/flag-russia.jpg" alt="flag-russia.jpg"><span class="cityName">Москва</span>
               <div class="buttonOpen">
@@ -145,10 +164,32 @@
           <div class="input-outer">
             <input class="input-search" type="search" placeholder="Поиск по товарам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.svg" alt="search.svg"></a>
           </div>
-          <div class="options"><a class="button-like" href="#"><img src="img/like.jpg" alt="like.jpg"></a><a class="button-shopCart" href="#"><img src="img/shopCart.jpg" alt="shopCart.jpg"></a><a class="buttonLogIn" href="#" id="header-btnLogIn"><span>Войти</span></a></div>
+          <div class="options"><a class="button-like" href="#"><img src="img/like.svg" alt="like.svg"></a><a class="button-shopCart" href="#"><img src="img/shopCart.svg" alt="shopCart.svg"></a><a class="buttonLogIn" href="#" id="header-btnLogIn"><span>Войти</span></a></div>
         </div>
       </div>
     </header>
+    <footer>
+      <div class="footer-content">
+        <div class="container">
+          <div class="footer-content-wrapper">
+            <div class="banners"><img class="b1" src="img/banner1.jpg" alt="banner1.jpg"><img class="b2" src="img/banner2.jpg" alt="banner2.jpg"></div>
+            <div class="links"><span class="linkHead">О компании </span>
+              <div class="list"><a href="#">О нас </a><br><a href="#">Оферта </a><br><a href="#">Политика конфидециальности </a><br><a href="#">Бонусные баллы </a><br><a href="#">Подарочные сертификаты </a><br><a href="#">Карта сайта </a><br><a href="#">Контакты </a></div>
+            </div>
+            <div class="links"><span class="linkHead">Оформление заказа </span>
+              <div class="list"><a href="#">Доставка и оплата </a><br><a href="#">Возврат </a><br><a href="#">Способы оплаты </a><br><a href="#">Вопросы и ответы </a></div><br>
+            </div>
+            <div class="links"><span class="linkHead">Партнёрам </span>
+              <div class="list"><a href="#">Магазинам </a><br><a href="#">Моллам </a><br><a href="#">Веб мастерам </a><br><a href="#">Войти как партнер </a></div>
+            </div>
+            <div class="applinks"><a href="#"><img src="img/googleplay.jpg" alt="googleplay.jpg"></a><a href="#"><img src="img/appstore.jpg" alt="appstore.jpg"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottomLine"><span>&copy; 2010 - 2019 GoGroup.  Платформа для интернет-магазинов</span>
+        <div class="payments"><img class="payment-img" src="img/paypal.jpg" alt="paypal.jpg"><img class="payment-img" src="img/mastercard.jpg" alt="mastercard.jpg"><img class="payment-img" src="img/visa.jpg" alt="visa.jpg"></div>
+      </div>
+    </footer>
   </body>
   <script src="js/jquery.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
@@ -275,6 +316,38 @@
     			}
     		});
     	});
+    
+    
+    	//- Mobile
+    
+    	$('#header-menu-button').click(function(){
+    		$(this).toggleClass('is-active');
+    		if($('#header-menu-popup').hasClass('active')){
+    			$('#header-menu-popup').hide();
+    			$('body').removeClass('fixed');
+    			$('#header-menu-popup').removeClass('active')
+    		}else{
+    			$('#header-menu-popup').show();
+    			$('body').addClass('fixed');
+    			$('#header-menu-popup').addClass('active')
+    		}
+    	});
+    	$('.header-menu-link').click(function(){
+    		if($('#header-menu-popup-category').hasClass('active')){
+    			$('#header-menu-popup-category').hide();
+    			$('#header-menu-popup-category').removeClass('active')
+    		}else{
+    			$('#header-menu-popup-category').show();
+    			$('#header-menu-popup-category').addClass('active')
+    		}
+    	});
+    	$('.header-menu-category-close').click(function(){
+    		$('#header-menu-popup-category').hide();
+    		$('#header-menu-popup-category').removeClass('active')
+    	});
+    
+    
+    
     
     
     

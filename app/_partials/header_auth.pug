@@ -1,6 +1,10 @@
 header
 	.container
 		.headerLine
+			a.menu
+				button.hamburger.hamburger--elastic#header-menu-button(type="button")
+					span.hamburger-box
+						span.hamburger-inner
 			a(href="#").logo
 				img.img-logo(src="img/logo.svg", alt="logo.svg")
 			.languageSettings
@@ -12,16 +16,20 @@ header
 						.circle
 						.circle
 				.dropmenu#languageSettings-dropmenu.hide
-					.line#header-popup-map
-						span Город: Москва
+					.line#header-popup-map1
+						span #[span.black Город:] Москва
+						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.line#header-popup-map2
+						span #[span.black Доставка:] Москва
 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					.line#header-language-popup
-						span Язык: Русский
+						span #[span.black Язык:] Русский
 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					.line#header-currency-popup
-						span Валюта: RUB (Russian Rouble)
+						span #[span.black Валюта:] RUB (Russian Rouble)
 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
 			.input-outer
 				input.input-search(type="search" placeholder="Поиск по товарам")

@@ -131,19 +131,22 @@ body
 		.slide:hover
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 		.slide-more
-			display: -webkit-inline-flex
-			display: -moz-inline-flex
-			display: -ms-inline-flex
-			display: -o-inline-flex
-			display: inline-flex
-			justify-content: center
-			align-items: center
-			text-align: center
-			font-weight: bold
-			font-size: 15px
-			line-height: 1.4
-			color: #808080
 			background-color: #f2f2f2
+			.text
+				width: 100%
+				height: 100%
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				text-align: center
+				font-weight: bold
+				font-size: 15px
+				line-height: 1.4
+				color: #808080
 	section.marketing-table
 		.marketing-navbar
 			padding-top: 14px
@@ -169,6 +172,8 @@ body
 					font-size: 13px
 					font-weight: bold
 					color: #333
+			.buttonSwitch.mob
+				display: none
 			.buttonSwitch.active
 				box-shadow: inset 0px 4px 4px #bfbfbf
 				background-color: #F0F0F0
@@ -228,6 +233,54 @@ body
 			align-items: flex-start
 			padding-top: 15px
 			padding-bottom: 10px
+			.search-items.mob
+				position: relative
+				display: none
+				margin-bottom: 34px
+				input
+					width: 100%
+					height: 60px
+					padding-left: 49px
+					background-color: transparent
+					border: 0.5px solid #000000
+					border-radius: 5px
+					font-size: 19px
+					color: #000
+				input::-webkit-input-placeholder
+					font-size: 19px
+					color: #000
+					opacity: 0.5
+				input:-moz-placeholder
+					font-size: 19px
+					color: #000
+					opacity: 0.5
+				input::-moz-placeholder
+					font-size: 19px
+					color: #000
+					opacity: 0.5
+				input:-ms-input-placeholder
+					font-size: 19px
+					color: #000
+					opacity: 0.5
+				img.search
+					position: absolute
+					top: 0
+					bottom: 0
+					margin: auto
+					left: 0
+					margin-left: 18px
+					width: 19px
+				.filter-btn
+					position: absolute
+					right: 0
+					top: 0
+					bottom: 0
+					border-left: 0.5px solid #000000
+					cursor: pointer
+					text-align: center
+					img
+						opacity: 0.5
+						padding: 13px 28px 14px 26px
 			.sidebar
 				.number, .options
 					width: 252px
@@ -324,6 +377,27 @@ body
 				display: flex
 				width: 100%
 				flex-wrap: wrap
+				.btn-more.mob
+					transition: 0.3s
+					display: none
+					border-radius: 5px
+					border: 0.5px solid rgba(0, 0, 0, 0.3)
+					width: 200px
+					height: 60px
+					line-height: 60px
+					text-align: center
+					cursor: pointer
+					margin: 0 auto
+					span
+						transition: 0.3s
+						font-weight: bold
+						font-size: 21px
+						color: #000
+				.btn-more.mob:hover
+					background-color: $accent-blue
+					border-color: $accent-blue
+					span
+						color: #fff
 				.item
 					transition: 0.3s
 					display: -webkit-flex
@@ -339,6 +413,7 @@ body
 					margin-bottom: 10px
 					width: 49%
 					img.shop-preview
+						width: 72px
 						border-top-left-radius: 5px
 						border-bottom-left-radius: 5px
 						vertical-align: bottom
@@ -371,6 +446,68 @@ body
 							margin-right: 3px
 				.item:hover
 					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+			.items-table.mob
+				display: none
+				.category-h1
+					text-align: center
+					padding: 21px 0
+					a
+						margin: 0 18px
+						color: #000
+						font-size: 30px
+						font-weight: bold
+						opacity: 0.5
+						transition: 0.5s
+					a:hover
+						opacity: 1
+					a.active
+						opacity: 1
+				.category-item
+					transition: 0.3s
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					margin-bottom: 14px
+					background-color: #fff
+					border-radius: 5px
+					.name
+						font-size: 30px
+						color: #000
+						margin-left: 82px
+					.name.g
+						color: #55BB00
+					.name.r
+						color: #ED1C24
+				.category-item:hover
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+				.btns
+					margin-top: 20px
+					text-align: center
+					.btn
+						display: inline-block
+						padding: 19px 25px
+						margin: 0 7.5px
+						border-radius: 5px
+						span
+							font-size: 21px
+							font-weight: bold
+					.btn-logIn
+						background-color: $accent-blue
+						span
+							color: #fff
+					.btn-logUp
+						transition: 0.3s
+						border: 0.5px solid rgba(0, 0, 0, 0.3)
+						span
+							transition: 0.3s
+					.btn-logUp:hover
+						background-color: $accent-blue
+						border-color: $accent-blue
+						span
+							color: #fff
 		.marketing-navbar-bottom
 			position: relative
 			margin-bottom: 35px
@@ -384,7 +521,7 @@ body
 				cursor: pointer
 				width: 92px
 				height: 30px
-				border: 0.5px solid #000
+				border: 0.5px solid rgba(0, 0, 0, 0.3)
 				border-radius: 5px
 				text-align: center
 				span
@@ -459,4 +596,98 @@ body
 					span
 						color: #000
 
-
+@media only screen and(max-width: 1100px)
+	body
+		main
+			section.swiper-block 
+				.slide
+					width: 140px
+					height: 140px
+			section.marketing-table
+				.main-content
+					.items-table
+						.item
+							.head
+								padding-left: 5px
+@media only screen and(max-width: 1024px)
+	body
+		main
+			section.category-links
+				display: none
+			section.swiper-block
+				display: block
+				overflow-x: scroll
+				padding: 8px 0px
+				margin: 0 16px
+				white-space: nowrap
+				.slide
+					border-radius: 10px
+					display: inline-block
+					margin-right: 19px
+					width: 290px
+					height: auto
+				.slide-more
+					height: 290px
+					.text
+						font-size: 20px
+			section.marketing-table
+				.marketing-navbar-bottom
+					display: none
+				.marketing-navbar
+					margin-top: 26px
+					margin-bottom: 34px
+					padding: 19px 0
+					.input-outer
+						display: none
+					.buttonSwitch
+						padding-top: 21px
+						padding-bottom: 21px
+						margin: 0 28px
+						width: 165px
+						span
+							font-size: 22px
+					.buttonSwitch.mob
+						display: inline-block
+					.buttonSwitch.active
+						span
+							color: #000
+					.buttonSwitch:hover
+						span
+							color: #000
+				.main-content
+					padding-top: 0
+					padding-left: 15px
+					padding-right: 15px
+					display: block
+					.search-items.mob
+						display: block
+					.sidebar
+						display: none
+					.items-table
+						.btn-more.mob
+							display: block
+						.item
+							width: 100%
+							margin-left: 0
+							margin-bottom: 34px
+							.head
+								padding-left: 85px
+								span.name
+									font-size: 37px
+									padding: 23px 0
+								span.desc
+									font-size: 23px
+									margin-top: 0
+							.tags
+								padding-right: 40px
+								.category-text
+									font-size: 18px
+									padding: 20px 0
+									margin-bottom: 18px
+								.tag-img
+									width: 42px
+									height: 42px
+									margin-right: -5px
+									margin-left: 10px
+							img.shop-preview
+								width: 154px

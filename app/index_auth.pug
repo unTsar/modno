@@ -86,8 +86,6 @@ block content
 								.desctext
 									.text.headtext Предложение дня
 									.text.name Mango: одежда и обувь онлайн
-
-
 			section.swiper-block
 				img.slide(src="img/index/slide-img1.jpg", alt="slide-img1.jpg")
 				img.slide(src="img/index/slide-img2.jpg", alt="slide-img2.jpg")
@@ -96,20 +94,28 @@ block content
 				img.slide(src="img/index/slide-img5.jpg", alt="slide-img5.jpg")
 				img.slide(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
 				.slide.slide-more
-					|Смотреть
-					br
-					|всё
+					.text
+						|Смотреть
+						br
+						|всё
 			section.marketing-table
 				.marketing-navbar
 					.input-outer
 						input.input-search(type="search" placeholder="Поиск по магазинам")
 						a(href="#").buttonSearch
 							img.icon(src="img/search.svg", alt="search.svg")
+					.buttonSwitch.mob
+						span Товары
 					.buttonSwitch.active
 						span Магазины
 					.buttonSwitch
 						span Моллы
 				.main-content
+					.search-items.mob
+						input(type="search" placeholder="Поиск по товарам")
+						img.search(src="img/search.svg", alt="search.svg")
+						.filter-btn
+							img(src="img/filter-settings.svg", alt="filter-settings.svg")
 					.sidebar
 						.number
 							span.name Количество:
@@ -157,6 +163,8 @@ block content
 									img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
 									img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
 									img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+						.btn-more.mob
+							span Показать ещё
 				.marketing-navbar-bottom
 					.button.buttonMore
 						span Показать ещё

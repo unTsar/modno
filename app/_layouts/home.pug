@@ -1,5 +1,5 @@
 doctype html
-html(lang="de")
+html(lang="ru")
 	head
 		meta(charset="utf-8")
 
@@ -34,85 +34,322 @@ html(lang="de")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
-		.header-menu-popup-category#header-menu-popup-category
-			.head 
-				a(href="#").header-menu-category-close
-					img(src="img/arrow-left.svg", alt="arrow-left.svg")
-				span Бренды
-			.input-outer
-				img.img-search(src="img/search.svg", alt="search.svg")
-				input.input-search(type="search" placeholder="Поиск по брендам")
-			.links
-				a.link.header-menu-category-link(href="#") ACNE STUDIOS
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Absolutex
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Adidas
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Alexander MrQueen
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Alexander Wang
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Ann Demeulemeester
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Armani
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Asos
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Bagozza
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Balenciaga
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") ACNE STUDIOS
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Absolutex
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Adidas
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Alexander MrQueen
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Alexander Wang
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Ann Demeulemeester
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Armani
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Asos
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Bagozza
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-category-link(href="#") Balenciaga
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-			.offer-section
-				img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
-				.desctext
-					.text.headtext Предложение дня
-					.text.name Mango: одежда и обувь онлайн
-		.header-menu-popup#header-menu-popup
-			.head 
-				span Категории
-			.links
-				a.link.header-menu-link(href="#").g Новинки
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Бренды
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Одежда
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Обувь 
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Сумки
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Аксессуары
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Часы 
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Ювелирные украшения
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Парфюмерия
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#") Красота
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link.header-menu-link(href="#").r Sale
+		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-currency#hmenu-popup-main-currency
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Валюта
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search(type="search")
+				.links
+					.links-column
+						a.link(href="#") EUR (Euro)
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") USD (US Dollar)
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") RUB (Russian Rouble)
+		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-language#hmenu-popup-main-language
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Язык
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search(type="search")
+				.links
+					.links-column
+						a.link(href="#") Русский
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") English
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Deutsch
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Italiano
+		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-delivery#hmenu-popup-main-delivery
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Доставка
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search(type="search")
+				.links
+					.links-column
+						a.link(href="#") Москва 
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Санкт-Петербург
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Екатеринбург
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Краснодар
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Новосибирск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Красноярск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Челябинск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Ростов-на-Дону
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Тюмень
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Уфа
+					.links-column
+						a.link(href="#") Казань
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Пермь
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Нижний Новгород
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Самара
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Саратов
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Омск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Воронеж
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Волгоград
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Балашиха
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Хабаровск
+					.links-column
+						a.link(href="#") Иркутск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Томск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Сочи
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Ярославль
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Сургут
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Подольск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Мытищи
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Владивосток
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Калуга
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Пятигорск
+		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-city#hmenu-popup-main-city
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Город
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search(type="search")
+				.links
+					.links-column
+						a.link(href="#") Москва 
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Санкт-Петербург
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Екатеринбург
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Краснодар
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Новосибирск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Красноярск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Челябинск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Ростов-на-Дону
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Тюмень
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Уфа
+					.links-column
+						a.link(href="#") Казань
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Пермь
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Нижний Новгород
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Самара
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Саратов
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Омск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Воронеж
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Волгоград
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Балашиха
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Хабаровск
+					.links-column
+						a.link(href="#") Иркутск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Томск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Сочи
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Ярославль
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Сургут
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Подольск
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Мытищи
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Владивосток
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Калуга
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Пятигорск
+		.hmenu-popup-category.hmenu-popup.hmenu-popup-category1#hmenu-popup-category1
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Категории
+				.links
+					a.link.hmenu-link(href="#").g Новинки
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Бренды
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Одежда
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Обувь 
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Сумки
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Аксессуары
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Часы 
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Ювелирные украшения
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Парфюмерия
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Красота
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#").r Sale
+		.hmenu-popup-category.hmenu-popup.hmenu-popup-category2#hmenu-popup-category2
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head 
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Бренды
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search(type="search" placeholder="Поиск по брендам")
+				.links
+					a.link.hmenu-category-link(href="#") ACNE STUDIOS
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Absolutex
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Adidas
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Alexander MrQueen
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Alexander Wang
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Ann Demeulemeester
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Armani
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Asos
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Bagozza
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Balenciaga
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") ACNE STUDIOS
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Absolutex
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Adidas
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Alexander MrQueen
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Alexander Wang
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Ann Demeulemeester
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Armani
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Asos
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Bagozza
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Balenciaga
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.offer-section
+					img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
+					.desctext
+						.text.headtext Предложение дня
+						.text.name Mango: одежда и обувь онлайн
+		.hmenu-popup-category.hmenu-popup.hmenu-popup-category1#hmenu-popup-category1
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Категории
+				.links
+					a.link.hmenu-link(href="#").g Новинки
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Бренды
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Одежда
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Обувь 
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Сумки
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Аксессуары
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Часы 
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Ювелирные украшения
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Парфюмерия
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Красота
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#").r Sale
+		.hmenu-popup.hmenu-popup-main#hmenu-popup-main
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head 
+					span Категории
+				.links
+					a.link.hmenu-link(href="#") Женщины
+					img.separ(src="../img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Мужчины
+					img.separ(src="../img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-link(href="#") Дети
+			.outer
+				.links
+					a.link#hmenu-popup-main-city_btn(href="#") Город: #[span.val Москва]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
+					img.separ(src="../img/index/separ.svg", alt="separ.svg")
+					a.link#hmenu-popup-main-delivery_btn(href="#") Доставка: #[span.val Москва]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
+					img.separ(src="../img/index/separ.svg", alt="separ.svg")
+					a.link#hmenu-popup-main-language_btn(href="#") Язык: #[span.val Русский]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
+					img.separ(src="../img/index/separ.svg", alt="separ.svg")
+					a.link#hmenu-popup-main-currency_btn(href="#") Валюта: #[span.val RUB (Russian Rouble)]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 		.dd-popup.currency-popup#currency-popup
 			a.currency-popup_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -159,30 +396,50 @@ html(lang="de")
 				.search-item.dd-search-item.language-popup_close-btn
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					span 中文
-		.popup-map#popup-map.Log-form
-			a.popup-map_close-btn(href="#")
+		.popup-map.popup-map-delivery#popup-map2.Log-form
+			a.popup-map2_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Доставка
+			.input-outer
+				img.img-search(src="img/search.svg", alt="search.svg")
+				input.input-search.popup-map-input-search(type="search" placeholder="Введите город")
+				.search-results
+					.search-item
+						span Москва
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.search-item
+						span Санкт-Петербург
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.search-item
+						span Владивосток
+			.mapOuter
+				.map#map2
+			.map-buttons
+				a(href="#").map-btn.popup-map2_close-btn
+					span Запомнить
+		.popup-map.popup-map-city#popup-map1.Log-form
+			a.popup-map1_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
 				span Местоположение
-			.main-content
-				.mapOuter
-					.map#map
-				.selectOuter
-					.selectItem
-						.headtext Выберите город для поиска
-						select#mapSelect1.mapSelect(name="state")
-							option(value="Moscow" selected) Москва
-							option(value="SPB") Санкт-Петербург
-							option(value="Vladivostok") Владивосток
-					.selectItem
-						.headtext Выберите город для доставки
-						select#mapSelect2.mapSelect(name="state")
-							option(value="Moscow" selected) Москва
-							option(value="SPB") Санкт-Петербург
-							option(value="Vladivostok") Владивосток
-				.map-buttons
-					a(href="#").map-btn.popup-map_close-btn
-						span Готово
+			.input-outer
+				img.img-search(src="img/search.svg", alt="search.svg")
+				input.input-search.popup-map-input-search(type="search" placeholder="Введите город")
+				.search-results
+					.search-item
+						span Москва
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.search-item
+						span Санкт-Петербург
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					.search-item
+						span Владивосток
+			.mapOuter
+				.map#map1
+			.map-buttons
+				a(href="#").map-btn.popup-map1_close-btn
+					span Запомнить
 		.Log-form.LogIn-form#LogIn-form
 			a.LogIn-form_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -246,7 +503,6 @@ html(lang="de")
 	script(src="js/jquery.min.js")
 	script(src="js/svg4everybody.min.js")
 	script(src="js/jquery.bpopup.js")
-	script(src="js/select2.full.min.js")
 	script.
 		$(document).ready(function(){
 
@@ -306,10 +562,19 @@ html(lang="de")
 				});
 			});
 
-			$('#header-popup-map').click(function(){
-				$('#popup-map').bPopup({
+			$('#header-popup-map1').click(function(){
+				$('#popup-map1').bPopup({
 					positionStyle: 'fixed',
-					closeClass: 'popup-map_close-btn',
+					closeClass: 'popup-map1_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }
+									
+				});
+			});
+			$('#header-popup-map2').click(function(){
+				$('#popup-map2').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'popup-map2_close-btn',
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }
 									
@@ -326,6 +591,14 @@ html(lang="de")
 				});
 			});
 
+			$('.popup-map-input-search').focusin(function(){
+				$(this).siblings('.search-results').show()
+			});
+			$('.popup-map-input-search').focusout(function(){
+				$(this).siblings('.search-results').hide()
+			});
+
+
 			$('#header-currency-popup').click(function(){
 				$('#currency-popup').bPopup({
 					positionStyle: 'fixed',
@@ -333,27 +606,6 @@ html(lang="de")
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }
 									
-				});
-			});
-
-
-			$('.mapSelect').select2();
-
-			$('.select2').one('click', function(){
-				$('.select2-search--dropdown').prepend('<div class="select2-search--dropdown__search-img">')
-				$('.select2-search--dropdown').append('<div class="select2-search--dropdown__cross">')
-			});	
-			$('.select2').click(function(){
-				$('.select2-search__field').on('input', function(){
-					if(this.value.length){
-						$(this).next().css('display', 'block')
-					}else{
-						$(this).next().css('display', 'none')
-					}
-				});
-				$('.select2-search--dropdown__cross').click(function(){
-					$(this).prev().val('');
-					$(this).prev().trigger('input')
 				});
 			});
 
@@ -374,28 +626,60 @@ html(lang="de")
 
 			$('#header-menu-button').click(function(){
 				$(this).toggleClass('is-active');
-				if($('#header-menu-popup').hasClass('active')){
-					$('#header-menu-popup').hide();
-					$('body').removeClass('fixed');
-					$('#header-menu-popup').removeClass('active')
-				}else{
-					$('#header-menu-popup').show();
-					$('body').addClass('fixed');
-					$('#header-menu-popup').addClass('active')
+				$('#hmenu-popup-main').toggleClass('active');
+				$('#hmenu-popup-main').fadeToggle(250);
+				if($('.hmenu-popup').not('#hmenu-popup-main').hasClass('active')){
+					$('.hmenu-popup').removeClass('active');
+					$('.hmenu-popup').fadeOut(250);
 				}
+				$('body').toggleClass('fixed');
 			});
-			$('.header-menu-link').click(function(){
-				if($('#header-menu-popup-category').hasClass('active')){
-					$('#header-menu-popup-category').hide();
-					$('#header-menu-popup-category').removeClass('active')
-				}else{
-					$('#header-menu-popup-category').show();
-					$('#header-menu-popup-category').addClass('active')
-				}
+
+			$('.hmenu-popup-main .hmenu-link').click(function(){
+				$('#hmenu-popup-category1').toggleClass('active');
+				$('#hmenu-popup-category1').fadeToggle(250);
 			});
-			$('.header-menu-category-close').click(function(){
-				$('#header-menu-popup-category').hide();
-				$('#header-menu-popup-category').removeClass('active')
+			$('.hmenu-popup-category1 .hmenu-link').click(function(){
+				$('#hmenu-popup-category2').toggleClass('active');
+				$('#hmenu-popup-category2').fadeToggle(250);
+			});
+
+			$('.hmenu-popup-close').click(function(){
+				$('.hmenu-popup').fadeOut(250);
+				$('.hmenu-popup').removeClass('active')
+				$('#header-menu-button').removeClass('is-active')
+				$('body').removeClass('fixed');
+			});
+			$('.hmenu-popup-inner-close').click(function(){
+				$(this).parents('.hmenu-popup-category').fadeOut(250);
+				$(this).parents('.hmenu-popup-category').removeClass('active');
+				$(this).parents('.hmenu-popup-lSettings').fadeOut(250);
+				$(this).parents('.hmenu-popup-lSettings').removeClass('active');
+			});
+			$('#hmenu-popup-main-city_btn').click(function(){
+				$('#hmenu-popup-main-city').toggleClass('active');
+				$('#hmenu-popup-main-city').fadeToggle(250);
+			});
+			$('#hmenu-popup-main-delivery_btn').click(function(){
+				$('#hmenu-popup-main-delivery').toggleClass('active');
+				$('#hmenu-popup-main-delivery').fadeToggle(250);
+			});
+			$('#hmenu-popup-main-language_btn').click(function(){
+				$('#hmenu-popup-main-language').toggleClass('active');
+				$('#hmenu-popup-main-language').fadeToggle(250);
+			});
+			$('#hmenu-popup-main-currency_btn').click(function(){
+				$('#hmenu-popup-main-currency').toggleClass('active');
+				$('#hmenu-popup-main-currency').fadeToggle(250);
+			});
+
+
+
+			$('.footer-links-btn').click(function(){
+				$('.footer-links-btn').not(this).removeClass('active');
+				$('.footer-links-btn').not(this).next().slideUp(250);
+				$(this).next().slideToggle(250);
+				$(this).toggleClass('active');
 			});
 
 
@@ -406,9 +690,16 @@ html(lang="de")
 		});
 
 	script.
-		var map;
+		var map1;
+		var map2;
 		function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
+			map1 = new google.maps.Map(document.getElementById('map1'), {
+				center: {lat: 55.754095, lng: 37.616722},
+				zoom: 12,
+				streetViewControl: false,
+				mapTypeControl: false
+			});
+			map2 = new google.maps.Map(document.getElementById('map2'), {
 				center: {lat: 55.754095, lng: 37.616722},
 				zoom: 12,
 				streetViewControl: false,

@@ -406,8 +406,15 @@ body
 			.form-buttons
 				.form-btn
 					margin-top: 35px
+	.popup-map::-webkit-scrollbar
+			width: 0px
+			background: transparent
 	.popup-map
 		width: 738px
+		overflow-x: hidden
+		-ms-overflow-style: none
+		scrollbar-width: none
+		overflow-y: scroll
 		img.img-close
 			margin-top: 28px
 			margin-right: 25px
@@ -984,6 +991,33 @@ body
 
 @media only screen and(max-width: 1024px)
 	body
+		.popup-map
+			width: 100%
+			height: 100%
+			img.img-close
+				margin-top: 25px
+				margin-right: 60px
+			.topline
+				span
+					font-size: 25px
+			.input-outer
+				padding: 0 60px
+				margin-bottom: 30px
+				input.input-search
+					height: 50px
+					font-size: 19px
+				img.img-search
+					margin-left: 73px
+					width: 18px
+				.search-results
+					margin: 0 60px
+			.map-buttons
+				padding: 0 60px
+				.map-btn
+					height: 41px
+					span
+						font-size: 17px
+
 		.LogIn-form
 			width: 100%
 			height: 100%

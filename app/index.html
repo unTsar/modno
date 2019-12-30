@@ -18,6 +18,53 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
+    <div class="Log-form mk-filter-drop-popup" id="mk-filter-drop-popup"><a class="filter-drop-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><img class="img-inner-close filter-drop-popup_close-btn" src="../img/index/filter-drop-btn.svg" alt="filter-drop-btn.svg"><span>Сортировка по</span></div>
+      <div class="links"><a class="link" href="#">умолчанию</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">рейтингу</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">популярности</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">скидке</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">цене, дешевле</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">цене, дороже</a><a class="btn filter-drop-popup_close-btn" href="#"><span>Принять</span></a></div>
+    </div>
+    <div class="Log-form mk-filter-popup" id="mk-filter-popup"><a class="filter-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Фильтры</span></div>
+      <div class="links">
+        <div class="line mk-filter-popup-line mk-filter-drop-btn"><span class="span-link">Цена, <span class="rouble">&#8381;</span></span>
+          <div class="drop-btn"><span class="value">не важно</span><img class="img-drop" src="img/index/filter-drop-btn.svg" alt="filter-drop-btn.svg"></div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Безопасная сделка</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Товары со скидкой</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Товары с доставкой</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line mk-filter-drop-btn"><span class="span-link" href="#">Срок размещения</span>
+          <div class="drop-btn"><span class="value">за всё время</span><img class="img-drop" src="img/index/filter-drop-btn.svg" alt="filter-drop-btn.svg"></div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line mk-filter-drop-btn"><span class="span-link" href="#">Сортировка по</span>
+          <div class="drop-btn"><span class="value">по умолчанию</span><img class="img-drop" src="img/index/filter-drop-btn.svg" alt="filter-drop-btn.svg"></div>
+        </div><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a>
+      </div>
+    </div>
+    <div class="Log-form popup-profile-mob" id="popup-profile-mob"><a class="profile-mob_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Кабинет</span></div>
+      <div class="links"><a class="link" href="#">Мои заказы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Мои данные</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Мои сообщения (<span class="msg-val">3</span>)</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Отложенные товары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Подарочные сертификаты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link g" href="#">Подписки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Мои баллы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Отслеживание заказов</a>
+        <div class="track-input">
+          <input class="track-search" type="search" placeholder="Номер заказа">
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link profile-mob_close-btn" href="#">Выйти</a>
+      </div>
+    </div>
     <div class="hmenu-popup-lSettings hmenu-popup hmenu-popup-main-currency" id="hmenu-popup-main-currency">
       <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
         <div class="head"><a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Валюта</span></div>
@@ -40,19 +87,10 @@
         </div>
       </div>
     </div>
-    <div class="hmenu-popup-category hmenu-popup hmenu-popup-category1" id="hmenu-popup-category1">
-      <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
-        <div class="head"><a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Категории</span></div>
-        <div class="links"><a class="link hmenu-link g" href="#">Новинки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Бренды</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Обувь </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Сумки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Аксессуары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Часы </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Ювелирные украшения</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Парфюмерия</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Красота</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link r" href="#">Sale</a></div>
-      </div>
-    </div>
     <div class="hmenu-popup-category hmenu-popup hmenu-popup-category2" id="hmenu-popup-category2">
       <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
-        <div class="head"> <a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Бренды</span></div>
-        <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
-          <input class="input-search" type="search" placeholder="Поиск по брендам">
-        </div>
-        <div class="links"><a class="link hmenu-category-link" href="#">ACNE STUDIOS</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Absolutex</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Adidas</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Alexander MrQueen</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Alexander Wang</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Ann Demeulemeester</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Armani</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Asos</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Bagozza</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Balenciaga</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">ACNE STUDIOS</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Absolutex</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Adidas</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Alexander MrQueen</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Alexander Wang</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Ann Demeulemeester</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Armani</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Asos</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Bagozza</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Balenciaga</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"></div>
+        <div class="head"> <a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Одежда</span></div>
+        <div class="links"><a class="link hmenu-category-link" href="#">Блузы и рубашки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Брюки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Верхняя одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Вязаные костюмы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Джемперы, свитеры и кардиганы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Джинсы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Домашняя одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Комбинезоны</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Купальники и пляжная одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Носки, чулки и колготки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Пиджаки и костюмы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Платья и сарафаны</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Спортивные костюмы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Толстовки и свитшоты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Топы и майки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Туники</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Футболки поло</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Шорты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Одежда больших размеров</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Одежда для беременных</a></div>
         <div class="offer-section"><img src="img/index/offer-section-img.jpg" alt="offer-section-img.jpg">
           <div class="desctext">
             <div class="text headtext">Предложение дня</div>
@@ -64,7 +102,7 @@
     <div class="hmenu-popup-category hmenu-popup hmenu-popup-category1" id="hmenu-popup-category1">
       <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
         <div class="head"><a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Категории</span></div>
-        <div class="links"><a class="link hmenu-link g" href="#">Новинки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Бренды</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Обувь </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Сумки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Аксессуары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Часы </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Ювелирные украшения</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Парфюмерия</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Красота</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link r" href="#">Sale</a></div>
+        <div class="links"><a class="link hmenu-link g" href="#">Новинки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Обувь </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Сумки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Аксессуары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Часы </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Ювелирные украшения</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Парфюмерия</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Красота</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link r" href="#">Sale</a></div>
       </div>
     </div>
     <div class="hmenu-popup hmenu-popup-main" id="hmenu-popup-main">
@@ -190,7 +228,7 @@
     <header>
       <div class="container">
         <div class="headerLine"><a class="menu">
-            <button class="hamburger hamburger--elastic" id="header-menu-button" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a><a class="logo" href="#"><img class="img-logo" src="img/logo.svg" alt="logo.svg"></a>
+            <button class="hamburger hamburger--elastic" id="header-menu-button" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a><a class="button-like mob" href="#"><img src="img/like.svg" alt="like.svg"></a><a class="logo" href="#"><img class="img-logo" src="img/logo.svg" alt="logo.svg"></a><a class="button-shopCart mob" href="#"><img src="img/shopCart.svg" alt="shopCart.svg"></a>
           <div class="languageSettings">
             <div class="languageSettings-button" id="languageSettings-button"><img class="flag" src="img/flag-russia.jpg" alt="flag-russia.jpg"><span class="cityName">Москва</span>
               <div class="buttonOpen">
@@ -262,8 +300,10 @@
           </div>
         </section>
         <section class="swiper-block"><img class="slide" src="img/index/slide-img1.jpg" alt="slide-img1.jpg"><img class="slide" src="img/index/slide-img2.jpg" alt="slide-img2.jpg"><img class="slide" src="img/index/slide-img3.jpg" alt="slide-img3.jpg"><img class="slide" src="img/index/slide-img4.jpg" alt="slide-img4.jpg"><img class="slide" src="img/index/slide-img5.jpg" alt="slide-img5.jpg"><img class="slide" src="img/index/slide-img6.jpg" alt="slide-img6.jpg">
-          <div class="slide slide-more">
-            <div class="text">Смотреть<br>всё</div>
+          <div class="slide slide-more-outer"><img class="slide" src="img/index/slide-img6.jpg" alt="slide-img6.jpg">
+            <div class="slide-more">
+              <div class="text">Смотреть<br>всё</div>
+            </div>
           </div>
         </section>
         <section class="marketing-table">
@@ -273,13 +313,9 @@
             </div>
             <div class="mknav-buttonSwitch products buttonSwitch mob"><span>Товары</span></div>
             <div class="mknav-buttonSwitch shops buttonSwitch active"><span>Магазины</span></div>
-            <div class="mknav-buttonSwitch buttonSwitch"><span>Моллы</span></div>
+            <div class="mknav-buttonSwitch molls buttonSwitch"><span>Моллы</span></div>
           </div>
-          <div class="main-content">
-            <div class="search-items mob">
-              <input type="search" placeholder="Поиск по товарам"><img class="search" src="img/search.svg" alt="search.svg">
-              <div class="filter-btn"><img src="img/filter-settings.svg" alt="filter-settings.svg"></div>
-            </div>
+          <div class="main-content" id="mk-main-content">
             <div class="sidebar">
               <div class="number"><span class="name">Количество:</span><span class="value">2328</span></div>
               <div class="options">
@@ -320,162 +356,343 @@
                 </div>
               </div>
             </div>
-            <div class="items-table shops">
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+            <div class="items-table molls">
+              <div class="content">
+                <div class="search-items mob">
+                  <input type="search" placeholder="Поиск по моллам"><img class="search" src="img/search.svg" alt="search.svg">
+                  <div class="filter-btn mk-filter-btn"><img src="img/filter-settings.svg" alt="filter-settings.svg"></div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
-                <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
-                <div class="tags">
-                  <div class="category-text">Монобрендовый</div><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg">
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
                 </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="btn-more mob"><span>Показать ещё</span></div>
               </div>
-              <div class="btn-more mob"><span>Показать ещё</span></div>
+            </div>
+            <div class="items-table shops active" style="display: block">
+              <div class="content">
+                <div class="search-items mob">
+                  <input type="search" placeholder="Поиск по магазинам"><img class="search" src="img/search.svg" alt="search.svg">
+                  <div class="filter-btn mk-filter-btn"><img src="img/filter-settings.svg" alt="filter-settings.svg"></div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
+                  <div class="content">
+                    <div class="head"><span class="name">Affiction</span><span class="desc">Russia, Moscow, Ходынский бульвар, д. 4</span></div>
+                    <div class="category-text">Монобрендовый</div>
+                    <div class="tags"><img class="tag-img" src="img/index/tag1.svg" alt="tag1.svg"><img class="tag-img" src="img/index/tag2.svg" alt="tag2.svg"><img class="tag-img" src="img/index/tag3.svg" alt="tag3.svg"></div>
+                  </div>
+                </div>
+                <div class="btn-more mob"><span>Показать ещё</span></div>
+              </div>
             </div>
             <div class="items-table products mob">
-              <div class="category-h1"><a class="active" href="#">Женщинам</a><a href="#">Мужчинам</a><a href="#">Детям</a></div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name g">Новинки</div>
+              <div class="content">
+                <div class="search-items mob">
+                  <input type="search" placeholder="Поиск по товарам"><img class="search" src="img/search.svg" alt="search.svg">
+                  <div class="filter-btn mk-filter-btn"><img src="img/filter-settings.svg" alt="filter-settings.svg"></div>
+                </div>
+                <div class="category-h1"><a class="active" href="#">Женщины</a><a href="#">Мужчины</a><a href="#">Дети</a></div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name g">Новинки</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Одежда</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Обувь</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Сумки</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Аксессуары</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Часы</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Ювелирные украшения</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Парфюмерия</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name">Красота</div>
+                </div>
+                <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
+                  <div class="name r">Sale</div>
+                </div>
+                <div class="btns"><a class="btn btn-logIn" href="#" id="mk-products-btnLogIn"><span>Войти</span></a><a class="btn btn-logUp" href="#" id="mk-products-btnLogUp"><span>Зарегистрироваться</span></a></div>
               </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Одежда</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Обувь</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Сумки</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Аксессуары</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Часы</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Ювелирные украшения</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Парфюмерия</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name">Красота</div>
-              </div>
-              <div class="category-item"><img src="img/index/category-item-img.jpg" alt="category-item-img.jpg">
-                <div class="name r">Sale</div>
-              </div>
-              <div class="btns"><a class="btn btn-logIn" href="#" id="mk-products-btnLogIn"><span>Войти</span></a><a class="btn btn-logUp" href="#" id="mk-products-btnLogUp"><span>Зарегестрироваться</span></a></div>
             </div>
           </div>
           <div class="marketing-navbar-bottom">
@@ -548,12 +765,21 @@
     	});
     
     	$('#buttonProfile').click(function(){
-    		if ($('#profile-dropdown').hasClass('hide')){
-    			$('#profile-dropdown').fadeIn(50)
-    			$('#profile-dropdown').removeClass('hide');
+    		if($(window).width() >= 1025){
+    			if ($('#profile-dropdown').hasClass('hide')){
+    				$('#profile-dropdown').fadeIn(50)
+    				$('#profile-dropdown').removeClass('hide');
+    			}else{
+    				$('#profile-dropdown').fadeOut(100)
+    				$('#profile-dropdown').addClass('hide')
+    			}
     		}else{
-    			$('#profile-dropdown').fadeOut(100)
-    			$('#profile-dropdown').addClass('hide')
+    			$('#popup-profile-mob').bPopup({
+    				positionStyle: 'fixed',
+    				closeClass: 'profile-mob_close-btn',
+    				onOpen: function() { $('body').addClass('fixed'); },
+    				onClose: function() { $('body').removeClass('fixed') }				
+    			});
     		}
     	});
     
@@ -685,17 +911,13 @@
     	$('#hmenu-popup-main-city_btn').click(function(){
     		$('#popup-map1').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'popup-map1_close-btn',
-    			onOpen: function() { $('body').addClass('fixed'); },
-    			onClose: function() { $('body').removeClass('fixed') }			
+    			closeClass: 'popup-map1_close-btn'		
     		});
     	});
     	$('#hmenu-popup-main-delivery_btn').click(function(){
     		$('#popup-map2').bPopup({
     			positionStyle: 'fixed',
-    			closeClass: 'popup-map2_close-btn',
-    			onOpen: function() { $('body').addClass('fixed'); },
-    			onClose: function() { $('body').removeClass('fixed') }			
+    			closeClass: 'popup-map2_close-btn'		
     		});
     	});
     	$('#hmenu-popup-main-language_btn').click(function(){
@@ -707,6 +929,41 @@
     		$('#hmenu-popup-main-currency').fadeToggle(250);
     	});
     
+    	$('.mk-filter-btn').click(function(){
+    		$('#mk-filter-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'filter-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    	});
+    	$('.mk-filter-drop-btn').click(function(){
+    		$('#mk-filter-drop-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'filter-drop-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    	});
+    
+    	$('.mk-filter-popup-line').click(function(){
+    		if($(this).find('.option-checkbox').is(':checked')){
+    			$(this).find('.option-checkbox').prop('checked', false);
+    			$(this).removeClass('checked');
+    		}else{
+    			$(this).find('.option-checkbox').prop('checked', true);
+    			$(this).addClass('checked');
+    		}
+    	});
+    	$('.mk-filter-popup-line .option-checkbox').click(function(){
+    		if($(this).is(':checked')){
+    			$(this).prop('checked', false);
+    			$(this).parents('.line').removeClass('checked');
+    		}else{
+    			$(this).prop('checked', true);
+    			$(this).parents('.line').addClass('checked');
+    		}
+    	});
     
     
     	$('.footer-links-btn').click(function(){
@@ -716,6 +973,13 @@
     		$(this).toggleClass('active');
     	});
     
+    	$(window).resize(function(){
+    		if($(window).width() >= 1025){
+    			$('.footer-links-btn').next().show();
+    		}else{
+    			$('.footer-links-btn').next().hide();
+    		}
+    	});
     
     
     
@@ -761,18 +1025,43 @@
     		clearTimeout(timeoutID);
     		$('#subCategory-popup').hide();
     	});
-    
     	$('.mknav-buttonSwitch').click(function(){
-    		$(this).addClass('active')
-    		$('.mknav-buttonSwitch').not(this).removeClass('active')
+    		$(this).addClass('active');
+    		$('.mknav-buttonSwitch').not(this).removeClass('active');
+    		$('.mknav-buttonSwitch').addClass('disabled');
+    		setTimeout(function(){
+    			$('.mknav-buttonSwitch').removeClass('disabled');
+    		}, 350);
     	});
     	$('.mknav-buttonSwitch.shops').click(function(){
+    		$('.marketing-table .items-table').removeClass('active');
     		$('.marketing-table .items-table').fadeOut(250);
-    		$('.marketing-table .items-table.shops').fadeIn(250);
+    		setTimeout(function(){
+    			$('.marketing-table .items-table.shops').addClass('active');
+    			$('.marketing-table .items-table.shops').fadeIn(250);
+    		}, 250);
+    	});
+    	$('.mknav-buttonSwitch.molls').click(function(){
+    		$('.marketing-table .items-table').removeClass('active');
+    		$('.marketing-table .items-table').fadeOut(250);
+    		setTimeout(function(){
+    			$('.marketing-table .items-table.molls').addClass('active');
+    			$('.marketing-table .items-table.molls').fadeIn(250);
+    		}, 250);
     	});
     	$('.mknav-buttonSwitch.products').click(function(){
+    		$('.marketing-table .items-table').removeClass('active');
     		$('.marketing-table .items-table').fadeOut(250);
-    		$('.marketing-table .items-table.products').fadeIn(250);
+    		setTimeout(function(){
+    			$('.marketing-table .items-table.products').addClass('active');
+    			$('.marketing-table .items-table.products').fadeIn(250);
+    		}, 250);
+    	});
+    	$(window).resize(function(){
+    		if($(window).width() >= 1025){
+    			$('.marketing-table .items-table.products').removeClass('active');
+    			$('.marketing-table .items-table.products').fadeOut(250);
+    		}
     	});
     
     	$('#mk-products-btnLogIn').click(function(){

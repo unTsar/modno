@@ -34,6 +34,99 @@ html(lang="ru")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
+		.Log-form.mk-filter-drop-popup#mk-filter-drop-popup
+			a.filter-drop-popup_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				img.img-inner-close.filter-drop-popup_close-btn(src="../img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+				span Сортировка по
+			.links
+				a.link(href="#") умолчанию
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") рейтингу
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") популярности
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") скидке
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") цене, дешевле
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") цене, дороже
+				a(href="#").btn.filter-drop-popup_close-btn
+					span Принять
+		.Log-form.mk-filter-popup#mk-filter-popup
+			a.filter-popup_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Фильтры
+			.links
+				.line.mk-filter-popup-line.mk-filter-drop-btn
+					span.span-link Цена, #[span.rouble &#8381;]
+					.drop-btn
+						span.value не важно
+						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Безопасная сделка
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Товары со скидкой
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Товары с доставкой
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line.mk-filter-drop-btn
+					span.span-link(href="#") Срок размещения
+					.drop-btn
+						span.value за всё время
+						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line.mk-filter-drop-btn
+					span.span-link(href="#") Сортировка по
+					.drop-btn
+						span.value по умолчанию
+						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+				a(href="#").btn.filter-popup_close-btn
+					span Принять
+
+		.Log-form.popup-profile-mob#popup-profile-mob
+			a.profile-mob_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Кабинет
+			.links
+				a.link(href="#") Мои заказы
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") Мои данные
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") Мои сообщения (#[span.msg-val 3])
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") Отложенные товары
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") Подарочные сертификаты
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#").g Подписки
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") Мои баллы
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#") Отслеживание заказов
+				.track-input
+					input.track-search(type="search" placeholder="Номер заказа")
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				a.link(href="#").profile-mob_close-btn Выйти
+
 		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-currency#hmenu-popup-main-currency
 			.outer
 				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
@@ -212,86 +305,53 @@ html(lang="ru")
 		//- 				a.link(href="#") Калуга
 		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
 		//- 				a.link(href="#") Пятигорск
-		.hmenu-popup-category.hmenu-popup.hmenu-popup-category1#hmenu-popup-category1
-			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
-				.head
-					a(href="#").hmenu-popup-inner-close
-						img(src="img/arrow-left.svg", alt="arrow-left.svg")
-					span Категории
-				.links
-					a.link.hmenu-link(href="#").g Новинки
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Бренды
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Одежда
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Обувь 
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Сумки
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Аксессуары
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Часы 
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Ювелирные украшения
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Парфюмерия
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Красота
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#").r Sale
 		.hmenu-popup-category.hmenu-popup.hmenu-popup-category2#hmenu-popup-category2
 			.outer
 				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
 				.head 
 					a(href="#").hmenu-popup-inner-close
 						img(src="img/arrow-left.svg", alt="arrow-left.svg")
-					span Бренды
-				.input-outer
-					img.img-search(src="img/search.svg", alt="search.svg")
-					input.input-search(type="search" placeholder="Поиск по брендам")
+					span Одежда
 				.links
-					a.link.hmenu-category-link(href="#") ACNE STUDIOS
+					a.link.hmenu-category-link(href="#") Блузы и рубашки
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Absolutex
+					a.link.hmenu-category-link(href="#") Брюки
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Adidas
+					a.link.hmenu-category-link(href="#") Верхняя одежда
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Alexander MrQueen
+					a.link.hmenu-category-link(href="#") Вязаные костюмы
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Alexander Wang
+					a.link.hmenu-category-link(href="#") Джемперы, свитеры и кардиганы
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Ann Demeulemeester
+					a.link.hmenu-category-link(href="#") Джинсы
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Armani
+					a.link.hmenu-category-link(href="#") Домашняя одежда
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Asos
+					a.link.hmenu-category-link(href="#") Комбинезоны
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Bagozza
+					a.link.hmenu-category-link(href="#") Купальники и пляжная одежда
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Balenciaga
+					a.link.hmenu-category-link(href="#") Носки, чулки и колготки
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") ACNE STUDIOS
+					a.link.hmenu-category-link(href="#") Пиджаки и костюмы
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Absolutex
+					a.link.hmenu-category-link(href="#") Платья и сарафаны
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Adidas
+					a.link.hmenu-category-link(href="#") Спортивные костюмы
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Alexander MrQueen
+					a.link.hmenu-category-link(href="#") Толстовки и свитшоты
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Alexander Wang
+					a.link.hmenu-category-link(href="#") Топы и майки
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Ann Demeulemeester
+					a.link.hmenu-category-link(href="#") Туники
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Armani
+					a.link.hmenu-category-link(href="#") Футболки поло
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Asos
+					a.link.hmenu-category-link(href="#") Шорты
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Bagozza
+					a.link.hmenu-category-link(href="#") Одежда больших размеров
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-category-link(href="#") Balenciaga
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link.hmenu-category-link(href="#") Одежда для беременных
 				.offer-section
 					img(src="img/index/offer-section-img.jpg", alt="offer-section-img.jpg")
 					.desctext
@@ -306,8 +366,6 @@ html(lang="ru")
 					span Категории
 				.links
 					a.link.hmenu-link(href="#").g Новинки
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Бренды
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					a.link.hmenu-link(href="#") Одежда
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
@@ -522,12 +580,21 @@ html(lang="ru")
 			});
 
 			$('#buttonProfile').click(function(){
-				if ($('#profile-dropdown').hasClass('hide')){
-					$('#profile-dropdown').fadeIn(50)
-					$('#profile-dropdown').removeClass('hide');
+				if($(window).width() >= 1025){
+					if ($('#profile-dropdown').hasClass('hide')){
+						$('#profile-dropdown').fadeIn(50)
+						$('#profile-dropdown').removeClass('hide');
+					}else{
+						$('#profile-dropdown').fadeOut(100)
+						$('#profile-dropdown').addClass('hide')
+					}
 				}else{
-					$('#profile-dropdown').fadeOut(100)
-					$('#profile-dropdown').addClass('hide')
+					$('#popup-profile-mob').bPopup({
+						positionStyle: 'fixed',
+						closeClass: 'profile-mob_close-btn',
+						onOpen: function() { $('body').addClass('fixed'); },
+						onClose: function() { $('body').removeClass('fixed') }				
+					});
 				}
 			});
 
@@ -659,17 +726,13 @@ html(lang="ru")
 			$('#hmenu-popup-main-city_btn').click(function(){
 				$('#popup-map1').bPopup({
 					positionStyle: 'fixed',
-					closeClass: 'popup-map1_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
+					closeClass: 'popup-map1_close-btn'		
 				});
 			});
 			$('#hmenu-popup-main-delivery_btn').click(function(){
 				$('#popup-map2').bPopup({
 					positionStyle: 'fixed',
-					closeClass: 'popup-map2_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
+					closeClass: 'popup-map2_close-btn'		
 				});
 			});
 			$('#hmenu-popup-main-language_btn').click(function(){
@@ -681,6 +744,41 @@ html(lang="ru")
 				$('#hmenu-popup-main-currency').fadeToggle(250);
 			});
 
+			$('.mk-filter-btn').click(function(){
+				$('#mk-filter-popup').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'filter-popup_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+			});
+			$('.mk-filter-drop-btn').click(function(){
+				$('#mk-filter-drop-popup').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'filter-drop-popup_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+			});
+
+			$('.mk-filter-popup-line').click(function(){
+				if($(this).find('.option-checkbox').is(':checked')){
+					$(this).find('.option-checkbox').prop('checked', false);
+					$(this).removeClass('checked');
+				}else{
+					$(this).find('.option-checkbox').prop('checked', true);
+					$(this).addClass('checked');
+				}
+			});
+			$('.mk-filter-popup-line .option-checkbox').click(function(){
+				if($(this).is(':checked')){
+					$(this).prop('checked', false);
+					$(this).parents('.line').removeClass('checked');
+				}else{
+					$(this).prop('checked', true);
+					$(this).parents('.line').addClass('checked');
+				}
+			});
 
 
 			$('.footer-links-btn').click(function(){
@@ -690,6 +788,13 @@ html(lang="ru")
 				$(this).toggleClass('active');
 			});
 
+			$(window).resize(function(){
+				if($(window).width() >= 1025){
+					$('.footer-links-btn').next().show();
+				}else{
+					$('.footer-links-btn').next().hide();
+				}
+			});
 
 
 

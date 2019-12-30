@@ -213,6 +213,7 @@ body section.swiper-block {
 }
 
 body section.swiper-block .slide {
+  position: relative;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -231,7 +232,19 @@ body section.swiper-block .slide:hover {
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+body section.swiper-block .slide-more-outer img {
+  opacity: 0;
+}
+
 body section.swiper-block .slide-more {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   background-color: #f2f2f2;
 }
 
@@ -288,6 +301,10 @@ body section.marketing-table .marketing-navbar .buttonSwitch {
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   opacity: 0.75;
   font-size: 13px;
   font-weight: bold;
@@ -302,6 +319,10 @@ body section.marketing-table .marketing-navbar .buttonSwitch.active {
   -webkit-box-shadow: inset 0px 4px 4px #bfbfbf;
           box-shadow: inset 0px 4px 4px #bfbfbf;
   background-color: #F0F0F0;
+}
+
+body section.marketing-table .marketing-navbar .buttonSwitch.disabled {
+  pointer-events: none;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch:hover {
@@ -388,6 +409,7 @@ body section.marketing-table .main-content {
 }
 
 body section.marketing-table .main-content .search-items.mob {
+  width: 100%;
   position: relative;
   display: none;
   margin-bottom: 34px;
@@ -401,30 +423,30 @@ body section.marketing-table .main-content .search-items.mob input {
   border: 0.5px solid #000000;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  font-size: 19px;
+  font-size: 22px;
   color: #000;
 }
 
 body section.marketing-table .main-content .search-items.mob input::-webkit-input-placeholder {
-  font-size: 19px;
+  font-size: 22px;
   color: #000;
   opacity: 0.5;
 }
 
 body section.marketing-table .main-content .search-items.mob input:-moz-placeholder {
-  font-size: 19px;
+  font-size: 22px;
   color: #000;
   opacity: 0.5;
 }
 
 body section.marketing-table .main-content .search-items.mob input::-moz-placeholder {
-  font-size: 19px;
+  font-size: 22px;
   color: #000;
   opacity: 0.5;
 }
 
 body section.marketing-table .main-content .search-items.mob input:-ms-input-placeholder {
-  font-size: 19px;
+  font-size: 22px;
   color: #000;
   opacity: 0.5;
 }
@@ -591,6 +613,10 @@ body section.marketing-table .main-content .sidebar .options .line .buttonOpSw.r
 }
 
 body section.marketing-table .main-content .items-table {
+  display: none;
+}
+
+body section.marketing-table .main-content .items-table .content {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -598,13 +624,12 @@ body section.marketing-table .main-content .items-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
 
-body section.marketing-table .main-content .items-table .btn-more.mob {
+body section.marketing-table .main-content .items-table .content .btn-more.mob {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -620,7 +645,7 @@ body section.marketing-table .main-content .items-table .btn-more.mob {
   margin: 0 auto;
 }
 
-body section.marketing-table .main-content .items-table .btn-more.mob span {
+body section.marketing-table .main-content .items-table .content .btn-more.mob span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -629,26 +654,23 @@ body section.marketing-table .main-content .items-table .btn-more.mob span {
   color: #000;
 }
 
-body section.marketing-table .main-content .items-table .btn-more.mob:hover {
+body section.marketing-table .main-content .items-table .content .btn-more.mob:hover {
   background-color: #157EE1;
   border-color: #157EE1;
 }
 
-body section.marketing-table .main-content .items-table .btn-more.mob:hover span {
+body section.marketing-table .main-content .items-table .content .btn-more.mob:hover span {
   color: #fff;
 }
 
-body section.marketing-table .main-content .items-table .item {
+body section.marketing-table .main-content .items-table .content .category-item, body section.marketing-table .main-content .items-table .content .category-h1, body section.marketing-table .main-content .items-table .content .btns {
+  width: 100%;
+}
+
+body section.marketing-table .main-content .items-table .content .item {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   cursor: pointer;
   background-color: #fff;
@@ -657,59 +679,72 @@ body section.marketing-table .main-content .items-table .item {
   margin-left: 1%;
   margin-bottom: 10px;
   width: 49%;
+  font-size: 0;
+  letter-spacing: 0;
+  word-spacing: 0;
 }
 
-body section.marketing-table .main-content .items-table .item img.shop-preview {
+body section.marketing-table .main-content .items-table .content .item img.shop-preview, body section.marketing-table .main-content .items-table .content .item .content {
+  display: inline-block;
+  vertical-align: top;
+}
+
+body section.marketing-table .main-content .items-table .content .item img.shop-preview {
   width: 72px;
   -webkit-border-top-left-radius: 5px;
           border-top-left-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
           border-bottom-left-radius: 5px;
-  vertical-align: bottom;
 }
 
-body section.marketing-table .main-content .items-table .item .head {
+body section.marketing-table .main-content .items-table .content .item .content .head {
   padding-left: 23px;
 }
 
-body section.marketing-table .main-content .items-table .item .head span {
+body section.marketing-table .main-content .items-table .content .item .content .head span {
   display: block;
   line-height: 1.4;
 }
 
-body section.marketing-table .main-content .items-table .item .head span.name {
+body section.marketing-table .main-content .items-table .content .item .content .head span.name {
   padding: 11px 0;
   font-size: 14px;
   font-weight: bold;
   color: #000;
 }
 
-body section.marketing-table .main-content .items-table .item .head span.desc {
+body section.marketing-table .main-content .items-table .content .item .content .head span.desc {
   margin-top: 5px;
   font-size: 10px;
   color: #999;
 }
 
-body section.marketing-table .main-content .items-table .item .tags {
-  padding-right: 17px;
-  margin-left: auto;
-}
-
-body section.marketing-table .main-content .items-table .item .tags .category-text {
+body section.marketing-table .main-content .items-table .content .item .content .category-text {
+  position: absolute;
   font-size: 10px;
   color: #808080;
   opacity: 0.75;
   padding: 8px 0;
-  margin-bottom: 6px;
+  top: 0;
+  right: 0;
+  margin-right: 17px;
 }
 
-body section.marketing-table .main-content .items-table .item .tags .tag-img {
+body section.marketing-table .main-content .items-table .content .item .content .tags {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 17px;
+  margin-bottom: 12px;
+}
+
+body section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
   width: 25px;
   height: 25px;
   margin-right: 3px;
 }
 
-body section.marketing-table .main-content .items-table .item:hover {
+body section.marketing-table .main-content .items-table .content .item:hover {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
@@ -718,12 +753,12 @@ body section.marketing-table .main-content .items-table.mob {
   display: none;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-h1 {
+body section.marketing-table .main-content .items-table.mob .content .category-h1 {
   text-align: center;
   padding: 21px 0;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-h1 a {
+body section.marketing-table .main-content .items-table.mob .content .category-h1 a {
   margin: 0 18px;
   color: #000;
   font-size: 30px;
@@ -734,15 +769,15 @@ body section.marketing-table .main-content .items-table.mob .category-h1 a {
   transition: 0.5s;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-h1 a:hover {
+body section.marketing-table .main-content .items-table.mob .content .category-h1 a:hover {
   opacity: 1;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-h1 a.active {
+body section.marketing-table .main-content .items-table.mob .content .category-h1 a.active {
   opacity: 1;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-item {
+body section.marketing-table .main-content .items-table.mob .content .category-item {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -763,31 +798,31 @@ body section.marketing-table .main-content .items-table.mob .category-item {
           border-radius: 5px;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-item .name {
+body section.marketing-table .main-content .items-table.mob .content .category-item .name {
   font-size: 30px;
   color: #000;
   margin-left: 82px;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-item .name.g {
+body section.marketing-table .main-content .items-table.mob .content .category-item .name.g {
   color: #55BB00;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-item .name.r {
+body section.marketing-table .main-content .items-table.mob .content .category-item .name.r {
   color: #ED1C24;
 }
 
-body section.marketing-table .main-content .items-table.mob .category-item:hover {
+body section.marketing-table .main-content .items-table.mob .content .category-item:hover {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
-body section.marketing-table .main-content .items-table.mob .btns {
+body section.marketing-table .main-content .items-table.mob .content .btns {
   margin-top: 20px;
   text-align: center;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn {
   display: inline-block;
   padding: 19px 25px;
   margin: 0 7.5px;
@@ -795,38 +830,38 @@ body section.marketing-table .main-content .items-table.mob .btns .btn {
           border-radius: 5px;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn span {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn span {
   font-size: 21px;
   font-weight: bold;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn-logIn {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn-logIn {
   background-color: #157EE1;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn-logIn span {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn-logIn span {
   color: #fff;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn-logUp {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn-logUp {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn-logUp span {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn-logUp span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn-logUp:hover {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn-logUp:hover {
   background-color: #157EE1;
   border-color: #157EE1;
 }
 
-body section.marketing-table .main-content .items-table.mob .btns .btn-logUp:hover span {
+body section.marketing-table .main-content .items-table.mob .content .btns .btn-logUp:hover span {
   color: #fff;
 }
 
@@ -975,7 +1010,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     width: 140px;
     height: 140px;
   }
-  body main section.marketing-table .main-content .items-table .item .head {
+  body main section.marketing-table .main-content .items-table .content .item .head {
     padding-left: 5px;
   }
 }
@@ -996,11 +1031,14 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
             border-radius: 10px;
     display: inline-block;
     margin-right: 19px;
-    width: 290px;
+    width: 29.3%;
     height: auto;
   }
+  body main section.swiper-block .slide-more-outer img.slide {
+    width: 100%;
+  }
   body main section.swiper-block .slide-more {
-    height: 290px;
+    height: 100%;
   }
   body main section.swiper-block .slide-more .text {
     font-size: 20px;
@@ -1046,40 +1084,164 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body main section.marketing-table .main-content .sidebar {
     display: none;
   }
-  body main section.marketing-table .main-content .items-table .btn-more.mob {
+  body main section.marketing-table .main-content .items-table .content .btn-more.mob {
     display: block;
   }
-  body main section.marketing-table .main-content .items-table .item {
+  body main section.marketing-table .main-content .items-table .content .item {
     width: 100%;
     margin-left: 0;
     margin-bottom: 34px;
   }
-  body main section.marketing-table .main-content .items-table .item .head {
+  body main section.marketing-table .main-content .items-table .content .item .content .head {
     padding-left: 85px;
   }
-  body main section.marketing-table .main-content .items-table .item .head span.name {
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.name {
     font-size: 37px;
     padding: 23px 0;
   }
-  body main section.marketing-table .main-content .items-table .item .head span.desc {
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
     font-size: 23px;
     margin-top: 0;
   }
-  body main section.marketing-table .main-content .items-table .item .tags {
-    padding-right: 40px;
-  }
-  body main section.marketing-table .main-content .items-table .item .tags .category-text {
+  body main section.marketing-table .main-content .items-table .content .item .content .category-text {
     font-size: 18px;
     padding: 20px 0;
     margin-bottom: 18px;
   }
-  body main section.marketing-table .main-content .items-table .item .tags .tag-img {
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    padding-right: 40px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
     width: 42px;
     height: 42px;
     margin-right: -5px;
     margin-left: 10px;
   }
-  body main section.marketing-table .main-content .items-table .item img.shop-preview {
+  body main section.marketing-table .main-content .items-table .content .item img.shop-preview {
     width: 154px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body main section.marketing-table .main-content .items-table .content .item .content .head, body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    padding-left: 40px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.name {
+    padding: 7.5px 0;
+    font-size: 34px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    position: relative;
+    display: block;
+    margin-left: -10px;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body main section.marketing-table .main-content .items-table .content .item .content .head, body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    padding-left: 20px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
+    font-size: 20px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.name {
+    font-size: 30px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item .name {
+    margin-left: 40px;
+  }
+  body main section.marketing-table .marketing-navbar .buttonSwitch {
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body main section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 135px;
+    margin: 0 10px;
+  }
+  body main section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 20px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item img.shop-preview {
+    width: 125px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.name {
+    font-size: 25px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    margin-bottom: 5px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
+    width: 35px;
+    height: 35px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .category-text {
+    font-size: 16px;
+    margin-right: 19px;
+    padding: 11.5px 0;
+  }
+  body main section.swiper-block {
+    padding: 0;
+  }
+  body main section.swiper-block .slide {
+    width: 37.5%;
+  }
+  body main section.marketing-table .marketing-navbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px 0;
+  }
+  body main section.marketing-table .main-content .search-items.mob {
+    margin-bottom: 15px;
+  }
+  body main section.marketing-table .main-content .search-items.mob input {
+    height: 54px;
+  }
+  body main section.marketing-table .main-content .search-items.mob .filter-btn img {
+    padding: 15px 20px;
+    width: 63px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item {
+    margin-bottom: 15px;
+  }
+  body main section.marketing-table .main-content .items-table .content .btn-more.mob {
+    height: 54px;
+    line-height: 50px;
+  }
+  body main section.marketing-table .main-content .items-table .content .btn-more.mob span {
+    font-size: 20px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns {
+    margin-top: 7px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn {
+    padding: 10px 0;
+    width: 48%;
+    margin: 0;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn span {
+    font-size: 20px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn-logIn {
+    margin-right: 4%;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-h1 {
+    margin-top: -15px;
+    padding: 22.5px 0;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-h1 a {
+    font-size: 24px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item img {
+    width: 175px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item .name {
+    font-size: 22px;
+    margin-left: 27px;
   }
 }

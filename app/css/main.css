@@ -2470,6 +2470,9 @@ body footer .footer-bottomLine .payments img.payment-img {
   body .mk-filter-popup .topline img.img-inner-close, body .mk-filter-drop-popup .topline img.img-inner-close {
     margin-left: -10px;
   }
+  body .mk-filter-popup .links, body .mk-filter-drop-popup .links {
+    padding: 0 15px;
+  }
   body .mk-filter-popup .links a.link, body .mk-filter-drop-popup .links a.link {
     font-size: 16px;
     padding: 9.5px 0;

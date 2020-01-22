@@ -38,7 +38,7 @@ html(lang="ru")
 			a.filter-drop-popup_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
-				img.img-inner-close.filter-drop-popup_close-btn(src="../img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+				img.unfixed-btn.img-inner-close.filter-drop-popup_close-btn(src="../img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
 				span Сортировка по
 			.links
 				a.link(href="#") умолчанию
@@ -52,7 +52,7 @@ html(lang="ru")
 				a.link(href="#") цене, дешевле
 				img.separ(src="img/index/separ.svg", alt="separ.svg")
 				a.link(href="#") цене, дороже
-				a(href="#").btn.filter-drop-popup_close-btn
+				a(href="#").unfixed-btn.btn.filter-drop-popup_close-btn
 					span Принять
 		.Log-form.mk-filter-popup#mk-filter-popup
 			a.filter-popup_close-btn(href="#")
@@ -129,7 +129,6 @@ html(lang="ru")
 
 		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-currency#hmenu-popup-main-currency
 			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
 				.head
 					a(href="#").hmenu-popup-inner-close
 						img(src="img/arrow-left.svg", alt="arrow-left.svg")
@@ -146,7 +145,6 @@ html(lang="ru")
 						a.link(href="#") RUB (Russian Rouble)
 		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-language#hmenu-popup-main-language
 			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
 				.head
 					a(href="#").hmenu-popup-inner-close
 						img(src="img/arrow-left.svg", alt="arrow-left.svg")
@@ -403,7 +401,7 @@ html(lang="ru")
 					a.link#hmenu-popup-main-delivery_btn(href="#") Доставка: #[span.val Москва]
 						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link#hmenu-popup-main-language_btn(href="#") Язык: #[span.val Русский]
+					a.link#hmenu-popup-main-language_btn(href="#") Язык: #[span.val русский]
 						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					a.link#hmenu-popup-main-currency_btn(href="#") Валюта: #[span.val RUB (Russian Rouble)]
@@ -458,6 +456,8 @@ html(lang="ru")
 			a.popup-map2_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
+				a(href="#").hmenu-popup-inner-close.popup-map2_close-btn
+					img(src="img/arrow-left.svg", alt="arrow-left.svg")
 				span Доставка
 			.input-outer
 				img.img-search(src="img/search.svg", alt="search.svg")
@@ -480,6 +480,8 @@ html(lang="ru")
 			a.popup-map1_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
+				a(href="#").hmenu-popup-inner-close.popup-map1_close-btn
+					img(src="img/arrow-left.svg", alt="arrow-left.svg")
 				span Местоположение
 			.input-outer
 				img.img-search(src="img/search.svg", alt="search.svg")
@@ -509,11 +511,13 @@ html(lang="ru")
 						span Логин #[span.red *] 
 						a(href="#").a-logup#LogIn-form_btnLogUp.LogIn-form_close-btn Создать учетную запись
 					input(type="text")
+					a(href="#").a-logup#LogIn-form_btn_mobLogUp.LogIn-form_close-btn.mob Создать учетную запись
 				.input-item
 					.input-head 
 						span Пароль #[span.red *]
 						a(href="#") Забыли пароль?
 					input(type="password")
+					a(href="#").input-head__a.mob Забыли пароль?
 				.form-options
 					input#LogIn-form_checkbox(type="checkbox")
 					label(for="LogIn-form_checkbox") Запомнить
@@ -549,9 +553,8 @@ html(lang="ru")
 				.p-policy
 					input#LogUp-form_checkbox(type="checkbox")
 					label(for="LogUp-form_checkbox")
-					.textblock
-						.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. #[span.red *]
-						.desctext Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным #[a(href="#") здесь текстом]
+					.textblock.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. #[span.red *]
+					.textblock.desctext Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным #[a(href="#") здесь текстом]
 				.form-buttons
 					a(href="#").form-btn.form-btnLogUp#LogUp-form_btnLogUp.LogUp-form_close-btn
 						span Регистрация
@@ -614,20 +617,21 @@ html(lang="ru")
 				$('#LogIn-form').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'LogIn-form_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
+					onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
 					onClose: function() { $('body').removeClass('fixed') }
 									
 				});
 			});
-			$('#LogIn-form_btnLogUp').click(function(){
+			$('#LogIn-form_btnLogUp, #LogIn-form_btn_mobLogUp').click(function(){
 				$('#LogUp-form').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'LogUp-form_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
+					onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
 					onClose: function() { $('body').removeClass('fixed') }
 									
 				});
 			});
+			
 
 			$('#header-popup-map1').click(function(){
 				$('#popup-map1').bPopup({
@@ -759,6 +763,12 @@ html(lang="ru")
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
+			});
+			$('.mk-filter-drop-popup .unfixed-btn').click(function(){
+				setTimeout(function(){$('body').addClass('fixed'); }, 500);
+			});
+			$('.mk-filter-drop-popup .img-close').click(function(){
+				$('.mk-filter-popup .img-close').click();
 			});
 
 			$('.mk-filter-popup-line').click(function(){

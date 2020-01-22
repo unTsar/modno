@@ -423,30 +423,30 @@ body section.marketing-table .main-content .search-items.mob input {
   border: 0.5px solid #000000;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  font-size: 22px;
+  font-size: 19px;
   color: #000;
 }
 
 body section.marketing-table .main-content .search-items.mob input::-webkit-input-placeholder {
-  font-size: 22px;
+  font-size: 19px;
   color: #000;
   opacity: 0.5;
 }
 
 body section.marketing-table .main-content .search-items.mob input:-moz-placeholder {
-  font-size: 22px;
+  font-size: 19px;
   color: #000;
   opacity: 0.5;
 }
 
 body section.marketing-table .main-content .search-items.mob input::-moz-placeholder {
-  font-size: 22px;
+  font-size: 19px;
   color: #000;
   opacity: 0.5;
 }
 
 body section.marketing-table .main-content .search-items.mob input:-ms-input-placeholder {
-  font-size: 22px;
+  font-size: 19px;
   color: #000;
   opacity: 0.5;
 }
@@ -534,7 +534,7 @@ body section.marketing-table .main-content .sidebar .options .line {
 }
 
 body section.marketing-table .main-content .sidebar .options .line span {
-  font-size: 12px;
+  font-size: 13px;
   color: #808080;
   -webkit-transition: 0.3s ease all;
   -o-transition: 0.3s ease all;
@@ -778,6 +778,8 @@ body section.marketing-table .main-content .items-table.mob .content .category-h
 }
 
 body section.marketing-table .main-content .items-table.mob .content .category-item {
+  height: 133px;
+  overflow: hidden;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -792,10 +794,15 @@ body section.marketing-table .main-content .items-table.mob .content .category-i
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   background-color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+}
+
+body section.marketing-table .main-content .items-table.mob .content .category-item img {
+  width: 228px;
+  min-width: 228px;
 }
 
 body section.marketing-table .main-content .items-table.mob .content .category-item .name {
@@ -809,7 +816,7 @@ body section.marketing-table .main-content .items-table.mob .content .category-i
 }
 
 body section.marketing-table .main-content .items-table.mob .content .category-item .name.r {
-  color: #ED1C24;
+  color: #FF0000;
 }
 
 body section.marketing-table .main-content .items-table.mob .content .category-item:hover {
@@ -1010,8 +1017,12 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     width: 140px;
     height: 140px;
   }
-  body main section.marketing-table .main-content .items-table .content .item .head {
-    padding-left: 5px;
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    padding-right: 12px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
+    width: 21px;
+    height: 21px;
   }
 }
 
@@ -1022,7 +1033,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body main section.swiper-block {
     display: block;
     overflow-x: scroll;
-    padding: 8px 0px;
+    padding: 8px 10px;
     margin: 0 16px;
     white-space: nowrap;
   }
@@ -1041,7 +1052,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     height: 100%;
   }
   body main section.swiper-block .slide-more .text {
-    font-size: 20px;
+    font-size: 19px;
   }
   body main section.marketing-table .marketing-navbar-bottom {
     display: none;
@@ -1107,9 +1118,10 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     font-size: 18px;
     padding: 20px 0;
     margin-bottom: 18px;
+    margin-right: 40px;
   }
   body main section.marketing-table .main-content .items-table .content .item .content .tags {
-    padding-right: 40px;
+    padding-right: 37px;
   }
   body main section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
     width: 42px;
@@ -1158,7 +1170,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
 
 @media only screen and (max-width: 600px) {
   body main section.marketing-table .marketing-navbar .buttonSwitch {
-    width: 135px;
+    width: 24%;
     margin: 0 10px;
   }
   body main section.marketing-table .marketing-navbar .buttonSwitch span {
@@ -1186,14 +1198,15 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     padding: 11.5px 0;
   }
   body main section.swiper-block {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   body main section.swiper-block .slide {
-    width: 37.5%;
+    width: 44.5%;
   }
   body main section.marketing-table .marketing-navbar {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 32px;
+    margin-bottom: 15px;
     padding: 15px 0;
   }
   body main section.marketing-table .main-content .search-items.mob {
@@ -1217,18 +1230,18 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     font-size: 20px;
   }
   body main section.marketing-table .main-content .items-table.mob .content .btns {
-    margin-top: 7px;
+    margin-top: 5px;
   }
   body main section.marketing-table .main-content .items-table.mob .content .btns a.btn {
     padding: 10px 0;
-    width: 48%;
+    width: 49%;
     margin: 0;
   }
   body main section.marketing-table .main-content .items-table.mob .content .btns a.btn span {
     font-size: 20px;
   }
   body main section.marketing-table .main-content .items-table.mob .content .btns a.btn-logIn {
-    margin-right: 4%;
+    margin-right: 2%;
   }
   body main section.marketing-table .main-content .items-table.mob .content .category-h1 {
     margin-top: -15px;
@@ -1243,5 +1256,204 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body main section.marketing-table .main-content .items-table.mob .content .category-item .name {
     font-size: 22px;
     margin-left: 27px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body main section.swiper-block {
+    margin: 0 15px;
+  }
+  body main section.swiper-block .slide {
+    margin-right: 11px;
+  }
+  body main section.swiper-block .slide-more .text {
+    font-size: 13px;
+  }
+  body main section.marketing-table .marketing-navbar {
+    padding: 15px 0;
+  }
+  body main section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 28%;
+    margin: 0 1%;
+    padding: 12.5px 0;
+  }
+  body main section.marketing-table .main-content {
+    padding: 0 15px 10px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item img.shop-preview {
+    width: 105px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .category-text {
+    font-size: 14px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head, body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    padding-left: 11px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.name {
+    font-size: 20px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
+    font-size: 14px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    margin-top: 10px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
+    width: 25px;
+    height: 25px;
+  }
+  body main section.marketing-table .main-content .items-table .content .btn-more.mob {
+    width: 100%;
+    margin-top: 15px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-h1 {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 24px 0;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-h1 a {
+    margin: 0;
+    font-size: 22px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item {
+    height: 101px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item img {
+    min-width: 101px;
+    width: 101px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item span.name {
+    margin-left: 34px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body main section.marketing-table .main-content .items-table .content .item img.shop-preview {
+    width: 100px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    display: none;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
+    max-width: 170px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn-logIn {
+    width: 92px;
+    margin-right: 16px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn-logUp {
+    width: 180px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn span {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body main section.swiper-block {
+    margin: 0 15px;
+  }
+  body main section.swiper-block .slide {
+    width: 34.5%;
+    margin-right: 6px;
+  }
+  body main section.marketing-table .marketing-navbar {
+    margin-top: 18px;
+  }
+  body main section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 92px;
+    margin: 0 3px;
+  }
+  body main section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content {
+    padding: 0 15px 10px;
+  }
+  body main section.marketing-table .main-content .search-items.mob .filter-btn img {
+    padding: 8px 15px;
+    width: 53px;
+  }
+  body main section.marketing-table .main-content .search-items.mob img.search {
+    margin-left: 16px;
+  }
+  body main section.marketing-table .main-content .search-items.mob input {
+    font-size: 16px;
+    height: 40px;
+  }
+  body main section.marketing-table .main-content .search-items.mob input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .search-items.mob input:-moz-placeholder {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .search-items.mob input::-moz-placeholder {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .search-items.mob input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .category-text {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 10px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.15;
+    margin-top: 11px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.name {
+    font-size: 16px;
+    padding-top: 9px;
+    padding-bottom: 0;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin-top: 13px;
+    margin-right: 18px;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
+    width: 14px;
+    height: 14px;
+  }
+  body main section.marketing-table .main-content .items-table .content .btn-more.mob {
+    height: 40px;
+    line-height: 40px;
+  }
+  body main section.marketing-table .main-content .items-table .content .btn-more.mob span {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .btns a.btn span {
+    font-size: 16px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item {
+    height: 60px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item .name {
+    font-size: 16px;
+    margin-left: 33px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-item img {
+    min-width: 60px;
+    width: 60px;
+  }
+  body main section.marketing-table .main-content .items-table.mob .content .category-h1 a {
+    font-size: 19px;
   }
 }

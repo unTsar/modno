@@ -385,13 +385,17 @@ body .LogIn-form {
   width: 331px;
 }
 
-body .LogIn-form form.form-block .input-item .input-head a {
+body .LogIn-form form.form-block .input-item a.mob {
+  display: none;
+}
+
+body .LogIn-form form.form-block .input-item a, body .LogIn-form form.form-block .input-item a.mob {
   font-size: 11px;
   color: #808080;
   margin-left: auto;
 }
 
-body .LogIn-form form.form-block .input-item .input-head a.a-logup {
+body .LogIn-form form.form-block .input-item a.a-logup {
   color: #157EE1;
 }
 
@@ -473,6 +477,8 @@ body .LogUp-form form.form-block .input-item input {
 
 body .LogUp-form form.form-block .input-item .radio {
   padding-top: 11px;
+  margin-right: -75px;
+  margin-bottom: -25px;
 }
 
 body .LogUp-form form.form-block .input-item .radio input {
@@ -487,6 +493,7 @@ body .LogUp-form form.form-block .input-item .radio label {
   color: #808080;
   padding-left: 54px;
   margin-right: 75px;
+  margin-bottom: 25px;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -536,13 +543,7 @@ body .LogUp-form form.form-block .input-item .radio input:checked + label {
 }
 
 body .LogUp-form form.form-block .p-policy {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
 }
 
 body .LogUp-form form.form-block .p-policy input {
@@ -554,7 +555,9 @@ body .LogUp-form form.form-block .p-policy label {
   padding-left: 32px;
   margin-top: 5px;
   color: #000;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: inline-block;
   max-height: 20px;
   cursor: pointer;
@@ -595,23 +598,24 @@ body .LogUp-form form.form-block .p-policy input:checked + label::after {
 body .LogUp-form form.form-block .p-policy .textblock {
   line-height: 1.2;
   padding-right: 35px;
+  padding-left: 32px;
 }
 
-body .LogUp-form form.form-block .p-policy .textblock .headtext {
+body .LogUp-form form.form-block .p-policy .headtext {
   font-size: 15px;
 }
 
-body .LogUp-form form.form-block .p-policy .textblock .headtext span.red {
+body .LogUp-form form.form-block .p-policy .headtext span.red {
   color: #FF0000;
 }
 
-body .LogUp-form form.form-block .p-policy .textblock .desctext {
+body .LogUp-form form.form-block .p-policy .desctext {
   margin-top: 5px;
   font-size: 13px;
   color: #808080;
 }
 
-body .LogUp-form form.form-block .p-policy .textblock .desctext a {
+body .LogUp-form form.form-block .p-policy .desctext a {
   color: #157EE1;
   text-decoration: underline;
 }
@@ -636,10 +640,19 @@ body .popup-map {
 body .popup-map img.img-close {
   margin-top: 28px;
   margin-right: 25px;
+  z-index: 11;
 }
 
 body .popup-map .topline {
+  position: relative;
   padding: 25px 0;
+}
+
+body .popup-map .topline a.hmenu-popup-inner-close {
+  position: absolute;
+  left: 0;
+  margin-top: 2px;
+  display: none;
 }
 
 body .popup-map .topline span {
@@ -651,7 +664,8 @@ body .popup-map .input-outer {
   position: relative;
   margin-top: 7.5px;
   margin-bottom: 23px;
-  padding: 0 28px;
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
 body .popup-map .input-outer img.img-search {
@@ -660,7 +674,7 @@ body .popup-map .input-outer img.img-search {
   bottom: 0;
   left: 0;
   margin: auto;
-  margin-left: 41px;
+  margin-left: 10px;
   width: 16px;
 }
 
@@ -684,7 +698,6 @@ body .popup-map .input-outer .search-results {
   left: 0;
   right: 0;
   z-index: 11;
-  margin: 0 28px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   border-top: 0;
   background-color: #fff;
@@ -708,7 +721,7 @@ body .popup-map .input-outer .search-results img.separ {
 }
 
 body .popup-map .mapOuter {
-  height: 464px;
+  height: 520px;
   width: 100%;
   margin-top: 5px;
 }
@@ -844,9 +857,11 @@ body .mk-filter-popup .links, body .mk-filter-drop-popup .links {
 body .mk-filter-popup .links a.btn, body .mk-filter-drop-popup .links a.btn {
   display: block;
   margin-top: 31px;
-  width: 100%;
-  height: 41px;
-  line-height: 41px;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   background-color: #157EE1;
@@ -1728,6 +1743,8 @@ body footer .footer-content .footer-content-wrapper .applinks img {
   width: 76px;
   height: auto;
   margin-left: 16px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 body footer .footer-content .footer-content-wrapper .banners {
@@ -1777,15 +1794,16 @@ body footer .footer-bottomLine {
 }
 
 body footer .footer-bottomLine span {
+  display: inline-block;
   font-size: 10px;
   color: #000;
+  line-height: 1.2;
 }
 
 body footer .footer-bottomLine .payments {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
   padding-top: 3px;
   padding-right: 20.5%;
 }
@@ -1816,14 +1834,22 @@ body footer .footer-bottomLine .payments img.payment-img {
     height: 100%;
   }
   body .popup-map img.img-close {
-    margin-top: 25px;
-    margin-right: 60px;
+    display: none;
+  }
+  body .popup-map .topline {
+    padding: 35px 0;
+  }
+  body .popup-map .topline a.hmenu-popup-inner-close {
+    display: block;
+    margin-left: 35px;
   }
   body .popup-map .topline span {
     font-size: 25px;
   }
   body .popup-map .input-outer {
-    padding: 0 60px;
+    margin-top: 0;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 30px;
   }
   body .popup-map .input-outer input.input-search {
@@ -1831,17 +1857,17 @@ body footer .footer-bottomLine .payments img.payment-img {
     font-size: 19px;
   }
   body .popup-map .input-outer img.img-search {
-    margin-left: 73px;
     width: 18px;
   }
-  body .popup-map .input-outer .search-results {
-    margin: 0 60px;
-  }
   body .popup-map .map-buttons {
-    padding: 0 60px;
+    margin-top: 50px;
   }
   body .popup-map .map-buttons .map-btn {
-    height: 41px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
   }
   body .popup-map .map-buttons .map-btn span {
     font-size: 17px;
@@ -1867,11 +1893,11 @@ body footer .footer-bottomLine .payments img.payment-img {
   body .LogIn-form form.form-block .input-item .input-head {
     padding: 12px 0;
   }
-  body .LogIn-form form.form-block .input-item .input-head a {
-    font-size: 15px;
-  }
   body .LogIn-form form.form-block .input-item .input-head span {
     font-size: 20px;
+  }
+  body .LogIn-form form.form-block .input-item a {
+    font-size: 15px;
   }
   body .LogIn-form form.form-block .form-options {
     margin-top: 0;
@@ -1891,7 +1917,10 @@ body footer .footer-bottomLine .payments img.payment-img {
     height: 25px;
   }
   body .LogIn-form form.form-block .form-buttons .form-btn {
-    height: 41px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 60px;
   }
   body .LogUp-form {
     width: 100%;
@@ -2018,6 +2047,7 @@ body footer .footer-bottomLine .payments img.payment-img {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
+    margin-right: 0;
     line-height: 1;
   }
   body footer .footer-content .container .footer-content-wrapper .applinks a {
@@ -2031,7 +2061,7 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body footer .footer-bottomLine {
     height: 47px;
-    line-height: 47px;
+    line-height: 45px;
   }
   body footer .footer-bottomLine span {
     font-size: 14px;
@@ -2103,7 +2133,7 @@ body footer .footer-bottomLine .payments img.payment-img {
     padding-left: 30px;
   }
   body footer .footer-content .container .footer-content-wrapper .links .linkHead {
-    font-size: 15px;
+    font-size: 16px;
     padding-top: 23.5px;
     padding-bottom: 23.5px;
   }
@@ -2112,5 +2142,468 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body footer .footer-content .container .footer-content-wrapper .links .list a {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body .popup-map .input-outer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  body .popup-map .input-outer input.input-search {
+    height: 60px;
+    font-size: 20px;
+  }
+  body .popup-map .map-buttons {
+    margin-top: 34px;
+    padding: 0 30px;
+  }
+  body .popup-map .map-buttons a.map-btn {
+    height: 52px;
+    width: 100%;
+  }
+  body .popup-map .mapOuter {
+    height: 445px;
+  }
+  body .hmenu-popup .outer {
+    padding: 0 15px 0;
+    margin-bottom: 33px;
+  }
+  body .hmenu-popup .outer .head {
+    text-align: center;
+    padding: 27px 0;
+  }
+  body .hmenu-popup .outer .head span {
+    font-size: 22px;
+  }
+  body .hmenu-popup .outer img.hmenu-popup-close {
+    margin-top: 21px;
+    margin-right: 15px;
+  }
+  body .hmenu-popup .outer .links a.link {
+    padding: 14.5px 0;
+    font-size: 19px;
+  }
+  body .hmenu-popup-category1 .outer .head, body .hmenu-popup-category2 .outer .head, body .hmenu-popup-lSettings .outer .head {
+    text-align: left;
+  }
+  body .hmenu-popup-category1 .outer .head a.hmenu-popup-inner-close, body .hmenu-popup-category2 .outer .head a.hmenu-popup-inner-close, body .hmenu-popup-lSettings .outer .head a.hmenu-popup-inner-close {
+    margin-right: 16px;
+  }
+  body .hmenu-popup-category1 .outer .offer-section, body .hmenu-popup-category2 .outer .offer-section, body .hmenu-popup-lSettings .outer .offer-section {
+    margin-top: 72px;
+  }
+  body .hmenu-popup-category1 .outer .offer-section img, body .hmenu-popup-category2 .outer .offer-section img, body .hmenu-popup-lSettings .outer .offer-section img {
+    width: 100%;
+  }
+  body .hmenu-popup-category1 .outer .offer-section .desctext .headtext, body .hmenu-popup-category2 .outer .offer-section .desctext .headtext, body .hmenu-popup-lSettings .outer .offer-section .desctext .headtext {
+    font-size: 15px;
+  }
+  body .hmenu-popup-category1 .outer .offer-section .desctext .name, body .hmenu-popup-category2 .outer .offer-section .desctext .name, body .hmenu-popup-lSettings .outer .offer-section .desctext .name {
+    font-size: 22px;
+  }
+  body .hmenu-popup-lSettings .outer .links {
+    padding: 0 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  body .hmenu-popup-lSettings .outer .input-outer img.img-search {
+    margin-left: 0;
+  }
+  body .hmenu-popup-lSettings .outer .input-outer input.input-search {
+    font-size: 19px;
+    padding-left: 35px;
+  }
+  body .Log-form .topline {
+    padding: 33.5px 0;
+  }
+  body .Log-form .topline span {
+    font-size: 22px;
+  }
+  body .Log-form img.img-close {
+    width: 19px;
+    margin-top: 21px;
+    margin-right: 30px;
+  }
+  body .Log-form form.form-block {
+    padding: 0 30px;
+  }
+  body .Log-form form.form-block .form-options label {
+    font-size: 18px;
+    line-height: 37px;
+  }
+  body .Log-form form.form-block .form-options label::before {
+    width: 40px;
+    height: 40px;
+  }
+  body .Log-form form.form-block .form-options label::after {
+    width: 35px;
+    height: 35px;
+  }
+  body .Log-form form.form-block .input-item {
+    margin-bottom: 19px;
+  }
+  body .Log-form form.form-block .input-item .radio label {
+    font-size: 16px;
+    line-height: 31px;
+  }
+  body .Log-form form.form-block .input-item .radio label::before {
+    width: 40px;
+    height: 40px;
+  }
+  body .Log-form form.form-block .input-item .radio label::after {
+    width: 34px;
+    height: 34px;
+  }
+  body .Log-form form.form-block .input-item input {
+    height: 60px;
+    font-size: 20px;
+  }
+  body .Log-form form.form-block .input-item .input-head {
+    padding: 15px 0;
+  }
+  body .Log-form form.form-block .input-item .input-head span {
+    font-size: 19px;
+  }
+  body .Log-form form.form-block .input-item a, body .Log-form form.form-block .input-item a.mob {
+    font-size: 18px;
+  }
+  body .Log-form form.form-block .input-item a.a-logup {
+    text-decoration: underline;
+  }
+  body .Log-form form.form-block .form-buttons .form-btn {
+    width: 100%;
+    height: 52px;
+  }
+  body .Log-form form.form-block .form-buttons .form-btn span {
+    font-size: 20px;
+  }
+  body .Log-form form.form-block .p-policy .headtext {
+    padding-left: 56px;
+    font-size: 16px;
+  }
+  body .Log-form form.form-block .p-policy .desctext {
+    padding-left: 0;
+    margin-top: 25px;
+  }
+  body .Log-form form.form-block .p-policy label:before {
+    width: 40px;
+    height: 40px;
+  }
+  body .Log-form form.form-block .p-policy label:after {
+    width: 34px;
+    height: 34px;
+  }
+  body .mk-filter-popup .links, body .mk-filter-drop-popup .links {
+    padding: 0 30px;
+  }
+  body .mk-filter-popup .links a.link, body .mk-filter-drop-popup .links a.link {
+    font-size: 19px;
+    padding: 16px 0;
+  }
+  body .mk-filter-popup .links a.btn, body .mk-filter-drop-popup .links a.btn {
+    width: 100%;
+    height: 52px;
+    line-height: 51px;
+  }
+  body .mk-filter-popup .links a.btn span, body .mk-filter-drop-popup .links a.btn span {
+    font-size: 20px;
+  }
+  body .mk-filter-popup .links .line span.span-link, body .mk-filter-drop-popup .links .line span.span-link {
+    font-size: 19px;
+    padding: 16px 0;
+  }
+  body .mk-filter-popup .links .line .drop-btn span.value, body .mk-filter-drop-popup .links .line .drop-btn span.value {
+    font-size: 19px;
+  }
+  body .mk-filter-popup .links .line .drop-btn img.img-drop, body .mk-filter-drop-popup .links .line .drop-btn img.img-drop {
+    margin-left: 22px;
+  }
+  body .mk-filter-popup .links .line .buttonOpSw, body .mk-filter-drop-popup .links .line .buttonOpSw {
+    width: 63px;
+    height: 28px;
+  }
+  body .mk-filter-popup .links .line .buttonOpSw .knobs::before, body .mk-filter-drop-popup .links .line .buttonOpSw .knobs::before {
+    width: 24px;
+    height: 24px;
+  }
+  body .mk-filter-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before, body .mk-filter-drop-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before {
+    left: 37px;
+  }
+  body .mk-filter-popup .topline img.img-inner-close, body .mk-filter-drop-popup .topline img.img-inner-close {
+    margin-left: 20px;
+  }
+  body header .container .headerLine {
+    padding: 0 10px;
+  }
+  body header .container .headerLine .options a.buttonLogIn {
+    width: 48px;
+    height: 41px;
+  }
+  body header .container .headerLine .options a.buttonLogIn span {
+    font-size: 13px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .banners {
+    margin: 28px 0 25px 0;
+    padding: 0 15px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .banners img {
+    display: block;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  body footer .footer-bottomLine span {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body .mk-filter-popup .links .line span.span-link, body .mk-filter-drop-popup .links .line span.span-link {
+    font-size: 16px;
+  }
+  body .mk-filter-popup .links .line .drop-btn span.value, body .mk-filter-drop-popup .links .line .drop-btn span.value {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body .hmenu-popup {
+    margin-top: 71px;
+  }
+  body .hmenu-popup .outer {
+    margin-bottom: 15px;
+  }
+  body .hmenu-popup .outer img.hmenu-popup-close {
+    width: 15px;
+    margin-top: 17px;
+    margin-right: 15px;
+  }
+  body .hmenu-popup .outer .head {
+    padding: 19.5px 0;
+    margin: 17px 17px 0;
+  }
+  body .hmenu-popup .outer .head span {
+    font-size: 19px;
+  }
+  body .hmenu-popup .outer .links a.link {
+    padding: 9.5px 0;
+    font-size: 16px;
+  }
+  body .hmenu-popup .outer .links a.link img.img-arrow {
+    display: none;
+  }
+  body .hmenu-popup-category1 .outer .head, body .hmenu-popup-category2 .outer .head {
+    margin-left: 0;
+  }
+  body .hmenu-popup-category1 .outer .head a.hmenu-popup-inner-close, body .hmenu-popup-category2 .outer .head a.hmenu-popup-inner-close {
+    margin-right: 20px;
+  }
+  body .hmenu-popup-category1 .outer .head a.hmenu-popup-inner-close img, body .hmenu-popup-category2 .outer .head a.hmenu-popup-inner-close img {
+    width: 11px;
+  }
+  body .hmenu-popup-category1 .outer .offer-section, body .hmenu-popup-category2 .outer .offer-section {
+    margin-top: 45px;
+  }
+  body .hmenu-popup-category1 .outer .offer-section .desctext .headtext, body .hmenu-popup-category2 .outer .offer-section .desctext .headtext {
+    font-size: 13px;
+  }
+  body .hmenu-popup-category1 .outer .offer-section .desctext .name, body .hmenu-popup-category2 .outer .offer-section .desctext .name {
+    font-size: 16px;
+  }
+  body .hmenu-popup-lSettings .outer .head {
+    margin-left: 0;
+  }
+  body .Log-form img.img-close {
+    width: 15px;
+    margin-top: 28px;
+  }
+  body .Log-form .topline {
+    margin: 30px 30px 0 30px;
+    padding: 23.5px 0;
+  }
+  body .Log-form .topline span {
+    font-size: 19px;
+  }
+  body .Log-form form.form-block {
+    padding: 0 15px;
+  }
+  body .Log-form form.form-block .input-item {
+    margin-bottom: 0;
+  }
+  body .Log-form form.form-block .input-item input {
+    height: 50px;
+  }
+  body .Log-form form.form-block .input-item .radio {
+    margin-bottom: 0;
+  }
+  body .Log-form form.form-block .input-item .input-head {
+    padding: 9.5px 0;
+  }
+  body .Log-form form.form-block .input-item .input-head a {
+    display: none;
+  }
+  body .Log-form form.form-block .input-item .input-head span {
+    font-size: 16px;
+  }
+  body .Log-form form.form-block .input-item a.mob {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    padding: 8px 0;
+    font-size: 16px;
+  }
+  body .Log-form form.form-block .p-policy {
+    margin-top: 22px;
+  }
+  body .Log-form form.form-block .form-options label {
+    font-size: 16px;
+  }
+  body .Log-form form.form-block .form-buttons {
+    margin-top: 20px;
+  }
+  body .Log-form form.form-block .form-buttons .form-btn {
+    height: 40px;
+  }
+  body .Log-form form.form-block .form-buttons .form-btn span {
+    font-size: 16px;
+  }
+  body .mk-filter-popup .topline img.img-inner-close, body .mk-filter-drop-popup .topline img.img-inner-close {
+    margin-left: -10px;
+  }
+  body .mk-filter-popup .links a.link, body .mk-filter-drop-popup .links a.link {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body .mk-filter-popup .links a.btn, body .mk-filter-drop-popup .links a.btn {
+    margin-top: 6px;
+    height: 40px;
+    line-height: 40px;
+  }
+  body .mk-filter-popup .links a.btn span, body .mk-filter-drop-popup .links a.btn span {
+    font-size: 16px;
+  }
+  body .mk-filter-popup .links .line span.span-link, body .mk-filter-drop-popup .links .line span.span-link {
+    padding: 9.5px 0;
+  }
+  body .mk-filter-popup .links .line .drop-btn img.img-drop, body .mk-filter-drop-popup .links .line .drop-btn img.img-drop {
+    width: 14px;
+    margin-left: 14px;
+  }
+  body .mk-filter-popup .links .line .buttonOpSw, body .mk-filter-drop-popup .links .line .buttonOpSw {
+    width: 48px;
+    height: 21px;
+  }
+  body .mk-filter-popup .links .line .buttonOpSw .knobs::before, body .mk-filter-drop-popup .links .line .buttonOpSw .knobs::before {
+    width: 17px;
+    height: 17px;
+  }
+  body .mk-filter-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before, body .mk-filter-drop-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before {
+    left: 28px;
+  }
+  body .popup-map .topline {
+    margin: 0;
+  }
+  body .popup-map .topline a.hmenu-popup-inner-close {
+    margin-left: 18px;
+  }
+  body .popup-map .input-outer {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  body .popup-map .input-outer input.input-search {
+    height: 40px;
+    font-size: 16px;
+  }
+  body .popup-map .map-buttons {
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  body .popup-map .map-buttons a.map-btn {
+    height: 40px;
+  }
+  body .popup-map .map-buttons a.map-btn span {
+    font-size: 16px;
+  }
+  body .popup-map .mapOuter {
+    height: 348px;
+  }
+  body header .container .headerLine {
+    height: 56px;
+    padding: 0 15px;
+  }
+  body header .container .headerLine a.menu button.hamburger {
+    height: 27px;
+  }
+  body header .container .headerLine a.menu button.hamburger span.hamburger-box {
+    width: 29px;
+    height: 27px;
+  }
+  body header .container .headerLine a.menu button.hamburger span.hamburger-box span.hamburger-inner, body header .container .headerLine a.menu button.hamburger span.hamburger-box span.hamburger-inner:after, body header .container .headerLine a.menu button.hamburger span.hamburger-box span.hamburger-inner:before {
+    width: 29px;
+    height: 3px;
+  }
+  body header .container .headerLine a.menu button.hamburger span.hamburger-box span.hamburger-inner:before {
+    top: 8px;
+  }
+  body header .container .headerLine a.menu button.hamburger span.hamburger-box span.hamburger-inner:after {
+    top: 16px;
+  }
+  body header .container .headerLine a.menu button.hamburger.is-active span.hamburger-box span.hamburger-inner:before {
+    top: 10px;
+  }
+  body header .container .headerLine a.menu button.hamburger.is-active span.hamburger-box span.hamburger-inner:after {
+    top: 20px;
+  }
+  body header .container .headerLine a.button-like.mob img {
+    width: 25px;
+    height: 21px;
+  }
+  body header .container .headerLine a.logo img.img-logo {
+    width: 82px;
+  }
+  body header .container .headerLine a.button-shopCart.mob img {
+    width: 19px;
+    height: 21px;
+  }
+  body header .container .headerLine .options a.buttonLogIn {
+    width: 34px;
+    height: 28px;
+  }
+  body header .container .headerLine .options a.buttonLogIn span {
+    font-size: 10px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .banners {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .links {
+    padding-left: 15px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .links .linkHead {
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .links .linkHead::after {
+    margin-right: 15px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .applinks {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  body footer .footer-content .container .footer-content-wrapper .applinks a {
+    width: 50%;
+  }
+  body footer .footer-content .container .footer-content-wrapper .applinks a img {
+    margin-right: 0;
+  }
+  body footer .footer-content .container .footer-content-wrapper .applinks a:nth-last-child(1) {
+    text-align: right;
+  }
+  body footer .footer-bottomLine {
+    line-height: 58px;
+  }
+  body footer .footer-bottomLine span {
+    max-width: 290px;
   }
 }

@@ -153,19 +153,20 @@ block content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по моллам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn
+								.filter-btn.mk-filter-btn
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							- for(var i = 1; i <= 20; i++)
 								.item
 									img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
-									.head
-										span.name Affiction
-										span.desc Russia, Moscow, Ходынский бульвар, д. 4
-									.tags
-										.category-text Монобрендовый
-										img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
-										img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
-										img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+									.content
+										.head
+											span.name Affiction
+											.category-text Монобрендовый
+											span.desc Russia, Moscow, Ходынский бульвар, д. 4
+										.tags
+											img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
+											img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
+											img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
 							.btn-more.mob
 								span Показать ещё
 					.items-table.shops.active(style="display: block")
@@ -173,19 +174,20 @@ block content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по магазинам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn
+								.filter-btn.mk-filter-btn
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							- for(var i = 1; i <= 20; i++)
 								.item
 									img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
-									.head
-										span.name Affiction
-										span.desc Russia, Moscow, Ходынский бульвар, д. 4
-									.tags
-										.category-text Монобрендовый
-										img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
-										img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
-										img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+									.content
+										.head
+											span.name Affiction
+											.category-text Монобрендовый
+											span.desc Russia, Moscow, Ходынский бульвар, д. 4
+										.tags
+											img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
+											img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
+											img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
 							.btn-more.mob
 								span Показать ещё
 					.items-table.products.mob
@@ -193,47 +195,47 @@ block content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по товарам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn
+								.filter-btn.mk-filter-btn
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							.category-h1
-								a(href="#").active Женщинам
-								a(href="#") Мужчинам
-								a(href="#") Детям
+								a(href="#").active Женщины
+								a(href="#") Мужчины
+								a(href="#") Дети
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name.g Новинки
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Одежда
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Обувь
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Сумки
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Аксессуары
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Часы
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Ювелирные украшения
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Парфюмерия
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name Красота
 							.category-item
-								img(src="img/index/category-item-img.jpg", alt="category-item-img.jpg")
+								img(src="../img/index/slide-img1.jpg", alt="slide-img1.jpg")
 								.name.r Sale
 							.btns
 								a(href="#").btn.btn-logIn#mk-products-btnLogIn
 									span Войти
 								a(href="#").btn.btn-logUp#mk-products-btnLogUp
-									span Зарегестрироваться
+									span Зарегистрироваться
 				.marketing-navbar-bottom
 					.button.buttonMore
 						span Показать ещё
@@ -289,10 +291,13 @@ block scripts
 				clearTimeout(timeoutID);
 				$('#subCategory-popup').hide();
 			});
-
 			$('.mknav-buttonSwitch').click(function(){
 				$(this).addClass('active');
 				$('.mknav-buttonSwitch').not(this).removeClass('active');
+				$('.mknav-buttonSwitch').addClass('disabled');
+				setTimeout(function(){
+					$('.mknav-buttonSwitch').removeClass('disabled');
+				}, 350);
 			});
 			$('.mknav-buttonSwitch.shops').click(function(){
 				$('.marketing-table .items-table').removeClass('active');
@@ -320,6 +325,7 @@ block scripts
 			});
 			$(window).resize(function(){
 				if($(window).width() >= 1025){
+					$('.mknav-buttonSwitch.products').removeClass('active');
 					$('.marketing-table .items-table.products').removeClass('active');
 					$('.marketing-table .items-table.products').fadeOut(250);
 				}

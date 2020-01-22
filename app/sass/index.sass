@@ -261,22 +261,22 @@ body
 					background-color: transparent
 					border: 0.5px solid #000000
 					border-radius: 5px
-					font-size: 22px
+					font-size: 19px
 					color: #000
 				input::-webkit-input-placeholder
-					font-size: 22px
+					font-size: 19px
 					color: #000
 					opacity: 0.5
 				input:-moz-placeholder
-					font-size: 22px
+					font-size: 19px
 					color: #000
 					opacity: 0.5
 				input::-moz-placeholder
-					font-size: 22px
+					font-size: 19px
 					color: #000
 					opacity: 0.5
 				input:-ms-input-placeholder
-					font-size: 22px
+					font-size: 19px
 					color: #000
 					opacity: 0.5
 				img.search
@@ -336,7 +336,7 @@ body
 						line-height: 14px
 						margin-bottom: 17px
 						span
-							font-size: 12px
+							font-size: 13px
 							color: #808080
 							transition: 0.3s ease all
 						.buttonOpSw
@@ -491,6 +491,8 @@ body
 						a.active
 							opacity: 1
 					.category-item
+						height: 133px
+						overflow: hidden
 						transition: 0.3s
 						display: -webkit-flex
 						display: -moz-flex
@@ -498,9 +500,12 @@ body
 						display: -o-flex
 						display: flex
 						align-items: center
-						margin-bottom: 14px
+						margin-bottom: 15px
 						background-color: #fff
 						border-radius: 5px
+						img
+							width: 228px
+							min-width: 228px
 						.name
 							font-size: 30px
 							color: #000
@@ -508,7 +513,7 @@ body
 						.name.g
 							color: #55BB00
 						.name.r
-							color: #ED1C24
+							color: #FF0000
 					.category-item:hover
 						box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 					.btns
@@ -636,8 +641,12 @@ body
 					.items-table
 						.content
 							.item
-								.head
-									padding-left: 5px
+								.content
+									.tags
+										padding-right: 12px
+										.tag-img
+											width: 21px
+											height: 21px
 @media only screen and(max-width: 1024px)
 	body
 		main
@@ -646,7 +655,7 @@ body
 			section.swiper-block
 				display: block
 				overflow-x: scroll
-				padding: 8px 0px
+				padding: 8px 10px
 				margin: 0 16px
 				white-space: nowrap
 				.slide
@@ -661,7 +670,7 @@ body
 				.slide-more
 					height: 100%
 					.text
-						font-size: 20px
+						font-size: 19px
 			section.marketing-table
 				.marketing-navbar-bottom
 					display: none
@@ -716,8 +725,9 @@ body
 										font-size: 18px
 										padding: 20px 0
 										margin-bottom: 18px
+										margin-right: 40px
 									.tags
-										padding-right: 40px
+										padding-right: 37px
 										.tag-img
 											width: 42px
 											height: 42px
@@ -777,7 +787,7 @@ body
 			section.marketing-table
 				.marketing-navbar
 					.buttonSwitch
-						width: 135px
+						width: 24%
 						margin: 0 10px
 						span
 							font-size: 20px
@@ -803,13 +813,14 @@ body
 										margin-right: 19px
 										padding: 11.5px 0
 			section.swiper-block
-				padding: 0
+				padding-left: 0
+				padding-right: 0
 				.slide
-					width: 37.5%
+					width: 44.5%
 			section.marketing-table
 				.marketing-navbar
-					margin-top: 10px
-					margin-bottom: 10px
+					margin-top: 32px
+					margin-bottom: 15px
 					padding: 15px 0
 				.main-content
 					.search-items.mob
@@ -832,15 +843,15 @@ body
 					.items-table.mob
 						.content
 							.btns
-								margin-top: 7px
+								margin-top: 5px
 								a.btn
 									padding: 10px 0
-									width: 48%
+									width: 49%
 									margin: 0
 									span
 										font-size: 20px
 								a.btn-logIn
-									margin-right: 4%
+									margin-right: 2%
 
 							.category-h1
 								margin-top: -15px
@@ -853,3 +864,182 @@ body
 								.name
 									font-size: 22px
 									margin-left: 27px
+@media only screen and(max-width: 500px)
+	body
+		main
+			section.swiper-block
+				margin: 0 15px
+				.slide
+					margin-right: 11px
+				.slide-more
+					.text
+						font-size: 13px
+			section.marketing-table
+				.marketing-navbar
+					padding: 15px 0
+					.buttonSwitch
+						width: 28%
+						margin: 0 1%
+						padding: 12.5px 0
+				.main-content
+					padding: 0 15px 10px
+					.items-table
+						.content
+							.item
+								img.shop-preview
+									width: 105px
+								.content
+									.category-text
+										font-size: 14px
+									.head, .tags
+										padding-left: 11px
+									.head
+										span.name
+											font-size: 20px
+										span.desc
+											font-size: 14px
+									.tags
+										margin-top: 10px
+										.tag-img
+											width: 25px
+											height: 25px
+							.btn-more.mob
+								width: 100%
+								margin-top: 15px
+					.items-table.mob
+						.content
+							.category-h1
+								display: -webkit-flex
+								display: -moz-flex
+								display: -ms-flex
+								display: -o-flex
+								display: flex
+								justify-content: space-between
+								padding: 24px 0
+								a
+									margin: 0
+									font-size: 22px
+							.category-item
+								height: 101px
+								img
+									min-width: 101px
+									width: 101px
+								span.name
+									margin-left: 34px
+@media only screen and(max-width: 450px)	
+	body
+		main
+			section.marketing-table
+				.main-content
+					.items-table
+						.content
+							.item
+								img.shop-preview
+									width: 100px
+								.content
+									.tags
+										display: none
+									.head
+										span.desc 
+											max-width: 170px
+					.items-table.mob
+						.content
+							.btns
+								a.btn-logIn
+									width: 92px
+									margin-right: 16px
+								a.btn-logUp
+									width: 180px
+								a.btn
+									span
+										font-size: 18px
+@media only screen and(max-width: 400px)
+	body
+		main
+			section.swiper-block 
+				margin: 0 15px
+				.slide
+					width: 34.5%
+					margin-right: 6px
+			section.marketing-table
+				.marketing-navbar
+					margin-top: 18px
+					.buttonSwitch
+						width: 92px
+						margin: 0 3px
+						span
+							font-size: 16px
+				.main-content
+					padding: 0 15px 10px
+					.search-items.mob
+						.filter-btn
+							img
+								padding: 8px 15px
+								width: 53px
+						img.search
+							margin-left: 16px
+						input
+							font-size: 16px
+							height: 40px
+						input::-webkit-input-placeholder
+							font-size: 16px
+						input:-moz-placeholder
+							font-size: 16px
+						input::-moz-placeholder
+							font-size: 16px
+						input:-ms-input-placeholder
+							font-size: 16px
+
+					.items-table
+						.content
+							.item
+								.content
+									.category-text
+										position: relative
+										padding: 0
+										margin: 0
+										line-height: 1
+										font-size: 10px
+									.head
+										span.desc
+											font-size: 13px
+											color: #333
+											line-height: 1.15
+											margin-top: 11px
+										span.name
+											font-size: 16px
+											padding-top: 9px
+											padding-bottom: 0
+									.tags
+										position: absolute
+										top: 0
+										right: 0
+										padding: 0
+										margin-top: 13px
+										margin-right: 18px //5px + 13px
+										.tag-img
+											width: 14px
+											height: 14px
+							.btn-more.mob
+								height: 40px
+								line-height: 40px
+								span
+									font-size: 16px
+					.items-table.mob
+						.content
+							.btns
+								a.btn 
+									span
+										font-size: 16px
+							.category-item
+								height: 60px
+								.name
+									font-size: 16px
+									margin-left: 33px
+								img
+									min-width: 60px
+									width: 60px
+
+							.category-h1
+								a
+									font-size: 19px

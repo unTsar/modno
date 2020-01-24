@@ -195,8 +195,6 @@ block content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по товарам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn.mk-filter-btn
-									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							.category-h1
 								a(href="#").active Женщины
 								a(href="#") Мужчины
@@ -328,6 +326,10 @@ block scripts
 					$('.mknav-buttonSwitch.products').removeClass('active');
 					$('.marketing-table .items-table.products').removeClass('active');
 					$('.marketing-table .items-table.products').fadeOut(250);
+
+					$('.mknav-buttonSwitch.shops').addClass('active');
+					$('.marketing-table .items-table.shops').addClass('active');
+					$('.marketing-table .items-table.shops').fadeIn(250);
 				}
 			});
 

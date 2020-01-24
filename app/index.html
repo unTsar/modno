@@ -226,7 +226,7 @@
     <header>
       <div class="container">
         <div class="headerLine"><a class="menu">
-            <button class="hamburger hamburger--elastic" id="header-menu-button" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a><a class="button-like mob" href="#"><img src="img/like.svg" alt="like.svg"></a><a class="logo" href="#"><img class="img-logo" src="img/logo.svg" alt="logo.svg"></a><a class="button-shopCart mob" href="#"><img src="img/shopCart.svg" alt="shopCart.svg"></a>
+            <button class="hamburger hamburger--elastic" id="header-menu-button" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a><a class="button-like mob" href="#"><img src="img/like.svg" alt="like.svg"></a><a class="logo" href="index.html"><img class="img-logo" src="img/logo.svg" alt="logo.svg"></a><a class="button-shopCart mob" href="#"><img src="img/shopCart.svg" alt="shopCart.svg"></a>
           <div class="languageSettings">
             <div class="languageSettings-button" id="languageSettings-button"><img class="flag" src="img/flag-russia.jpg" alt="flag-russia.jpg"><span class="cityName">Москва</span>
               <div class="buttonOpen">
@@ -696,7 +696,6 @@
               <div class="content">
                 <div class="search-items mob">
                   <input type="search" placeholder="Поиск по товарам"><img class="search" src="img/search.svg" alt="search.svg">
-                  <div class="filter-btn mk-filter-btn"><img src="img/filter-settings.svg" alt="filter-settings.svg"></div>
                 </div>
                 <div class="category-h1"><a class="active" href="#">Женщины</a><a href="#">Мужчины</a><a href="#">Дети</a></div>
                 <div class="category-item"><img src="img/index/slide-img1.jpg" alt="slide-img1.jpg">
@@ -831,6 +830,9 @@
     			$('#profile-dropdown').fadeOut(100);
     			$('#profile-dropdown').addClass('hide')
     		}
+    		//- if (!$('.popup-map-input-search').is(e.target) && $('.popup-map-input-search').has(e.target).length === 0 && !$('.search-results').is(e.target) && $('.search-results').has(e.target).length === 0) {
+    		//- 	$('.popup-map-input-search').siblings('.search-results').hide();
+    		//- }
     	});
     
     	$('#header-btnLogIn').click(function(){
@@ -883,11 +885,15 @@
     	});
     
     	$('.popup-map-input-search').focusin(function(){
-    		$(this).siblings('.search-results').show()
+    		$(this).siblings('.search-results').show();
+    	});
+    	$('.popup-map-input-search + .search-results .search-item').click(function(){
+    		$('.popup-map-input-search + .search-results').hide();
     	});
     	$('.popup-map-input-search').focusout(function(){
-    		$(this).siblings('.search-results').hide()
+    		$(this).siblings('.search-results').hide();
     	});
+    	
     
     
     	$('#header-currency-popup').click(function(){
@@ -1107,6 +1113,10 @@
     			$('.mknav-buttonSwitch.products').removeClass('active');
     			$('.marketing-table .items-table.products').removeClass('active');
     			$('.marketing-table .items-table.products').fadeOut(250);
+    
+    			$('.mknav-buttonSwitch.shops').addClass('active');
+    			$('.marketing-table .items-table.shops').addClass('active');
+    			$('.marketing-table .items-table.shops').fadeIn(250);
     		}
     	});
     

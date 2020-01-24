@@ -698,20 +698,19 @@ body .popup-map .input-outer .search-results {
   left: 0;
   right: 0;
   z-index: 11;
-  border: 0.5px solid rgba(0, 0, 0, 0.3);
-  border-top: 0;
   background-color: #fff;
+  -webkit-box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.1);
   display: none;
 }
 
 body .popup-map .input-outer .search-results .search-item {
   cursor: pointer;
-  padding-left: 42px;
-  height: 31px;
+  padding: 9px 0 9px 42px;
 }
 
 body .popup-map .input-outer .search-results .search-item span {
-  font-size: 12px;
+  font-size: 19px;
 }
 
 body .popup-map .input-outer .search-results img.separ {
@@ -1026,6 +1025,7 @@ body main {
 }
 
 body .hmenu-popup {
+  overflow-y: scroll;
   display: none;
   background-color: #F7F7F7;
   position: absolute;
@@ -2516,6 +2516,12 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body .popup-map .input-outer input.input-search {
     height: 40px;
+    font-size: 16px;
+  }
+  body .popup-map .input-outer .search-results .search-item {
+    padding: 6px 0 6px 42px;
+  }
+  body .popup-map .input-outer .search-results .search-item span {
     font-size: 16px;
   }
   body .popup-map .map-buttons {

@@ -1816,6 +1816,12 @@ body footer .footer-bottomLine .payments img.payment-img {
   pointer-events: none;
 }
 
+@media only screen and (min-width: 1024px) {
+  footer .footer-content .footer-content-wrapper .links .list {
+    display: block !important;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   body header .container .headerLine {
     padding: 0 15px;
@@ -1989,9 +1995,9 @@ body footer .footer-bottomLine .payments img.payment-img {
     padding-bottom: 0;
   }
   body footer .footer-content .container .footer-content-wrapper {
-    overflow: hidden;
     padding-right: 0;
     display: block;
+    overflow: hidden;
   }
   body footer .footer-content .container .footer-content-wrapper .banners {
     padding-left: 15px;

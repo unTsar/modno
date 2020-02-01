@@ -54,6 +54,7 @@ html(lang="ru")
 				a.link(href="#") цене, дороже
 				a(href="#").unfixed-btn.btn.filter-drop-popup_close-btn
 					span Принять
+		//- Фильтр для товаров
 		.Log-form.mk-filter-popup#mk-filter-popup
 			a.filter-popup_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -100,6 +101,76 @@ html(lang="ru")
 						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
 				a(href="#").btn.filter-popup_close-btn
 					span Принять
+		.Log-form.mk-filter-popup#mk-filter-popup-shops
+			a.filter-popup_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Фильтры
+			.links
+				.line.mk-filter-popup-line
+					span.span-link Монобрендовые
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Мультибрендовые
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Бутики
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Аутлеты
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Онлайн
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				a(href="#").btn.filter-popup_close-btn
+					span Принять
+		.Log-form.mk-filter-popup#mk-filter-popup-molls
+			a.filter-popup_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Фильтры
+			.links
+				.line.mk-filter-popup-line
+					span.span-link Торговые центры
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Торговые комплексы
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line.mk-filter-popup-line
+					span.span-link Универмаги
+					.buttonOpSw.r
+						input.option-checkbox(type="checkbox")
+						.knobs
+						.layer
+				a(href="#").btn.filter-popup_close-btn
+					span Принять
 
 		.Log-form.popup-profile-mob#popup-profile-mob
 			a.profile-mob_close-btn(href="#")
@@ -135,14 +206,15 @@ html(lang="ru")
 					span Валюта
 				.input-outer
 					img.img-search(src="img/search.svg", alt="search.svg")
-					input.input-search(type="search")
+					input.input-search.popup-map-input-search(type="search" placeholder="Введите валюту")
 				.links
-					.links-column
-						a.link(href="#") EUR (Euro)
-						img.separ(src="img/index/separ.svg", alt="separ.svg")
-						a.link(href="#") USD (US Dollar)
-						img.separ(src="img/index/separ.svg", alt="separ.svg")
-						a.link(href="#") RUB (Russian Rouble)
+					a.link(href="#") EUR (Euro)
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") USD (US Dollar)
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") RUB (Russian Rouble)
+				a(href="#").btn-submit.hmenu-popup-inner-close
+					span Запомнить
 		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-language#hmenu-popup-main-language
 			.outer
 				.head
@@ -151,16 +223,21 @@ html(lang="ru")
 					span Язык
 				.input-outer
 					img.img-search(src="img/search.svg", alt="search.svg")
-					input.input-search(type="search")
+					input.input-search.popup-map-input-search(type="search" placeholder="Введите язык")
 				.links
-					.links-column
-						a.link(href="#") Русский
-						img.separ(src="img/index/separ.svg", alt="separ.svg")
-						a.link(href="#") English
-						img.separ(src="img/index/separ.svg", alt="separ.svg")
-						a.link(href="#") Deutsch
-						img.separ(src="img/index/separ.svg", alt="separ.svg")
-						a.link(href="#") Italiano
+					a.link(href="#") Русский
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") English
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") Deutsch
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") Italiano
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") Español
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") 中文
+				a(href="#").btn-submit.hmenu-popup-inner-close
+					span Запомнить
 		//- .hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-delivery#hmenu-popup-main-delivery
 		//- 	.outer
 		//- 		img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
@@ -305,7 +382,7 @@ html(lang="ru")
 		//- 				a.link(href="#") Пятигорск
 		.hmenu-popup-category.hmenu-popup.hmenu-popup-category2#hmenu-popup-category2
 			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				//- img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
 				.head 
 					a(href="#").hmenu-popup-inner-close
 						img(src="img/arrow-left.svg", alt="arrow-left.svg")
@@ -357,7 +434,7 @@ html(lang="ru")
 						.text.name Mango: одежда и обувь онлайн
 		.hmenu-popup-category.hmenu-popup.hmenu-popup-category1#hmenu-popup-category1
 			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				//- img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
 				.head
 					a(href="#").hmenu-popup-inner-close
 						img(src="img/arrow-left.svg", alt="arrow-left.svg")
@@ -384,7 +461,7 @@ html(lang="ru")
 					a.link.hmenu-link(href="#").r Sale
 		.hmenu-popup.hmenu-popup-main#hmenu-popup-main
 			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				//- img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
 				.head 
 					span Категории
 				.links
@@ -394,6 +471,8 @@ html(lang="ru")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					a.link.hmenu-link(href="#") Дети
 			.outer
+				.head 
+					span Настройки
 				.links
 					a.link#hmenu-popup-main-city_btn(href="#") Город: #[span.val Москва]
 						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
@@ -411,9 +490,9 @@ html(lang="ru")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
 				span Валюта
-			.input-search
+			.input-outer
 				img.img-search(src="img/search.svg", alt="search.svg")
-				input.dd-popup-search(type="search")
+				input.input-search.popup-map-input-search(type="search" placeholder="Введите валюту")
 			.search-items.dd-search-items
 				.search-item.dd-search-item.currency-popup_close-btn
 					span EUR (Euro)
@@ -431,9 +510,9 @@ html(lang="ru")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
 				span Язык
-			.input-search
+			.input-outer
 				img.img-search(src="img/search.svg", alt="search.svg")
-				input.dd-popup-search(type="search")
+				input.input-search.popup-map-input-search(type="search" placeholder="Введите язык")
 			.search-items.dd-search-items
 				.search-item.dd-search-item.language-popup_close-btn
 					span Русский
@@ -755,28 +834,39 @@ html(lang="ru")
 				$('#hmenu-popup-main-currency').fadeToggle(250);
 			});
 
-			$('.mk-filter-btn').click(function(){
-				$('#mk-filter-popup').bPopup({
+			$('.mk-filter-btn-shops').click(function(){
+				$('#mk-filter-popup-shops').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'filter-popup_close-btn',
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
 			});
-			$('.mk-filter-drop-btn').click(function(){
-				$('#mk-filter-drop-popup').bPopup({
+			$('.mk-filter-btn-molls').click(function(){
+				$('#mk-filter-popup-molls').bPopup({
 					positionStyle: 'fixed',
-					closeClass: 'filter-drop-popup_close-btn',
+					closeClass: 'filter-popup_close-btn',
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
 			});
-			$('.mk-filter-drop-popup .unfixed-btn').click(function(){
-				setTimeout(function(){$('body').addClass('fixed'); }, 500);
-			});
-			$('.mk-filter-drop-popup .img-close').click(function(){
-				$('.mk-filter-popup .img-close').click();
-			});
+
+			//- Фильтр для товаров
+
+			//- $('.mk-filter-drop-btn').click(function(){
+			//- 	$('#mk-filter-drop-popup').bPopup({
+			//- 		positionStyle: 'fixed',
+			//- 		closeClass: 'filter-drop-popup_close-btn',
+			//- 		onOpen: function() { $('body').addClass('fixed'); },
+			//- 		onClose: function() { $('body').removeClass('fixed') }			
+			//- 	});
+			//- });
+			//- $('.mk-filter-drop-popup .unfixed-btn').click(function(){
+			//- 	setTimeout(function(){$('body').addClass('fixed'); }, 500);
+			//- });
+			//- $('.mk-filter-drop-popup .img-close').click(function(){
+			//- 	$('.mk-filter-popup .img-close').click();
+			//- });
 
 			$('.mk-filter-popup-line').click(function(){
 				if($(this).find('.option-checkbox').is(':checked')){
@@ -804,6 +894,8 @@ html(lang="ru")
 				$(this).next().slideToggle(250);
 				$(this).toggleClass('active');
 			});
+
+			
 
 
 

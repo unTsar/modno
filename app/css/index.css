@@ -476,6 +476,10 @@ body section.marketing-table .main-content .search-items.mob .filter-btn img {
   padding: 13px 28px 14px 26px;
 }
 
+body section.marketing-table .main-content .sidebar {
+  display: none;
+}
+
 body section.marketing-table .main-content .sidebar .number, body section.marketing-table .main-content .sidebar .options {
   width: 252px;
   -webkit-border-radius: 5px;
@@ -1092,8 +1096,8 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body main section.marketing-table .main-content .search-items.mob {
     display: block;
   }
-  body main section.marketing-table .main-content .sidebar {
-    display: none;
+  body main section.marketing-table .main-content .sidebar, body main section.marketing-table .main-content .sidebar.active {
+    display: none !important;
   }
   body main section.marketing-table .main-content .items-table .content .btn-more.mob {
     display: block;

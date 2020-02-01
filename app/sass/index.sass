@@ -299,6 +299,7 @@ body
 						opacity: 0.5
 						padding: 13px 28px 14px 26px
 			.sidebar
+				display: none
 				.number, .options
 					width: 252px
 					border-radius: 5px
@@ -702,8 +703,8 @@ body
 					display: block
 					.search-items.mob
 						display: block
-					.sidebar
-						display: none
+					.sidebar, .sidebar.active
+						display: none !important
 					.items-table
 						.content
 							.btn-more.mob

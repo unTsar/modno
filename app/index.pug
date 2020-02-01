@@ -113,7 +113,7 @@ block content
 					.mknav-buttonSwitch.molls.buttonSwitch
 						span Моллы
 				.main-content#mk-main-content
-					.sidebar
+					.sidebar.shops.active(style="display: block")
 						.number
 							span.name Количество:
 							span.value 2328
@@ -148,12 +148,35 @@ block content
 									input.option-checkbox(type="checkbox" checked)
 									.knobs
 									.layer
+					.sidebar.molls
+						.number
+							span.name Количество:
+							span.value 2328
+						.options
+							.line
+								span Торговые центры
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox")
+									.knobs
+									.layer
+							.line
+								span Торговые комплексы
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox")
+									.knobs
+									.layer
+							.line.checked
+								span Универмаги
+								.buttonOpSw.r
+									input.option-checkbox(type="checkbox" checked)
+									.knobs
+									.layer
 					.items-table.molls
 						.content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по моллам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn.mk-filter-btn
+								.filter-btn.mk-filter-btn-molls
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							- for(var i = 1; i <= 20; i++)
 								.item
@@ -174,7 +197,7 @@ block content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по магазинам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn.mk-filter-btn
+								.filter-btn.mk-filter-btn-shops
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							- for(var i = 1; i <= 20; i++)
 								.item
@@ -300,17 +323,25 @@ block scripts
 			$('.mknav-buttonSwitch.shops').click(function(){
 				$('.marketing-table .items-table').removeClass('active');
 				$('.marketing-table .items-table').fadeOut(250);
+				$('.marketing-table .sidebar').removeClass('active');
+				$('.marketing-table .sidebar').fadeOut(250);
 				setTimeout(function(){
 					$('.marketing-table .items-table.shops').addClass('active');
 					$('.marketing-table .items-table.shops').fadeIn(250);
+					$('.marketing-table .sidebar.shops').addClass('active');
+					$('.marketing-table .sidebar.shops').fadeIn(250);
 				}, 250);
 			});
 			$('.mknav-buttonSwitch.molls').click(function(){
 				$('.marketing-table .items-table').removeClass('active');
 				$('.marketing-table .items-table').fadeOut(250);
+				$('.marketing-table .sidebar').removeClass('active');
+				$('.marketing-table .sidebar').fadeOut(250);
 				setTimeout(function(){
 					$('.marketing-table .items-table.molls').addClass('active');
 					$('.marketing-table .items-table.molls').fadeIn(250);
+					$('.marketing-table .sidebar.molls').addClass('active');
+					$('.marketing-table .sidebar.molls').fadeIn(250);
 				}, 250);
 			});
 			$('.mknav-buttonSwitch.products').click(function(){

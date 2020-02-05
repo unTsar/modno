@@ -686,15 +686,13 @@ body
 	.hmenu-popup
 		overflow-y: scroll
 		display: none
-		background-color: #F7F7F7
+		background-color: #fff
 		position: absolute
 		top: 0
 		left: 0
 		right: 0
 		bottom: 0
-		margin-top: 90px
-		padding-left: 15px
-		padding-right: 15px
+		width: 100%
 		.outer::-webkit-scrollbar
 			width: 0px
 			background: transparent
@@ -705,97 +703,16 @@ body
 			-ms-overflow-style: none
 			scrollbar-width: none
 			overflow-y: scroll
-			background-color: #fff
-			border-radius: 5px
-			padding: 0 20px
+			padding: 0 50px
 			padding-bottom: 15px
 			img.hmenu-popup-close
 				position: absolute
 				top: 0
 				right: 0
-				margin-top: 17px
-				margin-right: 20px
+				margin-top: 24px
+				margin-right: 50px
 				width: 20px
 				cursor: pointer
-	.hmenu-popup-category2
-		z-index: 300
-		.outer
-			.head
-				padding: 22px 0
-				a.hmenu-popup-inner-close
-					margin-right: 40px
-				span
-					font-size: 30px
-					font-weight: bold
-			.input-outer
-				position: relative
-				margin-bottom: 25px
-				img.img-search
-					position: absolute
-					top: 0
-					bottom: 0
-					margin: auto
-					left: 0
-					margin-left: 13px
-					width: 18px
-				input.input-search
-					padding-left: 54px
-					height: 45px
-					width: 100%
-					border: 0.5px solid rgba(0, 0, 0, 0.3)
-					border-radius: 5px
-				input.input-search::-webkit-input-placeholder, input.input-search:-moz-placeholder, input.input-search::-moz-placeholder, input.input-search:-ms-input-placeholder
-					font-size: 15px
-					color: #808080
-			.links
-				a.link
-					width: 100%
-					font-size: 25px
-					display: inline-block
-					padding: 13px 0
-				img.separ
-					display: block
-					width: 100%
-					max-height: 2px
-			.offer-section
-				margin-top: 86px
-				.desctext
-					.text
-						font-size: 20px
-					.headtext
-						color: #808080
-					.name
-						font-size: 25px
-						font-weight: bold
-	.hmenu-popup-category1
-		z-index: 200
-		.outer
-			.head
-				padding: 22px 0
-				a.hmenu-popup-inner-close
-					margin-right: 40px
-				span
-					font-size: 30px
-					font-weight: bold
-			.links
-				a.link
-					width: 100%
-					font-size: 25px
-					display: inline-block
-					padding: 13px 0
-				a.link.r
-					color: #ED1C24
-				a.link.g
-					color: #55BB00
-				img.separ
-					display: block
-					width: 100%
-					max-height: 2px
-	.hmenu-popup-main
-		z-index: 100
-		.outer
-			height: auto
-			margin-bottom: 69px
 			.head
 				padding: 22px 0
 				text-align: center
@@ -810,7 +727,7 @@ body
 					display: inline-block
 					padding: 13px 0
 					span.val
-						opacity: 0.5
+							opacity: 0.5
 					img.img-arrow
 						position: absolute
 						top: 0
@@ -818,39 +735,58 @@ body
 						right: 0
 						margin: auto
 						width: 11px
+				a.link.r
+					color: #ED1C24
+				a.link.g
+					color: #55BB00
 				img.separ
 					display: block
 					width: 100%
 					max-height: 2px
+	.hmenu-popup-category1, .hmenu-popup-category2, .hmenu-popup-lSettings
+		.outer
+			.head	
+				a.hmenu-popup-inner-close
+					float: left
+					margin: 15px 0
+					line-height: 0
+				span
+					margin-left: -14px
+	.hmenu-popup-category2
+		z-index: 300
+		.outer
+			.offer-section
+				margin-top: 86px
+				.desctext
+					.text
+						font-size: 20px
+					.headtext
+						color: #808080
+					.name
+						font-size: 25px
+						font-weight: bold
+	.hmenu-popup-category1
+		z-index: 200
+	.hmenu-popup-main
+		z-index: 100
+		.outer
+			height: auto
 	.hmenu-popup-lSettings
 		z-index: 400
 		.outer
-			padding: 0
-			img.hmenu-popup-close
-				margin-top: 37px
-				margin-right: 20px
-			.head
-				padding: 22px 20px
-				a.hmenu-popup-inner-close
-					margin-right: 40px
-				span
-					font-size: 30px
-					font-weight: bold
 			.input-outer
 				position: relative
-				margin-bottom: 20px
-				margin-left: 15px
-				margin-right: 15px
+				margin-bottom: 31px
 				img.img-search
 					position: absolute
 					top: 0
 					bottom: 0
 					left: 0
 					margin: auto
-					margin-left: 10px
+					margin-left: 19px
 					width: 18px
 				input.input-search
-					padding-left: 42px
+					padding-left: 53px
 					height: 50px
 					width: 100%
 					border: 0.5px solid rgba(0, 0, 0, 0.3)
@@ -859,20 +795,6 @@ body
 				input.input-search::-webkit-input-placeholder, input.input-search:-moz-placeholder, input.input-search::-moz-placeholder, input.input-search:-ms-input-placeholder
 					font-size: 12px
 					color: #808080
-			.links
-				position: relative
-				padding-left: 50px
-				padding-right: 50px
-				a.link
-					width: 100%
-					font-size: 25px
-					display: inline-block
-					padding: 13px 0
-					padding-right: 30px
-				img.separ
-					display: block
-					width: 100%
-					max-height: 2px
 			a.btn-submit
 				margin-left: auto
 				margin-right: auto
@@ -1240,18 +1162,19 @@ body
 			width: 100%
 			height: 100%
 			img.img-close
-				display: none
+				margin-top: 24px
+				margin-right: 50px
 			.topline
 				padding: 35px 0
 				a.hmenu-popup-inner-close
 					display: block
-					margin-left: 35px
+					margin-left: 50px
 				span
 					font-size: 25px
 			.input-outer
 				margin-top: 0
-				margin-left: 15px
-				margin-right: 15px
+				margin-left: 50px
+				margin-right: 50px
 				margin-bottom: 30px
 				input.input-search
 					height: 50px
@@ -1522,6 +1445,9 @@ body
 					input.track-search:-ms-input-placeholder
 						font-size: 19px
 		.popup-map
+			.topline
+				a.hmenu-popup-inner-close
+					margin-left: 30px
 			.input-outer
 				margin-left: 30px
 				margin-right: 30px
@@ -1538,28 +1464,31 @@ body
 				height: 445px
 		.hmenu-popup
 			.outer
-				padding: 0 30px 0
-				margin-bottom: 33px
+				padding-left: 30px
+				padding-right: 30px
 				.head
-					text-align: center
 					padding: 27px 0
 					span
 						font-size: 22px
 				img.hmenu-popup-close
 					margin-top: 21px
-					margin-right: 15px
+					margin-right: 30px
 				.links
 					a.link
 						padding: 14.5px 0
 						font-size: 19px
+		.hmenu-popup-main
+			.outer
+				.links
+					a.link
+						padding: 16px 0
 		.hmenu-popup-category1, .hmenu-popup-category2, .hmenu-popup-lSettings
 			.outer
-				.head
-					text-align: left
+				.head	
 					a.hmenu-popup-inner-close
-						margin-right: 16px
+						margin: 8px 0
 				.offer-section
-					margin-top: 72px
+					margin-top: 48px
 					img
 						width: 100%
 					.desctext
@@ -1736,16 +1665,15 @@ body
 					input.track-search:-ms-input-placeholder
 						font-size: 13px
 		.hmenu-popup
-			margin-top: 71px
+			padding-top: 28px
 			.outer
-				margin-bottom: 15px
+				padding-bottom: 0
 				img.hmenu-popup-close
 					width: 15px
-					margin-top: 17px
-					margin-right: 15px
+					margin-top: 0
+					margin-right: 30px
 				.head
 					padding: 19.5px 0
-					margin: 17px 17px 0
 					span
 						font-size: 19px
 				.links
@@ -1756,12 +1684,6 @@ body
 							display: none
 		.hmenu-popup-category1, .hmenu-popup-category2
 			.outer
-				.head
-					margin-left: 0
-					a.hmenu-popup-inner-close
-						margin-right: 20px
-						img
-							width: 11px
 				.offer-section
 					margin-top: 45px
 					.desctext
@@ -1771,8 +1693,16 @@ body
 							font-size: 16px
 		.hmenu-popup-lSettings
 			.outer
+				padding-left: 15px
+				padding-right: 15px
+				.links
+					padding-left: 15px
+					padding-right: 15px
 				.head
-					margin-left: 0
+					a.hmenu-popup-inner-close
+						margin-left: 15px
+					span
+						margin-left: -29px
 				.input-outer
 					input.input-search
 						height: 40px
@@ -1852,6 +1782,7 @@ body
 						.option-checkbox:checked + .knobs::before
 							left: 28px
 		.popup-map
+			padding-top: 28px
 			.topline
 				margin: 0
 				a.hmenu-popup-inner-close
@@ -1859,7 +1790,7 @@ body
 			.input-outer
 				margin-left: 15px
 				margin-right: 15px
-				margin-bottom: 15px
+				margin-bottom: 20px
 				input.input-search
 					height: 40px
 					font-size: 16px

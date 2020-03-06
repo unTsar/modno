@@ -1,0 +1,1023 @@
+@import "vars"
+@import "fonts"
+
+body
+	
+	section.shop-card
+		padding: 15px 0
+		.card-item
+			position: relative
+			background-color: #fff
+			border-radius: 3px
+			margin: 0 12.5%
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+			img.img-shop-preview, .content
+				display: inline-block
+				vertical-align: top
+			.content
+				padding-left: 42px
+				.text-name
+					font-weight: bold
+					font-size: 20px
+					padding: 8px 0 7px 0
+				.text-adress
+					font-size: 11px
+					color: #999999
+				.counters
+					.counter
+						display: inline-block
+						padding: 10px 0 18px 0
+						padding-right: 47px
+						span
+							font-size: 15px
+							color: #999999
+						span.b
+							color: #000000
+							font-weight: bold
+			.btn-subscribe
+				position: absolute
+				right: 14px
+				bottom: 19px
+				background-color: $accent-blue
+				width: 126px
+				height: 30px
+				line-height: 26px
+				border-radius: 3px
+				text-align: center
+				span
+					color: #ffffff
+					font-weight: bold
+					font-size: 13px
+			img.img-map
+				position: absolute
+				top: 14px
+				right: 14px
+	section.marketing-table
+		.marketing-navbar
+			padding-top: 14px
+			padding-bottom: 15px
+			position: relative
+			text-align: center
+			background-color: #fff
+			border-radius: 5px
+			.buttonSwitch
+				transition: 0.3s
+				cursor: pointer
+				display: inline-block
+				text-align: center
+				padding-top: 6px
+				padding-bottom: 7px
+				width: 123px
+				margin: 0 5px
+				border: 0.5px solid #ededed
+				border-radius: 5px
+				line-height: 15px
+				span
+					user-select: none
+					opacity: 0.75
+					font-size: 13px
+					font-weight: bold
+					color: #333
+			.buttonSwitch.active
+				box-shadow: inset 0px 4px 4px #bfbfbf
+				background-color: #F0F0F0
+			.buttonSwitch.disabled
+				pointer-events: none
+			.buttonSwitch:hover
+				box-shadow: inset 0px 4px 4px #bfbfbf
+				background-color: #F0F0F0
+			.input-outer
+				position: absolute
+				width: 240px
+				height: 30px
+				top: 0
+				bottom: 0
+				right: 0
+				margin: auto
+				margin-right: 17px
+				input.input-search
+					width: 100%
+					height: 100%
+					padding-left: 14px
+					padding-right: 25px
+					border-radius: 3px
+					border: none
+					background-color: #e6e6e6
+				a.buttonSearch
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					padding-left: 5px
+					padding-right: 7px
+					img.icon
+						vertical-align: middle
+						width: 14px
+						height: auto
+				input.input-search::-webkit-input-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+				input.input-search:-moz-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+				input.input-search::-moz-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+				input.input-search:-ms-input-placeholder
+					font-size: 12px
+					color: #808080
+					opacity: 0.5
+		.mk-block
+			display: none
+		.mk-products
+			.main-content
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: flex-start
+				padding-top: 15px
+				padding-bottom: 10px
+				.sidebar > *
+					margin-bottom: 15px
+				.sidebar
+					.sidebar-block
+						width: 252px
+						border-radius: 5px
+						background-color: #fff
+					.number, .sorting, .advSearch
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						padding-left: 15px
+						padding-right: 20px
+						height: 35px
+						align-items: center
+					.number
+						span.name, .value
+							font-size: 12px
+							color: #808080
+						span.value
+							font-weight: bold
+							margin-left: auto
+					.sorting
+						cursor: pointer
+						span
+							font-size: 13px
+							color: #000000
+						img.img-arrow
+							margin-left: auto
+					.category-h1
+						padding-top: 5px
+						.category-item
+							font-size: 12px
+							color: #000000
+							padding: 6px 0 6px 14px
+							cursor: pointer
+						.category-item:hover, .category-item.active
+							background-color: #E5E5E5
+							border-left: 3px #C4C4C4 solid
+							padding-left: 11px
+					.options
+						padding-top: 14px
+						padding-left: 15px
+						padding-bottom: 1px
+						.line
+							line-height: 14px
+							margin-bottom: 17px
+					.options, .filters
+						.line.checked
+							span
+								color: #000
+						.line
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							align-items: center
+							span
+								font-size: 12px
+								color: #808080
+								transition: 0.3s ease all
+							.buttonOpSw
+								display: inline-block
+								vertical-align: middle
+								position: relative
+								width: 32px
+								height: 15px
+								margin-left: auto
+								margin-right: 16px
+								overflow: hidden
+								.layer
+									width: 100%
+									background-color: #808080
+									z-index: 1
+								.knobs
+									z-index: 2
+								.knobs::before
+									content: ''
+									position: absolute
+									top: 2px
+									left: 2px
+									width: 11px
+									height: 11px
+									background-color: #fff
+									border-radius: 50%
+								.knobs, .layer
+									position: absolute
+									top: 0
+									right: 0
+									bottom: 0
+									left: 0
+								.knobs, .knobs::before, .layer
+									transition: 0.3s ease all
+								.option-checkbox
+									position: relative
+									width: 100%
+									height: 100%
+									padding: 0
+									margin: 0
+									opacity: 0
+									cursor: pointer
+									z-index: 3
+								.option-checkbox:checked + .knobs::before
+									content: ''
+									left: 19px
+								.option-checkbox:checked ~ .layer
+									background-color: $accent-blue
+							.buttonOpSw.r, .layer
+								border-radius: 100px
+					.advSearch
+						cursor: pointer
+						span
+							font-weight: bold
+							font-size: 12px
+							color: #000000
+						img.img-settings
+							margin-left: auto
+							margin-right: 5px
+							width: 15px
+					.filters
+						.line
+							cursor: pointer
+							padding-left: 14px
+							height: 33px
+							line-height: 31px
+							span.name
+								font-size: 12px
+							span.value
+								font-size: 10px
+								margin-left: auto
+								margin-right: 14px
+								color: #808080
+							img.img-arrow
+								margin-right: 14px
+						img.separ
+							display: block
+							width: 100%
+							max-height: 2px
+
+				.items-table
+					.content
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						flex-wrap: wrap
+						.btn-more.mob
+							transition: 0.3s
+							display: none
+							border-radius: 5px
+							border: 0.5px solid rgba(0, 0, 0, 0.3)
+							width: 200px
+							height: 60px
+							line-height: 60px
+							text-align: center
+							cursor: pointer
+							margin: 0 auto
+							span
+								transition: 0.3s
+								font-weight: bold
+								font-size: 21px
+								color: #000
+						.btn-more.mob:hover
+							background-color: $accent-blue
+							border-color: $accent-blue
+							span
+								color: #fff
+						.category-item, .category-h1, .btns
+							width: 100%
+						.item
+							transition: 0.3s
+							position: relative
+							cursor: pointer
+							background-color: #fff
+							border-radius: 5px
+							margin-left: 1.1%
+							margin-bottom: 14px
+							width: 23.9%
+							font-size: 0
+							letter-spacing: 0
+							word-spacing: 0
+							img.new-mark
+								position: absolute
+								top: 0
+								left: 0
+								margin-top: 10px
+								margin-left: 12px
+							a.like-mark
+								position: absolute
+								top: 0
+								right: 0
+								margin-top: 7px
+								margin-right: 7px
+							img.img-preview
+								border-radius: 5px 5px 0 0
+							.content
+								position: relative
+								padding-left: 18px
+								padding-right: 13px
+								padding-bottom: 12px
+								a.unhidden-mark
+									position: absolute
+									top: -21px
+									right: 0
+									margin-bottom: 8px
+									margin-right: 9px
+								.headtext
+									margin-top: 11px
+									line-height: 1.95
+									span.name
+										font-size: 12px
+										font-weight: bold
+									span.creator
+										font-size: 10px
+								.additional
+									margin-top: 5px
+									.rating
+										img
+											margin-bottom: -1px
+										span.info
+											font-size: 10px
+											color: #808080
+											margin-left: 7px
+									.category
+										margin-top: 9px
+										span, img.category-flag
+											display: inline-block
+											vertical-align: middle
+										span
+											font-size: 9px
+											color: #808080
+											margin-left: 4px
+								.price
+									position: relative
+									margin-left: auto
+									margin-top: auto
+									span.price-value
+										font-size: 12px
+										font-weight: bold
+									span.old-price-value
+										position: absolute
+										font-size: 10px
+										color: #808080
+										top: -21px
+										right: 0
+										text-decoration: line-through
+
+						.item:hover
+							box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+		.mk-info
+			font-size: 15px
+			.main-content
+				.anchors-section
+					margin: 17px 0
+					a.anchor-btn
+						display: inline-block
+						position: relative
+						padding: 0 20px
+						font-size: 13px
+						font-weight: bold
+						height: 30px
+						line-height: 30px
+						border-radius: 5px
+						margin-right: 7px
+						transition: 0.3s
+					a.anchor-btn::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+						border-radius: 5px
+					a.anchor-btn:hover 
+						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+						background-color: #E5E5E5
+				.mk-info-section
+					border-radius: 5px
+					background-color: #fff
+					padding-left: 37px
+					margin-bottom: 15px
+					h2
+						font-weight: bold
+						font-size: 18px
+						margin: 0
+						margin-left: 0
+						padding: 19.5px 0
+				.about-shop
+					h2
+						font-size: 20px
+						padding: 11px 0
+					.headblock
+						background-color: #E5E5E5
+						padding: 11.5px 0 11.5px 37px
+						margin-left: -37px
+						span.headname
+							font-size: 18px
+					.main-info
+						padding-top: 12px
+						padding-bottom: 5px
+						a.site
+							color: $accent-blue
+							text-decoration: underline
+							display: inline-block
+							padding: 10px 0
+						img, span
+							display: inline-block
+							vertical-align: middle
+						.secure-tr, .delivery
+							padding: 7px 0
+							span
+								margin-left: 12px
+						.delivery-inf
+							img
+								margin-bottom: -4px
+						.contacts
+							.undgr
+								.circle
+									width: 11px
+									height: 9px
+									border-radius: 50%
+								.circle.c1
+									background-color: #FFDB1C
+								.circle.c2
+									background-color: #6ACDA9
+								.circle.c3
+									background-color: #219417
+								.circle, span
+									display: inline-block
+									vertical-align: middle
+								span
+									margin-left: 8px
+									margin-right: 20px
+							span.time
+								padding: 10px 0
+					.categories, .brands
+						padding-bottom: 5px
+						.content
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							.category-column, .brands-column
+								width: 33.7%
+								.item
+									padding: 8px 0
+									display: block
+								.item.head
+									font-weight: bold
+				.delivery
+					form.form-block
+						.delivery-type, .choice-city
+							.radio-item
+								input
+									display: none
+								label
+									transition: 0.3s
+									font-size: 15px
+									color: #7F7F7F
+									position: relative
+									display: inline-block
+									cursor: pointer
+								label::before
+									transition: 0.3s
+									content: ''
+									position: absolute
+									display: inline-block
+									border-radius: 5px
+									border: 0.5px solid #808080
+								label::after
+									content: ''
+									position: absolute
+									display: inline-block
+									display: none
+									background-repeat: no-repeat
+									background-size: cover
+									background-image: url('../img/checkbox-img.svg')
+								input:checked + label::after
+									display: block
+								input:checked + label::before
+									border-color: #000
+								input:checked + label
+									color: #000
+						.delivery-type
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							.radio-item.checked
+								border-color: $accent-blue
+							.radio-item
+								width: 24.2%
+								padding-top: 13px
+								padding-bottom: 16px
+								margin-right: 2.2%
+								border: 0.5px solid rgba(0, 0, 0, 0.3)
+								border-radius: 5px
+								transition: 0.3s
+								label
+									font-weight: bold
+									padding-left: 54px
+									margin-left: 26px
+									line-height: 1.4
+								label::before
+									top: 3px
+									left: 0
+									width: 29px
+									height: 29px
+								label::after
+									top: 6px
+									left: 3px
+									width: 24px
+									height: 24px
+								.ext-text
+									padding-left: 54px
+									margin-left: 26px
+									line-height: 1
+									span
+										font-size: 10px
+										color: #7F7F7F
+									span.price
+										font-weight: bold
+						.choice-city
+							margin-top: 20px
+							margin-bottom: 8px
+							padding: 10px 0
+							.radio-item
+								display: inline-block
+								vertical-align: middle
+								label
+									padding-left: 26px
+									margin-right: 40px
+									line-height: 1.4
+								label::before
+									top: 2px
+									left: 0
+									width: 17px
+									height: 17px
+								label::after
+									top: 5px
+									left: 3px
+									width: 12px
+									height: 12px
+					.inf-block
+						padding-bottom: 13px
+						.line
+							max-width: 375px
+							padding: 8px 0
+							span.value
+								float: right
+								font-weight: bold
+				.reimb
+					padding-bottom: 25px
+					p.desc
+						max-width: 695px
+						margin: 0
+					span.footnote
+						font-size: 10px
+					.questions
+						margin-left: -37px
+						.item
+							padding-left: 37px
+							.headline
+								cursor: pointer
+								padding: 21px 0
+								span.name
+									font-weight: bold
+								img.arrow
+									margin-left: 15px
+									margin-top: 2px
+									transition: 0.3s
+									transform: rotate(90deg)
+								span.name, img.arrow
+									display: inline-block
+									vertical-align: middle
+							.headline.active
+								img.arrow
+									transform: rotate(-90deg)
+							.hidden
+								display: none
+								p
+									margin: 0
+									margin-bottom: 20px
+						img.separ
+							display: block
+							width: 100%
+							max-height: 2px
+				.credit
+					.instruction
+						span.point
+							font-weight: bold
+							display: block
+							padding: 7.5px 0
+					form.credit-form
+						padding-top: 25px
+						.range-item
+							margin-bottom: 25px
+							.headtext
+								padding: 10px 0
+							input[type=range]
+								max-width: 695px
+								width: 100%
+								border: 0
+								margin: 0
+								-webkit-appearance: none
+							input[type=range]::-webkit-slider-thumb
+								-webkit-appearance: none
+							input[type=range]:focus
+								outline: none
+							input[type=range]::-ms-track
+								width: 100%
+								cursor: pointer
+								background: transparent
+								border-color: transparent
+								color: transparent
+							input[type=range]::-webkit-slider-thumb
+								-webkit-appearance: none
+								height: 20px
+								width: 20px
+								border-radius: 50%
+								background: $accent-blue
+								cursor: pointer
+								margin-top: -9px
+							input[type=range]::-moz-range-thumb
+								-webkit-appearance: none
+								height: 20px
+								width: 20px
+								border-radius: 50%
+								background: $accent-blue
+								cursor: pointer
+								margin-top: -9px
+							input[type=range]::-ms-thumb
+								-webkit-appearance: none
+								height: 20px
+								width: 20px
+								border-radius: 50%
+								background: $accent-blue
+								cursor: pointer
+								margin-top: -9px
+							input[type=range]::-webkit-slider-runnable-track
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-moz-range-track
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-ms-track
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-ms-fill-lower
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-ms-fill-upper
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-webkit-slider-runnable-track
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-moz-range-track
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							input[type=range]::-ms-track
+								width: 100%
+								height: 3px
+								cursor: pointer
+								background: #D9D9D9
+								border: 0
+								margin: 0
+							.range-points
+								max-width: 695px
+								width: 100%
+								padding-top: 15px
+								display: -webkit-flex
+								display: -moz-flex
+								display: -ms-flex
+								display: -o-flex
+								display: flex
+								align-items: center
+								justify-content: space-between
+								span
+									opacity: 0.5
+						.calc-values
+							.line
+								max-width: 325px
+								padding: 8px 0
+								span.value
+									float: right
+									font-weight: bold
+						.input-contacts
+							max-width: 325px
+							.input-outer
+								position: relative
+								margin-top: 15px
+								cursor: pointer
+								input
+									width: 100%
+									height: 31px
+									padding-left: 17px
+									line-height: 31px
+									border: 0.5px solid rgba(0, 0, 0, 0.5)
+									border-radius: 5px
+								.placeholder	
+									position: absolute
+									pointer-events: none
+									width: 100%
+									height: 100%
+									padding-left: 17px
+									top: 0
+									left: 0
+									span
+										font-size: 10px
+										color: #7F7F7F
+									span.red
+										color: #E00000
+								// input::-webkit-input-placeholder
+								// 	font-size: 10px
+								// 	color: #7F7F7F
+								// input:-moz-placeholder
+								// 	font-size: 10px
+								// 	color: #7F7F7F
+								// input::-moz-placeholder
+								// 	font-size: 10px
+								// 	color: #7F7F7F
+								// input:-ms-input-placeholder
+								// 	font-size: 10px
+								// 	color: #7F7F7F
+						.submit-block
+							padding-top: 34px
+							padding-bottom: 30px
+							input, p.desc
+								display: inline-block
+								vertical-align: middle
+							input
+								width: 182px
+								height: 30px
+								line-height: 30px
+								background-color: $accent-blue
+								border-radius: 5px
+								border: none
+								color: #fff
+								cursor: pointer
+							p.desc
+								max-width: 190px
+								margin-left: 23px
+						p.desc
+							margin: 0
+							max-width: 64.5%
+							font-size: 12px
+							line-height: 1.2
+							color: #7F7F7F
+						.mark
+							padding-top: 30px
+							padding-bottom: 25px
+							span
+								font-size: 12px
+							a
+								color: $accent-blue
+								text-decoration: underline
+		.mk-feedback
+			.main-content
+				.anchors-section
+					margin: 17px 0
+					a.anchor-btn
+						display: inline-block
+						position: relative
+						padding: 0px 28px
+						font-size: 13px
+						font-weight: bold
+						height: 30px
+						line-height: 30px
+						border-radius: 5px
+						margin-right: 7px
+						transition: 0.3s
+					a.anchor-btn::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+						border-radius: 5px
+					a.anchor-btn:hover, a.anchor-btn.active 
+						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+						background-color: #E5E5E5
+					a.anchor-btn.disabled
+						pointer-events: none
+				.reviews-list
+					display: none
+					background-color: #fff
+					border-radius: 5px
+					position: relative
+					a.btn-send
+						position: absolute
+						top: 0
+						right: 0
+						margin-top: 19px
+						margin-right: 38px
+						background-color: $accent-blue
+						border-radius: 3px
+						width: 126px
+						height: 30px
+						line-height: 28px
+						text-align: center
+						span
+							font-size: 14px
+							color: #fff
+					h2
+						font-size: 18px
+						font-weight: bold
+						padding: 19.5px 0
+						padding-left: 37px
+						margin: 0
+					.review-item
+						padding-left: 37px
+						padding-top: 12px
+						padding-bottom: 10px
+						.photo-profile, .content
+							display: inline-block
+							vertical-align: top
+						.circle
+							border-radius: 50%
+							width: 65px
+							height: 65px
+							background-color: #C4C4C4
+						.content
+							padding-left: 22px
+							.rating
+								margin-left: 55px
+							span.name
+								font-size: 15px
+							span.review-date
+								margin-top: 5px
+								margin-left: 13px
+							span.login
+								display: block
+								margin-top: -5px
+							.rating
+								img
+									cursor: pointer
+							span.review-date, span.login
+								font-size: 12px
+								color: #7F7F7F
+							span.name, span.review-date, .rating
+								display: inline-block
+								vertical-align: top
+							p.review-text
+								margin: 0
+								font-size: 15px
+								max-width: 700px
+								margin-top: 10px
+					img.separ
+						display: block
+						width: 100%
+						max-height: 2px
+
+
+
+		.marketing-navbar-bottom
+			position: relative
+			margin-bottom: 35px
+			padding-top: 16px
+			padding-bottom: 13px
+			border-radius: 5px
+			text-align: center
+			background-color: #fff
+			.button
+				transition: 0.3s
+				cursor: pointer
+				width: 92px
+				height: 30px
+				border: 0.5px solid rgba(0, 0, 0, 0.3)
+				border-radius: 5px
+				text-align: center
+				span
+					transition: 0.3s
+					line-height: 30px
+					font-size: 9.5px
+					color: #000
+					font-weight: bold
+			.button:hover
+				background-color: $accent-blue
+				border-color: $accent-blue
+				span
+					color: #fff
+			.buttonsPN
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				padding-right: 23px
+				.buttonPrev, .buttonNext
+					margin: auto
+					margin-left: 16px
+			.buttonMore
+				position: absolute
+				top: 0
+				bottom: 0
+				margin: auto
+				left: 261px
+			.pages
+				position: relative
+				font-size: 0
+				display: inline-block
+				border-radius: 5px
+				.page
+					transition: 0.3s
+					cursor: pointer
+					border: 0.5px solid #ededed
+					border-left: none
+					width: 29px
+					height: 30px
+					display: inline-block
+					span
+						font-size: 10.5px
+						line-height: 30px
+						color: #b3b3b3
+						transition: 0.3s
+						font-weight: bold
+				.page:first-child
+					border-top-left-radius: 5px
+					border-bottom-left-radius: 5px
+					border-left: 0.5px solid #ededed
+				.page:nth-last-child(1)
+					border-top-right-radius: 5px
+					border-bottom-right-radius: 5px
+				.page.active
+					box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+					background-color: #ededed
+					border-color: white
+					margin: 1px 0
+					span
+						color: #000
+				.page:hover
+					box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+					background-color: #ededed
+					border-color: white
+					margin: 1px 0
+					span
+						color: #000

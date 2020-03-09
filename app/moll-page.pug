@@ -1,7 +1,7 @@
 extends _layouts/home
 
 block styles
-	link(rel="stylesheet", href="css/shop-page.css")
+	link(rel="stylesheet", href="css/moll-page.css")
 block content
 
 	include _partials/header.pug
@@ -31,7 +31,7 @@ block content
 						a(href="#").buttonSearch
 							img.icon(src="img/search.svg", alt="search.svg")
 					.mknav-buttonSwitch.products.buttonSwitch.active
-						span Товары
+						span Магазины
 					.mknav-buttonSwitch.info.buttonSwitch
 						span Информация
 					.mknav-buttonSwitch.feedback.buttonSwitch
@@ -39,120 +39,54 @@ block content
 				.mk-block.mk-products.active(style="display: block")
 					.main-content
 						.sidebar
-							.sidebar-block.number
+							.number
 								span.name Количество:
 								span.value 2328
-							.sidebar-block.sorting
-								span По цене #[span.value дороже]
-								img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-							.sidebar-block.category-h1
-								.category-item.active Женское
-								.category-item Мужское
-								.category-item Детское
-							.sidebar-block.options
+							.options
 								.line
-									span Одежда
+									span Монобрендовые
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox")
 										.knobs
 										.layer
 								.line
-									span Обувь
+									span Мультибрендовые
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox")
 										.knobs
 										.layer
 								.line
-									span Аксессуары
+									span Бутики
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox")
 										.knobs
 										.layer
 								.line.checked
-									span Косметика
+									span Аутлеты
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox" checked)
 										.knobs
 										.layer
-							.sidebar-block.advSearch
-								span Расширенный поиск
-								img.img-settings(src="img/filter-settings.svg", alt="filter-settings.svg")
-							.sidebar-block.filters
-								.line
-									span.name Тип
-									span.value Брюки
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line
-									span.name Бренд
-									span.value Gucci
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line
-									span.name Размер
-									span.value 44
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line
-									span.name Цвет
-									span.value Белый
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line
-									span.name Материал
-									span.value Кожа
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line.mk-filter-popup-line.checked
-									span.name Новинки
+								.line.checked
+									span Онлайн
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox" checked)
 										.knobs
 										.layer
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line.mk-filter-popup-line
-									span.name Скидки
-									.buttonOpSw.r
-										input.option-checkbox(type="checkbox")
-										.knobs
-										.layer
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line
-									span.name Цена, от
-									span.value 200 &#8381;
-								img.separ(src="img/index/separ.svg" alt="separ.svg")
-								.line
-									span.name Цена, до
-									span.value 200 000 &#8381;
 						.items-table
 							.content
-								- for(var i = 1; i <= 12; i++)
+								- for(var i = 1; i <= 20; i++)
 									.item
-										img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
-										a.like-mark(href="#")
-											img(src="img/shop-page/like-mark.svg", alt="like-mark.svg")
-										img.img-preview(src="img/shop-page/products-item.jpg", alt="products-item.jpg")
+										img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
 										.content
-											a.unhidden-mark(href="#")
-												img(src="img/shop-page/unhidden-mark.svg", alt="unhidden-mark.svg")
-											.headtext
-												span.name Кепка мужская чёрная
-												br
-												span.creator Secret artist
-											.additional
-												.rating
-													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-													img(src="img/shop-page/star-disable.svg", alt="star-disable.svg")
-													span.info (#[span.value 30])
-												.category
-													img.category-flag(src="img/shop-page/category-flag.svg", alt="category-flag.svg")
-													span lady &amp; gentleman
-											.price
-												span.old-price-value 1200 &#8381;
-												span.price-value 500 000 &#8381;
+											.head
+												span.name Affiction
+												.category-text Монобрендовый
+												span.desc Russia, Moscow, Ходынский бульвар, д. 4
+											.tags
+												img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
+												img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
+												img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
 								.btn-more.mob
 									span Показать ещё
 					.marketing-navbar-bottom

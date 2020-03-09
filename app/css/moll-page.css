@@ -224,18 +224,14 @@ body section.marketing-table .mk-products .main-content {
   padding-bottom: 10px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar > * {
-  margin-bottom: 15px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .sidebar-block {
+body section.marketing-table .mk-products .main-content .sidebar .number, body section.marketing-table .mk-products .main-content .sidebar .options {
   width: 252px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   background-color: #fff;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .number, body section.marketing-table .mk-products .main-content .sidebar .sorting, body section.marketing-table .mk-products .main-content .sidebar .advSearch {
+body section.marketing-table .mk-products .main-content .sidebar .number {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -244,7 +240,7 @@ body section.marketing-table .mk-products .main-content .sidebar .number, body s
   display: -ms-flexbox;
   display: flex;
   padding-left: 15px;
-  padding-right: 20px;
+  padding-right: 25px;
   height: 35px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -253,7 +249,7 @@ body section.marketing-table .mk-products .main-content .sidebar .number, body s
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .number span.name, body section.marketing-table .mk-products .main-content .sidebar .number .value {
-  font-size: 12px;
+  font-size: 10px;
   color: #808080;
 }
 
@@ -262,52 +258,18 @@ body section.marketing-table .mk-products .main-content .sidebar .number span.va
   margin-left: auto;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .sorting {
-  cursor: pointer;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .sorting span {
-  font-size: 13px;
-  color: #000000;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .sorting img.img-arrow {
-  margin-left: auto;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .category-h1 {
-  padding-top: 5px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .category-h1 .category-item {
-  font-size: 12px;
-  color: #000000;
-  padding: 6px 0 6px 14px;
-  cursor: pointer;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .category-h1 .category-item:hover, body section.marketing-table .mk-products .main-content .sidebar .category-h1 .category-item.active {
-  background-color: #E5E5E5;
-  border-left: 3px #C4C4C4 solid;
-  padding-left: 11px;
-}
-
 body section.marketing-table .mk-products .main-content .sidebar .options {
+  margin-top: 15px;
   padding-top: 14px;
   padding-left: 15px;
   padding-bottom: 1px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line {
-  line-height: 14px;
-  margin-bottom: 17px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .options .line.checked span, body section.marketing-table .mk-products .main-content .sidebar .filters .line.checked span {
+body section.marketing-table .mk-products .main-content .sidebar .options .line.checked span {
   color: #000;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line, body section.marketing-table .mk-products .main-content .sidebar .filters .line {
+body section.marketing-table .mk-products .main-content .sidebar .options .line {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -315,23 +277,20 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  line-height: 14px;
+  margin-bottom: 17px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line span, body section.marketing-table .mk-products .main-content .sidebar .filters .line span {
-  font-size: 12px;
+body section.marketing-table .mk-products .main-content .sidebar .options .line span {
+  font-size: 13px;
   color: #808080;
   -webkit-transition: 0.3s ease all;
   -o-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw {
   display: inline-block;
-  vertical-align: middle;
   position: relative;
   width: 32px;
   height: 15px;
@@ -340,17 +299,17 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
   overflow: hidden;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .layer {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer {
   width: 100%;
   background-color: #808080;
   z-index: 1;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .knobs {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs {
   z-index: 2;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs::before, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .knobs::before {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -362,7 +321,7 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
           border-radius: 50%;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .layer {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer {
   position: absolute;
   top: 0;
   right: 0;
@@ -370,13 +329,13 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
   left: 0;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs::before, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .knobs::before, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .layer {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs::before, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer {
   -webkit-transition: 0.3s ease all;
   -o-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .option-checkbox, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .option-checkbox {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .option-checkbox {
   position: relative;
   width: 100%;
   height: 100%;
@@ -387,62 +346,18 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
   z-index: 3;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .option-checkbox:checked + .knobs::before, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .option-checkbox:checked + .knobs::before {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .option-checkbox:checked + .knobs::before {
   content: '';
   left: 19px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .option-checkbox:checked ~ .layer, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw .option-checkbox:checked ~ .layer {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .option-checkbox:checked ~ .layer {
   background-color: #157EE1;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw.r, body section.marketing-table .mk-products .main-content .sidebar .options .line .layer, body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw.r, body section.marketing-table .mk-products .main-content .sidebar .filters .line .layer {
+body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw.r, body section.marketing-table .mk-products .main-content .sidebar .options .line .layer {
   -webkit-border-radius: 100px;
           border-radius: 100px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .advSearch {
-  cursor: pointer;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .advSearch span {
-  font-weight: bold;
-  font-size: 12px;
-  color: #000000;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .advSearch img.img-settings {
-  margin-left: auto;
-  margin-right: 5px;
-  width: 15px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .filters .line {
-  cursor: pointer;
-  padding-left: 14px;
-  height: 33px;
-  line-height: 31px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .filters .line span.name {
-  font-size: 12px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .filters .line span.value {
-  font-size: 10px;
-  margin-left: auto;
-  margin-right: 14px;
-  color: #808080;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .filters .line img.img-arrow {
-  margin-right: 14px;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .filters img.separ {
-  display: block;
-  width: 100%;
-  max-height: 2px;
 }
 
 body section.marketing-table .mk-products .main-content .items-table .content {
@@ -505,111 +420,72 @@ body section.marketing-table .mk-products .main-content .items-table .content .i
   background-color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  margin-left: 1.1%;
-  margin-bottom: 14px;
-  width: 23.9%;
+  margin-left: 1%;
+  margin-bottom: 10px;
+  width: 49%;
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
 }
 
-body section.marketing-table .mk-products .main-content .items-table .content .item img.new-mark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 10px;
-  margin-left: 12px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item a.like-mark {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 7px;
-  margin-right: 7px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item img.img-preview {
-  -webkit-border-radius: 5px 5px 0 0;
-          border-radius: 5px 5px 0 0;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content {
-  position: relative;
-  padding-left: 18px;
-  padding-right: 13px;
-  padding-bottom: 12px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content a.unhidden-mark {
-  position: absolute;
-  top: -21px;
-  right: 0;
-  margin-bottom: 8px;
-  margin-right: 9px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .headtext {
-  margin-top: 11px;
-  line-height: 1.95;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .headtext span.name {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .headtext span.creator {
-  font-size: 10px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional {
-  margin-top: 5px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional .rating img {
-  margin-bottom: -1px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional .rating span.info {
-  font-size: 10px;
-  color: #808080;
-  margin-left: 7px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional .category {
-  margin-top: 9px;
-}
-
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional .category span, body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional .category img.category-flag {
+body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview, body section.marketing-table .mk-products .main-content .items-table .content .item .content {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .additional .category span {
-  font-size: 9px;
-  color: #808080;
-  margin-left: 4px;
+body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview {
+  width: 72px;
+  -webkit-border-top-left-radius: 5px;
+          border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+          border-bottom-left-radius: 5px;
 }
 
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .price {
-  position: relative;
-  margin-left: auto;
-  margin-top: auto;
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .head {
+  padding-left: 23px;
 }
 
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .price span.price-value {
-  font-size: 12px;
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span {
+  display: block;
+  line-height: 1.4;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+  padding: 11px 0;
+  font-size: 14px;
   font-weight: bold;
+  color: #000;
 }
 
-body section.marketing-table .mk-products .main-content .items-table .content .item .content .price span.old-price-value {
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #999;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .category-text {
   position: absolute;
   font-size: 10px;
   color: #808080;
-  top: -21px;
+  opacity: 0.75;
+  padding: 8px 0;
+  top: 0;
   right: 0;
-  text-decoration: line-through;
+  margin-right: 17px;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 17px;
+  margin-bottom: 12px;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags .tag-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
 }
 
 body section.marketing-table .mk-products .main-content .items-table .content .item:hover {

@@ -699,7 +699,22 @@ body .popup-map .input-outer input.input-search {
           border-radius: 5px;
 }
 
-body .popup-map .input-outer input.input-search::-webkit-input-placeholder, body .popup-map .input-outer input.input-search:-moz-placeholder, body .popup-map .input-outer input.input-search::-moz-placeholder, body .popup-map .input-outer input.input-search:-ms-input-placeholder {
+body .popup-map .input-outer input.input-search::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #808080;
+}
+
+body .popup-map .input-outer input.input-search:-moz-placeholder {
+  font-size: 12px;
+  color: #808080;
+}
+
+body .popup-map .input-outer input.input-search::-moz-placeholder {
+  font-size: 12px;
+  color: #808080;
+}
+
+body .popup-map .input-outer input.input-search:-ms-input-placeholder {
   font-size: 12px;
   color: #808080;
 }

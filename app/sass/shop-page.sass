@@ -11,6 +11,8 @@ body
 			border-radius: 3px
 			margin: 0 12.5%
 			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+			img.img-shop-preview
+				width: 121px
 			img.img-shop-preview, .content
 				display: inline-block
 				vertical-align: top
@@ -52,6 +54,9 @@ body
 				position: absolute
 				top: 14px
 				right: 14px
+				width: 204px
+				height: 33px
+				object-fit: cover
 	section.marketing-table
 		.marketing-navbar
 			padding-top: 14px
@@ -1021,3 +1026,96 @@ body
 					margin: 1px 0
 					span
 						color: #000
+
+@media only screen and(max-width: 1024px)
+	body
+		section.shop-card
+			.card-item
+				margin: 0 15px
+				.btn-subscribe
+					right: 20px
+					bottom: 20px
+					width: 197px
+					height: 60px
+					line-height: 58px
+					span
+						font-size: 17px
+				img.img-map
+					width: 239px
+					height: 60px
+					top: 16px
+					right: 20px
+				img.img-shop-preview
+					width: 175px
+				.content
+					padding-left: 63px
+					.text-name
+						font-size: 30px
+						padding-bottom: 0
+					.text-adress
+						font-size: 18px
+					.counters
+						.counter
+							text-align: center
+							padding-bottom: 0
+							padding-top: 15px
+							padding-right: 25px
+							span
+								font-size: 20px
+							span.b
+								font-size: 24px
+								display: block
+								line-height: 1.2
+@media only screen and(max-width: 900px)
+	body
+		section.shop-card
+			.card-item
+				.semiposition
+					text-align: center
+					padding: 15px 0
+					.btn-subscribe, img.img-map
+						position: relative
+						right: 0
+						top: 0
+						bottom: 0
+						left: 0
+						display: inline-block
+						vertical-align: middle
+						margin: 0 10px
+@media only screen and (max-width: 768px)
+	body
+		section.shop-card
+			.card-item
+				img.img-shop-preview
+					width: 130px
+				.content
+					.text-name
+						font-size: 25px
+					.text-adress
+						font-size: 15px
+					.counters
+						.counter
+							span
+								font-size: 14px
+								span.b
+									font-size: 19px
+@media only screen and(max-width: 600px)
+	body
+		section.shop-card
+			.card-item
+				.content
+					padding-left: 25px
+					.text-name
+						font-size: 22px
+					.text-adress
+						font-size: 13px
+					.counters
+						.counter
+							padding-right: 20px
+				.semiposition
+					.btn-subscribe, img.img-map
+						width: 205px
+						height: 52px
+						margin: 0 5px
+					.btn-subscribe
+						line-height: 50px

@@ -28,6 +28,10 @@ body section.shop-card .card-item {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+body section.shop-card .card-item img.img-shop-preview {
+  width: 121px;
+}
+
 body section.shop-card .card-item img.img-shop-preview, body section.shop-card .card-item .content {
   display: inline-block;
   vertical-align: top;
@@ -87,6 +91,10 @@ body section.shop-card .card-item img.img-map {
   position: absolute;
   top: 14px;
   right: 14px;
+  width: 204px;
+  height: 33px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body section.marketing-table .marketing-navbar {
@@ -1558,4 +1566,111 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover {
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   color: #000;
+}
+
+@media only screen and (max-width: 1024px) {
+  body section.shop-card .card-item {
+    margin: 0 15px;
+  }
+  body section.shop-card .card-item .btn-subscribe {
+    right: 20px;
+    bottom: 20px;
+    width: 197px;
+    height: 60px;
+    line-height: 58px;
+  }
+  body section.shop-card .card-item .btn-subscribe span {
+    font-size: 17px;
+  }
+  body section.shop-card .card-item img.img-map {
+    width: 239px;
+    height: 60px;
+    top: 16px;
+    right: 20px;
+  }
+  body section.shop-card .card-item img.img-shop-preview {
+    width: 175px;
+  }
+  body section.shop-card .card-item .content {
+    padding-left: 63px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 30px;
+    padding-bottom: 0;
+  }
+  body section.shop-card .card-item .content .text-adress {
+    font-size: 18px;
+  }
+  body section.shop-card .card-item .content .counters .counter {
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 15px;
+    padding-right: 25px;
+  }
+  body section.shop-card .card-item .content .counters .counter span {
+    font-size: 20px;
+  }
+  body section.shop-card .card-item .content .counters .counter span.b {
+    font-size: 24px;
+    display: block;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body section.shop-card .card-item .semiposition {
+    text-align: center;
+    padding: 15px 0;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe, body section.shop-card .card-item .semiposition img.img-map {
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body section.shop-card .card-item img.img-shop-preview {
+    width: 130px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 25px;
+  }
+  body section.shop-card .card-item .content .text-adress {
+    font-size: 15px;
+  }
+  body section.shop-card .card-item .content .counters .counter span {
+    font-size: 14px;
+  }
+  body section.shop-card .card-item .content .counters .counter span span.b {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body section.shop-card .card-item .content {
+    padding-left: 25px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 22px;
+  }
+  body section.shop-card .card-item .content .text-adress {
+    font-size: 13px;
+  }
+  body section.shop-card .card-item .content .counters .counter {
+    padding-right: 20px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe, body section.shop-card .card-item .semiposition img.img-map {
+    width: 205px;
+    height: 52px;
+    margin: 0 5px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe {
+    line-height: 50px;
+  }
 }

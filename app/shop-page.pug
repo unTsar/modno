@@ -13,7 +13,7 @@ block content
 					img.img-shop-preview(src="img/shop-page/shop-preview.jpg", alt="shop-preview.jpg")
 					.content
 						.text-name Gucci
-						.text-adress Russia, Moscow, Ходынский
+						.text-adress Russia, Moscow, Ходынский бульвар, д. 4 
 						.counters
 							.counter
 								span #[span.b 17] магазинов
@@ -25,440 +25,446 @@ block content
 						img.img-map(src="img/shop-page/card-item-map.jpg", alt="card-item-map.jpg")
 						a(href="#").btn-subscribe
 							span Подписаться
-			//- section.marketing-table
-			//- 	.marketing-navbar
-			//- 		.input-outer.mk-block-products-input-outer
-			//- 			input.input-search(type="search" placeholder="Поиск по магазинам")
-			//- 			a(href="#").buttonSearch
-			//- 				img.icon(src="img/search.svg", alt="search.svg")
-			//- 		.mknav-buttonSwitch.products.buttonSwitch.active
-			//- 			span Товары
-			//- 		.mknav-buttonSwitch.info.buttonSwitch
-			//- 			span Информация
-			//- 		.mknav-buttonSwitch.feedback.buttonSwitch
-			//- 			span Отзывы
-			//- 	.mk-block.mk-products.active(style="display: block")
-			//- 		.main-content
-			//- 			.sidebar
-			//- 				.sidebar-block.number
-			//- 					span.name Количество:
-			//- 					span.value 2328
-			//- 				.sidebar-block.sorting
-			//- 					span По цене #[span.value дороже]
-			//- 					img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 				.sidebar-block.category-h1
-			//- 					.category-item.active Женское
-			//- 					.category-item Мужское
-			//- 					.category-item Детское
-			//- 				.sidebar-block.options
-			//- 					.line
-			//- 						span Одежда
-			//- 						.buttonOpSw.r
-			//- 							input.option-checkbox(type="checkbox")
-			//- 							.knobs
-			//- 							.layer
-			//- 					.line
-			//- 						span Обувь
-			//- 						.buttonOpSw.r
-			//- 							input.option-checkbox(type="checkbox")
-			//- 							.knobs
-			//- 							.layer
-			//- 					.line
-			//- 						span Аксессуары
-			//- 						.buttonOpSw.r
-			//- 							input.option-checkbox(type="checkbox")
-			//- 							.knobs
-			//- 							.layer
-			//- 					.line.checked
-			//- 						span Косметика
-			//- 						.buttonOpSw.r
-			//- 							input.option-checkbox(type="checkbox" checked)
-			//- 							.knobs
-			//- 							.layer
-			//- 				.sidebar-block.advSearch
-			//- 					span Расширенный поиск
-			//- 					img.img-settings(src="img/filter-settings.svg", alt="filter-settings.svg")
-			//- 				.sidebar-block.filters
-			//- 					.line
-			//- 						span.name Тип
-			//- 						span.value Брюки
-			//- 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line
-			//- 						span.name Бренд
-			//- 						span.value Gucci
-			//- 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line
-			//- 						span.name Размер
-			//- 						span.value 44
-			//- 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line
-			//- 						span.name Цвет
-			//- 						span.value Белый
-			//- 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line
-			//- 						span.name Материал
-			//- 						span.value Кожа
-			//- 						img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line.mk-filter-popup-line.checked
-			//- 						span.name Новинки
-			//- 						.buttonOpSw.r
-			//- 							input.option-checkbox(type="checkbox" checked)
-			//- 							.knobs
-			//- 							.layer
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line.mk-filter-popup-line
-			//- 						span.name Скидки
-			//- 						.buttonOpSw.r
-			//- 							input.option-checkbox(type="checkbox")
-			//- 							.knobs
-			//- 							.layer
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line
-			//- 						span.name Цена, от
-			//- 						span.value 200 &#8381;
-			//- 					img.separ(src="img/index/separ.svg" alt="separ.svg")
-			//- 					.line
-			//- 						span.name Цена, до
-			//- 						span.value 200 000 &#8381;
-			//- 			.items-table
-			//- 				.content
-			//- 					- for(var i = 1; i <= 12; i++)
-			//- 						.item
-			//- 							img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
-			//- 							a.like-mark(href="#")
-			//- 								img(src="img/shop-page/like-mark.svg", alt="like-mark.svg")
-			//- 							img.img-preview(src="img/shop-page/products-item.jpg", alt="products-item.jpg")
-			//- 							.content
-			//- 								a.unhidden-mark(href="#")
-			//- 									img(src="img/shop-page/unhidden-mark.svg", alt="unhidden-mark.svg")
-			//- 								.headtext
-			//- 									span.name Кепка мужская чёрная
-			//- 									br
-			//- 									span.creator Secret artist
-			//- 								.additional
-			//- 									.rating
-			//- 										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 										img(src="img/shop-page/star-disable.svg", alt="star-disable.svg")
-			//- 										span.info (#[span.value 30])
-			//- 									.category
-			//- 										img.category-flag(src="img/shop-page/category-flag.svg", alt="category-flag.svg")
-			//- 										span lady &amp; gentleman
-			//- 								.price
-			//- 									span.old-price-value 1200 &#8381;
-			//- 									span.price-value 500 000 &#8381;
-			//- 					.btn-more.mob
-			//- 						span Показать ещё
-			//- 		.marketing-navbar-bottom
-			//- 			.button.buttonMore
-			//- 				span Показать ещё
-			//- 			.pages
-			//- 				.page.active
-			//- 					span 1
-			//- 				.page
-			//- 					span 2
-			//- 				.page
-			//- 					span 3
-			//- 				.page
-			//- 					span 4
-			//- 				.page
-			//- 					span 5
-			//- 				.page
-			//- 					span 6
-			//- 				.page
-			//- 					span 7
-			//- 				.page
-			//- 					span 8
-			//- 				.page
-			//- 					span 8
-			//- 				.page
-			//- 					span 99
-			//- 			.buttonsPN
-			//- 				.button.buttonPrev
-			//- 					span Предыдущая
-			//- 				.button.buttonNext
-			//- 					span Следующая
-			//- 	.mk-block.mk-info
-			//- 		.main-content
-			//- 			.anchors-section
-			//- 				a.anchor-btn(href="#" onclick="$.scrollTo('.about-shop', 500);") О магазине
-			//- 				a.anchor-btn(href="#" onclick="$.scrollTo('.delivery', 500);") Доставка
-			//- 				a.anchor-btn(href="#" onclick="$.scrollTo('.reimb', 500);") Возврат
-			//- 				a.anchor-btn(href="#" onclick="$.scrollTo('.credit', 500);") Кредит
-			//- 			.about-shop.mk-info-section
-			//- 				h2 О магазине
-			//- 				.main-info
-			//- 					.headblock
-			//- 						span.headname Общая информация
-			//- 					a.site(href="#") gucci.com
-			//- 					.secure-tr
-			//- 						img(src="img/shop-page/secure-tr.svg", alt="secure-tr.svg")
-			//- 						span Безопасная сделка
-			//- 					.contacts
-			//- 						.undgr
-			//- 							.circle.c1
-			//- 							span ЦСКА
-			//- 							.circle.c2
-			//- 							span ЦСКА
-			//- 							.circle.c3
-			//- 							span Аэропорт
-			//- 						span.adress Россия, Москва, Ходынский бульвар, д. 4
-			//- 						br
-			//- 						span.phone 8 (495) 725-42-08
-			//- 						br
-			//- 						span.time Время работы с 8:00 до 22:00
-			//- 					.delivery-inf
-			//- 						img(src="img/shop-page/delivery.svg", alt="delivery.svg")
-			//- 						span Возможна доставка
-			//- 				.categories
-			//- 					.headblock
-			//- 						span.headname Категории товаров
-			//- 					.content
-			//- 						.category-column
-			//- 							.item.head Мужское
-			//- 							a(href="#").item Одежда
-			//- 							a(href="#").item Обувь
-			//- 							a(href="#").item Сумки
-			//- 							a(href="#").item Аксессуары
-			//- 							a(href="#").item Подарки
-			//- 						.category-column
-			//- 							.item.head Женское 
-			//- 							a(href="#").item Одежда
-			//- 							a(href="#").item Обувь
-			//- 							a(href="#").item Сумки
-			//- 							a(href="#").item Аксессуары
-			//- 							a(href="#").item Подарки
-			//- 						.category-column
-			//- 							.item.head Детское
-			//- 							a(href="#").item Новорожденные
-			//- 							a(href="#").item Мальчики
-			//- 							a(href="#").item Девочки
-			//- 				.brands
-			//- 					.headblock
-			//- 						span.headname Бренды магазина
-			//- 					.content
-			//- 						.brands-column
-			//- 							a(href="#").item A.M.N.
-			//- 							a(href="#").item Bosco Sport
-			//- 							a(href="#").item L’occitane
-			//- 							a(href="#").item Top Shop
-			//- 							.item Белорусская обувь
-			//- 						.brands-column
-			//- 							a(href="#").item Большевичка
-			//- 							a(href="#").item Иль де Боте
-			//- 							a(href="#").item A.M.N.
-			//- 							a(href="#").item Bosco Sport
-			//- 							a(href="#").item L’occitane
-			//- 						.brands-column
-			//- 							a(href="#").item Top Shop
-			//- 							a(href="#").item Белорусская обувь
-			//- 							a(href="#").item Большевичка
-			//- 							a(href="#").item Иль де Боте
-			//- 							a(href="#").item A.M.N.
-			//- 			.delivery.mk-info-section
-			//- 				h2 Доставка
-			//- 				form(action="#").form-block
-			//- 					.delivery-type
-			//- 						.radio-item.mk-info-radio-item
-			//- 							input#mk-info_radio1(type="radio" name="mk-info-radio1")
-			//- 							label(for="mk-info_radio1") Доставка курьером
-			//- 							.ext-text
-			//- 								span.price от 1 &#8381;
-			//- 								br
-			//- 								span.delivery-opts Ближайшая доставка #[br]8 ноября.
-			//- 						.radio-item.mk-info-radio-item
-			//- 							input#mk-info_radio2(type="radio" name="mk-info-radio1")
-			//- 							label(for="mk-info_radio2") Самовывоз из пункта выдачи
-			//- 							.ext-text
-			//- 								span.price от 1 &#8381;
-			//- 								br
-			//- 								span.delivery-opts Более 250 пунктов самовывоза
-			//- 						.radio-item.mk-info-radio-item
-			//- 							input#mk-info_radio3(type="radio" name="mk-info-radio1")
-			//- 							label(for="mk-info_radio3") Почта
-			//- 							.ext-text
-			//- 								span.price от 1 &#8381;
-			//- 								br
-			//- 								span.delivery-opts Ближайшая доставка 8 ноября.
-			//- 					.choice-city
-			//- 						.radio-item
-			//- 							input#mk-info_radio4(type="radio" name="mk-info-radio2")
-			//- 							label(for="mk-info_radio4") Москва и МО
-			//- 						.radio-item
-			//- 							input#mk-info_radio5(type="radio" name="mk-info-radio2")
-			//- 							label(for="mk-info_radio5") Санкт-Петербург и ЛО
-			//- 				.inf-block
-			//- 					.line
-			//- 						span в пределах МКАД
-			//- 						span.value 249 &#8381;
-			//- 					.line
-			//- 						span за пределами МКАД (до трассы A 107)
-			//- 						span.value 349 &#8381;
-			//- 			.reimb.mk-info-section
-			//- 				h2 Возврат
-			//- 				p.desc Мы хотим, чтобы покупки на Modno приносили вам радость, а если что-то пошло не так, мы готовы помочь вернуть товар продавцу* как можно быстрее. Просим обратить внимание, что окончательное решение по возврату товаров принимает продавец в соответствии с нормами законодательства Российской Федерации.
-			//- 				span.footnote *Продавец – интернет-магазин, у которого вы заказали товары на modno.ru
-			//- 				.questions
-			//- 					.item
-			//- 						.headline.mk-info-reimb-question
-			//- 							span.name Получили не тот товар?
-			//- 							img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 						.hidden
-			//- 							.text
-			//- 								p Полученный товар отличается от заказанного по характеристикам или цвету? Вы можете оформить возврат товара продавцу, обменять его на верный или получить соразмерную компенсацию, оставив товар у себя.
-			//- 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-			//- 					.item
-			//- 						.headline.mk-info-reimb-question
-			//- 							span.name В заказе чего-то не хватает?
-			//- 							img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 						.hidden
-			//- 							.text
-			//- 								p Вы получили товары в неполной комплектации или недополучили что-то из заказанного? Вы можете оформить возврат товара продавцу или получить соразмерную компенсацию, оставив товар у себя.
-			//- 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-			//- 					.item
-			//- 						.headline.mk-info-reimb-question
-			//- 							span.name Обнаружили брак?
-			//- 							img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 						.hidden
-			//- 							.text
-			//- 								p Полученный товар имеет дефекты, внешние механические повреждения (царапины, вмятины, сколы), которые возникли до передачи товара вам? Не переживайте!
-			//- 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-			//- 					.item
-			//- 						.headline.mk-info-reimb-question
-			//- 							span.name Передумали и хотите сдать товар?
-			//- 							img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
-			//- 						.hidden
-			//- 							.text
-			//- 								p Помните, у товара должна быть сохранена комплектация, товарный вид и упаковка, товар не должен иметь следов использования.Направить обращение необходимо в течение 7 дней.
-			//- 			.credit.mk-info-section
-			//- 				h2 Кредит
-			//- 				.instruction
-			//- 					span.point 1. Заполните онлайн заявку и узнайте решение банка сразу
-			//- 					span.point 2. Представитель банка доставит вам карту
-			//- 					span.point 3. Получите деньги в любом банкомате
-			//- 				form.credit-form(action="#")
-			//- 					.range-item
-			//- 						.headtext Сумма кредита
-			//- 						input(type="range" min="0" max="5" step="1" value="0")
-			//- 						.range-points
-			//- 							span 5 000 &#8381;
-			//- 							span 100 000 &#8381;
-			//- 							span 300 000 &#8381;
-			//- 							span 1 000 000 &#8381;
-			//- 							span 1 500 000 &#8381;
-			//- 							span 2 000 000 &#8381;
-			//- 					.range-item
-			//- 						.headtext Срок кредита
-			//- 						input(type="range" min="0" max="4" step="1" value="0")
-			//- 						.range-points
-			//- 							span 1 год
-			//- 							span 2 года
-			//- 							span 3 года
-			//- 							span 4 года
-			//- 							span 5 лет
-			//- 					.calc-values
-			//- 						.line
-			//- 							span Ставка
-			//- 							span.value 9,9%
-			//- 						.line
-			//- 							span Ежемесячный платёж
-			//- 							span.value от 42 500 &#8381;
-			//- 					.input-contacts
-			//- 						.input-outer
-			//- 							input.mk-info-credit-contacts-input(type="text")
-			//- 							.placeholder
-			//- 								span Фамилия #[span.red *]
-			//- 						.input-outer
-			//- 							input.mk-info-credit-contacts-input(type="text")
-			//- 							.placeholder
-			//- 								span Имя #[span.red *]
-			//- 						.input-outer
-			//- 							input.mk-info-credit-contacts-input(type="text")
-			//- 							.placeholder
-			//- 								span Отчество #[span.red *]
-			//- 						.input-outer
-			//- 							input.mk-info-credit-contacts-input(type="tel")
-			//- 							.placeholder
-			//- 								span Телефон #[span.red *]
-			//- 					.submit-block
-			//- 						input(type="submit" value="Подтвердить")
-			//- 						p.desc Нажимая кнопку “Подтвердить” я соглашаюсь на передачу данных АО “Тинькофф Банк”
-			//- 					p.desc Услуги оказываются АО “Тинькофф Банк”. Пример расчета условий по кредиту носит исключительно информационный характер и не является публичной офертой. Яндекс не несет ответственности за действия третьих лиц.
-			//- 					.mark 
-			//- 						span Услуги оказываются АО “Тинькофф банк”. Реклама. #[a(href="#") Условия кредитования]
-			//- 	.mk-block.mk-feedback
-			//- 		.main-content
-			//- 			.anchors-section
-			//- 				a.anchor-btn.mk-feedback-anchor-btn.active.review-all(href="#") Все
-			//- 				a.anchor-btn.mk-feedback-anchor-btn.review-positive(href="#") Положительные
-			//- 				a.anchor-btn.mk-feedback-anchor-btn.review-negative(href="#") Отрицательные
-			//- 			.reviews-list.review-all.active(style='display: block')
-			//- 				a(href="#").btn-send
-			//- 					span Оставить отзыв
-			//- 				h2 Отзывы (все)
-			//- 				- for(var i = 1; i <= 17; i++)
-			//- 					.review-item
-			//- 						.photo-profile.circle
-			//- 						.content
-			//- 							span.name Екатерина
-			//- 							span.review-date 21 октября 2019
-			//- 							.rating
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 							span.login ekaterina777
-			//- 							p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
-			//- 					if i != 17
-			//- 						img.separ(src="img/index/separ.svg", alt="separ.svg")
-			//- 			.reviews-list.review-positive
-			//- 				a(href="#").btn-send
-			//- 					span Оставить отзыв
-			//- 				h2 Отзывы (положительные)
-			//- 				- for(var i = 1; i <= 17; i++)
-			//- 					.review-item
-			//- 						.photo-profile.circle
-			//- 						.content
-			//- 							span.name Екатерина
-			//- 							span.review-date 21 октября 2019
-			//- 							.rating
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 							span.login ekaterina777
-			//- 							p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
-			//- 					if i != 17
-			//- 						img.separ(src="img/index/separ.svg", alt="separ.svg")
-			//- 			.reviews-list.review-negative
-			//- 				a(href="#").btn-send
-			//- 					span Оставить отзыв
-			//- 				h2 Отзывы (отрицательные)
-			//- 				- for(var i = 1; i <= 17; i++)
-			//- 					.review-item
-			//- 						.photo-profile.circle
-			//- 						.content
-			//- 							span.name Екатерина
-			//- 							span.review-date 21 октября 2019
-			//- 							.rating
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 								img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-			//- 							span.login ekaterina777
-			//- 							p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
-			//- 					if i != 17
-			//- 						img.separ(src="img/index/separ.svg", alt="separ.svg")
+			section.marketing-table
+				.marketing-navbar
+					.input-outer.mk-block-products-input-outer
+						input.input-search(type="search" placeholder="Поиск по товарам")
+						a(href="#").buttonSearch
+							img.icon(src="img/search.svg", alt="search.svg")
+					.mknav-buttonSwitch.products.buttonSwitch.active
+						span Товары
+					.mknav-buttonSwitch.info.buttonSwitch
+						span Информация
+					.mknav-buttonSwitch.feedback.buttonSwitch
+						span Отзывы
+				.mk-block.mk-products.active(style="display: block")
+					.main-content
+						.sidebar
+							.sidebar-block.number
+								span.name Количество:
+								span.value 2328
+							.sidebar-block.sorting
+								span По цене #[span.value дороже]
+								img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+							.sidebar-block.category-h1
+								.category-item.active Женское
+								.category-item Мужское
+								.category-item Детское
+							.sidebar-block.options
+								.line
+									span Одежда
+									.buttonOpSw.r
+										input.option-checkbox(type="checkbox")
+										.knobs
+										.layer
+								.line
+									span Обувь
+									.buttonOpSw.r
+										input.option-checkbox(type="checkbox")
+										.knobs
+										.layer
+								.line
+									span Аксессуары
+									.buttonOpSw.r
+										input.option-checkbox(type="checkbox")
+										.knobs
+										.layer
+								.line.checked
+									span Косметика
+									.buttonOpSw.r
+										input.option-checkbox(type="checkbox" checked)
+										.knobs
+										.layer
+							.sidebar-block.advSearch
+								span Расширенный поиск
+								img.img-settings(src="img/filter-settings.svg", alt="filter-settings.svg")
+							.sidebar-block.filters
+								.line
+									span.name Тип
+									span.value Брюки
+									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line
+									span.name Бренд
+									span.value Gucci
+									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line
+									span.name Размер
+									span.value 44
+									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line
+									span.name Цвет
+									span.value Белый
+									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line
+									span.name Материал
+									span.value Кожа
+									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line.mk-filter-popup-line.checked
+									span.name Новинки
+									.buttonOpSw.r
+										input.option-checkbox(type="checkbox" checked)
+										.knobs
+										.layer
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line.mk-filter-popup-line
+									span.name Скидки
+									.buttonOpSw.r
+										input.option-checkbox(type="checkbox")
+										.knobs
+										.layer
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line
+									span.name Цена, от
+									span.value 200 &#8381;
+								img.separ(src="img/index/separ.svg" alt="separ.svg")
+								.line
+									span.name Цена, до
+									span.value 200 000 &#8381;
+						.items-table
+							.search-items.mob
+									input(type="search" placeholder="Поиск по товарам")
+									img.search(src="img/search.svg", alt="search.svg")
+							.items-table-content
+								- for(var i = 1; i <= 12; i++)
+									.item
+										img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
+										a.like-mark(href="#")
+											img(src="img/shop-page/like-mark.svg", alt="like-mark.svg")
+										img.img-preview(src="img/shop-page/products-item.jpg", alt="products-item.jpg")
+										.content
+											a.unhidden-mark(href="#")
+												img(src="img/shop-page/unhidden-mark.svg", alt="unhidden-mark.svg")
+											.headtext
+												span.name Кепка мужская чёрная
+												br
+												span.creator Secret artist
+											.additional
+												.rating
+													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+													img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+													img(src="img/shop-page/star-disable.svg", alt="star-disable.svg")
+													span.info (#[span.value 30])
+												.price
+													span.price-value 500 000 &#8381;
+													span.old-price-value 1200 &#8381;
+												.category
+													img.category-flag(src="img/shop-page/category-flag.svg", alt="category-flag.svg")
+													span lady &amp; gentleman
+								.btn-more.mob
+									span Показать ещё
+					.marketing-navbar-bottom
+						.button.buttonMore
+							span Показать ещё
+						.pages
+							.page.active
+								span 1
+							.page
+								span 2
+							.page
+								span 3
+							.page
+								span 4
+							.page
+								span 5
+							.page
+								span 6
+							.page
+								span 7
+							.page
+								span 8
+							.page
+								span 8
+							.page
+								span 99
+						.buttonsPN
+							.button.buttonPrev
+								span Предыдущая
+							.button.buttonNext
+								span Следующая
+				.mk-block.mk-info
+					.main-content
+						.anchors-section
+							a.anchor-btn(href="#" onclick="$.scrollTo('.about-shop', 500);") О магазине
+							a.anchor-btn(href="#" onclick="$.scrollTo('.delivery', 500);") Доставка
+							a.anchor-btn(href="#" onclick="$.scrollTo('.reimb', 500);") Возврат
+							a.anchor-btn(href="#" onclick="$.scrollTo('.credit', 500);") Кредит
+						.about-shop.mk-info-section
+							h2 О магазине
+							.main-info
+								.headblock
+									span.headname Общая информация
+								a.site(href="#") gucci.com
+								.secure-tr
+									img(src="img/shop-page/secure-tr.svg", alt="secure-tr.svg")
+									span Безопасная сделка
+								.contacts
+									.undgr
+										.undgr-item
+											.circle.c1
+											span ЦСКА
+										.undgr-item
+											.circle.c2
+											span ЦСКА
+										.undgr-item
+											.circle.c3
+											span Аэропорт
+									span.adress Россия, Москва, Ходынский бульвар, д. 4
+									br
+									span.phone 8 (495) 725-42-08
+									br
+									span.time Время работы с 8:00 до 22:00
+								.delivery-inf
+									img(src="img/shop-page/delivery.svg", alt="delivery.svg")
+									span Возможна доставка
+							.categories
+								.headblock
+									span.headname Категории товаров
+								.content
+									.category-column
+										.item.head Мужское
+										a(href="#").item Одежда
+										a(href="#").item Обувь
+										a(href="#").item Сумки
+										a(href="#").item Аксессуары
+										a(href="#").item Подарки
+									.category-column
+										.item.head Женское 
+										a(href="#").item Одежда
+										a(href="#").item Обувь
+										a(href="#").item Сумки
+										a(href="#").item Аксессуары
+										a(href="#").item Подарки
+									.category-column
+										.item.head Детское
+										a(href="#").item Новорожденные
+										a(href="#").item Мальчики
+										a(href="#").item Девочки
+							.brands
+								.headblock
+									span.headname Бренды магазина
+								.content
+									.brands-column
+										a(href="#").item A.M.N.
+										a(href="#").item Bosco Sport
+										a(href="#").item L’occitane
+										a(href="#").item Top Shop
+										.item Белорусская обувь
+									.brands-column
+										a(href="#").item Большевичка
+										a(href="#").item Иль де Боте
+										a(href="#").item A.M.N.
+										a(href="#").item Bosco Sport
+										a(href="#").item L’occitane
+									.brands-column
+										a(href="#").item Top Shop
+										a(href="#").item Белорусская обувь
+										a(href="#").item Большевичка
+										a(href="#").item Иль де Боте
+										a(href="#").item A.M.N.
+						.delivery.mk-info-section
+							h2 Доставка
+							form(action="#").form-block
+								.delivery-type
+									.radio-item.mk-info-radio-item
+										input#mk-info_radio1(type="radio" name="mk-info-radio1")
+										label(for="mk-info_radio1") Доставка курьером
+										.ext-text
+											span.price от 1 &#8381;
+											br
+											span.delivery-opts Ближайшая доставка #[br]8 ноября.
+									.radio-item.mk-info-radio-item
+										input#mk-info_radio2(type="radio" name="mk-info-radio1")
+										label(for="mk-info_radio2") Самовывоз из пункта выдачи
+										.ext-text
+											span.price от 1 &#8381;
+											br
+											span.delivery-opts Более 250 пунктов самовывоза
+									.radio-item.mk-info-radio-item
+										input#mk-info_radio3(type="radio" name="mk-info-radio1")
+										label(for="mk-info_radio3") Почта
+										.ext-text
+											span.price от 1 &#8381;
+											br
+											span.delivery-opts Ближайшая доставка 8 ноября.
+								.choice-city
+									.radio-item
+										input#mk-info_radio4(type="radio" name="mk-info-radio2")
+										label(for="mk-info_radio4") Москва и МО
+									.radio-item
+										input#mk-info_radio5(type="radio" name="mk-info-radio2")
+										label(for="mk-info_radio5") Санкт-Петербург и ЛО
+							.inf-block
+								.line
+									span в пределах МКАД
+									span.value 249 &#8381;
+								img.separ.mob(src="img/index/separ.svg", alt="separ.svg")
+								.line
+									span за пределами МКАД #[span.ext (до трассы A 107)]
+									span.value 349 &#8381;
+						.reimb.mk-info-section
+							h2 Возврат
+							p.desc Мы хотим, чтобы покупки на Modno приносили вам радость, а если что-то пошло не так, мы готовы помочь вернуть товар продавцу* как можно быстрее. Просим обратить внимание, что окончательное решение по возврату товаров принимает продавец в соответствии с нормами законодательства Российской Федерации.
+							span.footnote *Продавец – интернет-магазин, у которого вы заказали товары на modno.ru
+							.questions
+								.item
+									.headline.mk-info-reimb-question
+										span.name Получили не тот товар?
+										img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									.hidden
+										.text
+											p Полученный товар отличается от заказанного по характеристикам или цвету? Вы можете оформить возврат товара продавцу, обменять его на верный или получить соразмерную компенсацию, оставив товар у себя.
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.headline.mk-info-reimb-question
+										span.name В заказе чего-то не хватает?
+										img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									.hidden
+										.text
+											p Вы получили товары в неполной комплектации или недополучили что-то из заказанного? Вы можете оформить возврат товара продавцу или получить соразмерную компенсацию, оставив товар у себя.
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.headline.mk-info-reimb-question
+										span.name Обнаружили брак?
+										img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									.hidden
+										.text
+											p Полученный товар имеет дефекты, внешние механические повреждения (царапины, вмятины, сколы), которые возникли до передачи товара вам? Не переживайте!
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.headline.mk-info-reimb-question
+										span.name Передумали и хотите сдать товар?
+										img.arrow.closed(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									.hidden
+										.text
+											p Помните, у товара должна быть сохранена комплектация, товарный вид и упаковка, товар не должен иметь следов использования. Направить обращение необходимо в течение 7 дней.
+						.credit.mk-info-section
+							h2 Кредит
+							.instruction
+								span.point 1. Заполните онлайн заявку и узнайте решение банка.
+								span.point 2. Представитель банка доставит вам карту.
+								span.point 3. Получите деньги в любом банкомате.
+							form.credit-form(action="#")
+								.range-item
+									.headtext Сумма кредита
+									input#mk-info-credit-input-range1(type="range" min="0" max="5" step="1" value="0")
+									.range-points
+										span.range1-range-point.range1-range-point0 5 000 &#8381;
+										span.range1-range-point.range1-range-point1 100 000 &#8381;
+										span.range1-range-point.range1-range-point2 300 000 &#8381;
+										span.range1-range-point.range1-range-point3 1 000 000 &#8381;
+										span.range1-range-point.range1-range-point4 1 500 000 &#8381;
+										span.range1-range-point.range1-range-point5 2 000 000 &#8381;
+								.range-item
+									.headtext Срок кредита
+									input#mk-info-credit-input-range2(type="range" min="0" max="4" step="1" value="0")
+									.range-points
+										span.range2-range-point.range2-range-point0 1 год
+										span.range2-range-point.range2-range-point1 2 года
+										span.range2-range-point.range2-range-point2 3 года
+										span.range2-range-point.range2-range-point3 4 года
+										span.range2-range-point.range2-range-point4 5 лет
+								.calc-values
+									.line
+										span Ставка
+										span.value 9,9%
+									img.separ.mob(src="img/index/separ.svg", alt="separ.svg")
+									.line
+										span Ежемесячный платёж
+										span.value от 42 500 &#8381;
+								.input-contacts
+									.input-outer
+										input.mk-info-credit-contacts-input(type="text")
+										.placeholder
+											span Фамилия #[span.red *]
+									.input-outer
+										input.mk-info-credit-contacts-input(type="text")
+										.placeholder
+											span Имя #[span.red *]
+									.input-outer
+										input.mk-info-credit-contacts-input(type="text")
+										.placeholder
+											span Отчество #[span.red *]
+									.input-outer
+										input.mk-info-credit-contacts-input(type="tel")
+										.placeholder
+											span Телефон #[span.red *]
+								.submit-block
+									input(type="submit" value="Подтвердить")
+									p.desc Нажимая кнопку “Подтвердить” я соглашаюсь на передачу данных АО “Тинькофф Банк”
+								p.desc Услуги оказываются АО “Тинькофф Банк”. Пример расчета условий по кредиту носит исключительно информационный характер и не является публичной офертой. Яндекс не несет ответственности за действия третьих лиц.
+								.mark 
+									span Услуги оказываются АО “Тинькофф банк”. Реклама. #[a(href="#") Условия кредитования]
+				.mk-block.mk-feedback
+					.main-content
+						.anchors-section
+							a.anchor-btn.mk-feedback-anchor-btn.active.review-all(href="#") Все
+							a.anchor-btn.mk-feedback-anchor-btn.review-positive(href="#") Положительные
+							a.anchor-btn.mk-feedback-anchor-btn.review-negative(href="#") Отрицательные
+							a(href="#").btn-send
+								span Оставить отзыв
+						.reviews-list.review-all.active(style='display: block')
+							h2 Отзывы (все)
+							- for(var i = 1; i <= 17; i++)
+								.review-item
+									.photo-profile.circle
+									.content
+										span.name Екатерина
+										span.review-date 21 октября 2019
+										.rating
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										span.login ekaterina777
+										p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
+								if i != 17
+									img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.reviews-list.review-positive
+							h2 Отзывы (положительные)
+							- for(var i = 1; i <= 17; i++)
+								.review-item
+									.photo-profile.circle
+									.content
+										span.name Екатерина
+										span.review-date 21 октября 2019
+										.rating
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										span.login ekaterina777
+										p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
+								if i != 17
+									img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.reviews-list.review-negative
+							h2 Отзывы (отрицательные)
+							- for(var i = 1; i <= 17; i++)
+								.review-item
+									.photo-profile.circle
+									.content
+										span.name Екатерина
+										span.review-date 21 октября 2019
+										.rating
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										span.login ekaterina777
+										p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
+								if i != 17
+									img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.btn-more.mob
+							span Показать ещё
 
 
 									
@@ -594,6 +600,29 @@ block scripts
 			$(function($) {
 				$('input[type="tel"]').mask("+7 (999) 999-99-99")
 			});
+
+
+			$('.mk-filter-btn-shops').click(function(){
+				$('#mk-filter-popup-shops').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'filter-popup_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+			});
+
+			//- Mobile Input range .mk-info > .credit 
+
+			if($(window).width() <= 768){
+				$('#mk-info-credit-input-range1').change(function(){
+					$('.range1-range-point').hide();
+					$('.range1-range-point' + this.value).show();
+				});
+				$('#mk-info-credit-input-range2').change(function(){
+					$('.range2-range-point').hide();
+					$('.range2-range-point' + this.value).show();
+				});
+			}
 
 			
 		});

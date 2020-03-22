@@ -1751,7 +1751,7 @@ body footer .footer-bottomLine .payments img.payment-img {
   pointer-events: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   footer .footer-content .footer-content-wrapper .links .list {
     display: block !important;
   }

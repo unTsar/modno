@@ -623,6 +623,29 @@ block scripts
 					$('.range2-range-point' + this.value).show();
 				});
 			}
+			$(window).resize(function(){
+				if($(window).width() > 768){
+					$('.range1-range-point').show();
+					$('.range2-range-point').show();
+					$('#mk-info-credit-input-range1').unbind('change');
+					$('#mk-info-credit-input-range2').unbind('change');
+				}else{
+					$('.range1-range-point').hide();
+					$('.range2-range-point').hide();
+					$('.range1-range-point0').show();
+					$('.range2-range-point0').show();
+					$('input[type=range]').val('0');
+
+					$('#mk-info-credit-input-range1').change(function(){
+						$('.range1-range-point').hide();
+						$('.range1-range-point' + this.value).show();
+					});
+					$('#mk-info-credit-input-range2').change(function(){
+						$('.range2-range-point').hide();
+						$('.range2-range-point' + this.value).show();
+					});
+				}
+			});
 
 			
 		});

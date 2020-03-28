@@ -34,6 +34,37 @@ html(lang="ru")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
+		//- Send feedback
+		.Log-form.feedback-form#feedback-form
+			a.feedback-form_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				span Оставить отзыв
+			form(action="#").form-block
+				.input-item
+					.input-head 
+						span Ваше имя #[span.red *] 
+					input(type="text")
+				.input-item
+					.input-head 
+						span Ваша оценка #[span.red *]
+					.rating
+						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+				.input-item
+					.input-head 
+						span Комментарий #[span.red *]
+					textarea
+				.p-policy
+					input#feedback-form_checkbox(type="checkbox")
+					label(for="feedback-form_checkbox")
+					.textblock.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.
+				.form-buttons
+					input.feedback-form_close-btn(type="submit" value="Отправить")
+
 		.Log-form.mk-filter-drop-popup#mk-filter-drop-popup
 			a.filter-drop-popup_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -55,51 +86,105 @@ html(lang="ru")
 				a(href="#").unfixed-btn.btn.filter-drop-popup_close-btn
 					span Принять
 		//- Фильтр для товаров
-		.Log-form.mk-filter-popup#mk-filter-popup
-			a.filter-popup_close-btn(href="#")
+		.Log-form.mk-filter-popup#mk-filter-popup-products
+			a.filter-popup-products_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
 			.topline
-				span Фильтры
+				span Фильтры товаров
 			.links
-				.line.mk-filter-popup-line.mk-filter-drop-btn
-					span.span-link Цена, #[span.rouble &#8381;]
-					.drop-btn
-						span.value не важно
-						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+				.line
+					span.span-link Вид одежды
+					select.mk-filter-products-select2.js-states.form-control(name="state")
+						option(value="Opt1") Мужская
+						option(value="Opt2") Женская
+						option(value="Opt3") Детская
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line
+					span.span-link Категория
+					select.mk-filter-products-select2.js-states.form-control(name="state")
+						option(value="Opt1") Одежда
+						option(value="Opt2") Обувь
+						option(value="Opt3") Аксессуары
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line
+					span.span-link Тип
+					select.mk-filter-products-select2.js-states.form-control(name="state")
+						option(value="Opt1") Брюки
+						option(value="Opt2") Кардиганы
+						option(value="Opt3") Свитеры
+						option(value="Opt4") Рубашки
+						option(value="Opt5") Блузы
+						option(value="Opt6") Джемперы
+						option(value="Opt7") Вязаные костюмы
+						option(value="Opt8") Джинсы
+						option(value="Opt9") Комбинезоны
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line
+					span.span-link Размер
+					.input-outer
+						input.value(type="number" value="44")
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line
+					span.span-link Цвет
+					select.mk-filter-products-select2.js-states.form-control(name="state")
+						option(value="Opt1") Белый
+						option(value="Opt2") Чёрный
+						option(value="Opt3") Коричневый
+				img.separ(src="img/index/separ.svg", alt="separ.svg")
+				.line
+					span.span-link Материал
+					select.mk-filter-products-select2.js-states.form-control(name="state")
+						option(value="Opt1") Кожа
+						option(value="Opt2") Шёлк
+						option(value="Opt3") Шерсть
+						option(value="Opt4") Кожзам
 				img.separ(src="img/index/separ.svg", alt="separ.svg")
 				.line.mk-filter-popup-line
-					span.span-link Безопасная сделка
+					span.span-link Новинки
 					.buttonOpSw.r
 						input.option-checkbox(type="checkbox")
 						.knobs
 						.layer
 				img.separ(src="img/index/separ.svg", alt="separ.svg")
 				.line.mk-filter-popup-line
-					span.span-link Товары со скидкой
+					span.span-link Скидки
 					.buttonOpSw.r
 						input.option-checkbox(type="checkbox")
 						.knobs
 						.layer
+			.g-separ-block
+			.links
+				.line
+					span.span-link Цена, от
+					.input-outer
+						input.value(type="text" value="200")
+						span.rouble &#8381;
 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Товары с доставкой
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
+				.line
+					span.span-link Цена, до
+					.input-outer
+						input.value(type="text" value="200 000")
+						span.rouble &#8381;
+			.g-separ-block
+			.links
+				.line#header-popup-map1
+					span.span-link Город
+					span.value Москва
+					.img-arrow
 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line.mk-filter-drop-btn
-					span.span-link(href="#") Срок размещения
-					.drop-btn
-						span.value за всё время
-						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line.mk-filter-drop-btn
-					span.span-link(href="#") Сортировка по
-					.drop-btn
-						span.value по умолчанию
-						img.img-drop(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
-				a(href="#").btn.filter-popup_close-btn
+				.line#header-popup-map2
+					span.span-link Доставка
+					span.value Москва
+					.img-arrow
+			.g-separ-block
+			.links
+				.line
+					span.span-link Сортировка
+					select.mk-filter-products-select2.js-states.form-control(name="state")
+						option(value="Opt1") по цене
+						option(value="Opt2") по рейтингу
+			.btn-outer
+				a(href="#").btn.filter-popup-products_close-btn
 					span Принять
 		.Log-form.mk-filter-popup#mk-filter-popup-shops
 			a.filter-popup_close-btn(href="#")
@@ -240,148 +325,7 @@ html(lang="ru")
 					a.link(href="#") 中文
 				a(href="#").btn-submit.hmenu-popup-inner-close
 					span Запомнить
-		//- .hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-delivery#hmenu-popup-main-delivery
-		//- 	.outer
-		//- 		img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
-		//- 		.head
-		//- 			a(href="#").hmenu-popup-inner-close
-		//- 				img(src="img/arrow-left.svg", alt="arrow-left.svg")
-		//- 			span Доставка
-		//- 		.input-outer
-		//- 			img.img-search(src="img/search.svg", alt="search.svg")
-		//- 			input.input-search(type="search")
-		//- 		.links
-		//- 			.links-column
-		//- 				a.link(href="#") Москва 
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Санкт-Петербург
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Екатеринбург
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Краснодар
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Новосибирск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Красноярск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Челябинск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Ростов-на-Дону
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Тюмень
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Уфа
-		//- 			.links-column
-		//- 				a.link(href="#") Казань
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Пермь
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Нижний Новгород
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Самара
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Саратов
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Омск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Воронеж
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Волгоград
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Балашиха
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Хабаровск
-		//- 			.links-column
-		//- 				a.link(href="#") Иркутск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Томск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Сочи
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Ярославль
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Сургут
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Подольск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Мытищи
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Владивосток
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Калуга
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Пятигорск
-		//- .hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-city#hmenu-popup-main-city
-		//- 	.outer
-		//- 		img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
-		//- 		.head
-		//- 			a(href="#").hmenu-popup-inner-close
-		//- 				img(src="img/arrow-left.svg", alt="arrow-left.svg")
-		//- 			span Город
-		//- 		.input-outer
-		//- 			img.img-search(src="img/search.svg", alt="search.svg")
-		//- 			input.input-search(type="search")
-		//- 		.links
-		//- 			.links-column
-		//- 				a.link(href="#") Москва 
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Санкт-Петербург
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Екатеринбург
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Краснодар
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Новосибирск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Красноярск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Челябинск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Ростов-на-Дону
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Тюмень
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Уфа
-		//- 			.links-column
-		//- 				a.link(href="#") Казань
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Пермь
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Нижний Новгород
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Самара
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Саратов
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Омск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Воронеж
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Волгоград
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Балашиха
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Хабаровск
-		//- 			.links-column
-		//- 				a.link(href="#") Иркутск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Томск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Сочи
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Ярославль
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Сургут
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Подольск
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Мытищи
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Владивосток
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Калуга
-		//- 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-		//- 				a.link(href="#") Пятигорск
+
 		.hmenu-popup-category.hmenu-popup.hmenu-popup-category2#hmenu-popup-category2
 			.outer
 				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
@@ -579,6 +523,7 @@ html(lang="ru")
 			.map-buttons
 				a(href="#").map-btn.popup-map1_close-btn
 					span Запомнить
+
 		.Log-form.LogIn-form#LogIn-form
 			a.LogIn-form_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -848,6 +793,21 @@ html(lang="ru")
 					closeClass: 'filter-popup_close-btn',
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }			
+				});
+			});
+			$('.mk-filter-btn-products').click(function(){
+				$('#mk-filter-popup-products').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'filter-popup-products_close-btn',
+					onOpen: function() { 
+						$('body').addClass('fixed');
+					},
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+				$('.mk-filter-products-select2').select2({
+					minimumResultsForSearch: Infinity,
+					dropdownCssClass: 'mk-filter-products-select2-dropdown',
+					dropdownCss: { 'z-index': '10001'},
 				});
 			});
 

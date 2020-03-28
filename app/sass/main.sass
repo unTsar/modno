@@ -25,6 +25,29 @@ body
 	overflow-x: hidden
 	color: #000
 	background-color: #F7F7F7
+	.select2-container--default
+		z-index: 10001
+		.mk-filter-products-select2-dropdown
+			border: none
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+			.select2-results__group
+				padding-left: 14px
+			.select2-results > .select2-results__options
+				max-height: 350px
+				.select2-results__option
+					font-size: 17px
+					transition: 0.3s
+					padding: 17.5px 0 17.5px 14px
+				.select2-results__option[role=group]
+					padding-left: 0
+					.select2-results__option
+						padding-left: 28px
+			.select2-results__option--highlighted[aria-selected]
+				background-color: #ddd
+				color: #000
+			.select2-results__option[aria-selected=true]
+				background-color: $accent-blue
+				color: #fff
 	img
 		user-select: none
 	a
@@ -56,63 +79,6 @@ body
 		height: 0
 	input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
 		display: none
-	.select2-container, .select2-container--default, .select2-container--open
-		z-index: 22222
-	.select2-container--default
-		.select2-results__option--highlighted
-			transition: 0.5s
-			font-size: 15px
-		.select2-results__option[aria-selected=true], .select2-results__option--highlighted[aria-selected]
-			background-color: #F5F5F5
-			color: #000
-		.select2-results__option--highlighted:hover
-			background-color: #F4F4F4
-	.select2-container, .select2-container--default, .select2-container--open
-		.select2-dropdown, .select2-dropdown--below
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
-			border: none
-			.select2-search--dropdown
-				padding: 0
-				position: relative
-				.select2-search__field
-					padding: 7px
-					padding-left: 22.5px
-					border: none
-					font-size: 15px
-				.select2-search--dropdown__search-img
-					background-image: url('../img/search.svg')
-					background-repeat: no-repeat
-					background-size: contain
-					width: 12px
-					height: 11px
-					position: absolute
-					left: 6px
-					top: 0
-					bottom: 0
-					margin: auto
-				.select2-search--dropdown__cross
-					display: none
-					cursor: pointer
-					background-image: url('../img/cross-out.svg')
-					background-repeat: no-repeat
-					background-size: contain
-					position: absolute
-					width: 12px
-					height: 12px
-					top: 0
-					bottom: 0
-					right: 6px
-					margin: auto
-			.select2-results
-				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
-				position: relative
-				.select2-results__options
-					.select2-results__option
-						font-size: 15px
-	.select2-container--open
-		.select2-selection, .select2-selection--single
-			.select2-selection__arrow
-				transform: rotate(-180deg)
 	.container
 		width: 1140px
 		margin-left: auto
@@ -194,8 +160,8 @@ body
 			width: 17px
 			top: 0
 			right: 0
-			margin-top: 16px
-			margin-right: 16px
+			margin-top: 26px
+			margin-right: 25px
 		.topline
 			text-align: center
 			padding: 23px 0
@@ -252,6 +218,15 @@ body
 					font-size: 15px
 					font-weight: bold
 					color: #fff
+			input[type=submit]
+				background-color: $accent-blue
+				width: 100%
+				height: 34px
+				border: none
+				border-radius: 5px
+				font-size: 15px
+				font-weight: bold
+				color: #fff
 	.LogIn-form
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 		width: 331px
@@ -359,6 +334,34 @@ body
 						border-color: #000
 					input:checked + label
 						color: #000
+			.form-buttons
+				.form-btn
+					margin-top: 35px
+	.feedback-form
+		width: 738px
+		form.form-block
+			.input-item
+				margin-bottom: 28px
+				input
+					max-width: 270px
+				.rating
+					padding-bottom: 10px
+					img
+						width: 21px
+						cursor: pointer
+						margin-right: 1px
+				textarea
+					width: 470px
+					height: 121px
+					border: 0.5px solid rgba(0, 0, 0, 0.3)
+					border-radius: 5px
+					resize: none
+					padding-left: 9px
+					padding-top: 5px
+			.form-buttons
+				margin-top: 28px
+	.feedback-form, .LogUp-form
+		form.form-block
 			.p-policy
 				position: relative
 				input
@@ -413,9 +416,6 @@ body
 					a
 						color: $accent-blue
 						text-decoration: underline
-			.form-buttons
-				.form-btn
-					margin-top: 35px
 	.popup-map::-webkit-scrollbar
 			width: 0px
 			background: transparent
@@ -552,10 +552,10 @@ body
 				input.track-search:-ms-input-placeholder
 					font-size: 15px
 					color: #808080
-	.mk-filter-popup::-webkit-scrollbar, .mk-filter-drop-popup::-webkit-scrollbar
+	.mk-filter-popup::-webkit-scrollbar //, .mk-filter-drop-popup::-webkit-scrollbar
 		width: 0px
 		background: transparent
-	.mk-filter-popup, .mk-filter-drop-popup
+	.mk-filter-popup //, .mk-filter-drop-popup
 		overflow-x: hidden
 		-ms-overflow-style: none
 		scrollbar-width: none
@@ -572,9 +572,10 @@ body
 			padding: 35px 0
 			span
 				font-size: 25px
-		.links
-			padding-left: 60px
-			padding-right: 40px
+		.links, .btn-outer
+			padding-left: 50px
+			padding-right: 50px
+		.btn-outer
 			a.btn
 				display: block
 				margin-top: 31px
@@ -593,19 +594,37 @@ body
 	.mk-filter-popup
 		.links
 			.line
+				position: relative
 				cursor: pointer
 				width: 100%
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
-				display: flex
-				align-items: center
+				height: 68px
+				line-height: 66px
+				text-align: right
 				span.span-link
+					position: absolute
+					z-index: 10002
+					left: 0
 					font-size: 20px
 					display: inline-block
-					padding: 17.5px 0
+				span.value
+					font-size: 15px
+					color: #808080
+					margin-right: 46px
+				.img-arrow
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 0
+					margin: auto
+					display: block
+					background-image: url('../img/index/drop-menu-arrow.svg')
+					background-repeat: no-repeat
+					background-position: center
+					background-size: cover
+					width: 11px
+					height: 19px
 				.buttonOpSw
+					margin: 22.5px 0
 					display: inline-block
 					position: relative
 					width: 52px
@@ -652,44 +671,91 @@ body
 						background-color: $accent-blue
 				.buttonOpSw.r, .layer
 					border-radius: 100px
-				.drop-btn
-					margin-right: 20px
+				select
+					width: 100%
+				.select2.select2-container
+					font-size: 15px
+					height: 68px
+				.select2-container--default
+					.select2-selection--single
+						border: none
+						outline: none
+				.select2-container--default
+					.select2-selection--single
+						.select2-selection__rendered
+							color: #808080
+							text-align: right
+				.select2-container
+					.select2-selection--single
+						.select2-selection__rendered
+							padding-right: 46px
+							height: 68px
+							line-height: 66px
+				.select2-container--default
+					.select2-selection--single
+						.select2-selection__arrow
+							transition: 0.3s
+							background-image: url('../img/index/drop-menu-arrow.svg')
+							background-repeat: no-repeat
+							background-position: center
+							background-size: cover
+							width: 11px
+							height: 19px
+							top: 0
+							right: 0
+							bottom: 0
+							margin: auto
+							b
+								display: none
+				.select2-container--default.select2-container--open
+					.select2-selection--single
+						.select2-selection__arrow
+							transform: rotate(90deg)
+				.input-outer
+					margin-right: 46px
 					margin-left: auto
-					span.value
-						font-size: 17px
+					input.value
+						border: 0
+						background-color: transparent
+						text-align: right
+						font-size: 15px
 						color: #808080
-					img.img-drop
-						width: 19px
-						height: auto
-						margin-left: 24px
+					span.rouble
+						font-size: 15px
+						color: #808080
+						margin-left: 5px
 				img.separ
 					width: 100%
 					max-height: 2px
 					display: block
-	.mk-filter-drop-popup
-		.topline
-			position: relative
-			img.img-inner-close
-				position: absolute
-				top: 0
-				bottom: 0
-				left: 0
-				margin: auto
-				margin-left: 60px
-				transform: rotate(90deg)
-				padding: 10px
-				width: 39px
-				height: auto
-		.links
-			img.separ
-				width: 100%
-				max-height: 2px
-				display: block
-			a.link
-				width: 100%
-				display: inline-block
-				font-size: 20px
-				padding: 17.5px 0
+		.g-separ-block
+			width: 100%
+			height: 15px
+			background-color: #f7f7f7
+	// .mk-filter-drop-popup
+	// 	.topline
+	// 		position: relative
+	// 		img.img-inner-close
+	// 			position: absolute
+	// 			top: 0
+	// 			bottom: 0
+	// 			left: 0
+	// 			margin: auto
+	// 			margin-left: 60px
+	// 			transform: rotate(90deg)
+	// 			padding: 10px
+	// 			width: 39px
+	// 			height: auto
+	// 	.links
+	// 		img.separ
+	// 			width: 100%
+	// 			max-height: 2px
+	// 			display: block
+	// 		a.link
+	// 			width: 100%
+	// 			display: inline-block
+	// 			font-size: 20px
+	// 			padding: 17.5px 0
 	main
 		padding-top: 16px
 
@@ -1202,14 +1268,28 @@ body
 					line-height: 60px
 					span
 						font-size: 17px
-
+		.Log-form
+			padding-bottom: 15px
+			img.img-close
+				width: 20px
+				margin-top: 25px
+				margin-right: 50px
+			form.form-block
+				.form-buttons
+					.form-btn
+						margin-left: auto
+						margin-right: auto
+						width: 180px
+						height: 60px
+					input[type=submit]
+						display: block
+						margin-left: auto
+						margin-right: auto
+						width: 180px
+						height: 60px
 		.LogIn-form
 			width: 100%
 			height: 100%
-			img.img-close
-				width: 20px
-				margin-top: 27px
-				margin-right: 33px
 			.topline
 				padding: 35px 0
 				span
@@ -1236,22 +1316,32 @@ body
 					label::after
 						width: 25px
 						height: 25px
-				.form-buttons
-					.form-btn
-						margin-left: auto
-						margin-right: auto
-						width: 180px
-						height: 60px
 		.LogUp-form
 			width: 100%
 			height: 100%
+		.feedback-form
+			width: 100%
+			height: 100%
+			.topline
+				padding: 33.5px 0
+				font-size: 25px
 			form.form-block
+				.input-item
+					margin-bottom: 13px
+					.input-head
+						padding: 3px 0
+						span
+							font-size: 20px
+					.rating
+						padding-bottom: 0
+				.p-policy
+					max-width: 650px
 				.form-buttons
-					.form-btn
-						margin-left: auto
-						margin-right: auto
-						width: 180px
-						height: 60px
+					input[type=submit]
+						font-size: 17px
+				.p-policy, .form-buttons
+					margin-top: 30px
+
 		header
 			.container
 				.headerLine
@@ -1565,16 +1655,25 @@ body
 						font-size: 18px
 					a.a-logup
 						text-decoration: underline
+					textarea
+						width: 100%
+						height: 231px
+						font-size: 20px
+						padding-top: 10px
 				.form-buttons
 					.form-btn
 						width: 100%
 						height: 52px
 						span
 							font-size: 20px
+					input[type=submit]
+						width: 100%
+						height: 52px
+						font-size: 20px
 				.p-policy
 					.headtext
 						padding-left: 56px
-						font-size: 16px
+						font-size: 18px
 					.desctext
 						padding-left: 0
 						margin-top: 25px
@@ -1584,38 +1683,59 @@ body
 					label:after
 						width: 34px
 						height: 34px
-		.mk-filter-popup, .mk-filter-drop-popup
-			.links
-				padding: 0 30px
-				a.link
-					font-size: 19px
-					padding: 16px 0
+		.feedback-form	
+			form.form-block
+				.input-item
+					.rating
+						padding-bottom: 8px
+						img
+							width: 43px
+							margin-right: 2px
+				.form-buttons
+					margin-top: 40px
+		.mk-filter-popup //, .mk-filter-drop-popup
+			.btn-outer
 				a.btn
+					margin-top: 33px
 					width: 100%
 					height: 52px
-					line-height: 51px
+					line-height: 50px
 					span
 						font-size: 20px
+			.links, .btn-outer
+				padding: 0 30px
 				.line
+					height: 63px
+					line-height: 63px
+					.input-outer
+						margin-right: 34px
+						input.value
+							font-size: 13px
+						span.rouble
+							font-size: 13px
+					.select2.select2-container
+						height: 63px
+						font-size: 13px
+					.select2-container
+						.select2-selection--single
+							.select2-selection__rendered
+								height: 63px
+								line-height: 60px
+								padding-right: 34px
 					span.span-link
 						font-size: 19px
-						padding: 16px 0
-					.drop-btn
-						span.value
-							font-size: 19px
-						img.img-drop
-							margin-left: 22px
+					span.value
+						margin-right: 34px
+						font-size: 13px
 					.buttonOpSw
 						width: 63px
 						height: 28px
+						margin: 17.5px 0
 						.knobs::before
 							width: 24px
 							height: 24px
 						.option-checkbox:checked + .knobs::before
 							left: 37px
-			.topline
-				img.img-inner-close
-					margin-left: 20px
 				
 		header
 			.container
@@ -1643,16 +1763,6 @@ body
 			.footer-bottomLine
 				span
 					font-size: 13px
-@media only screen and(max-width: 450px)
-	body
-		.mk-filter-popup, .mk-filter-drop-popup
-			.links
-				.line
-					span.span-link
-						font-size: 16px
-					.drop-btn
-						span.value
-							font-size: 13px
 @media only screen and(max-width: 400px)
 	body
 		.popup-profile-mob
@@ -1732,7 +1842,6 @@ body
 				span
 					font-size: 19px
 			form.form-block
-				padding: 0 15px
 				.input-item
 					margin-bottom: 0
 					input
@@ -1751,39 +1860,69 @@ body
 						margin-top: 10px
 						padding: 8px 0
 						font-size: 16px
+					.rating
+						padding-bottom: 0
+						img
+							width: 30px
+					textarea 
+						height: 100px
 				.p-policy
 					margin-top: 22px
+					.textblock.headtext
+						font-size: 16px
+						padding-right: 0
 				.form-options
 					label
 						font-size: 16px
 				.form-buttons
 					margin-top: 20px
+					margin-left: -15px
+					margin-right: -15px
 					.form-btn
 						height: 40px
 						span
 							font-size: 16px
+					input[type=submit]
+						height: 40px
+						font-size: 16px
 		.mk-filter-popup, .mk-filter-drop-popup
 			.topline
 				img.img-inner-close
 					margin-left: -10px
-			.links
+			.btn-outer
 				padding: 0 15px
-				a.link
-					font-size: 16px
-					padding: 9.5px 0
 				a.btn
-					margin-top: 6px
+					margin-top: 15px
 					height: 40px
 					line-height: 40px
 					span
 						font-size: 16px
+			.links
 				.line
+					height: 50px
+					line-height: 50px
 					span.span-link
-						padding: 9.5px 0
-					.drop-btn
-						img.img-drop
-							width: 14px
-							margin-left: 14px
+						font-size: 16px
+					span.value
+						margin-right: 21px
+					.img-arrow
+						width: 8px
+						height: 14px
+					.input-outer
+						margin-right: 0
+					.select2.select2-container
+						height: 50px
+					.select2-container
+						.select2-selection--single
+							.select2-selection__rendered
+								height: 50px
+								line-height: 50px
+								padding-right: 21px
+					.select2-container--default
+						.select2-selection--single
+							.select2-selection__arrow
+								width: 8px
+								height: 14px
 					.buttonOpSw
 						width: 48px
 						height: 21px
@@ -1792,6 +1931,8 @@ body
 							height: 17px
 						.option-checkbox:checked + .knobs::before
 							left: 28px
+			.g-separ-block
+				height: 10px
 		.popup-map
 			padding-top: 28px
 			.topline

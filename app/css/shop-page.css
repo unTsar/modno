@@ -14,6 +14,42 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
+body .select2-container--default .mk-sidebar-select2-dropdown {
+  border: none;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results__group {
+  padding-left: 14px;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results > .select2-results__options .select2-results__option {
+  font-size: 13px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding-left: 14px;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results > .select2-results__options .select2-results__option[role=group] {
+  padding-left: 0;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results > .select2-results__options .select2-results__option[role=group] .select2-results__option {
+  padding-left: 28px;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results__option--highlighted[aria-selected] {
+  background-color: #ddd;
+  color: #000;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results__option[aria-selected=true] {
+  background-color: #157EE1;
+  color: #fff;
+}
+
 body section.shop-card {
   padding: 0 0 15px 0;
 }
@@ -237,6 +273,56 @@ body section.marketing-table .mk-products .main-content .sidebar > * {
   margin-bottom: 15px;
 }
 
+body section.marketing-table .mk-products .main-content .sidebar select {
+  width: 100%;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2.select2-container {
+  font-size: 10px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2-container--default .select2-selection--single {
+  border: none;
+  outline: none;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #808080;
+  text-align: right;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2-container .select2-selection--single .select2-selection__rendered {
+  padding-right: 36px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2-container--default .select2-selection--single .select2-selection__arrow {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-image: url("../img/index/drop-menu-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 8px;
+  height: 11px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-right: 14px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 body section.marketing-table .mk-products .main-content .sidebar .sidebar-block {
   width: 252px;
   -webkit-border-radius: 5px;
@@ -273,15 +359,30 @@ body section.marketing-table .mk-products .main-content .sidebar .number span.va
 
 body section.marketing-table .mk-products .main-content .sidebar .sorting {
   cursor: pointer;
+  position: relative;
+  padding: 0;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .sorting span {
+body section.marketing-table .mk-products .main-content .sidebar .sorting .select2-container--default .select2-selection--single .select2-selection__arrow {
+  margin-right: 18px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .sorting .select2-container {
+  font-size: 13px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .sorting .select2-container .select2-selection--single .select2-selection__rendered {
+  padding-right: 40px;
+  color: #000;
+  line-height: 25px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .sorting span.name {
+  margin-left: 15px;
+  position: absolute;
+  z-index: 1;
   font-size: 13px;
   color: #000000;
-}
-
-body section.marketing-table .mk-products .main-content .sidebar .sorting img.img-arrow {
-  margin-left: auto;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .category-h1 {
@@ -302,17 +403,18 @@ body section.marketing-table .mk-products .main-content .sidebar .category-h1 .c
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .options {
-  padding-top: 14px;
-  padding-left: 15px;
-  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 14px;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .options .line {
+  cursor: pointer;
   line-height: 14px;
-  margin-bottom: 17px;
+  padding: 9px 0;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line.checked span, body section.marketing-table .mk-products .main-content .sidebar .filters .line.checked span {
+body section.marketing-table .mk-products .main-content .sidebar .options .line.checked span.name, body section.marketing-table .mk-products .main-content .sidebar .filters .line.checked span.name {
   color: #000;
 }
 
@@ -328,9 +430,10 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line,
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 16px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .options .line span, body section.marketing-table .mk-products .main-content .sidebar .filters .line span {
+body section.marketing-table .mk-products .main-content .sidebar .options .line span.name, body section.marketing-table .mk-products .main-content .sidebar .filters .line span.name {
   font-size: 12px;
   color: #808080;
   -webkit-transition: 0.3s ease all;
@@ -345,7 +448,6 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
   width: 32px;
   height: 15px;
   margin-left: auto;
-  margin-right: 16px;
   overflow: hidden;
 }
 
@@ -410,42 +512,77 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
           border-radius: 100px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .advSearch {
-  cursor: pointer;
+body section.marketing-table .mk-products .main-content .sidebar .filters-head {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .advSearch span {
+body section.marketing-table .mk-products .main-content .sidebar .filters-head span {
   font-weight: bold;
   font-size: 12px;
   color: #000000;
+  margin-left: 15px;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .advSearch img.img-settings {
+body section.marketing-table .mk-products .main-content .sidebar .filters-head img.img-settings {
   margin-left: auto;
-  margin-right: 5px;
+  margin-right: 24px;
   width: 15px;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .filters .line {
+  position: relative;
   cursor: pointer;
-  padding-left: 14px;
+  padding: 0;
   height: 33px;
   line-height: 31px;
 }
 
+body section.marketing-table .mk-products .main-content .sidebar .filters .line .buttonOpSw {
+  margin-right: 14px;
+}
+
 body section.marketing-table .mk-products .main-content .sidebar .filters .line span.name {
   font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  margin-left: 14px;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .filters .line span.value {
+  margin-right: 14px;
   font-size: 10px;
   margin-left: auto;
-  margin-right: 14px;
   color: #808080;
 }
 
-body section.marketing-table .mk-products .main-content .sidebar .filters .line img.img-arrow {
+body section.marketing-table .mk-products .main-content .sidebar .filters .line .input-outer {
   margin-right: 14px;
+  margin-left: auto;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .filters .line .input-outer input.value {
+  border: 0;
+  background-color: transparent;
+  text-align: right;
+  font-size: 11px;
+  color: #808080;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar .filters .line .input-outer span.rouble {
+  font-size: 10px;
+  color: #808080;
+  margin-left: 5px;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .filters img.separ {
@@ -505,6 +642,21 @@ body section.marketing-table .mk-products .main-content .items-table .search-ite
   left: 0;
   margin-left: 18px;
   width: 19px;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .search-items.mob .filter-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 0.5px solid #000000;
+  cursor: pointer;
+  text-align: center;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .search-items.mob .filter-btn img {
+  opacity: 0.5;
+  padding: 13px 28px 14px 26px;
 }
 
 body section.marketing-table .mk-products .main-content .items-table .items-table-content {
@@ -1558,6 +1710,7 @@ body section.marketing-table .marketing-navbar-bottom .button {
   cursor: pointer;
   width: 92px;
   height: 30px;
+  line-height: 23px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1568,7 +1721,6 @@ body section.marketing-table .marketing-navbar-bottom .button span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  line-height: 30px;
   font-size: 9.5px;
   color: #000;
   font-weight: bold;
@@ -2392,6 +2544,10 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.marketing-table .mk-products .main-content .items-table .search-items.mob input {
     height: 54px;
   }
+  body section.marketing-table .mk-products .main-content .items-table .search-items.mob .filter-btn img {
+    padding: 15px 20px;
+    width: 63px;
+  }
   body section.marketing-table .mk-products .main-content .items-table .items-table-content .btn-more.mob {
     height: 54px;
     line-height: 50px;
@@ -2516,15 +2672,11 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.shop-card .card-item .content .counters {
     margin-top: 15px;
   }
+  body section.shop-card .card-item .semiposition {
+    padding-bottom: 0;
+  }
   body section.shop-card .card-item .semiposition .btn-subscribe, body section.shop-card .card-item .semiposition img.img-map {
-    width: 125px;
-    height: 40px;
-  }
-  body section.shop-card .card-item .semiposition .btn-subscribe {
-    line-height: 38px;
-  }
-  body section.shop-card .card-item .semiposition .btn-subscribe span {
-    font-size: 16px;
+    margin-bottom: 15px;
   }
   body section.marketing-table .marketing-navbar {
     padding: 15px 0;
@@ -2901,6 +3053,16 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.shop-card .card-item .content .counters .counter span.b {
     font-size: 16px;
   }
+  body section.shop-card .card-item .semiposition .btn-subscribe, body section.shop-card .card-item .semiposition img.img-map {
+    width: 125px;
+    height: 40px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe {
+    line-height: 38px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe span {
+    font-size: 16px;
+  }
   body section.marketing-table .marketing-navbar .buttonSwitch {
     width: 100px;
     margin: 0 1px;
@@ -2911,6 +3073,10 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.marketing-table .mk-products .main-content .items-table .search-items.mob input {
     font-size: 16px;
     height: 40px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .search-items.mob .filter-btn img {
+    padding: 8px 15px;
+    width: 53px;
   }
   body section.marketing-table .mk-products .main-content .items-table .items-table-content .btn-more.mob {
     height: 40px;

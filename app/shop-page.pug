@@ -1,6 +1,7 @@
 extends _layouts/home
 
 block styles
+	link(rel="stylesheet", href="css/select2.css")
 	link(rel="stylesheet", href="css/shop-page.css")
 block content
 
@@ -44,65 +45,88 @@ block content
 								span.name Количество:
 								span.value 2328
 							.sidebar-block.sorting
-								span По цене #[span.value дороже]
-								img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+								span.name По цене:
+								select.mk-sidebar-select2.js-states.form-control(name="state")
+									option(value="Opt1") дороже
+									option(value="Opt2") дешевле
 							.sidebar-block.category-h1
 								.category-item.active Женское
 								.category-item Мужское
 								.category-item Детское
 							.sidebar-block.options
-								.line
-									span Одежда
+								.line.mk-filter-popup-line
+									span.name Одежда
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox")
 										.knobs
 										.layer
-								.line
-									span Обувь
+								.line.mk-filter-popup-line
+									span.name Обувь
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox")
 										.knobs
 										.layer
-								.line
-									span Аксессуары
+								.line.mk-filter-popup-line
+									span.name Аксессуары
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox")
 										.knobs
 										.layer
-								.line.checked
-									span Косметика
+								.line.mk-filter-popup-line.checked
+									span.name Косметика
 									.buttonOpSw.r
 										input.option-checkbox(type="checkbox" checked)
 										.knobs
 										.layer
-							.sidebar-block.advSearch
+							.sidebar-block.filters-head
 								span Расширенный поиск
 								img.img-settings(src="img/filter-settings.svg", alt="filter-settings.svg")
 							.sidebar-block.filters
 								.line
 									span.name Тип
-									span.value Брюки
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									select.mk-sidebar-select2.js-states.form-control(name="state")
+										optgroup(label="Одежда")
+											option(value="Opt1") Брюки
+											option(value="Opt2") Рубашки
+											option(value="Opt3") Блузы
+											option(value="Opt4") Вязаные костюмы
+											option(value="Opt5") Джемперы
+											option(value="Opt6" disabled) Свитеры (disabled)
+											option(value="Opt7") Кардиганы
+										optgroup(label="Обувь")
+											option(value="Opt8") Туфли
+											option(value="Opt9") Кроссовки
+											option(value="Opt10") Кеды
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line
 									span.name Бренд
-									span.value Gucci
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									select.mk-sidebar-select2.js-states.form-control(name="state")
+										option(value="Opt1") Armani
+										option(value="Opt2") Adidas
+										option(value="Opt3" selected) Gucci
+										option(value="Opt4") ACNE STUDIOS
+										option(value="Opt5") Absolutex
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line
 									span.name Размер
-									span.value 44
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									.input-outer
+										input.value(type="number" value="44")
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line
 									span.name Цвет
-									span.value Белый
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									select.mk-sidebar-select2.js-states.form-control(name="state")
+										option(value="Opt1") Белый
+										option(value="Opt2") Чёрный
+										option(value="Opt3") Коричневый
+										option(value="Opt4") Красный
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line
 									span.name Материал
-									span.value Кожа
-									img.img-arrow(src="img/index/drop-menu-arrow.svg", alt="drop-menu-arrow.svg")
+									select.mk-sidebar-select2.js-states.form-control(name="state")
+										option(value="Opt1") Кожа
+										option(value="Opt2") Шёлк
+										option(value="Opt3") Шерсть
+										option(value="Opt4") Кожзам
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line.mk-filter-popup-line.checked
 									span.name Новинки
@@ -120,15 +144,21 @@ block content
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line
 									span.name Цена, от
-									span.value 200 &#8381;
+									.input-outer
+										input.value(type="text" value="200")
+										span.rouble &#8381;
 								img.separ(src="img/index/separ.svg" alt="separ.svg")
 								.line
 									span.name Цена, до
-									span.value 200 000 &#8381;
+									.input-outer
+										input.value(type="text" value="200 000")
+										span.rouble &#8381;
 						.items-table
 							.search-items.mob
-									input(type="search" placeholder="Поиск по товарам")
-									img.search(src="img/search.svg", alt="search.svg")
+								input(type="search" placeholder="Поиск по товарам")
+								img.search(src="img/search.svg", alt="search.svg")
+								.filter-btn.mk-filter-btn-products
+									img(src="img/filter-settings.svg", alt="filter-settings.svg")
 							.items-table-content
 								- for(var i = 1; i <= 12; i++)
 									.item
@@ -407,7 +437,7 @@ block content
 							a.anchor-btn.mk-feedback-anchor-btn.active.review-all(href="#") Все
 							a.anchor-btn.mk-feedback-anchor-btn.review-positive(href="#") Положительные
 							a.anchor-btn.mk-feedback-anchor-btn.review-negative(href="#") Отрицательные
-							a(href="#").btn-send
+							a(href="#").btn-send.feedback-form-btn
 								span Оставить отзыв
 						.reviews-list.review-all.active(style='display: block')
 							h2 Отзывы (все)
@@ -474,6 +504,7 @@ block content
 block scripts
 	script(src="js/jquery.maskedinput.min.js")
 	script(src="js/jquery.scrollTo.min.js")
+	script(src="js/select2.full.min.js")
 	script.
 		$(document).ready(function(){
 			$('.buttonOpSw').click(function(){
@@ -601,16 +632,6 @@ block scripts
 				$('input[type="tel"]').mask("+7 (999) 999-99-99")
 			});
 
-
-			$('.mk-filter-btn-shops').click(function(){
-				$('#mk-filter-popup-shops').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'filter-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
-			});
-
 			//- Mobile Input range .mk-info > .credit 
 
 			if($(window).width() <= 768){
@@ -623,12 +644,18 @@ block scripts
 					$('.range2-range-point' + this.value).show();
 				});
 			}
+
 			$(window).resize(function(){
 				if($(window).width() > 768){
 					$('.range1-range-point').show();
 					$('.range2-range-point').show();
 					$('#mk-info-credit-input-range1').unbind('change');
 					$('#mk-info-credit-input-range2').unbind('change');
+
+					$('.mk-sidebar-select2').select2({
+						minimumResultsForSearch: Infinity,
+						dropdownCssClass: 'mk-sidebar-select2-dropdown'
+					});
 				}else{
 					$('.range1-range-point').hide();
 					$('.range2-range-point').hide();
@@ -645,6 +672,23 @@ block scripts
 						$('.range2-range-point' + this.value).show();
 					});
 				}
+			});
+
+			//- Send feedback popup
+
+			$('.feedback-form-btn').click(function(){
+				$('#feedback-form').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'feedback-form_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+			});
+
+			//- mk sidebar filters Select2 
+			$('.mk-sidebar-select2').select2({
+				minimumResultsForSearch: Infinity,
+				dropdownCssClass: 'mk-sidebar-select2-dropdown'
 			});
 
 			

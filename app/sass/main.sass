@@ -26,7 +26,7 @@ body
 	color: #000
 	background-color: #F7F7F7
 	.select2-container--default
-		z-index: 10001
+		z-index: 5003
 		.mk-filter-products-select2-dropdown
 			border: none
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
@@ -83,6 +83,16 @@ body
 		width: 1140px
 		margin-left: auto
 		margin-right: auto
+
+	// карта страница магазина
+	.shop-page-map-popup
+		width: 100%
+		height: 100%
+		overflow: hidden
+		display: none
+		.map
+			width: 100%
+			height: 100%
 	.dd-popup
 		position: relative
 		display: none
@@ -416,15 +426,8 @@ body
 					a
 						color: $accent-blue
 						text-decoration: underline
-	.popup-map::-webkit-scrollbar
-			width: 0px
-			background: transparent
 	.popup-map
 		width: 738px
-		overflow-x: hidden
-		-ms-overflow-style: none
-		scrollbar-width: none
-		overflow-y: scroll
 		img.img-close
 			margin-top: 28px
 			margin-right: 25px
@@ -491,11 +494,11 @@ body
 					width: 100%
 					max-height: 2px
 		.mapOuter
-			height: 520px
 			width: 100%
 			margin-top: 5px
 			.map
-				height: 100%
+				width: 100%
+				height: 520px
 		.map-buttons
 			margin-top: 38px
 			margin-bottom: 28px
@@ -602,7 +605,7 @@ body
 				text-align: right
 				span.span-link
 					position: absolute
-					z-index: 10002
+					z-index: 5002
 					left: 0
 					font-size: 20px
 					display: inline-block
@@ -676,6 +679,7 @@ body
 				.select2.select2-container
 					font-size: 15px
 					height: 68px
+					z-index: 5001
 				.select2-container--default
 					.select2-selection--single
 						border: none
@@ -1885,7 +1889,7 @@ body
 					input[type=submit]
 						height: 40px
 						font-size: 16px
-		.mk-filter-popup, .mk-filter-drop-popup
+		.mk-filter-popup //, .mk-filter-drop-popup
 			.topline
 				img.img-inner-close
 					margin-left: -10px
@@ -1926,6 +1930,7 @@ body
 					.buttonOpSw
 						width: 48px
 						height: 21px
+						margin: 13.5px 0
 						.knobs::before
 							width: 17px
 							height: 17px

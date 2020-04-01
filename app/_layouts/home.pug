@@ -34,6 +34,9 @@ html(lang="ru")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
+		//- карта страница магазина
+		.shop-page-map-popup#shop-page-map-popup
+			.map#shop-page-map
 		//- Send feedback
 		.Log-form.feedback-form#feedback-form
 			a.feedback-form_close-btn(href="#")
@@ -167,12 +170,13 @@ html(lang="ru")
 						span.rouble &#8381;
 			.g-separ-block
 			.links
-				.line#header-popup-map1
+				.line.hmenu-popup-main-city_btn
 					span.span-link Город
 					span.value Москва
 					.img-arrow
 				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line#header-popup-map2
+				.line.hmenu-popup-main-delivery_btn
+
 					span.span-link Доставка
 					span.value Москва
 					.img-arrow
@@ -420,10 +424,10 @@ html(lang="ru")
 				.head 
 					span Настройки
 				.links
-					a.link#hmenu-popup-main-city_btn(href="#") Город: #[span.val Москва]
+					a.link.hmenu-popup-main-city_btn(href="#") Город: #[span.val Москва]
 						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link#hmenu-popup-main-delivery_btn(href="#") Доставка: #[span.val Москва]
+					a.link.hmenu-popup-main-delivery_btn(href="#") Доставка: #[span.val Москва]
 						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					a.link#hmenu-popup-main-language_btn(href="#") Язык: #[span.val русский]
@@ -593,6 +597,23 @@ html(lang="ru")
 
 			svg4everybody();
 
+			$('.hmenu-popup-main-city_btn').click(function(){
+				$('#popup-map1').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'popup-map1_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }
+				});
+			});
+			$('.hmenu-popup-main-delivery_btn').click(function(){
+				$('#popup-map2').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'popup-map2_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }	
+				});
+			});
+
 			var lSbtn = $('#languageSettings-button');
 			var lSdropmenu = $('#languageSettings-dropmenu');
 
@@ -654,26 +675,6 @@ html(lang="ru")
 					positionStyle: 'fixed',
 					closeClass: 'LogUp-form_close-btn',
 					onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
-			});
-			
-
-			$('#header-popup-map1').click(function(){
-				$('#popup-map1').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'popup-map1_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
-			});
-			$('#header-popup-map2').click(function(){
-				$('#popup-map2').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'popup-map2_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }
 									
 				});
@@ -757,18 +758,6 @@ html(lang="ru")
 				$(this).parents('.hmenu-popup-category').removeClass('active');
 				$(this).parents('.hmenu-popup-lSettings').fadeOut(250);
 				$(this).parents('.hmenu-popup-lSettings').removeClass('active');
-			});
-			$('#hmenu-popup-main-city_btn').click(function(){
-				$('#popup-map1').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'popup-map1_close-btn'		
-				});
-			});
-			$('#hmenu-popup-main-delivery_btn').click(function(){
-				$('#popup-map2').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'popup-map2_close-btn'		
-				});
 			});
 			$('#hmenu-popup-main-language_btn').click(function(){
 				$('#hmenu-popup-main-language').toggleClass('active');
@@ -855,6 +844,19 @@ html(lang="ru")
 				$(this).toggleClass('active');
 			});
 
+			// карта страница магазина
+			$('#shop-page-map-popup-btn').click(function(){
+				$('#shop-page-map-popup').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'shop-page-map-popup_close-btn',
+					onOpen: function() { 
+						$('body').addClass('fixed');
+					},
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+				
+			});
+
 			
 
 
@@ -865,6 +867,7 @@ html(lang="ru")
 	script.
 		var map1;
 		var map2;
+		var map3;
 		function initMap() {
 			map1 = new google.maps.Map(document.getElementById('map1'), {
 				center: {lat: 55.754095, lng: 37.616722},
@@ -873,6 +876,12 @@ html(lang="ru")
 				mapTypeControl: false
 			});
 			map2 = new google.maps.Map(document.getElementById('map2'), {
+				center: {lat: 55.754095, lng: 37.616722},
+				zoom: 12,
+				streetViewControl: false,
+				mapTypeControl: false
+			});
+			map3 = new google.maps.Map(document.getElementById('shop-page-map'), {
 				center: {lat: 55.754095, lng: 37.616722},
 				zoom: 12,
 				streetViewControl: false,

@@ -44,7 +44,7 @@ body {
 }
 
 body .select2-container--default {
-  z-index: 10001;
+  z-index: 5003;
 }
 
 body .select2-container--default .mk-filter-products-select2-dropdown {
@@ -143,6 +143,18 @@ body .container {
   width: 1140px;
   margin-left: auto;
   margin-right: auto;
+}
+
+body .shop-page-map-popup {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+body .shop-page-map-popup .map {
+  width: 100%;
+  height: 100%;
 }
 
 body .dd-popup {
@@ -645,17 +657,8 @@ body .feedback-form form.form-block .p-policy .desctext a, body .LogUp-form form
   text-decoration: underline;
 }
 
-body .popup-map::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
 body .popup-map {
   width: 738px;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
 }
 
 body .popup-map img.img-close {
@@ -756,13 +759,13 @@ body .popup-map .input-outer .search-results img.separ {
 }
 
 body .popup-map .mapOuter {
-  height: 520px;
   width: 100%;
   margin-top: 5px;
 }
 
 body .popup-map .mapOuter .map {
-  height: 100%;
+  width: 100%;
+  height: 520px;
 }
 
 body .popup-map .map-buttons {
@@ -920,7 +923,7 @@ body .mk-filter-popup .links .line {
 
 body .mk-filter-popup .links .line span.span-link {
   position: absolute;
-  z-index: 10002;
+  z-index: 5002;
   left: 0;
   font-size: 20px;
   display: inline-block;
@@ -1027,6 +1030,7 @@ body .mk-filter-popup .links .line select {
 body .mk-filter-popup .links .line .select2.select2-container {
   font-size: 15px;
   height: 68px;
+  z-index: 5001;
 }
 
 body .mk-filter-popup .links .line .select2-container--default .select2-selection--single {
@@ -2621,61 +2625,62 @@ body footer .footer-bottomLine .payments img.payment-img {
     height: 40px;
     font-size: 16px;
   }
-  body .mk-filter-popup .topline img.img-inner-close, body .mk-filter-drop-popup .topline img.img-inner-close {
+  body .mk-filter-popup .topline img.img-inner-close {
     margin-left: -10px;
   }
-  body .mk-filter-popup .btn-outer, body .mk-filter-drop-popup .btn-outer {
+  body .mk-filter-popup .btn-outer {
     padding: 0 15px;
   }
-  body .mk-filter-popup .btn-outer a.btn, body .mk-filter-drop-popup .btn-outer a.btn {
+  body .mk-filter-popup .btn-outer a.btn {
     margin-top: 15px;
     height: 40px;
     line-height: 40px;
   }
-  body .mk-filter-popup .btn-outer a.btn span, body .mk-filter-drop-popup .btn-outer a.btn span {
+  body .mk-filter-popup .btn-outer a.btn span {
     font-size: 16px;
   }
-  body .mk-filter-popup .links .line, body .mk-filter-drop-popup .links .line {
+  body .mk-filter-popup .links .line {
     height: 50px;
     line-height: 50px;
   }
-  body .mk-filter-popup .links .line span.span-link, body .mk-filter-drop-popup .links .line span.span-link {
+  body .mk-filter-popup .links .line span.span-link {
     font-size: 16px;
   }
-  body .mk-filter-popup .links .line span.value, body .mk-filter-drop-popup .links .line span.value {
+  body .mk-filter-popup .links .line span.value {
     margin-right: 21px;
   }
-  body .mk-filter-popup .links .line .img-arrow, body .mk-filter-drop-popup .links .line .img-arrow {
+  body .mk-filter-popup .links .line .img-arrow {
     width: 8px;
     height: 14px;
   }
-  body .mk-filter-popup .links .line .input-outer, body .mk-filter-drop-popup .links .line .input-outer {
+  body .mk-filter-popup .links .line .input-outer {
     margin-right: 0;
   }
-  body .mk-filter-popup .links .line .select2.select2-container, body .mk-filter-drop-popup .links .line .select2.select2-container {
+  body .mk-filter-popup .links .line .select2.select2-container {
     height: 50px;
   }
-  body .mk-filter-popup .links .line .select2-container .select2-selection--single .select2-selection__rendered, body .mk-filter-drop-popup .links .line .select2-container .select2-selection--single .select2-selection__rendered {
+  body .mk-filter-popup .links .line .select2-container .select2-selection--single .select2-selection__rendered {
     height: 50px;
     line-height: 50px;
     padding-right: 21px;
   }
-  body .mk-filter-popup .links .line .select2-container--default .select2-selection--single .select2-selection__arrow, body .mk-filter-drop-popup .links .line .select2-container--default .select2-selection--single .select2-selection__arrow {
+  body .mk-filter-popup .links .line .select2-container--default .select2-selection--single .select2-selection__arrow {
     width: 8px;
     height: 14px;
   }
-  body .mk-filter-popup .links .line .buttonOpSw, body .mk-filter-drop-popup .links .line .buttonOpSw {
+  body .mk-filter-popup .links .line .buttonOpSw {
     width: 48px;
     height: 21px;
+    margin: 13.5px 0;
   }
-  body .mk-filter-popup .links .line .buttonOpSw .knobs::before, body .mk-filter-drop-popup .links .line .buttonOpSw .knobs::before {
+  body .mk-filter-popup .links .line .buttonOpSw .knobs::before {
     width: 17px;
     height: 17px;
   }
-  body .mk-filter-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before, body .mk-filter-drop-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before {
+  body .mk-filter-popup .links .line .buttonOpSw .option-checkbox:checked + .knobs::before {
     left: 28px;
   }
-  body .mk-filter-popup .g-separ-block, body .mk-filter-drop-popup .g-separ-block {
+  body .mk-filter-popup .g-separ-block {
     height: 10px;
   }
   body .popup-map {

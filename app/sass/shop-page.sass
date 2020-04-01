@@ -72,13 +72,15 @@ body
 					color: #ffffff
 					font-weight: bold
 					font-size: 13px
-			img.img-map
+			.img-map-link
 				position: absolute
 				top: 14px
 				right: 14px
-				width: 204px
-				height: 33px
-				object-fit: cover
+				img.img-map
+					display: block
+					width: 204px
+					height: 33px
+					object-fit: cover
 	section.marketing-table
 		.marketing-navbar
 			padding-top: 14px
@@ -176,6 +178,7 @@ body
 						width: 100%
 					.select2.select2-container
 						font-size: 10px
+						z-index: 5001
 					.select2-container--default
 						.select2-selection--single
 							border: none
@@ -249,7 +252,7 @@ body
 						span.name
 							margin-left: 15px
 							position: absolute
-							z-index: 1
+							z-index: 5002
 							font-size: 13px
 							color: #000000
 					.category-h1
@@ -363,7 +366,7 @@ body
 							span.name
 								font-size: 12px
 								position: absolute
-								z-index: 1
+								z-index: 5002
 								margin-left: 14px
 							span.value
 								margin-right: 14px
@@ -1234,11 +1237,12 @@ body
 					line-height: 58px
 					span
 						font-size: 17px
-				img.img-map
-					width: 239px
-					height: 60px
+				.img-map-link
 					top: 16px
 					right: 20px
+					img.img-map
+						width: 239px
+						height: 60px
 				img.img-shop-preview
 					width: 175px
 				.content
@@ -1616,7 +1620,7 @@ body
 				.semiposition
 					text-align: center
 					padding: 15px 0
-					.btn-subscribe, img.img-map
+					.btn-subscribe, .img-map-link
 						position: relative
 						right: 0
 						top: 0
@@ -1799,10 +1803,15 @@ body
 						.counter
 							padding-right: 20px
 				.semiposition
-					.btn-subscribe, img.img-map
+					.btn-subscribe
 						width: 205px
 						height: 52px
 						margin: 0 5px
+					.img-map-link
+						margin: 0 5px
+						img.img-map
+							width: 205px
+							height: 52px
 					.btn-subscribe
 						line-height: 50px
 		section.marketing-table
@@ -1947,7 +1956,7 @@ body
 						margin-top: 15px
 				.semiposition
 					padding-bottom: 0
-					.btn-subscribe, img.img-map
+					.btn-subscribe, .img-map-link
 						margin-bottom: 15px
 		section.marketing-table
 			.marketing-navbar
@@ -2259,9 +2268,13 @@ body
 							span.b
 								font-size: 16px
 				.semiposition
-					.btn-subscribe, img.img-map
+					.btn-subscribe
 						width: 125px
 						height: 40px
+					.img-map-link
+						img.img-map
+							width: 125px
+							height: 40px
 					.btn-subscribe
 						line-height: 38px
 						span

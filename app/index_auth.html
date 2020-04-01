@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
+    <div class="shop-page-map-popup" id="shop-page-map-popup">
+      <div class="map" id="shop-page-map"></div>
+    </div>
     <div class="Log-form feedback-form" id="feedback-form"><a class="feedback-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
       <div class="topline"><span>Оставить отзыв</span></div>
       <form class="form-block" action="#">
@@ -127,10 +130,10 @@
       </div>
       <div class="g-separ-block"></div>
       <div class="links">
-        <div class="line" id="header-popup-map1"><span class="span-link">Город</span><span class="value">Москва</span>
+        <div class="line hmenu-popup-main-city_btn"><span class="span-link">Город</span><span class="value">Москва</span>
           <div class="img-arrow"></div>
         </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
-        <div class="line" id="header-popup-map2"><span class="span-link">Доставка</span><span class="value">Москва</span>
+        <div class="line hmenu-popup-main-delivery_btn"><span class="span-link">Доставка</span><span class="value">Москва</span>
           <div class="img-arrow"></div>
         </div>
       </div>
@@ -262,7 +265,7 @@
       </div>
       <div class="outer">
         <div class="head"> <span>Настройки</span></div>
-        <div class="links"><a class="link" id="hmenu-popup-main-city_btn" href="#">Город: <span class="val">Москва</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-delivery_btn" href="#">Доставка: <span class="val">Москва</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-language_btn" href="#">Язык: <span class="val">русский</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-currency_btn" href="#">Валюта: <span class="val">RUB (Russian Rouble)</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a></div>
+        <div class="links"><a class="link hmenu-popup-main-city_btn" href="#">Город: <span class="val">Москва</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-popup-main-delivery_btn" href="#">Доставка: <span class="val">Москва</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-language_btn" href="#">Язык: <span class="val">русский</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-currency_btn" href="#">Валюта: <span class="val">RUB (Russian Rouble)</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a></div>
       </div>
     </div>
     <div class="dd-popup currency-popup" id="currency-popup"><a class="currency-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -946,6 +949,23 @@
     
     	svg4everybody();
     
+    	$('.hmenu-popup-main-city_btn').click(function(){
+    		$('#popup-map1').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'popup-map1_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    		});
+    	});
+    	$('.hmenu-popup-main-delivery_btn').click(function(){
+    		$('#popup-map2').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'popup-map2_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }	
+    		});
+    	});
+    
     	var lSbtn = $('#languageSettings-button');
     	var lSdropmenu = $('#languageSettings-dropmenu');
     
@@ -1007,26 +1027,6 @@
     			positionStyle: 'fixed',
     			closeClass: 'LogUp-form_close-btn',
     			onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
-    			onClose: function() { $('body').removeClass('fixed') }
-    							
-    		});
-    	});
-    	
-    
-    	$('#header-popup-map1').click(function(){
-    		$('#popup-map1').bPopup({
-    			positionStyle: 'fixed',
-    			closeClass: 'popup-map1_close-btn',
-    			onOpen: function() { $('body').addClass('fixed'); },
-    			onClose: function() { $('body').removeClass('fixed') }
-    							
-    		});
-    	});
-    	$('#header-popup-map2').click(function(){
-    		$('#popup-map2').bPopup({
-    			positionStyle: 'fixed',
-    			closeClass: 'popup-map2_close-btn',
-    			onOpen: function() { $('body').addClass('fixed'); },
     			onClose: function() { $('body').removeClass('fixed') }
     							
     		});
@@ -1110,18 +1110,6 @@
     		$(this).parents('.hmenu-popup-category').removeClass('active');
     		$(this).parents('.hmenu-popup-lSettings').fadeOut(250);
     		$(this).parents('.hmenu-popup-lSettings').removeClass('active');
-    	});
-    	$('#hmenu-popup-main-city_btn').click(function(){
-    		$('#popup-map1').bPopup({
-    			positionStyle: 'fixed',
-    			closeClass: 'popup-map1_close-btn'		
-    		});
-    	});
-    	$('#hmenu-popup-main-delivery_btn').click(function(){
-    		$('#popup-map2').bPopup({
-    			positionStyle: 'fixed',
-    			closeClass: 'popup-map2_close-btn'		
-    		});
     	});
     	$('#hmenu-popup-main-language_btn').click(function(){
     		$('#hmenu-popup-main-language').toggleClass('active');
@@ -1208,6 +1196,19 @@
     		$(this).toggleClass('active');
     	});
     
+    	// карта страница магазина
+    	$('#shop-page-map-popup-btn').click(function(){
+    		$('#shop-page-map-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'shop-page-map-popup_close-btn',
+    			onOpen: function() { 
+    				$('body').addClass('fixed');
+    			},
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    		
+    	});
+    
     	
     
     
@@ -1219,6 +1220,7 @@
   <script>
     var map1;
     var map2;
+    var map3;
     function initMap() {
     	map1 = new google.maps.Map(document.getElementById('map1'), {
     		center: {lat: 55.754095, lng: 37.616722},
@@ -1227,6 +1229,12 @@
     		mapTypeControl: false
     	});
     	map2 = new google.maps.Map(document.getElementById('map2'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    	map3 = new google.maps.Map(document.getElementById('shop-page-map'), {
     		center: {lat: 55.754095, lng: 37.616722},
     		zoom: 12,
     		streetViewControl: false,

@@ -19,7 +19,10 @@
     <link rel="stylesheet" href="css/shop-page.css">
   </head>
   <body>
-    <div class="shop-page-map-popup" id="shop-page-map-popup">
+    <div class="shop-map index-sidebar-map-popup" id="index-sidebar-map-popup"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+      <div class="map" id="index-sidebar-map"></div>
+    </div>
+    <div class="shop-map shop-page-map-popup" id="shop-page-map-popup"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
       <div class="map" id="shop-page-map"></div>
     </div>
     <div class="Log-form feedback-form" id="feedback-form"><a class="feedback-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -186,7 +189,8 @@
             <div class="knobs"></div>
             <div class="layer"></div>
           </div>
-        </div><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a>
+        </div>
+        <div class="btn-outer"><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a></div>
       </div>
     </div>
     <div class="Log-form mk-filter-popup" id="mk-filter-popup-molls"><a class="filter-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -212,7 +216,8 @@
             <div class="knobs"></div>
             <div class="layer"></div>
           </div>
-        </div><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a>
+        </div>
+        <div class="btn-outer"><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a></div>
       </div>
     </div>
     <div class="Log-form popup-profile-mob" id="popup-profile-mob"><a class="profile-mob_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -417,7 +422,7 @@
                 <div class="counter"><span><span class="b">1</span> подписка</span></div>
               </div>
             </div>
-            <div class="semiposition"><a class="img-map-link" href="#shop-page-map" id="shop-page-map-popup-btn"><img class="img-map" src="img/shop-page/card-item-map.jpg" alt="card-item-map.jpg"></a><a class="btn-subscribe" href="#"><span>Подписаться</span></a></div>
+            <div class="semiposition"><a class="img-map-link" href="#" id="shop-page-map-popup-btn"><img class="img-map" src="img/shop-page/card-item-map.jpg" alt="card-item-map.jpg"></a><a class="btn-subscribe" href="#"><span>Подписаться</span></a></div>
           </div>
         </section>
         <section class="marketing-table">
@@ -1536,6 +1541,18 @@
     		});
     		
     	});
+    	// карта магазинов на главной
+    	$('#index-sidebar-map-popup-btn').click(function(){
+    		$('#index-sidebar-map-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'index-sidebar-map-popup_close-btn',
+    			onOpen: function() { 
+    				$('body').addClass('fixed');
+    			},
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    		
+    	});
     
     	
     
@@ -1549,6 +1566,7 @@
     var map1;
     var map2;
     var map3;
+    var map4;
     function initMap() {
     	map1 = new google.maps.Map(document.getElementById('map1'), {
     		center: {lat: 55.754095, lng: 37.616722},
@@ -1563,6 +1581,12 @@
     		mapTypeControl: false
     	});
     	map3 = new google.maps.Map(document.getElementById('shop-page-map'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    	map4 = new google.maps.Map(document.getElementById('index-sidebar-map'), {
     		center: {lat: 55.754095, lng: 37.616722},
     		zoom: 12,
     		streetViewControl: false,

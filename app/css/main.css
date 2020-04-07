@@ -145,16 +145,37 @@ body .container {
   margin-right: auto;
 }
 
-body .shop-page-map-popup {
+body .shop-map {
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: none;
+  position: relative;
 }
 
-body .shop-page-map-popup .map {
+body .shop-map a.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 5px;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  line-height: 57px;
+  text-align: center;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+body .shop-map .map {
   width: 100%;
   height: 100%;
+}
+
+body .shop-map .map .gm-control-active.gm-fullscreen-control {
+  top: 70px !important;
 }
 
 body .dd-popup {
@@ -1105,10 +1126,6 @@ body .mk-filter-popup .g-separ-block {
   width: 100%;
   height: 15px;
   background-color: #f7f7f7;
-}
-
-body main {
-  padding-top: 16px;
 }
 
 body .hmenu-popup {

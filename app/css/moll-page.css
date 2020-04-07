@@ -14,8 +14,44 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
+body .select2-container--default .mk-sidebar-select2-dropdown {
+  border: none;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results__group {
+  padding-left: 14px;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results > .select2-results__options .select2-results__option {
+  font-size: 13px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding-left: 14px;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results > .select2-results__options .select2-results__option[role=group] {
+  padding-left: 0;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results > .select2-results__options .select2-results__option[role=group] .select2-results__option {
+  padding-left: 28px;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results__option--highlighted[aria-selected] {
+  background-color: #ddd;
+  color: #000;
+}
+
+body .select2-container--default .mk-sidebar-select2-dropdown .select2-results__option[aria-selected=true] {
+  background-color: #157EE1;
+  color: #fff;
+}
+
 body section.shop-card {
-  padding: 0 0 15px 0;
+  padding: 15px 0 15px 0;
 }
 
 body section.shop-card .card-item {
@@ -26,6 +62,10 @@ body section.shop-card .card-item {
   margin: 0 12.5%;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body section.shop-card .card-item img.img-shop-preview {
+  width: 121px;
 }
 
 body section.shop-card .card-item img.img-shop-preview, body section.shop-card .card-item .content {
@@ -46,6 +86,7 @@ body section.shop-card .card-item .content .text-name {
 body section.shop-card .card-item .content .text-adress {
   font-size: 11px;
   color: #999999;
+  line-height: 15px;
 }
 
 body section.shop-card .card-item .content .counters .counter {
@@ -83,10 +124,18 @@ body section.shop-card .card-item .btn-subscribe span {
   font-size: 13px;
 }
 
-body section.shop-card .card-item img.img-map {
+body section.shop-card .card-item .img-map-link {
   position: absolute;
   top: 14px;
   right: 14px;
+}
+
+body section.shop-card .card-item .img-map-link img.img-map {
+  display: block;
+  width: 204px;
+  height: 33px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body section.marketing-table .marketing-navbar {
@@ -360,6 +409,37 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
           border-radius: 100px;
 }
 
+body section.marketing-table .mk-products .main-content .sidebar a.img-map-link {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  padding: 15px 0;
+  background-image: url("../img/shop-page/card-item-map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar a.img-map-link svg {
+  width: 35px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar a.img-map-link svg path {
+  fill: #157EE1;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar a.img-map-link:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 body section.marketing-table .mk-products .main-content .items-table .content {
   display: -webkit-flex;
   display: -moz-flex;
@@ -371,6 +451,74 @@ body section.marketing-table .mk-products .main-content .items-table .content {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob {
+  width: 100%;
+  position: relative;
+  display: none;
+  margin-bottom: 34px;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob input {
+  width: 100%;
+  height: 60px;
+  padding-left: 49px;
+  background-color: transparent;
+  border: 0.5px solid #000000;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  font-size: 19px;
+  color: #000;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob input::-webkit-input-placeholder {
+  font-size: 19px;
+  color: #000;
+  opacity: 0.5;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob input:-moz-placeholder {
+  font-size: 19px;
+  color: #000;
+  opacity: 0.5;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob input::-moz-placeholder {
+  font-size: 19px;
+  color: #000;
+  opacity: 0.5;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob input:-ms-input-placeholder {
+  font-size: 19px;
+  color: #000;
+  opacity: 0.5;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob img.search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  margin-left: 18px;
+  width: 19px;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob .filter-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 0.5px solid #000000;
+  cursor: pointer;
+  text-align: center;
+}
+
+body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob .filter-btn img {
+  opacity: 0.5;
+  padding: 13px 28px 14px 26px;
 }
 
 body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob {
@@ -497,45 +645,6 @@ body section.marketing-table .mk-info {
   font-size: 15px;
 }
 
-body section.marketing-table .mk-info .main-content .anchors-section {
-  margin: 17px 0;
-}
-
-body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
-  display: inline-block;
-  position: relative;
-  padding: 0 20px;
-  font-size: 13px;
-  font-weight: bold;
-  height: 30px;
-  line-height: 30px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  margin-right: 7px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-}
-
-body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn:hover {
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #E5E5E5;
-}
-
 body section.marketing-table .mk-info .main-content .mk-info-section {
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -552,23 +661,25 @@ body section.marketing-table .mk-info .main-content .mk-info-section h2 {
   padding: 19.5px 0;
 }
 
+body section.marketing-table .mk-info .main-content .about-shop {
+  margin-top: 15px;
+}
+
 body section.marketing-table .mk-info .main-content .about-shop h2 {
-  font-size: 20px;
-  padding: 11px 0;
+  padding: 10.5px 0;
 }
 
 body section.marketing-table .mk-info .main-content .about-shop .headblock {
   background-color: #E5E5E5;
-  padding: 11.5px 0 11.5px 37px;
+  padding: 5.5px 0 5.5px 37px;
   margin-left: -37px;
 }
 
 body section.marketing-table .mk-info .main-content .about-shop .headblock span.headname {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 body section.marketing-table .mk-info .main-content .about-shop .main-info {
-  padding-top: 12px;
   padding-bottom: 5px;
 }
 
@@ -584,11 +695,11 @@ body section.marketing-table .mk-info .main-content .about-shop .main-info img, 
   vertical-align: middle;
 }
 
-body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery {
+body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf {
   padding: 7px 0;
 }
 
-body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr span, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery span {
+body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr span, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf span {
   margin-left: 12px;
 }
 
@@ -615,7 +726,11 @@ body section.marketing-table .mk-info .main-content .about-shop .main-info .cont
   background-color: #219417;
 }
 
-body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .circle, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr span {
+body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item {
+  display: inline-block;
+}
+
+body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item .circle, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item span {
   display: inline-block;
   vertical-align: middle;
 }
@@ -656,500 +771,8 @@ body section.marketing-table .mk-info .main-content .about-shop .categories .con
   font-weight: bold;
 }
 
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item input, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item input {
-  display: none;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  font-size: 15px;
-  color: #7F7F7F;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::before, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  content: '';
-  position: absolute;
-  display: inline-block;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  border: 0.5px solid #808080;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::after, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  display: none;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-image: url("../img/checkbox-img.svg");
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item input:checked + label::after, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item input:checked + label::after {
-  display: block;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item input:checked + label::before, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item input:checked + label::before {
-  border-color: #000;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item input:checked + label, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item input:checked + label {
-  color: #000;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item.checked {
-  border-color: #157EE1;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
-  width: 24.2%;
-  padding-top: 13px;
-  padding-bottom: 16px;
-  margin-right: 2.2%;
-  border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
-  font-weight: bold;
-  padding-left: 54px;
-  margin-left: 26px;
-  line-height: 1.4;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::before {
-  top: 3px;
-  left: 0;
-  width: 29px;
-  height: 29px;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::after {
-  top: 6px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
-  padding-left: 54px;
-  margin-left: 26px;
-  line-height: 1;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
-  font-size: 10px;
-  color: #7F7F7F;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span.price {
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
-  margin-top: 20px;
-  margin-bottom: 8px;
-  padding: 10px 0;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
-  padding-left: 26px;
-  margin-right: 40px;
-  line-height: 1.4;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
-  top: 2px;
-  left: 0;
-  width: 17px;
-  height: 17px;
-}
-
-body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
-  top: 5px;
-  left: 3px;
-  width: 12px;
-  height: 12px;
-}
-
-body section.marketing-table .mk-info .main-content .delivery .inf-block {
-  padding-bottom: 13px;
-}
-
-body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
-  max-width: 375px;
-  padding: 8px 0;
-}
-
-body section.marketing-table .mk-info .main-content .delivery .inf-block .line span.value {
-  float: right;
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-info .main-content .reimb {
-  padding-bottom: 25px;
-}
-
-body section.marketing-table .mk-info .main-content .reimb p.desc {
-  max-width: 695px;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .reimb span.footnote {
-  font-size: 10px;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions {
-  margin-left: -37px;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item {
-  padding-left: 37px;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .headline {
-  cursor: pointer;
-  padding: 21px 0;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
-  margin-left: 15px;
-  margin-top: 2px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name, body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .headline.active img.arrow {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden {
-  display: none;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden p {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-body section.marketing-table .mk-info .main-content .reimb .questions img.separ {
-  display: block;
-  width: 100%;
-  max-height: 2px;
-}
-
-body section.marketing-table .mk-info .main-content .credit .instruction span.point {
-  font-weight: bold;
-  display: block;
-  padding: 7.5px 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form {
-  padding-top: 25px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item {
-  margin-bottom: 25px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
-  padding: 10px 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range] {
-  max-width: 695px;
-  width: 100%;
-  border: 0;
-  margin: 0;
-  -webkit-appearance: none;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]:focus {
-  outline: none;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  background: #157EE1;
-  cursor: pointer;
-  margin-top: -9px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #157EE1;
-  cursor: pointer;
-  margin-top: -9px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
-  -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #157EE1;
-  cursor: pointer;
-  margin-top: -9px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-fill-lower {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-fill-upper {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  background: #D9D9D9;
-  border: 0;
-  margin: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
-  max-width: 695px;
-  width: 100%;
-  padding-top: 15px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
-  opacity: 0.5;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
-  max-width: 325px;
-  padding: 8px 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span.value {
-  float: right;
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
-  max-width: 325px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
-  position: relative;
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
-  width: 100%;
-  height: 31px;
-  padding-left: 17px;
-  line-height: 31px;
-  border: 0.5px solid rgba(0, 0, 0, 0.5);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
-  position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  padding-left: 17px;
-  top: 0;
-  left: 0;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder span {
-  font-size: 10px;
-  color: #7F7F7F;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder span.red {
-  color: #E00000;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
-  padding-top: 34px;
-  padding-bottom: 30px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input, body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
-  width: 182px;
-  height: 30px;
-  line-height: 30px;
-  background-color: #157EE1;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
-  max-width: 190px;
-  margin-left: 23px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form p.desc {
-  margin: 0;
-  max-width: 64.5%;
-  font-size: 12px;
-  line-height: 1.2;
-  color: #7F7F7F;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
-  padding-top: 30px;
-  padding-bottom: 25px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span {
-  font-size: 12px;
-}
-
-body section.marketing-table .mk-info .main-content .credit form.credit-form .mark a {
-  color: #157EE1;
-  text-decoration: underline;
-}
-
 body section.marketing-table .mk-feedback .main-content .anchors-section {
+  position: relative;
   margin: 17px 0;
 }
 
@@ -1192,19 +815,11 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.ancho
   pointer-events: none;
 }
 
-body section.marketing-table .mk-feedback .main-content .reviews-list {
-  display: none;
-  background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  position: relative;
-}
-
-body section.marketing-table .mk-feedback .main-content .reviews-list a.btn-send {
+body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
-  margin-top: 19px;
+  margin-bottom: -66px;
   margin-right: 38px;
   background-color: #157EE1;
   -webkit-border-radius: 3px;
@@ -1215,9 +830,50 @@ body section.marketing-table .mk-feedback .main-content .reviews-list a.btn-send
   text-align: center;
 }
 
-body section.marketing-table .mk-feedback .main-content .reviews-list a.btn-send span {
+body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send span {
   font-size: 14px;
   color: #fff;
+}
+
+body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+body section.marketing-table .mk-feedback .main-content .btn-more.mob span {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000;
+}
+
+body section.marketing-table .mk-feedback .main-content .btn-more.mob:hover {
+  background-color: #157EE1;
+  border-color: #157EE1;
+}
+
+body section.marketing-table .mk-feedback .main-content .btn-more.mob:hover span {
+  color: #fff;
+}
+
+body section.marketing-table .mk-feedback .main-content .reviews-list {
+  display: none;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
@@ -1288,6 +944,8 @@ body section.marketing-table .mk-feedback .main-content .reviews-list .review-it
   font-size: 15px;
   max-width: 700px;
   margin-top: 10px;
+  padding-right: 15px;
+  line-height: 1.4;
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list img.separ {
@@ -1314,6 +972,7 @@ body section.marketing-table .marketing-navbar-bottom .button {
   cursor: pointer;
   width: 92px;
   height: 30px;
+  line-height: 23px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1324,7 +983,6 @@ body section.marketing-table .marketing-navbar-bottom .button span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  line-height: 30px;
   font-size: 9.5px;
   color: #000;
   font-weight: bold;
@@ -1434,4 +1092,1492 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover {
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   color: #000;
+}
+
+@media only screen and (max-width: 1140px) {
+  body section.marketing-table .mk-products .main-content {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content, body section.marketing-table .mk-info .main-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    padding-right: 12px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags .tag-img {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body section.shop-card .card-item {
+    margin: 0 15px;
+  }
+  body section.shop-card .card-item .btn-subscribe {
+    right: 20px;
+    bottom: 20px;
+    width: 197px;
+    height: 60px;
+    line-height: 58px;
+  }
+  body section.shop-card .card-item .btn-subscribe span {
+    font-size: 17px;
+  }
+  body section.shop-card .card-item .img-map-link {
+    top: 16px;
+    right: 20px;
+  }
+  body section.shop-card .card-item .img-map-link img.img-map {
+    width: 239px;
+    height: 60px;
+  }
+  body section.shop-card .card-item img.img-shop-preview {
+    width: 175px;
+  }
+  body section.shop-card .card-item .content {
+    padding-left: 63px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 30px;
+    padding-bottom: 0;
+  }
+  body section.shop-card .card-item .content .text-adress {
+    font-size: 18px;
+  }
+  body section.shop-card .card-item .content .counters .counter {
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 15px;
+    padding-right: 25px;
+  }
+  body section.shop-card .card-item .content .counters .counter span {
+    font-size: 20px;
+  }
+  body section.shop-card .card-item .content .counters .counter span.b {
+    font-size: 24px;
+    display: block;
+    line-height: 1.2;
+  }
+  body section.marketing-table .marketing-navbar-bottom {
+    display: none;
+  }
+  body section.marketing-table .marketing-navbar {
+    margin-top: 19px;
+    margin-bottom: 34px;
+    padding: 19px 0;
+  }
+  body section.marketing-table .marketing-navbar .input-outer {
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body section.marketing-table .marketing-navbar .input-outer * {
+    display: none;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin: 0 28px;
+    width: 165px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 17px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch.active span {
+    color: #000;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch:hover span {
+    color: #000;
+  }
+  body section.marketing-table .mk-products .main-content {
+    padding-left: 15px;
+    padding-top: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob {
+    display: block;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob {
+    display: block;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 34px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head {
+    padding-left: 85px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+    font-size: 37px;
+    padding: 23px 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+    font-size: 23px;
+    margin-top: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .category-text {
+    font-size: 18px;
+    padding: 20px 0;
+    margin-bottom: 18px;
+    margin-right: 40px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    padding-right: 37px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags .tag-img {
+    width: 42px;
+    height: 42px;
+    margin-right: -5px;
+    margin-left: 10px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview {
+    width: 154px;
+  }
+  body section.marketing-table .mk-products .main-content .sidebar {
+    display: none;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section {
+    padding-left: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section h2 {
+    font-size: 21px;
+    padding: 29.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info {
+    padding: 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info a.site {
+    font-size: 20px;
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr img {
+    width: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr {
+    padding: 8.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .circle {
+    width: 20px;
+    height: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr span {
+    margin-left: 24px;
+    margin-right: 50px;
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.adress, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.phone, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.time {
+    font-size: 20px;
+    padding: 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf img {
+    width: 27px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf span {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf {
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories, body section.marketing-table .mk-info .main-content .about-shop .brands {
+    padding: 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column .item, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column .item, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column .item, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column .item {
+    font-size: 20px;
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock {
+    margin-left: -30px;
+    padding: 25.5px 0;
+    padding-left: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock span.headname {
+    font-size: 25px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
+    width: 30.4%;
+    margin-right: 3%;
+    padding-bottom: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
+    margin-left: 0;
+    padding-left: 62px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
+    margin-left: 9px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 63px;
+    padding: 21px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
+    display: inline-block;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
+    width: 29px;
+    height: 29px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
+    width: 24px;
+    height: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    font-size: 20px;
+    padding-left: 53px;
+    margin-right: 140px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block {
+    padding-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
+    max-width: 100%;
+    padding: 18.5px 0;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block img.separ {
+    display: block;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc {
+    font-size: 20px;
+    max-width: 100%;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px 0;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions {
+    margin-left: -30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
+    font-size: 25px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
+    margin-left: 35px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    font-size: 20px;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction span.point {
+    font-size: 20px;
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form {
+    padding-top: 0;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item {
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
+    font-size: 20px;
+    padding: 18.5px 0;
+    margin-bottom: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range] {
+    max-width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
+    width: 43px;
+    height: 43px;
+    margin-top: -20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
+    width: 43px;
+    height: 43px;
+    margin-top: -20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
+    width: 43px;
+    height: 43px;
+    margin-top: -20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
+    padding: 25px 0;
+    max-width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values {
+    margin-top: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
+    max-width: 100%;
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values img.separ.mob {
+    display: block;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
+    max-width: none;
+    margin-right: -40px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
+    display: inline-block;
+    width: 46%;
+    margin-right: 3%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
+    padding-left: 12px;
+    height: 38px;
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
+    padding: 6px 0 6px 12px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder span {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
+    padding-top: 21px;
+    padding-bottom: 35px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
+    width: 165px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    max-width: 70%;
+    font-size: 15px;
+    margin-left: 45px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form p.desc {
+    max-width: 100%;
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content {
+    padding-bottom: 75px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
+    width: 191px;
+    height: 60px;
+    line-height: 58px;
+    margin-bottom: -111px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send span {
+    font-weight: bold;
+    font-size: 17px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    display: block;
+    margin-top: 28px;
+    margin-bottom: 24px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    font-size: 21px;
+    padding: 29.5px 0;
+    padding-left: 37px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 90%;
+    margin-top: -7px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating {
+    margin-left: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating img {
+    width: 21px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    max-width: 830px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 5px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding: 10px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section {
+    margin: 34px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+    height: 60px;
+    line-height: 58px;
+    font-size: 21px;
+    margin-right: 22px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body section.shop-card .card-item img.img-shop-preview {
+    -webkit-border-radius: 0px 0px 5px 0px;
+            border-radius: 0px 0px 5px 0px;
+  }
+  body section.shop-card .card-item .semiposition {
+    text-align: center;
+    padding: 15px 0;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe, body section.shop-card .card-item .semiposition .img-map-link {
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head, body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    padding-left: 40px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+    padding: 7.5px 0;
+    font-size: 34px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    position: relative;
+    display: block;
+    margin-left: -10px;
+    margin-top: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    max-width: 50%;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body section.shop-card .card-item img.img-shop-preview {
+    width: 130px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 25px;
+  }
+  body section.shop-card .card-item .content .text-adress {
+    font-size: 15px;
+  }
+  body section.shop-card .card-item .content .counters .counter span {
+    font-size: 14px;
+  }
+  body section.shop-card .card-item .content .counters .counter span span.b {
+    font-size: 19px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    margin: 0 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head, body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    padding-left: 20px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+    font-size: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock {
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock span.headname {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column {
+    padding: 10px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column .item, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column .item, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column .item, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column .item {
+    font-size: 19px;
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    position: relative;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content {
+    padding-left: 0;
+    width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding-left: 89px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .photo-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 12px;
+    margin-left: 37px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+    font-size: 19px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body section.shop-card .card-item .content {
+    padding-left: 25px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 22px;
+  }
+  body section.shop-card .card-item .content .text-adress {
+    font-size: 13px;
+  }
+  body section.shop-card .card-item .content .counters .counter {
+    padding-right: 20px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe {
+    width: 205px;
+    height: 52px;
+    margin: 0 5px;
+  }
+  body section.shop-card .card-item .semiposition .img-map-link {
+    margin: 0 5px;
+  }
+  body section.shop-card .card-item .semiposition .img-map-link img.img-map {
+    width: 205px;
+    height: 52px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe {
+    line-height: 50px;
+  }
+  body section.marketing-table .marketing-navbar {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 24%;
+    margin: 0 10px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob input {
+    height: 54px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .search-items.mob .filter-btn img {
+    padding: 15px 20px;
+    width: 63px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob {
+    height: 54px;
+    line-height: 50px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview {
+    width: 125px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+    font-size: 25px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    margin-bottom: 5px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags .tag-img {
+    width: 35px;
+    height: 35px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .category-text {
+    font-size: 16px;
+    margin-right: 19px;
+    padding: 11.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content, body section.marketing-table .mk-info .main-content .about-shop .brands .content {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column {
+    width: 50%;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    white-space: normal;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    display: inline-block;
+    max-width: 80%;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
+    width: 160px;
+    height: 52px;
+    line-height: 50px;
+    margin-right: 15px;
+    margin-bottom: -66px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    height: 54px;
+    line-height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    max-width: 250px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section {
+    margin-top: 21px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+    width: 100%;
+    height: 52px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body section.shop-card .card-item img.img-shop-preview {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body section.shop-card .card-item .content {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  body section.shop-card .card-item .content .text-name, body section.shop-card .card-item .content .text-adress {
+    text-align: left;
+    padding-left: 115px;
+    padding-right: 15px;
+  }
+  body section.shop-card .card-item .content .text-name {
+    font-size: 19px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+  body section.shop-card .card-item .content .counters {
+    margin-top: 15px;
+  }
+  body section.shop-card .card-item .semiposition {
+    padding-bottom: 0;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe, body section.shop-card .card-item .semiposition .img-map-link {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .marketing-navbar {
+    padding: 15px 0;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 28%;
+    margin: 0 1%;
+    padding: 12.5px 0;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview {
+    width: 105px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .category-text {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head, body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    padding-left: 11px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    margin-top: 10px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags .tag-img {
+    width: 25px;
+    height: 25px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob {
+    width: 100%;
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock {
+    margin-left: -15px;
+    padding-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info {
+    padding-bottom: 21px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info a.site {
+    font-size: 19px;
+    padding: 14.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf {
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr img, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf img {
+    width: 41px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr span, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf span {
+    font-size: 19px;
+    margin-left: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr {
+    margin-top: 35px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item .circle {
+    width: 15px;
+    height: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item span {
+    font-size: 19px;
+    margin-left: 11px;
+    margin-right: 25px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.adress, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.phone, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.time {
+    font-size: 19px;
+    padding: 4.5px 0;
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf img {
+    width: 32px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf span {
+    margin-left: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section {
+    padding-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section h2 {
+    font-size: 22px;
+    padding: 12px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery h2 {
+    margin-bottom: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type {
+    display: block;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
+    padding-top: 10px;
+    width: 100%;
+    margin-right: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
+    margin-left: 13px;
+    padding-left: 60px;
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::before {
+    width: 40px;
+    height: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::after {
+    width: 34px;
+    height: 34px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
+    padding: 6px 0;
+    padding-left: 73px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    margin-top: 65px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    font-size: 19px;
+    padding: 8px 0;
+    padding-left: 60px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
+    width: 40px;
+    height: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
+    width: 34px;
+    height: 34px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
+    padding: 8px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    font-size: 19px;
+    max-width: 65%;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span.ext {
+    opacity: 0.5;
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block img.separ {
+    padding-right: 0;
+  }
+  body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    font-size: 13px;
+    padding: 13px 0;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc, body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions {
+    margin-left: -15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item {
+    padding-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline {
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
+    margin-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction span.point {
+    font-size: 19px;
+    padding: 14.5px 0;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
+    font-size: 19px;
+    padding: 14.5px 0;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-fill-lower {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-fill-upper {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
+    width: 37px;
+    height: 37px;
+    margin-top: -17px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
+    width: 37px;
+    height: 37px;
+    margin-top: -17px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
+    width: 37px;
+    height: 37px;
+    margin-top: -17px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point0 {
+    left: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point1 {
+    left: 3%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point2 {
+    left: 20%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point3 {
+    left: 34%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point4 {
+    left: 52%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point5 {
+    left: 69%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
+    height: 60px;
+    padding-left: 21px;
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
+    padding: 16px 0 16px 21px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder span {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
+    padding-top: 29px;
+    padding-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
+    height: 52px;
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input, body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    margin-top: 48px;
+    max-width: none;
+    margin-left: 0;
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form p.desc {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
+    padding: 15px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span a {
+    display: block;
+  }
+  body section.marketing-table .mk-feedback .main-content {
+    padding-bottom: 5px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    font-size: 22px;
+    padding: 22px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    padding-top: 32px;
+    padding-bottom: 23px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .photo-profile {
+    margin-left: 15px;
+    margin-top: 32px;
+    width: 75px;
+    height: 75px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding: 5px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    line-height: 1.2;
+    margin-top: 33px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding-left: 99px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview {
+    width: 100px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    display: none;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+    max-width: 170px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body section.shop-card .card-item .content .counters .counter span {
+    font-size: 13px;
+  }
+  body section.shop-card .card-item .content .counters .counter span.b {
+    font-size: 16px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe {
+    width: 125px;
+    height: 40px;
+  }
+  body section.shop-card .card-item .semiposition .img-map-link img.img-map {
+    width: 125px;
+    height: 40px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe {
+    line-height: 38px;
+  }
+  body section.shop-card .card-item .semiposition .btn-subscribe span {
+    font-size: 16px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 100px;
+    margin: 0 1px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob .filter-btn img {
+    padding: 8px 15px;
+    width: 53px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob img.search {
+    margin-left: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob input {
+    font-size: 16px;
+    height: 40px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob input:-moz-placeholder {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob input::-moz-placeholder {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .search-items.mob input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .category-text {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 10px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.desc {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.15;
+    margin-top: 11px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .head span.name {
+    font-size: 16px;
+    padding-top: 9px;
+    padding-bottom: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin-top: 13px;
+    margin-right: 18px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .item .content .tags .tag-img {
+    width: 14px;
+    height: 14px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob {
+    height: 40px;
+    line-height: 40px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .content .btn-more.mob span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .headblock span.headname {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info {
+    padding-bottom: 11px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info a.site {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf {
+    padding: 8.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr img, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf img {
+    width: 28px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .secure-tr span, body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf img {
+    width: 22px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .delivery-inf span {
+    margin-left: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr {
+    margin-top: 0;
+    padding: 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item span {
+    font-size: 16px;
+    margin-left: 16px;
+    margin-right: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .undgr-item .circle {
+    width: 10px;
+    height: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.adress, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.phone, body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts span.time {
+    font-size: 16px;
+    padding: 9.5px 0;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column {
+    padding: 5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column .item, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column .item, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column .item, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column .item {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
+    margin-left: 16px;
+    padding-left: 46px;
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::before {
+    width: 30px;
+    height: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::after {
+    width: 24px;
+    height: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
+    padding-left: 62px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    margin-top: 22px;
+    margin-bottom: 7px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    padding: 5.5px 0;
+    padding-left: 50px;
+    font-size: 16px;
+    margin-right: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
+    width: 30px;
+    height: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
+    width: 24px;
+    height: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
+    padding: 10.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    font-size: 16px;
+    max-width: 70%;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span.ext {
+    font-size: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    padding: 5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
+    font-size: 16px;
+    max-width: 220px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
+    width: 10px;
+    float: right;
+    margin-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction span.point {
+    font-size: 16px;
+    padding: 11px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item {
+    padding-bottom: 7px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range] {
+    bottom: 7px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
+    width: 21px;
+    height: 21px;
+    margin-top: -8px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
+    width: 21px;
+    height: 21px;
+    margin-top: -8px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
+    width: 21px;
+    height: 21px;
+    margin-top: -8px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
+    padding: 14.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point0 {
+    left: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point1 {
+    left: 10%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point2 {
+    left: 29%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point3 {
+    left: 44%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point4 {
+    left: 62%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point5 {
+    left: 65%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span {
+    font-size: 16px;
+    display: inline-block;
+    max-width: 150px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
+    height: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
+    padding: 6px 0 6px 21px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
+    padding-top: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
+    height: 40px;
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    margin-top: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb h2, body section.marketing-table .mk-info .main-content .credit h2 {
+    font-size: 19px;
+    padding: 19.5px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content {
+    padding-bottom: 10px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    font-size: 19px;
+    padding: 24px 0;
+    padding-left: 15px;
+    max-width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .photo-profile {
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating img {
+    width: 18px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding: 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    margin-top: 5px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date {
+    font-size: 10px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding-left: 61px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section {
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+  }
 }

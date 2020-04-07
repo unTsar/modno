@@ -15,10 +15,14 @@
     <link rel="stylesheet" href="css/select2.css">
     <link rel="stylesheet" href="css/hamburgers.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/select2.css">
     <link rel="stylesheet" href="css/moll-page.css">
   </head>
   <body>
-    <div class="shop-page-map-popup" id="shop-page-map-popup">
+    <div class="shop-map index-sidebar-map-popup" id="index-sidebar-map-popup"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+      <div class="map" id="index-sidebar-map"></div>
+    </div>
+    <div class="shop-map shop-page-map-popup" id="shop-page-map-popup"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
       <div class="map" id="shop-page-map"></div>
     </div>
     <div class="Log-form feedback-form" id="feedback-form"><a class="feedback-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -185,7 +189,8 @@
             <div class="knobs"></div>
             <div class="layer"></div>
           </div>
-        </div><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a>
+        </div>
+        <div class="btn-outer"><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a></div>
       </div>
     </div>
     <div class="Log-form mk-filter-popup" id="mk-filter-popup-molls"><a class="filter-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -211,7 +216,8 @@
             <div class="knobs"></div>
             <div class="layer"></div>
           </div>
-        </div><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a>
+        </div>
+        <div class="btn-outer"><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a></div>
       </div>
     </div>
     <div class="Log-form popup-profile-mob" id="popup-profile-mob"><a class="profile-mob_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
@@ -409,21 +415,22 @@
           <div class="card-item"><img class="img-shop-preview" src="img/shop-page/shop-preview.jpg" alt="shop-preview.jpg">
             <div class="content">
               <div class="text-name">Gucci</div>
-              <div class="text-adress">Russia, Moscow, Ходынский</div>
+              <div class="text-adress">Russia, Moscow, Ходынский бульвар, д. 4 </div>
               <div class="counters">
                 <div class="counter"><span><span class="b">17</span> магазинов</span></div>
                 <div class="counter"><span><span class="b">42,4</span> подписчиков</span></div>
                 <div class="counter"><span><span class="b">1</span> подписка</span></div>
               </div>
-            </div><a class="btn-subscribe" href="#"><span>Подписаться</span></a><img class="img-map" src="img/shop-page/card-item-map.jpg" alt="card-item-map.jpg">
+            </div>
+            <div class="semiposition"><a class="img-map-link" href="#" id="shop-page-map-popup-btn"><img class="img-map" src="img/shop-page/card-item-map.jpg" alt="card-item-map.jpg"></a><a class="btn-subscribe" href="#"><span>Подписаться</span></a></div>
           </div>
         </section>
         <section class="marketing-table">
           <div class="marketing-navbar">
             <div class="input-outer mk-block-products-input-outer">
-              <input class="input-search" type="search" placeholder="Поиск по магазинам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.svg" alt="search.svg"></a>
+              <input class="input-search" type="search" placeholder="Поиск по моллам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.svg" alt="search.svg"></a>
             </div>
-            <div class="mknav-buttonSwitch products buttonSwitch active"><span>Магазины</span></div>
+            <div class="mknav-buttonSwitch products buttonSwitch active"><span>Моллы</span></div>
             <div class="mknav-buttonSwitch info buttonSwitch"><span>Информация</span></div>
             <div class="mknav-buttonSwitch feedback buttonSwitch"><span>Отзывы</span></div>
           </div>
@@ -432,35 +439,21 @@
               <div class="sidebar">
                 <div class="number"><span class="name">Количество:</span><span class="value">2328</span></div>
                 <div class="options">
-                  <div class="line"><span>Монобрендовые</span>
+                  <div class="line"><span>Торговые центры</span>
                     <div class="buttonOpSw r">
                       <input class="option-checkbox" type="checkbox">
                       <div class="knobs"></div>
                       <div class="layer"></div>
                     </div>
                   </div>
-                  <div class="line"><span>Мультибрендовые</span>
+                  <div class="line"><span>Торговые комплексы</span>
                     <div class="buttonOpSw r">
                       <input class="option-checkbox" type="checkbox">
                       <div class="knobs"></div>
                       <div class="layer"></div>
                     </div>
                   </div>
-                  <div class="line"><span>Бутики</span>
-                    <div class="buttonOpSw r">
-                      <input class="option-checkbox" type="checkbox">
-                      <div class="knobs"></div>
-                      <div class="layer"></div>
-                    </div>
-                  </div>
-                  <div class="line checked"><span>Аутлеты</span>
-                    <div class="buttonOpSw r">
-                      <input class="option-checkbox" type="checkbox" checked>
-                      <div class="knobs"></div>
-                      <div class="layer"></div>
-                    </div>
-                  </div>
-                  <div class="line checked"><span>Онлайн</span>
+                  <div class="line checked"><span>Универмаги</span>
                     <div class="buttonOpSw r">
                       <input class="option-checkbox" type="checkbox" checked>
                       <div class="knobs"></div>
@@ -471,6 +464,10 @@
               </div>
               <div class="items-table">
                 <div class="content">
+                  <div class="search-items mob">
+                    <input type="search" placeholder="Поиск по моллам"><img class="search" src="img/search.svg" alt="search.svg">
+                    <div class="filter-btn mk-filter-btn-molls"><img src="img/filter-settings.svg" alt="filter-settings.svg"></div>
+                  </div>
                   <div class="item"><img class="shop-preview" src="img/index/shop-preview.jpg" alt="shop-preview.jpg">
                     <div class="content">
                       <div class="head"><span class="name">Affiction</span>
@@ -657,7 +654,6 @@
           </div>
           <div class="mk-block mk-info">
             <div class="main-content">
-              <div class="anchors-section"><a class="anchor-btn" href="#" onclick="$.scrollTo('.about-shop', 500);">О магазине</a><a class="anchor-btn" href="#" onclick="$.scrollTo('.delivery', 500);">Доставка</a><a class="anchor-btn" href="#" onclick="$.scrollTo('.reimb', 500);">Возврат</a><a class="anchor-btn" href="#" onclick="$.scrollTo('.credit', 500);">Кредит</a></div>
               <div class="about-shop mk-info-section">
                 <h2>О магазине</h2>
                 <div class="main-info">
@@ -665,9 +661,15 @@
                   <div class="secure-tr"><img src="img/shop-page/secure-tr.svg" alt="secure-tr.svg"><span>Безопасная сделка</span></div>
                   <div class="contacts">
                     <div class="undgr">
-                      <div class="circle c1"></div><span>ЦСКА</span>
-                      <div class="circle c2"></div><span>ЦСКА</span>
-                      <div class="circle c3"></div><span>Аэропорт</span>
+                      <div class="undgr-item">
+                        <div class="circle c1"></div><span>ЦСКА</span>
+                      </div>
+                      <div class="undgr-item">
+                        <div class="circle c2"></div><span>ЦСКА</span>
+                      </div>
+                      <div class="undgr-item">
+                        <div class="circle c3"></div><span>Аэропорт</span>
+                      </div>
                     </div><span class="adress">Россия, Москва, Ходынский бульвар, д. 4</span><br><span class="phone">8 (495) 725-42-08</span><br><span class="time">Время работы с 8:00 до 22:00</span>
                   </div>
                   <div class="delivery-inf"><img src="img/shop-page/delivery.svg" alt="delivery.svg"><span>Возможна доставка</span></div>
@@ -697,130 +699,12 @@
                   </div>
                 </div>
               </div>
-              <div class="delivery mk-info-section">
-                <h2>Доставка</h2>
-                <form class="form-block" action="#">
-                  <div class="delivery-type">
-                    <div class="radio-item mk-info-radio-item">
-                      <input id="mk-info_radio1" type="radio" name="mk-info-radio1">
-                      <label for="mk-info_radio1">Доставка курьером</label>
-                      <div class="ext-text"><span class="price">от 1 &#8381;</span><br><span class="delivery-opts">Ближайшая доставка <br>8 ноября.</span></div>
-                    </div>
-                    <div class="radio-item mk-info-radio-item">
-                      <input id="mk-info_radio2" type="radio" name="mk-info-radio1">
-                      <label for="mk-info_radio2">Самовывоз из пункта выдачи</label>
-                      <div class="ext-text"><span class="price">от 1 &#8381;</span><br><span class="delivery-opts">Более 250 пунктов самовывоза</span></div>
-                    </div>
-                    <div class="radio-item mk-info-radio-item">
-                      <input id="mk-info_radio3" type="radio" name="mk-info-radio1">
-                      <label for="mk-info_radio3">Почта</label>
-                      <div class="ext-text"><span class="price">от 1 &#8381;</span><br><span class="delivery-opts">Ближайшая доставка 8 ноября.</span></div>
-                    </div>
-                  </div>
-                  <div class="choice-city">
-                    <div class="radio-item">
-                      <input id="mk-info_radio4" type="radio" name="mk-info-radio2">
-                      <label for="mk-info_radio4">Москва и МО</label>
-                    </div>
-                    <div class="radio-item">
-                      <input id="mk-info_radio5" type="radio" name="mk-info-radio2">
-                      <label for="mk-info_radio5">Санкт-Петербург и ЛО</label>
-                    </div>
-                  </div>
-                </form>
-                <div class="inf-block">
-                  <div class="line"><span>в пределах МКАД</span><span class="value">249 &#8381;</span></div>
-                  <div class="line"><span>за пределами МКАД (до трассы A 107)</span><span class="value">349 &#8381;</span></div>
-                </div>
-              </div>
-              <div class="reimb mk-info-section">
-                <h2>Возврат</h2>
-                <p class="desc">Мы хотим, чтобы покупки на Modno приносили вам радость, а если что-то пошло не так, мы готовы помочь вернуть товар продавцу* как можно быстрее. Просим обратить внимание, что окончательное решение по возврату товаров принимает продавец в соответствии с нормами законодательства Российской Федерации.</p><span class="footnote">*Продавец – интернет-магазин, у которого вы заказали товары на modno.ru</span>
-                <div class="questions">
-                  <div class="item">
-                    <div class="headline mk-info-reimb-question"><span class="name">Получили не тот товар?</span><img class="arrow closed" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
-                    <div class="hidden">
-                      <div class="text">
-                        <p>Полученный товар отличается от заказанного по характеристикам или цвету? Вы можете оформить возврат товара продавцу, обменять его на верный или получить соразмерную компенсацию, оставив товар у себя.</p>
-                      </div>
-                    </div>
-                  </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
-                  <div class="item">
-                    <div class="headline mk-info-reimb-question"><span class="name">В заказе чего-то не хватает?</span><img class="arrow closed" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
-                    <div class="hidden">
-                      <div class="text">
-                        <p>Вы получили товары в неполной комплектации или недополучили что-то из заказанного? Вы можете оформить возврат товара продавцу или получить соразмерную компенсацию, оставив товар у себя.</p>
-                      </div>
-                    </div>
-                  </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
-                  <div class="item">
-                    <div class="headline mk-info-reimb-question"><span class="name">Обнаружили брак?</span><img class="arrow closed" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
-                    <div class="hidden">
-                      <div class="text">
-                        <p>Полученный товар имеет дефекты, внешние механические повреждения (царапины, вмятины, сколы), которые возникли до передачи товара вам? Не переживайте!</p>
-                      </div>
-                    </div>
-                  </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
-                  <div class="item">
-                    <div class="headline mk-info-reimb-question"><span class="name">Передумали и хотите сдать товар?</span><img class="arrow closed" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
-                    <div class="hidden">
-                      <div class="text">
-                        <p>Помните, у товара должна быть сохранена комплектация, товарный вид и упаковка, товар не должен иметь следов использования.Направить обращение необходимо в течение 7 дней.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="credit mk-info-section">
-                <h2>Кредит</h2>
-                <div class="instruction"><span class="point">1. Заполните онлайн заявку и узнайте решение банка сразу</span><span class="point">2. Представитель банка доставит вам карту</span><span class="point">3. Получите деньги в любом банкомате</span></div>
-                <form class="credit-form" action="#">
-                  <div class="range-item">
-                    <div class="headtext">Сумма кредита</div>
-                    <input type="range" min="0" max="5" step="1" value="0">
-                    <div class="range-points"><span>5 000 &#8381;</span><span>100 000 &#8381;</span><span>300 000 &#8381;</span><span>1 000 000 &#8381;</span><span>1 500 000 &#8381;</span><span>2 000 000 &#8381;</span></div>
-                  </div>
-                  <div class="range-item">
-                    <div class="headtext">Срок кредита</div>
-                    <input type="range" min="0" max="4" step="1" value="0">
-                    <div class="range-points"><span>1 год</span><span>2 года</span><span>3 года</span><span>4 года</span><span>5 лет</span></div>
-                  </div>
-                  <div class="calc-values">
-                    <div class="line"><span>Ставка</span><span class="value">9,9%</span></div>
-                    <div class="line"><span>Ежемесячный платёж</span><span class="value">от 42 500 &#8381;</span></div>
-                  </div>
-                  <div class="input-contacts">
-                    <div class="input-outer">
-                      <input class="mk-info-credit-contacts-input" type="text">
-                      <div class="placeholder"><span>Фамилия <span class="red">*</span></span></div>
-                    </div>
-                    <div class="input-outer">
-                      <input class="mk-info-credit-contacts-input" type="text">
-                      <div class="placeholder"><span>Имя <span class="red">*</span></span></div>
-                    </div>
-                    <div class="input-outer">
-                      <input class="mk-info-credit-contacts-input" type="text">
-                      <div class="placeholder"><span>Отчество <span class="red">*</span></span></div>
-                    </div>
-                    <div class="input-outer">
-                      <input class="mk-info-credit-contacts-input" type="tel">
-                      <div class="placeholder"><span>Телефон <span class="red">*</span></span></div>
-                    </div>
-                  </div>
-                  <div class="submit-block">
-                    <input type="submit" value="Подтвердить">
-                    <p class="desc">Нажимая кнопку “Подтвердить” я соглашаюсь на передачу данных АО “Тинькофф Банк”</p>
-                  </div>
-                  <p class="desc">Услуги оказываются АО “Тинькофф Банк”. Пример расчета условий по кредиту носит исключительно информационный характер и не является публичной офертой. Яндекс не несет ответственности за действия третьих лиц.</p>
-                  <div class="mark"> <span>Услуги оказываются АО “Тинькофф банк”. Реклама. <a href="#">Условия кредитования</a></span></div>
-                </form>
-              </div>
             </div>
           </div>
           <div class="mk-block mk-feedback">
             <div class="main-content">
-              <div class="anchors-section"><a class="anchor-btn mk-feedback-anchor-btn active review-all" href="#">Все</a><a class="anchor-btn mk-feedback-anchor-btn review-positive" href="#">Положительные</a><a class="anchor-btn mk-feedback-anchor-btn review-negative" href="#">Отрицательные</a></div>
-              <div class="reviews-list review-all active" style="display: block"><a class="btn-send" href="#"><span>Оставить отзыв</span></a>
+              <div class="anchors-section"><a class="anchor-btn mk-feedback-anchor-btn active review-all" href="#">Все</a><a class="anchor-btn mk-feedback-anchor-btn review-positive" href="#">Положительные</a><a class="anchor-btn mk-feedback-anchor-btn review-negative" href="#">Отрицательные</a><a class="btn-send feedback-form-btn" href="#"><span>Оставить отзыв</span></a></div>
+              <div class="reviews-list review-all active" style="display: block">
                 <h2>Отзывы (все)</h2>
                 <div class="review-item">
                   <div class="photo-profile circle"></div>
@@ -942,7 +826,7 @@
                   </div>
                 </div>
               </div>
-              <div class="reviews-list review-positive"><a class="btn-send" href="#"><span>Оставить отзыв</span></a>
+              <div class="reviews-list review-positive">
                 <h2>Отзывы (положительные)</h2>
                 <div class="review-item">
                   <div class="photo-profile circle"></div>
@@ -1064,7 +948,7 @@
                   </div>
                 </div>
               </div>
-              <div class="reviews-list review-negative"><a class="btn-send" href="#"><span>Оставить отзыв</span></a>
+              <div class="reviews-list review-negative">
                 <h2>Отзывы (отрицательные)</h2>
                 <div class="review-item">
                   <div class="photo-profile circle"></div>
@@ -1186,6 +1070,7 @@
                   </div>
                 </div>
               </div>
+              <div class="btn-more mob"><span>Показать ещё</span></div>
             </div>
           </div>
         </section>
@@ -1484,6 +1369,18 @@
     		});
     		
     	});
+    	// карта магазинов на главной
+    	$('#index-sidebar-map-popup-btn').click(function(){
+    		$('#index-sidebar-map-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'index-sidebar-map-popup_close-btn',
+    			onOpen: function() { 
+    				$('body').addClass('fixed');
+    			},
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    		
+    	});
     
     	
     
@@ -1497,6 +1394,7 @@
     var map1;
     var map2;
     var map3;
+    var map4;
     function initMap() {
     	map1 = new google.maps.Map(document.getElementById('map1'), {
     		center: {lat: 55.754095, lng: 37.616722},
@@ -1516,10 +1414,17 @@
     		streetViewControl: false,
     		mapTypeControl: false
     	});
+    	map4 = new google.maps.Map(document.getElementById('index-sidebar-map'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
     }
   </script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKhp6yO-hzgForGQ3ZJrBGj-QrUCUbZeQ&callback=initMap" async defer></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/select2.full.min.js"></script>
   <script>
     $(document).ready(function(){
     	$('.buttonOpSw').click(function(){
@@ -1645,6 +1550,65 @@
     	
     	$(function($) {
     		$('input[type="tel"]').mask("+7 (999) 999-99-99")
+    	});
+    
+    	//- Mobile Input range .mk-info > .credit 
+    
+    	if($(window).width() <= 768){
+    		$('#mk-info-credit-input-range1').change(function(){
+    			$('.range1-range-point').hide();
+    			$('.range1-range-point' + this.value).show();
+    		});
+    		$('#mk-info-credit-input-range2').change(function(){
+    			$('.range2-range-point').hide();
+    			$('.range2-range-point' + this.value).show();
+    		});
+    	}
+    
+    	$(window).resize(function(){
+    		if($(window).width() > 768){
+    			$('.range1-range-point').show();
+    			$('.range2-range-point').show();
+    			$('#mk-info-credit-input-range1').unbind('change');
+    			$('#mk-info-credit-input-range2').unbind('change');
+    
+    			$('.mk-sidebar-select2').select2({
+    				minimumResultsForSearch: Infinity,
+    				dropdownCssClass: 'mk-sidebar-select2-dropdown'
+    			});
+    		}else{
+    			$('.range1-range-point').hide();
+    			$('.range2-range-point').hide();
+    			$('.range1-range-point0').show();
+    			$('.range2-range-point0').show();
+    			$('input[type=range]').val('0');
+    
+    			$('#mk-info-credit-input-range1').change(function(){
+    				$('.range1-range-point').hide();
+    				$('.range1-range-point' + this.value).show();
+    			});
+    			$('#mk-info-credit-input-range2').change(function(){
+    				$('.range2-range-point').hide();
+    				$('.range2-range-point' + this.value).show();
+    			});
+    		}
+    	});
+    
+    	//- Send feedback popup
+    
+    	$('.feedback-form-btn').click(function(){
+    		$('#feedback-form').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'feedback-form_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    	});
+    
+    	//- mk sidebar filters Select2 
+    	$('.mk-sidebar-select2').select2({
+    		minimumResultsForSearch: Infinity,
+    		dropdownCssClass: 'mk-sidebar-select2-dropdown'
     	});
     
     	

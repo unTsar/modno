@@ -34,8 +34,15 @@ html(lang="ru")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
+		//- карта магазинов на главной
+		.shop-map.index-sidebar-map-popup#index-sidebar-map-popup
+			a.close-btn.index-sidebar-map-popup_close-btn(href="#")
+				img(src="img/close.svg", alt="close.svg")
+			.map#index-sidebar-map
 		//- карта страница магазина
-		.shop-page-map-popup#shop-page-map-popup
+		.shop-map.shop-page-map-popup#shop-page-map-popup
+			a.close-btn.shop-page-map-popup_close-btn(href="#")
+				img(src="img/close.svg", alt="close.svg")
 			.map#shop-page-map
 		//- Send feedback
 		.Log-form.feedback-form#feedback-form
@@ -230,8 +237,9 @@ html(lang="ru")
 						input.option-checkbox(type="checkbox")
 						.knobs
 						.layer
-				a(href="#").btn.filter-popup_close-btn
-					span Принять
+				.btn-outer
+					a(href="#").btn.filter-popup_close-btn
+						span Принять
 		.Log-form.mk-filter-popup#mk-filter-popup-molls
 			a.filter-popup_close-btn(href="#")
 				img.img-close(src="img/close.svg", alt="close.svg")
@@ -258,8 +266,9 @@ html(lang="ru")
 						input.option-checkbox(type="checkbox")
 						.knobs
 						.layer
-				a(href="#").btn.filter-popup_close-btn
-					span Принять
+				.btn-outer
+					a(href="#").btn.filter-popup_close-btn
+						span Принять
 
 		.Log-form.popup-profile-mob#popup-profile-mob
 			a.profile-mob_close-btn(href="#")
@@ -856,6 +865,18 @@ html(lang="ru")
 				});
 				
 			});
+			// карта магазинов на главной
+			$('#index-sidebar-map-popup-btn').click(function(){
+				$('#index-sidebar-map-popup').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'index-sidebar-map-popup_close-btn',
+					onOpen: function() { 
+						$('body').addClass('fixed');
+					},
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+				
+			});
 
 			
 
@@ -868,6 +889,7 @@ html(lang="ru")
 		var map1;
 		var map2;
 		var map3;
+		var map4;
 		function initMap() {
 			map1 = new google.maps.Map(document.getElementById('map1'), {
 				center: {lat: 55.754095, lng: 37.616722},
@@ -882,6 +904,12 @@ html(lang="ru")
 				mapTypeControl: false
 			});
 			map3 = new google.maps.Map(document.getElementById('shop-page-map'), {
+				center: {lat: 55.754095, lng: 37.616722},
+				zoom: 12,
+				streetViewControl: false,
+				mapTypeControl: false
+			});
+			map4 = new google.maps.Map(document.getElementById('index-sidebar-map'), {
 				center: {lat: 55.754095, lng: 37.616722},
 				zoom: 12,
 				streetViewControl: false,

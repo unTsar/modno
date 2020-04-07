@@ -15,6 +15,7 @@
 }
 
 body section.category-links {
+  margin-top: 15px;
   position: relative;
   background-color: #fff;
   -webkit-border-radius: 5px;
@@ -609,6 +610,37 @@ body section.marketing-table .main-content .sidebar .options .line .buttonOpSw .
 body section.marketing-table .main-content .sidebar .options .line .buttonOpSw.r, body section.marketing-table .main-content .sidebar .options .line .layer {
   -webkit-border-radius: 100px;
           border-radius: 100px;
+}
+
+body section.marketing-table .main-content .sidebar a.img-map-link {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  padding: 15px 0;
+  background-image: url("../img/shop-page/card-item-map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+body section.marketing-table .main-content .sidebar a.img-map-link svg {
+  width: 35px;
+}
+
+body section.marketing-table .main-content .sidebar a.img-map-link svg path {
+  fill: #157EE1;
+}
+
+body section.marketing-table .main-content .sidebar a.img-map-link:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 body section.marketing-table .main-content .items-table {

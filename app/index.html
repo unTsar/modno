@@ -18,11 +18,17 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <div class="shop-map index-sidebar-map-popup" id="index-sidebar-map-popup"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
-      <div class="map" id="index-sidebar-map"></div>
+    <div class="shop-map-outer index-sidebar-map-popup" id="index-sidebar-map-popup">
+      <div class="back-close-btn index-sidebar-map-popup_close-btn"></div>
+      <div class="shop-map"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+        <div class="map" id="index-sidebar-map"></div>
+      </div>
     </div>
-    <div class="shop-map shop-page-map-popup" id="shop-page-map-popup"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
-      <div class="map" id="shop-page-map"></div>
+    <div class="shop-map-outer shop-page-map-popup" id="shop-page-map-popup">
+      <div class="back-close-btn shop-page-map-popup_close-btn"></div>
+      <div class="shop-map"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+        <div class="map" id="shop-page-map"></div>
+      </div>
     </div>
     <div class="Log-form feedback-form" id="feedback-form"><a class="feedback-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
       <div class="topline"><span>Оставить отзыв</span></div>
@@ -511,7 +517,7 @@
                     <div class="layer"></div>
                   </div>
                 </div>
-              </div><a class="img-map-link" href="#" title="Проверить местоположение" id="index-sidebar-map-popup-btn"><svg class="property-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 29"><ellipse class="shadow" fill="#000000" fill-opacity="0.24" cx="9" cy="27" rx="6" ry="2"></ellipse><path class="pin" d="M9,27 C7,27 0,16.9704016 0,9 C2.28269391e-16,4.02943725 4.02943725,0 9,0 C13.9705627,0 18,4.02943725 18,9 C18,16.9704016 11,27 9,27 Z M9,13 C11.209139,13 13,11.209139 13,9 C13,6.790861 11.209139,5 9,5 C6.790861,5 5,6.790861 5,9 C5,11.209139 6.790861,13 9,13 Z"></path></svg></a>
+              </div><a class="img-map-link index-sidebar-map-popup-btn" href="#" title="Проверить местоположение"><svg class="property-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 29"><ellipse class="shadow" fill="#000000" fill-opacity="0.24" cx="9" cy="27" rx="6" ry="2"></ellipse><path class="pin" d="M9,27 C7,27 0,16.9704016 0,9 C2.28269391e-16,4.02943725 4.02943725,0 9,0 C13.9705627,0 18,4.02943725 18,9 C18,16.9704016 11,27 9,27 Z M9,13 C11.209139,13 13,11.209139 13,9 C13,6.790861 11.209139,5 9,5 C6.790861,5 5,6.790861 5,9 C5,11.209139 6.790861,13 9,13 Z"></path></svg></a>
             </div>
             <div class="sidebar molls">
               <div class="number"><span class="name">Количество:</span><span class="value">2328</span></div>
@@ -537,7 +543,7 @@
                     <div class="layer"></div>
                   </div>
                 </div>
-              </div>
+              </div><a class="img-map-link index-sidebar-map-popup-btn" href="#" title="Проверить местоположение"><svg class="property-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 29"><ellipse class="shadow" fill="#000000" fill-opacity="0.24" cx="9" cy="27" rx="6" ry="2"></ellipse><path class="pin" d="M9,27 C7,27 0,16.9704016 0,9 C2.28269391e-16,4.02943725 4.02943725,0 9,0 C13.9705627,0 18,4.02943725 18,9 C18,16.9704016 11,27 9,27 Z M9,13 C11.209139,13 13,11.209139 13,9 C13,6.790861 11.209139,5 9,5 C6.790861,5 5,6.790861 5,9 C5,11.209139 6.790861,13 9,13 Z"></path></svg></a>
             </div>
             <div class="items-table molls">
               <div class="content">
@@ -1222,24 +1228,20 @@
     
     	// карта страница магазина
     	$('#shop-page-map-popup-btn').click(function(){
+    		$('body').addClass('fixed');
     		$('#shop-page-map-popup').bPopup({
     			positionStyle: 'fixed',
     			closeClass: 'shop-page-map-popup_close-btn',
-    			onOpen: function() { 
-    				$('body').addClass('fixed');
-    			},
     			onClose: function() { $('body').removeClass('fixed') }			
     		});
     		
     	});
     	// карта магазинов на главной
-    	$('#index-sidebar-map-popup-btn').click(function(){
+    	$('.index-sidebar-map-popup-btn').click(function(){
+    		$('body').addClass('fixed');
     		$('#index-sidebar-map-popup').bPopup({
     			positionStyle: 'fixed',
     			closeClass: 'index-sidebar-map-popup_close-btn',
-    			onOpen: function() { 
-    				$('body').addClass('fixed');
-    			},
     			onClose: function() { $('body').removeClass('fixed') }			
     		});
     		

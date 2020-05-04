@@ -18,11 +18,17 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <div class="shop-map index-sidebar-map-popup" id="index-sidebar-map-popup"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
-      <div class="map" id="index-sidebar-map"></div>
+    <div class="shop-map-outer index-sidebar-map-popup" id="index-sidebar-map-popup">
+      <div class="back-close-btn index-sidebar-map-popup_close-btn"></div>
+      <div class="shop-map"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+        <div class="map" id="index-sidebar-map"></div>
+      </div>
     </div>
-    <div class="shop-map shop-page-map-popup" id="shop-page-map-popup"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
-      <div class="map" id="shop-page-map"></div>
+    <div class="shop-map-outer shop-page-map-popup" id="shop-page-map-popup">
+      <div class="back-close-btn shop-page-map-popup_close-btn"></div>
+      <div class="shop-map"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+        <div class="map" id="shop-page-map"></div>
+      </div>
     </div>
     <div class="Log-form feedback-form" id="feedback-form"><a class="feedback-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
       <div class="topline"><span>Оставить отзыв</span></div>
@@ -1203,24 +1209,20 @@
     
     	// карта страница магазина
     	$('#shop-page-map-popup-btn').click(function(){
+    		$('body').addClass('fixed');
     		$('#shop-page-map-popup').bPopup({
     			positionStyle: 'fixed',
     			closeClass: 'shop-page-map-popup_close-btn',
-    			onOpen: function() { 
-    				$('body').addClass('fixed');
-    			},
     			onClose: function() { $('body').removeClass('fixed') }			
     		});
     		
     	});
     	// карта магазинов на главной
-    	$('#index-sidebar-map-popup-btn').click(function(){
+    	$('.index-sidebar-map-popup-btn').click(function(){
+    		$('body').addClass('fixed');
     		$('#index-sidebar-map-popup').bPopup({
     			positionStyle: 'fixed',
     			closeClass: 'index-sidebar-map-popup_close-btn',
-    			onOpen: function() { 
-    				$('body').addClass('fixed');
-    			},
     			onClose: function() { $('body').removeClass('fixed') }			
     		});
     		

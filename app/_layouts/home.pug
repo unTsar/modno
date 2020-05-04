@@ -35,15 +35,19 @@ html(lang="ru")
 	
 	body
 		//- карта магазинов на главной
-		.shop-map.index-sidebar-map-popup#index-sidebar-map-popup
-			a.close-btn.index-sidebar-map-popup_close-btn(href="#")
-				img(src="img/close.svg", alt="close.svg")
-			.map#index-sidebar-map
+		.shop-map-outer.index-sidebar-map-popup#index-sidebar-map-popup
+			.back-close-btn.index-sidebar-map-popup_close-btn
+			.shop-map
+				a.close-btn.index-sidebar-map-popup_close-btn(href="#")
+					img(src="img/close.svg", alt="close.svg")
+				.map#index-sidebar-map
 		//- карта страница магазина
-		.shop-map.shop-page-map-popup#shop-page-map-popup
-			a.close-btn.shop-page-map-popup_close-btn(href="#")
-				img(src="img/close.svg", alt="close.svg")
-			.map#shop-page-map
+		.shop-map-outer.shop-page-map-popup#shop-page-map-popup
+			.back-close-btn.shop-page-map-popup_close-btn
+			.shop-map
+				a.close-btn.shop-page-map-popup_close-btn(href="#")
+					img(src="img/close.svg", alt="close.svg")
+				.map#shop-page-map
 		//- Send feedback
 		.Log-form.feedback-form#feedback-form
 			a.feedback-form_close-btn(href="#")
@@ -855,24 +859,20 @@ html(lang="ru")
 
 			// карта страница магазина
 			$('#shop-page-map-popup-btn').click(function(){
+				$('body').addClass('fixed');
 				$('#shop-page-map-popup').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'shop-page-map-popup_close-btn',
-					onOpen: function() { 
-						$('body').addClass('fixed');
-					},
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
 				
 			});
 			// карта магазинов на главной
-			$('#index-sidebar-map-popup-btn').click(function(){
+			$('.index-sidebar-map-popup-btn').click(function(){
+				$('body').addClass('fixed');
 				$('#index-sidebar-map-popup').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'index-sidebar-map-popup_close-btn',
-					onOpen: function() { 
-						$('body').addClass('fixed');
-					},
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
 				

@@ -85,30 +85,42 @@ body
 		margin-right: auto
 
 	// карта страница магазина
-	.shop-map
+	.shop-map-outer
+		position: relative
+		display: none
 		width: 100%
 		height: 100%
-		overflow: hidden
-		display: none
-		position: relative
-		a.close-btn
+		padding: 40px
+		.back-close-btn
 			position: absolute
+			z-index: -1
 			top: 0
-			right: 0
-			margin-top: 15px
-			margin-right: 5px
-			z-index: 5
-			width: 50px
-			height: 50px
-			line-height: 57px
-			text-align: center
-			background-color: #fff
-			border-radius: 50%
-		.map
+			left: 0
 			width: 100%
 			height: 100%
-			.gm-control-active.gm-fullscreen-control
-				top: 70px !important
+		.shop-map
+			width: 100%
+			height: 100%
+			overflow: hidden
+			position: relative
+			a.close-btn
+				position: absolute
+				top: 0
+				right: 0
+				margin-top: 15px
+				margin-right: 5px
+				z-index: 5
+				width: 50px
+				height: 50px
+				line-height: 57px
+				text-align: center
+				background-color: #fff
+				border-radius: 50%
+			.map
+				width: 100%
+				height: 100%
+				.gm-control-active.gm-fullscreen-control
+					top: 70px !important
 	.dd-popup
 		position: relative
 		display: none
@@ -1200,6 +1212,7 @@ body
 						text-transform: uppercase
 						font-weight: bold
 						font-size: 12px
+						pointer-events: none
 					.list
 						margin-top: 13px
 						line-height: 1.4
@@ -1427,6 +1440,7 @@ body
 								padding-top: 17px
 								padding-bottom: 17px
 								cursor: pointer
+								pointer-events: all
 								position: relative
 								text-transform: none
 								font-size: 20px
@@ -1476,6 +1490,8 @@ body
 					padding-right: 15px
 @media only screen and(max-width: 768px)
 	body
+		.shop-map-outer
+			padding: 20px
 		header
 			.container
 				.headerLine

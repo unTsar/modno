@@ -75,6 +75,20 @@ body section.item-main-section .preview-content .photoswiper .fotorama__nav--thu
   opacity: 1;
 }
 
+body section.item-main-section .preview-content .photoswiper .fotorama__fullscreen-icon {
+  width: 90%;
+  height: 85%;
+  margin: auto;
+  bottom: 0;
+  background: transparent;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  z-index: 10;
+  -webkit-transform: none !important;
+      -ms-transform: none !important;
+          transform: none !important;
+}
+
 body section.item-main-section .preview-content .photoswiper .fotorama__arr--next {
   right: -36.5%;
 }

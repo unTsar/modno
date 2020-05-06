@@ -37,6 +37,8 @@ body
 					.fotorama__nav__frame.fotorama__active
 						img
 							opacity: 1
+				.fotorama__arr--next
+					right: -36.5%
 
 				.fotorama__thumb
 					border-radius: 5px
@@ -1027,7 +1029,7 @@ body
 				.anchors-section
 					position: relative
 					margin: 17px 0
-					a.anchor-btn
+					.anchor-btn
 						display: inline-block
 						position: relative
 						padding: 0px 28px
@@ -1038,7 +1040,7 @@ body
 						border-radius: 5px
 						margin-right: 7px
 						transition: 0.3s
-					a.anchor-btn::before
+					.anchor-btn::before
 						content: ''
 						position: absolute
 						top: 0
@@ -1047,10 +1049,10 @@ body
 						height: 100%
 						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 						border-radius: 5px
-					a.anchor-btn:hover, a.anchor-btn.active 
+					.anchor-btn:hover, .anchor-btn.active 
 						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 						background-color: #E5E5E5
-					a.anchor-btn.disabled
+					.anchor-btn.disabled
 						pointer-events: none
 					a.btn-send
 						position: absolute

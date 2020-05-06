@@ -3,6 +3,7 @@ extends _layouts/home
 block styles
 	link(rel="stylesheet", href="css/item-page.css")
 	link(rel="stylesheet", href="css/fotorama.css")
+	link(rel="stylesheet", href="css/magnific-popup.css")
 block content
 
 	include _partials/header.pug
@@ -469,9 +470,9 @@ block content
 				.mk-block.mk-feedback
 					.main-content
 						.anchors-section
-							a.anchor-btn.mk-feedback-anchor-btn.active.review-all(href="#") Все
-							a.anchor-btn.mk-feedback-anchor-btn.review-positive(href="#") Положительные
-							a.anchor-btn.mk-feedback-anchor-btn.review-negative(href="#") Отрицательные
+							.anchor-btn.mk-feedback-anchor-btn.active.review-all Все
+							.anchor-btn.mk-feedback-anchor-btn.review-positive Положительные
+							.anchor-btn.mk-feedback-anchor-btn.review-negative Отрицательные
 							a(href="#").btn-send.feedback-form-btn
 								span Оставить отзыв
 						.reviews-list.review-all.active(style='display: block')
@@ -538,6 +539,7 @@ block scripts
 	script(src="js/jquery.scrollTo.min.js")
 	script(src="js/jquery.maskedinput.min.js")
 	script(src="js/fotorama.js")
+	script(src="js/jquery.magnific-popup.min.js")
 	script.
 		$(document).ready(function(){
 			$('.mknav-buttonSwitch').click(function(){
@@ -713,4 +715,16 @@ block scripts
 			setTimeout(function(){
 				fotorama.show(0);
 			}, 1);
+
+
+			//- magnificPopup
+
+			$('.fotorama__stage__frame').magnificPopup({
+				items: [
+					{
+						src: 'img/item-page/item-main-section-img.jpg'
+					},
+				],
+				type: 'image'
+			});
 		});

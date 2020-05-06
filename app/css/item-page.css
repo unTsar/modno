@@ -75,6 +75,10 @@ body section.item-main-section .preview-content .photoswiper .fotorama__nav--thu
   opacity: 1;
 }
 
+body section.item-main-section .preview-content .photoswiper .fotorama__arr--next {
+  right: -36.5%;
+}
+
 body section.item-main-section .preview-content .photoswiper .fotorama__thumb {
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1584,7 +1588,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section {
   margin: 17px 0;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn {
   display: inline-block;
   position: relative;
   padding: 0px 28px;
@@ -1600,7 +1604,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.ancho
   transition: 0.3s;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn::before {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1613,13 +1617,13 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.ancho
           border-radius: 5px;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn:hover, body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn.active {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn:hover, body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn.active {
   -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #E5E5E5;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn.disabled {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn.disabled {
   pointer-events: none;
 }
 

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/item-page.css">
     <link rel="stylesheet" href="css/fotorama.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
   </head>
   <body>
     <div class="shop-map-outer index-sidebar-map-popup" id="index-sidebar-map-popup">
@@ -801,7 +802,11 @@
           </div>
           <div class="mk-block mk-feedback">
             <div class="main-content">
-              <div class="anchors-section"><a class="anchor-btn mk-feedback-anchor-btn active review-all" href="#">Все</a><a class="anchor-btn mk-feedback-anchor-btn review-positive" href="#">Положительные</a><a class="anchor-btn mk-feedback-anchor-btn review-negative" href="#">Отрицательные</a><a class="btn-send feedback-form-btn" href="#"><span>Оставить отзыв</span></a></div>
+              <div class="anchors-section">
+                <div class="anchor-btn mk-feedback-anchor-btn active review-all">Все</div>
+                <div class="anchor-btn mk-feedback-anchor-btn review-positive">Положительные</div>
+                <div class="anchor-btn mk-feedback-anchor-btn review-negative">Отрицательные</div><a class="btn-send feedback-form-btn" href="#"><span>Оставить отзыв</span></a>
+              </div>
               <div class="reviews-list review-all active" style="display: block">
                 <h2>Отзывы (все)</h2>
                 <div class="review-item">
@@ -1519,6 +1524,7 @@
   <script src="js/jquery.scrollTo.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/fotorama.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
   <script>
     $(document).ready(function(){
     	$('.mknav-buttonSwitch').click(function(){
@@ -1694,6 +1700,18 @@
     	setTimeout(function(){
     		fotorama.show(0);
     	}, 1);
+    
+    
+    	//- magnificPopup
+    
+    	$('.fotorama__stage__frame').magnificPopup({
+    		items: [
+    			{
+    				src: 'img/item-page/item-main-section-img.jpg'
+    			},
+    		],
+    		type: 'image'
+    	});
     });
   </script>
 </html>

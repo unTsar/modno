@@ -10,8 +10,19 @@ block content
 	main
 		.container
 			section.item-main-section
+				.sm-preview-item
+					img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
+					.content
+						.head
+							span.name Affiction
+							.category-text Монобрендовый
+							span.desc Russia, Moscow, Ходынский бульвар, д. 4
+						.tags
+							img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
+							img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
+							img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
 				.preview-content
-					#fotorama.fotorama.photoswiper(data-auto="false" data-width="100%" data-nav="thumbs" data-loop="true" data-margin="10" data-thumbwidth="113" data-thumbheight="70" data-thumbmargin="10" data-allowfullscreen="true")
+					#fotorama.fotorama.photoswiper(data-auto="false" data-width="100%" data-nav="thumbs" data-loop="true" data-margin="10" data-thumbmargin="10" data-allowfullscreen="true")
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
@@ -22,17 +33,6 @@ block content
 						span.head Описание
 						p.text Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок.
 				.r-sidebar
-					.sm-preview-item
-						img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
-						.content
-							.head
-								span.name Affiction
-								.category-text Монобрендовый
-								span.desc Russia, Moscow, Ходынский бульвар, д. 4
-							.tags
-								img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
-								img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
-								img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
 					.info-block
 						img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
 						.name Кроссовки Men’s Air MonarchI V training shoe
@@ -86,12 +86,7 @@ block content
 						a.btn(href="#") Заказать
 						a.btn(href="#") Написать сообщение
 
-						
-
-
-
-
-			section.marketing-table
+			//- section.marketing-table
 				.marketing-navbar
 					.mknav-buttonSwitch.products.buttonSwitch.active
 						span Товары
@@ -705,13 +700,22 @@ block scripts
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
 			});
-
-
-			var $fotoramaDiv = $('#fotorama').fotorama();
-			var fotorama = $fotoramaDiv.data('fotorama');
-			fotorama.show(5);
-			setTimeout(function(){
-				fotorama.show(0);
-			}, 1);
-
+			$('#fotorama').fotorama({
+				autoplay: 3000,
+				glimpse: "13.38%",
+				ratio: 1.7
+			});
+			$(window).on('load resize', function(){
+				if($(window).width() <= 1024){
+					$('#fotorama').fotorama({
+						thumbwidth: 178,
+						thumbheight: 116,
+					});
+				}else{
+					$('#fotorama').fotorama({
+						thumbwidth: 113,
+						thumbheight: 70,
+					});
+				}
+			});
 		});

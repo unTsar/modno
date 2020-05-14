@@ -29,6 +29,23 @@ body .fotorama--fullscreen .fotorama__wrap .fotorama__nav-wrap .fotorama__thumb 
           border-radius: 5px;
 }
 
+body .fotorama--fullscreen .fotorama__wrap .fotorama__dot {
+  width: 11px;
+  height: 11px;
+  background-color: #C4C4C4;
+  border: none;
+  top: 15px;
+}
+
+body .fotorama--fullscreen .fotorama__wrap .fotorama__nav--dots .fotorama__nav__frame {
+  width: 20px;
+  height: 30px;
+}
+
+body .fotorama--fullscreen .fotorama__wrap .fotorama__nav__frame.fotorama__active .fotorama__dot {
+  background-color: #157EE1;
+}
+
 body .fotorama--fullscreen .fotorama__img {
   -webkit-border-radius: 15px !important;
           border-radius: 15px !important;
@@ -120,6 +137,23 @@ body section.item-main-section .preview-content .photoswiper .fotorama__thumb {
 body section.item-main-section .preview-content .photoswiper .fotorama__thumb img.fotorama__img {
   width: 113px;
   height: 70px;
+}
+
+body section.item-main-section .preview-content .photoswiper .fotorama__dot {
+  width: 11px;
+  height: 11px;
+  background-color: #C4C4C4;
+  border: none;
+  top: 15px;
+}
+
+body section.item-main-section .preview-content .photoswiper .fotorama__nav--dots .fotorama__nav__frame {
+  width: 20px;
+  height: 40px;
+}
+
+body section.item-main-section .preview-content .photoswiper .fotorama__nav__frame.fotorama__active .fotorama__dot {
+  background-color: #157EE1;
 }
 
 body section.item-main-section .preview-content .photoswiper-nav {
@@ -551,6 +585,10 @@ body section.item-main-section .r-sidebar .sidebar-btns a.btn:hover {
   color: #fff;
 }
 
+body section.item-main-section .r-sidebar .sidebar-btns a.btn.mob {
+  display: none;
+}
+
 body section.marketing-table .marketing-navbar {
   padding-top: 14px;
   padding-bottom: 15px;
@@ -610,7 +648,7 @@ body section.marketing-table .mk-products .anchors-section {
   margin: 15px 0 20px 0;
 }
 
-body section.marketing-table .mk-products .anchors-section a.anchor-btn {
+body section.marketing-table .mk-products .anchors-section .anchor-btn {
   display: inline-block;
   position: relative;
   padding: 0px 28px;
@@ -626,7 +664,7 @@ body section.marketing-table .mk-products .anchors-section a.anchor-btn {
   transition: 0.3s;
 }
 
-body section.marketing-table .mk-products .anchors-section a.anchor-btn::before {
+body section.marketing-table .mk-products .anchors-section .anchor-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -639,13 +677,13 @@ body section.marketing-table .mk-products .anchors-section a.anchor-btn::before 
           border-radius: 5px;
 }
 
-body section.marketing-table .mk-products .anchors-section a.anchor-btn:hover, body section.marketing-table .mk-products .anchors-section a.anchor-btn.active {
+body section.marketing-table .mk-products .anchors-section .anchor-btn:hover, body section.marketing-table .mk-products .anchors-section .anchor-btn.active {
   -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #E5E5E5;
 }
 
-body section.marketing-table .mk-products .anchors-section a.anchor-btn.disabled {
+body section.marketing-table .mk-products .anchors-section .anchor-btn.disabled {
   pointer-events: none;
 }
 
@@ -838,21 +876,81 @@ body section.marketing-table .mk-products .items-table .btn-more:hover span {
   color: #fff;
 }
 
-body section.marketing-table .mk-products .items-table.publications {
-  overflow: hidden;
+body section.marketing-table .mk-products .items-table.publications .swiper-block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-body section.marketing-table .mk-products .items-table.publications .line .item {
-  width: 24.26%;
+body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
+  position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+  vertical-align: top;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  cursor: pointer;
-  display: inline-block;
 }
 
-body section.marketing-table .mk-products .items-table.publications .line .item img {
+body section.marketing-table .mk-products .items-table.publications .swiper-block .slide:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more-outer img {
+  opacity: 0;
+}
+
+body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  display: block;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+
+body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more .text {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #808080;
 }
 
 body section.marketing-table .mk-info {
@@ -863,7 +961,7 @@ body section.marketing-table .mk-info .main-content .anchors-section {
   margin: 17px 0;
 }
 
-body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn {
   display: inline-block;
   position: relative;
   padding: 0 20px;
@@ -879,7 +977,7 @@ body section.marketing-table .mk-info .main-content .anchors-section a.anchor-bt
   transition: 0.3s;
 }
 
-body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn::before {
+body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -892,7 +990,7 @@ body section.marketing-table .mk-info .main-content .anchors-section a.anchor-bt
           border-radius: 5px;
 }
 
-body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn:hover {
+body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn:hover {
   -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #E5E5E5;
@@ -1812,6 +1910,19 @@ body section.marketing-table .mk-block {
   display: none;
 }
 
+@media only screen and (max-width: 1140px) {
+  body section.marketing-table .mk-products .main-content, body section.marketing-table .mk-info .main-content, body section.marketing-table .mk-feedback .main-content {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   body section.item-main-section {
     padding: 15px;
@@ -1854,8 +1965,1742 @@ body section.marketing-table .mk-block {
     display: block;
     width: 100%;
   }
+  body section.item-main-section .preview-content .desc-block {
+    display: none;
+  }
   body section.item-main-section .r-sidebar {
     padding-top: 0;
     margin-top: 34px;
+    margin-left: 0;
+  }
+  body section.item-main-section .r-sidebar .info-block {
+    padding-top: 0;
+    padding-left: 29px;
+    padding-bottom: 57px;
+    font-size: 25px;
+  }
+  body section.item-main-section .r-sidebar .info-block img.new-mark {
+    width: 60px;
+    height: 30px;
+    margin-top: 26px;
+    margin-right: 28px;
+  }
+  body section.item-main-section .r-sidebar .info-block .name {
+    font-size: 25px;
+    padding: 19.5px 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .brand {
+    margin: 0;
+    font-size: 25px;
+  }
+  body section.item-main-section .r-sidebar .info-block a.send {
+    display: block;
+    font-size: 25px;
+    padding: 19.5px 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .articleN {
+    font-size: 20px;
+    margin-top: 0;
+    padding: 8.5px 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .rating {
+    margin-right: 28px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .rating img {
+    width: 37px;
+    vertical-align: top;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price {
+    margin-top: 0;
+    margin-right: 28px;
+    padding: 12px 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price span.price-value {
+    font-size: 35px;
+    margin-left: 20px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price span.old-price-value {
+    font-size: 20px;
+    padding: 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .range {
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 0;
+    margin-right: 28px;
+  }
+  body section.item-main-section .r-sidebar .settings {
+    margin-top: 34px;
+    padding-left: 29px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  body section.item-main-section .r-sidebar .settings .availability {
+    margin-right: 19px;
+    margin-top: 28px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability .circle {
+    width: 19px;
+    height: 19px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability span {
+    font-size: 25px;
+    margin-left: 19px;
+  }
+  body section.item-main-section .r-sidebar .settings span.subhead {
+    display: inline-block;
+    font-size: 25px;
+    padding-top: 9px;
+  }
+  body section.item-main-section .r-sidebar .settings .colour, body section.item-main-section .r-sidebar .settings .size {
+    margin-top: 18px;
+  }
+  body section.item-main-section .r-sidebar .settings .colour .var, body section.item-main-section .r-sidebar .settings .size .var {
+    width: 41px;
+    height: 41px;
+    line-height: 38px;
+    font-size: 19px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn {
+    display: block;
+    width: auto;
+    margin-left: -29px;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    padding: 17px 0;
+    margin-top: 50px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn span {
+    font-size: 24px;
+    margin-left: 19px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn img {
+    width: 36px;
+  }
+  body section.item-main-section .r-sidebar .settings span.region {
+    font-size: 25px;
+    margin-left: 0;
+    padding: 15px 0;
+  }
+  body section.item-main-section .r-sidebar .arrows {
+    margin-top: 34px;
+    padding: 16px 0;
+    margin-bottom: 18px;
+  }
+  body section.item-main-section .r-sidebar .arrows span {
+    font-size: 18px;
+    margin: 0 75px;
+  }
+  body section.item-main-section .r-sidebar .arrows a {
+    position: relative;
+    display: inline-block;
+  }
+  body section.item-main-section .r-sidebar .arrows a img {
+    margin: 0px;
+  }
+  body section.item-main-section .r-sidebar .arrows .arrow-left {
+    margin-right: 11px;
+  }
+  body section.item-main-section .r-sidebar .arrows .arrow-right {
+    margin-left: 11px;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns {
+    padding-bottom: 17px;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns a.btn {
+    width: 49.2%;
+    height: 60px;
+    line-height: 56px;
+    font-size: 21px;
+  }
+  body section.marketing-table .marketing-navbar {
+    margin-bottom: 34px;
+    padding: 19px 0;
+  }
+  body section.marketing-table .marketing-navbar .input-outer {
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body section.marketing-table .marketing-navbar .input-outer * {
+    display: none;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin: 0 28px;
+    width: 165px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 17px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch.active span {
+    color: #000;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch:hover span {
+    color: #000;
+  }
+  body section.marketing-table .mk-products .items-table {
+    margin-bottom: 34px;
+  }
+  body section.marketing-table .mk-products .items-table .header {
+    padding: 29.5px 0;
+    padding-left: 28px;
+    margin-bottom: 32px;
+  }
+  body section.marketing-table .mk-products .items-table .header span {
+    font-size: 21px;
+  }
+  body section.marketing-table .mk-products .items-table .line {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: -1.1%;
+  }
+  body section.marketing-table .mk-products .items-table .line .item {
+    width: 32.2%;
+    margin-left: 1.1%;
+  }
+  body section.marketing-table .mk-products .items-table .line .item img.new-mark {
+    width: 60px;
+    margin-top: 15px;
+    margin-left: 18px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item a.like-mark {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item a.like-mark img {
+    width: 30px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content {
+    padding-left: 27px;
+    padding-bottom: 18px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content a.unhidden-mark {
+    top: -42px;
+    margin-bottom: 12px;
+    margin-right: 14px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content a.unhidden-mark img {
+    width: 32px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .headtext {
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .headtext span.creator {
+    font-size: 15px;
+    line-height: 2;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .headtext span.name {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .additional {
+    margin-top: 16px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .additional .category {
+    margin-top: 16px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .additional .category img.category-flag {
+    width: 24px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .additional .category span {
+    font-size: 13px;
+    margin-left: 3px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .additional .rating img {
+    width: 21px;
+    margin-bottom: -4px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .additional .rating span.info {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .price span.price-value {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-products .items-table .line .item .content .price span.old-price-value {
+    font-size: 15px;
+    top: -36px;
+  }
+  body section.marketing-table .mk-products .items-table .btn-more {
+    margin-top: 20px;
+    margin-bottom: 34px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+  }
+  body section.marketing-table .mk-products .items-table .btn-more span {
+    font-size: 21px;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block {
+    display: block;
+    overflow-x: scroll;
+    padding: 8px 10px;
+    margin: 0 16px;
+    white-space: nowrap;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    display: inline-block;
+    margin-right: 19px;
+    width: 29.3%;
+    height: auto;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more-outer img.slide {
+    width: 100%;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more {
+    height: 100%;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more .text {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section {
+    padding-left: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section h2 {
+    font-size: 21px;
+    padding: 29.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
+    width: 30.4%;
+    margin-right: 3%;
+    padding-bottom: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
+    margin-left: 0;
+    padding-left: 62px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
+    margin-left: 9px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 63px;
+    padding: 21px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
+    display: inline-block;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
+    width: 29px;
+    height: 29px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
+    width: 24px;
+    height: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    font-size: 20px;
+    padding-left: 53px;
+    margin-right: 140px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block {
+    padding-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
+    max-width: 100%;
+    padding: 18.5px 0;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block img.separ {
+    display: block;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc {
+    font-size: 20px;
+    max-width: 100%;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px 0;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions {
+    margin-left: -30px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
+    font-size: 25px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
+    margin-left: 35px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    font-size: 20px;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction span.point {
+    font-size: 20px;
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form {
+    padding-top: 0;
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item {
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
+    font-size: 20px;
+    padding: 18.5px 0;
+    margin-bottom: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range] {
+    max-width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
+    width: 43px;
+    height: 43px;
+    margin-top: -20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
+    width: 43px;
+    height: 43px;
+    margin-top: -20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
+    width: 43px;
+    height: 43px;
+    margin-top: -20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
+    padding: 25px 0;
+    max-width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values {
+    margin-top: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
+    max-width: 100%;
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values img.separ.mob {
+    display: block;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
+    max-width: none;
+    margin-right: -40px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
+    display: inline-block;
+    width: 46%;
+    margin-right: 3%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
+    padding-left: 12px;
+    height: 38px;
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
+    padding: 6px 0 6px 12px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder span {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
+    padding-top: 21px;
+    padding-bottom: 35px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
+    width: 165px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    max-width: 70%;
+    font-size: 15px;
+    margin-left: 45px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form p.desc {
+    max-width: 100%;
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content {
+    padding-bottom: 75px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
+    width: 191px;
+    height: 60px;
+    line-height: 58px;
+    margin-bottom: -111px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send span {
+    font-weight: bold;
+    font-size: 17px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    display: block;
+    margin-top: 28px;
+    margin-bottom: 24px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    font-size: 21px;
+    padding: 29.5px 0;
+    padding-left: 37px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 90%;
+    margin-top: -7px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating {
+    margin-left: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating img {
+    width: 21px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    max-width: 830px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 5px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding: 10px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section, body section.marketing-table .mk-products .main-content .anchors-section {
+    margin: 34px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn {
+    height: 60px;
+    line-height: 58px;
+    font-size: 21px;
+    margin-right: 22px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body section.item-main-section .sm-preview-item .content .tags {
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 85px;
+    margin-top: 5px;
+  }
+  body section.item-main-section .sm-preview-item .content .head span.name {
+    padding: 10px 0;
+  }
+  body section.marketing-table .mk-products .main-content .anchors-section {
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn {
+    margin-bottom: 34px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price {
+    margin-top: 8px;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price span.old-price-value {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .category span {
+    margin-left: 11px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    max-width: 50%;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body section.item-main-section .sm-preview-item {
+    margin-bottom: 15px;
+  }
+  body section.item-main-section .sm-preview-item img.shop-preview {
+    width: 106px;
+  }
+  body section.item-main-section .sm-preview-item .content .head, body section.item-main-section .sm-preview-item .content .tags {
+    padding-left: 11px;
+  }
+  body section.item-main-section .sm-preview-item .content .head span.name {
+    font-size: 19px;
+    padding: 9.5px 0;
+  }
+  body section.item-main-section .sm-preview-item .content .head span.desc {
+    font-size: 13px;
+  }
+  body section.item-main-section .sm-preview-item .content .head .category-text {
+    font-size: 13px;
+    margin-right: 15px;
+    padding: 14px 0;
+  }
+  body section.item-main-section .sm-preview-item .content .tags img.tag-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+  }
+  body section.item-main-section .r-sidebar .info-block .name {
+    max-width: 75%;
+    line-height: 1.2;
+  }
+  body section.item-main-section .r-sidebar .info-block .brand, body section.item-main-section .r-sidebar .info-block .name, body section.item-main-section .r-sidebar .info-block a.send {
+    font-size: 22px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability {
+    margin-right: 15px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability span {
+    font-size: 19px;
+    margin-left: 15px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability .circle {
+    width: 15px;
+    height: 15px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    margin: 0 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content {
+    padding-left: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price span.price-value {
+    font-size: 22px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .headtext span.name {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
+    width: 48%;
+    margin-right: 2%;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    margin-right: 70px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0px;
+    padding: 18px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    display: none;
+    opacity: 1;
+    position: relative;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point0, body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range2-range-point0 {
+    display: inline;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point0 {
+    left: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point1 {
+    left: 10%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point2 {
+    left: 29%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point3 {
+    left: 44%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point4 {
+    left: 62%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point5 {
+    left: 81%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range2-range-point0 {
+    left: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range2-range-point1 {
+    left: 15%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range2-range-point2 {
+    left: 38%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range2-range-point3 {
+    left: 60%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range2-range-point4 {
+    left: 85%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range] {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    position: relative;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content {
+    padding-left: 0;
+    width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding-left: 89px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .photo-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 12px;
+    margin-left: 37px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn {
+    font-size: 19px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body section.marketing-table .marketing-navbar {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 24%;
+    margin: 0 10px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item img.new-mark {
+    width: 35px;
+    margin-left: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional {
+    margin-top: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .category {
+    margin-top: 8px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .category img.category-flag {
+    width: 18px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .category span {
+    margin-left: 5px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .rating img {
+    width: 16px;
+    margin-bottom: -2px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price span.old-price-value {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .btn-more {
+    height: 54px;
+    line-height: 50px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .btn-more span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
+    width: 44.5%;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content, body section.marketing-table .mk-info .main-content .about-shop .brands .content {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column {
+    width: 50%;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    white-space: normal;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    display: inline-block;
+    max-width: 80%;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
+    width: 160px;
+    height: 52px;
+    line-height: 50px;
+    margin-right: 15px;
+    margin-bottom: -66px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    height: 54px;
+    line-height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    max-width: 250px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section, body section.marketing-table .mk-products .main-content .anchors-section {
+    margin-top: 21px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn {
+    width: 100%;
+    height: 52px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body section.item-main-section {
+    padding-bottom: 0;
+  }
+  body section.item-main-section .r-sidebar {
+    margin-top: 4px;
+  }
+  body section.item-main-section .r-sidebar .info-block {
+    padding-left: 15px;
+    padding-bottom: 25px;
+  }
+  body section.item-main-section .r-sidebar .info-block img.new-mark {
+    width: 35px;
+    height: 18px;
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+  body section.item-main-section .r-sidebar .info-block .brand, body section.item-main-section .r-sidebar .info-block .articleN {
+    font-size: 13px;
+  }
+  body section.item-main-section .r-sidebar .info-block a.send {
+    font-size: 19px;
+    padding: 10px 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .name {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  body section.item-main-section .r-sidebar .info-block .articleN {
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .rating img {
+    width: 24px;
+    vertical-align: bottom;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price {
+    padding: 7px 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price span.price-value {
+    font-size: 22px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price span.old-price-value {
+    font-size: 13px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .range {
+    font-size: 10px;
+    padding: 0;
+    padding-bottom: 25px;
+  }
+  body section.item-main-section .r-sidebar .settings {
+    padding-left: 15px;
+    margin-top: 15px;
+  }
+  body section.item-main-section .r-sidebar .settings span.subhead {
+    font-size: 19px;
+    padding-top: 21px;
+  }
+  body section.item-main-section .r-sidebar .settings .colour, body section.item-main-section .r-sidebar .settings .size {
+    margin-top: 0;
+  }
+  body section.item-main-section .r-sidebar .settings .colour .var, body section.item-main-section .r-sidebar .settings .size .var {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  body section.item-main-section .r-sidebar .settings .availability {
+    margin-top: 24px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn {
+    margin-top: 33px;
+    padding: 10px 0;
+    margin-left: -15px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn span {
+    font-size: 19px;
+  }
+  body section.item-main-section .r-sidebar .settings span.region {
+    font-size: 19px;
+    padding: 9px 0;
+    margin-top: 33px;
+    margin-bottom: 19px;
+  }
+  body section.item-main-section .r-sidebar .arrows {
+    margin: 15px 0;
+  }
+  body section.item-main-section .r-sidebar .arrows a img {
+    width: 10px;
+  }
+  body section.item-main-section .r-sidebar .arrows span {
+    font-size: 19px;
+    margin: 0 35px;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns {
+    padding-bottom: 0;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns a.btn {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns a.btn.desk {
+    display: none;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns a.btn.mob {
+    display: block;
+  }
+  body section.marketing-table .marketing-navbar {
+    padding: 15px 0;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 28%;
+    margin: 0 1%;
+    padding: 12.5px 0;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table {
+    margin-bottom: 30px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .header {
+    padding: 22px 0;
+    padding-left: 15px;
+    margin-bottom: 17px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item {
+    width: 48%;
+    margin-left: 2%;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item a.like-mark {
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 13px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item a.like-mark img {
+    width: 20px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content a.unhidden-mark {
+    display: none;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .rating span.info {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .rating img {
+    width: 14px;
+    margin-bottom: -1px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .category {
+    margin-top: 14px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .category span {
+    margin-left: 7px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .btn-more {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 30px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block {
+    margin: 0 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block .slide {
+    margin-right: 11px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block .slide-more .text {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section {
+    padding-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .mk-info-section h2 {
+    font-size: 22px;
+    padding: 12px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery h2 {
+    margin-bottom: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type {
+    display: block;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
+    padding-top: 10px;
+    width: 100%;
+    margin-right: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
+    margin-left: 13px;
+    padding-left: 60px;
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::before {
+    width: 40px;
+    height: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::after {
+    width: 34px;
+    height: 34px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
+    padding: 6px 0;
+    padding-left: 73px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    margin-top: 65px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    font-size: 19px;
+    padding: 8px 0;
+    padding-left: 60px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
+    width: 40px;
+    height: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
+    width: 34px;
+    height: 34px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
+    padding: 8px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    font-size: 19px;
+    max-width: 65%;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span.ext {
+    opacity: 0.5;
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block img.separ {
+    padding-right: 0;
+  }
+  body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    font-size: 13px;
+    padding: 13px 0;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc, body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions {
+    margin-left: -15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item {
+    padding-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline {
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
+    margin-left: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction span.point {
+    font-size: 19px;
+    padding: 14.5px 0;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
+    font-size: 19px;
+    padding: 14.5px 0;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-fill-lower {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-fill-upper {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-track {
+    height: 5px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
+    width: 37px;
+    height: 37px;
+    margin-top: -17px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
+    width: 37px;
+    height: 37px;
+    margin-top: -17px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
+    width: 37px;
+    height: 37px;
+    margin-top: -17px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point0 {
+    left: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point1 {
+    left: 3%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point2 {
+    left: 20%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point3 {
+    left: 34%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point4 {
+    left: 52%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point5 {
+    left: 69%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
+    height: 60px;
+    padding-left: 21px;
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
+    padding: 16px 0 16px 21px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder span {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
+    padding-top: 29px;
+    padding-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
+    height: 52px;
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input, body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    margin-top: 48px;
+    max-width: none;
+    margin-left: 0;
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form p.desc {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
+    padding: 15px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark span a {
+    display: block;
+  }
+  body section.marketing-table .mk-feedback .main-content {
+    padding-bottom: 5px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    font-size: 22px;
+    padding: 22px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    padding-top: 32px;
+    padding-bottom: 23px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .photo-profile {
+    margin-left: 15px;
+    margin-top: 32px;
+    width: 75px;
+    height: 75px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding: 5px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    line-height: 1.2;
+    margin-top: 33px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding-left: 99px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body section.item-main-section .sm-preview-item img.shop-preview {
+    width: 100px;
+  }
+  body section.item-main-section .sm-preview-item .content .head .category-text {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 10px;
+    padding: 5px 0;
+  }
+  body section.item-main-section .sm-preview-item .content .head span.desc {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.15;
+    margin-top: 11px;
+    max-width: 170px;
+  }
+  body section.item-main-section .sm-preview-item .content .head span.name {
+    font-size: 16px;
+    padding-top: 9px;
+    padding-bottom: 0;
+  }
+  body section.item-main-section .sm-preview-item .content .tags {
+    display: none;
+  }
+  body section.item-main-section .r-sidebar {
+    margin-top: 0;
+  }
+  body section.item-main-section .r-sidebar .info-block {
+    padding-top: 16px;
+    padding-bottom: 30px;
+  }
+  body section.item-main-section .r-sidebar .info-block img.new-mark {
+    position: relative;
+    display: block;
+    margin: 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .name {
+    font-size: 16px;
+    max-width: none;
+  }
+  body section.item-main-section .r-sidebar .info-block a.send {
+    font-size: 15px;
+    padding: 0;
+  }
+  body section.item-main-section .r-sidebar .info-block .articleN {
+    padding-top: 16px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .rating, body section.item-main-section .r-sidebar .info-block .additional .price, body section.item-main-section .r-sidebar .info-block .additional .range {
+    margin-right: 15px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .rating img {
+    width: 18px;
+    height: 18px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price {
+    padding: 0;
+    margin-top: 5px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price span.price-value {
+    font-size: 19px;
+    margin-left: 10px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .price span.old-price-value {
+    font-size: 13px;
+  }
+  body section.item-main-section .r-sidebar .info-block .additional .range {
+    padding-bottom: 10px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability {
+    margin-top: 11px;
+    margin-right: 15px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability .circle {
+    width: 10px;
+    height: 10px;
+  }
+  body section.item-main-section .r-sidebar .settings .availability span {
+    font-size: 13px;
+    margin-left: 10px;
+  }
+  body section.item-main-section .r-sidebar .settings span.subhead {
+    font-size: 16px;
+    padding-top: 10px;
+    margin-bottom: 12px;
+  }
+  body section.item-main-section .r-sidebar .settings .colour .var, body section.item-main-section .r-sidebar .settings .size .var {
+    width: 35px;
+    height: 35px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn {
+    margin-top: 22px;
+    padding: 13px 0;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn span {
+    font-size: 16px;
+  }
+  body section.item-main-section .r-sidebar .settings .delivery-btn img {
+    width: auto;
+    height: 20px;
+  }
+  body section.item-main-section .r-sidebar .settings span.region {
+    padding: 0;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+  body section.item-main-section .r-sidebar .arrows span {
+    font-size: 16px;
+  }
+  body section.item-main-section .r-sidebar .sidebar-btns a.btn {
+    margin-bottom: 15px;
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    width: 48.5%;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch {
+    width: 100px;
+    margin: 0 1px;
+  }
+  body section.marketing-table .marketing-navbar .buttonSwitch span {
+    font-size: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table {
+    margin-bottom: 20px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .header {
+    padding: 14.5px 0;
+    padding-left: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .header span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item a.like-mark img {
+    width: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item img.new-mark {
+    margin-top: 8px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content {
+    padding-right: 8px;
+    padding-bottom: 11px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .headtext {
+    margin-top: 5px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .headtext span.name, body section.marketing-table .mk-products .main-content .items-table .line .item .content .headtext span.creator {
+    font-size: 13px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .additional .rating {
+    display: none;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price {
+    margin-top: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price span.price-value {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .price span.old-price-value {
+    display: none;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .line .item .content .category {
+    display: none;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .btn-more {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-products .main-content .items-table .btn-more span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block {
+    margin: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block .slide {
+    width: 34.5%;
+    margin-right: 6px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
+    margin-left: 16px;
+    padding-left: 46px;
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::before {
+    width: 30px;
+    height: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label::after {
+    width: 24px;
+    height: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text {
+    padding-left: 62px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item .ext-text span {
+    font-size: 14px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
+    margin-top: 22px;
+    margin-bottom: 7px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label {
+    padding: 5.5px 0;
+    padding-left: 50px;
+    font-size: 16px;
+    margin-right: 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::before {
+    width: 30px;
+    height: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item label::after {
+    width: 24px;
+    height: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line {
+    padding: 10.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span {
+    font-size: 16px;
+    max-width: 70%;
+  }
+  body section.marketing-table .mk-info .main-content .delivery .inf-block .line span.ext {
+    font-size: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb p.desc {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb span.footnote {
+    padding: 5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline span.name {
+    font-size: 16px;
+    max-width: 220px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .headline img.arrow {
+    width: 10px;
+    float: right;
+    margin-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .reimb .questions .item .hidden .text p {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .credit .instruction span.point {
+    font-size: 16px;
+    padding: 11px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item {
+    padding-bottom: 7px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .headtext {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range] {
+    bottom: 7px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-webkit-slider-thumb {
+    width: 21px;
+    height: 21px;
+    margin-top: -8px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-moz-range-thumb {
+    width: 21px;
+    height: 21px;
+    margin-top: -8px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item input[type=range]::-ms-thumb {
+    width: 21px;
+    height: 21px;
+    margin-top: -8px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
+    padding: 14.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point0 {
+    left: 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point1 {
+    left: 10%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point2 {
+    left: 29%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point3 {
+    left: 44%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point4 {
+    left: 62%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span.range1-range-point5 {
+    left: 65%;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line {
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .calc-values .line span {
+    font-size: 16px;
+    display: inline-block;
+    max-width: 150px;
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts {
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer {
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer input {
+    height: 40px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
+    padding: 6px 0 6px 21px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block {
+    padding-top: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block input {
+    height: 40px;
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .submit-block p.desc {
+    margin-top: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .credit form.credit-form .mark {
+    line-height: 1.2;
+  }
+  body section.marketing-table .mk-info .main-content .reimb h2, body section.marketing-table .mk-info .main-content .credit h2 {
+    font-size: 19px;
+    padding: 19.5px 0;
+  }
+  body section.marketing-table .mk-feedback .main-content {
+    padding-bottom: 10px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send {
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-send span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .btn-more.mob span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
+    font-size: 19px;
+    padding: 24px 0;
+    padding-left: 15px;
+    max-width: 100%;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .photo-profile {
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating img {
+    width: 18px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding: 0;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    margin-top: 5px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content p.review-text {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.review-date {
+    font-size: 10px;
+  }
+  body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.name, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content .rating, body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .content span.login {
+    padding-left: 61px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section, body section.marketing-table .mk-products .main-content .anchors-section {
+    margin-top: 15px;
+  }
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn {
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
   }
 }

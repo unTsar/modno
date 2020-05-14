@@ -2110,6 +2110,7 @@ body footer .footer-bottomLine .payments img.payment-img {
     display: none;
     margin-top: 0;
     line-height: 3.1;
+    max-height: 1000000px;
   }
   body footer .footer-content .container .footer-content-wrapper .links .list a {
     font-size: 17px;

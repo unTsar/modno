@@ -12,6 +12,19 @@ body
 					border-radius: 5px
 				.fotorama__thumb
 					border-radius: 5px
+			.fotorama__dot
+					width: 11px
+					height: 11px
+					background-color: #C4C4C4
+					border: none
+					top: 15px
+			.fotorama__nav--dots
+				.fotorama__nav__frame
+					width: 20px
+					height: 30px
+			.fotorama__nav__frame.fotorama__active
+				.fotorama__dot
+					background-color: $accent-blue
 		.fotorama__img
 			border-radius: 15px !important
 
@@ -67,6 +80,19 @@ body
 					img.fotorama__img
 						width: 113px
 						height: 70px
+				.fotorama__dot
+					width: 11px
+					height: 11px
+					background-color: #C4C4C4
+					border: none
+					top: 15px
+				.fotorama__nav--dots
+					.fotorama__nav__frame
+						width: 20px
+						height: 40px
+				.fotorama__nav__frame.fotorama__active
+					.fotorama__dot
+						background-color: $accent-blue
 			.photoswiper-nav
 				width: 100%
 				padding-top: 12px
@@ -351,6 +377,8 @@ body
 					background-color: $accent-blue
 					border-color: $accent-blue
 					color: #fff
+				a.btn.mob
+					display: none
 
 
 	section.marketing-table
@@ -391,7 +419,7 @@ body
 			.anchors-section
 				position: relative
 				margin: 15px 0 20px 0
-				a.anchor-btn
+				.anchor-btn
 					display: inline-block
 					position: relative
 					padding: 0px 28px
@@ -402,7 +430,7 @@ body
 					border-radius: 5px
 					margin-right: 7px
 					transition: 0.3s
-				a.anchor-btn::before
+				.anchor-btn::before
 					content: ''
 					position: absolute
 					top: 0
@@ -411,10 +439,10 @@ body
 					height: 100%
 					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 					border-radius: 5px
-				a.anchor-btn:hover, a.anchor-btn.active 
+				.anchor-btn:hover, .anchor-btn.active 
 					box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 					background-color: #E5E5E5
-				a.anchor-btn.disabled
+				.anchor-btn.disabled
 					pointer-events: none
 			.items-table
 				margin-bottom: 38px
@@ -538,22 +566,61 @@ body
 					span
 						color: #fff
 			.items-table.publications
-				overflow: hidden
-				.line
-					.item
-						width: 24.26%
-						border-radius: 5px
+				.swiper-block
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: space-between
+					padding-top: 15px
+					padding-bottom: 15px
+					.slide
+						position: relative
+						transition: 0.3s
 						cursor: pointer
+						outline: none
+						vertical-align: top
 						display: inline-block
+						height: 150px
+						width: 150px
+						border-radius: 5px
+					.slide:hover
+						box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+					.slide-more-outer
 						img
+							opacity: 0
+					.slide-more
+						position: absolute
+						z-index: 20
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						width: 100%
+						height: 100%
+						background-color: #f2f2f2
+						.text
 							width: 100%
-							display: block
+							height: 100%
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							align-items: center
+							justify-content: center
+							text-align: center
+							font-weight: bold
+							font-size: 15px
+							line-height: 1.4
+							color: #808080
 		.mk-info
 			font-size: 15px
 			.main-content
 				.anchors-section
 					margin: 17px 0
-					a.anchor-btn
+					.anchor-btn
 						display: inline-block
 						position: relative
 						padding: 0 20px
@@ -564,7 +631,7 @@ body
 						border-radius: 5px
 						margin-right: 7px
 						transition: 0.3s
-					a.anchor-btn::before
+					.anchor-btn::before
 						content: ''
 						position: absolute
 						top: 0
@@ -573,7 +640,7 @@ body
 						height: 100%
 						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 						border-radius: 5px
-					a.anchor-btn:hover 
+					.anchor-btn:hover 
 						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 						background-color: #E5E5E5
 				.mk-info-section
@@ -1176,7 +1243,22 @@ body
 						max-height: 2px
 		.mk-block
 			display: none
+@media only screen and(max-width: 1140px)
+	body
+		section.marketing-table
+			.mk-products, .mk-info, .mk-feedback
+				.main-content
+					padding: 0 15px
 
+@media only screen and(max-width: 1100px)
+	body
+		section.marketing-table
+			.mk-products
+				.items-table.publications
+					.swiper-block 
+						.slide
+							width: 140px
+							height: 140px
 @media only screen and(max-width: 1024px)
 	body
 		section.item-main-section
@@ -1211,6 +1293,1456 @@ body
 			.preview-content, .r-sidebar
 				display: block
 				width: 100%
+			.preview-content
+				.desc-block
+					display: none
 			.r-sidebar
 				padding-top: 0
 				margin-top: 34px
+				margin-left: 0
+				.info-block
+					padding-top: 0
+					padding-left: 29px
+					padding-bottom: 57px
+					font-size: 25px
+					img.new-mark
+						width: 60px
+						height: 30px
+						margin-top: 26px
+						margin-right: 28px
+					.name
+						font-size: 25px
+						padding: 19.5px 0
+					.brand
+						margin: 0
+						font-size: 25px
+					a.send
+						display: block
+						font-size: 25px
+						padding: 19.5px 0
+					.articleN
+						font-size: 20px
+						margin-top: 0
+						padding: 8.5px 0
+					.additional
+						.rating
+							margin-right: 28px
+							img
+								width: 37px
+								vertical-align: top
+						.price
+							margin-top: 0
+							margin-right: 28px
+							padding: 12px 0
+							span.price-value
+								font-size: 35px
+								margin-left: 20px
+							span.old-price-value
+								font-size: 20px
+								padding: 0
+						.range
+							font-size: 20px
+							margin: 0
+							padding: 5px 0
+							margin-right: 28px
+				.settings
+					margin-top: 34px
+					padding-left: 29px
+					padding-top: 0
+					padding-bottom: 0
+					.availability
+						margin-right: 19px
+						margin-top: 28px
+						.circle
+							width: 19px
+							height: 19px
+						span
+							font-size: 25px
+							margin-left: 19px
+					span.subhead
+						display: inline-block
+						font-size: 25px
+						padding-top: 9px
+					.colour, .size
+						margin-top: 18px
+						.var
+							width: 41px
+							height: 41px
+							line-height: 38px
+							font-size: 19px
+							margin-right: 13px
+							margin-bottom: 13px
+					.delivery-btn
+						display: block
+						width: auto
+						margin-left: -29px
+						border-radius: 0
+						padding: 17px 0
+						margin-top: 50px
+						span
+							font-size: 24px
+							margin-left: 19px
+						img
+							width: 36px
+					span.region
+						font-size: 25px
+						margin-left: 0
+						padding: 15px 0
+				.arrows
+					margin-top: 34px
+					padding: 16px 0
+					margin-bottom: 18px
+					span
+						font-size: 18px
+						margin: 0 75px
+					a
+						position: relative
+						display: inline-block
+						img
+							margin: 0px
+					.arrow-left
+						margin-right: 11px
+					.arrow-right
+						margin-left: 11px
+				.sidebar-btns
+					padding-bottom: 17px
+					a.btn
+						width: 49.2%
+						height: 60px
+						line-height: 56px
+						font-size: 21px
+		section.marketing-table
+			.marketing-navbar
+				margin-bottom: 34px
+				padding: 19px 0
+				.input-outer
+					pointer-events: none
+					user-select: none
+					*
+						display: none
+				.buttonSwitch
+					padding-top: 21px
+					padding-bottom: 21px
+					margin: 0 28px
+					width: 165px
+					span
+						font-size: 17px
+				.buttonSwitch.active
+					span
+						color: #000
+				.buttonSwitch:hover
+					span
+						color: #000
+			.mk-products
+				.items-table
+					margin-bottom: 34px
+					.header
+						padding: 29.5px 0
+						padding-left: 28px
+						margin-bottom: 32px
+						span
+							font-size: 21px
+					.line
+						flex-wrap: wrap
+						justify-content: flex-start
+						padding-top: 0
+						padding-bottom: 0
+						margin-bottom: 0
+						margin-left: -1.1%
+						.item
+							width: 32.2%
+							margin-left: 1.1%
+							img.new-mark
+								width: 60px
+								margin-top: 15px
+								margin-left: 18px
+							a.like-mark
+								margin-top: 10px
+								margin-right: 10px
+								img 
+									width: 30px
+							.content
+								padding-left: 27px	
+								padding-bottom: 18px
+								a.unhidden-mark
+									top: -42px
+									margin-bottom: 12px
+									margin-right: 14px
+									img
+										width: 32px
+								.headtext
+									line-height: 1.6
+									margin-top: 10px
+									span.creator
+										font-size: 15px
+										line-height: 2
+									span.name
+										font-size: 20px
+								.additional
+									margin-top: 16px
+									.category
+										margin-top: 16px
+										img.category-flag
+											width: 24px
+										span
+											font-size: 13px
+											margin-left: 3px
+									.rating
+										img
+											width: 21px
+											margin-bottom: -4px
+										span.info
+											font-size: 15px
+								.price
+									span.price-value
+										font-size: 25px
+										line-height: 1.2
+									span.old-price-value
+										font-size: 15px
+										top: -36px
+					.btn-more
+						margin-top: 20px
+						margin-bottom: 34px
+						width: 200px
+						height: 60px
+						line-height: 60px
+						span
+							font-size: 21px
+				.items-table.publications
+					.swiper-block 
+						display: block
+						overflow-x: scroll
+						padding: 8px 10px
+						margin: 0 16px
+						white-space: nowrap
+						.slide
+							border-radius: 10px
+							display: inline-block
+							margin-right: 19px
+							width: 29.3%
+							height: auto
+						.slide-more-outer
+							img.slide
+								width: 100%
+						.slide-more
+							height: 100%
+							.text
+								font-size: 19px
+			.mk-info
+				.main-content
+					.mk-info-section
+						padding-left: 30px
+						h2
+							font-size: 21px
+							padding: 29.5px 0
+					.delivery
+						form.form-block
+							.delivery-type
+								.radio-item
+									width: 30.4%
+									margin-right: 3%
+									padding-bottom: 13px
+									.ext-text	
+										margin-left: 0
+										padding-left: 62px
+										span
+											font-size: 14px
+									label
+										margin-left: 9px
+							.choice-city
+								white-space: nowrap
+								overflow: hidden
+								margin-top: 20px
+								margin-bottom: 63px
+								padding: 21px 0
+								.radio-item
+									display: inline-block
+									label::before
+										width: 29px
+										height: 29px
+									label::after
+										width: 24px
+										height: 24px
+									label
+										font-size: 20px
+										padding-left: 53px
+										margin-right: 140px
+						.inf-block
+							padding-bottom: 0
+							.line
+								max-width: 100%
+								padding: 18.5px 0
+								padding-right: 30px
+								span
+									font-size: 20px
+							img.separ
+								display: block
+								padding-right: 30px
+					.reimb
+						p.desc
+							font-size: 20px
+							max-width: 100%
+							padding-right: 30px
+						span.footnote
+							font-size: 15px
+							display: inline-block
+							padding: 5px 0
+							padding-right: 30px
+						.questions
+							margin-left: -30px
+							.item
+								.headline
+									span.name
+										font-size: 25px
+									img.arrow
+										margin-left: 35px
+								.hidden	
+									.text
+										p
+											font-size: 20px
+											padding-right: 30px
+					.credit
+						.instruction
+							span.point
+								font-size: 20px
+								padding: 18.5px 0
+						form.credit-form
+							padding-top: 0
+							padding-right: 30px
+							.range-item	
+								margin-bottom: 0
+								.headtext
+									font-size: 20px
+									padding: 18.5px 0
+									margin-bottom: 20px
+								input[type=range]
+									max-width: 100%
+								input[type=range]::-webkit-slider-thumb
+									width: 43px
+									height: 43px
+									margin-top: -20px
+								input[type=range]::-moz-range-thumb
+									width: 43px
+									height: 43px
+									margin-top: -20px
+								input[type=range]::-ms-thumb
+									width: 43px
+									height: 43px
+									margin-top: -20px
+								.range-points
+									padding: 25px 0
+									max-width: 100%
+									span
+										font-size: 20px
+							.calc-values
+								margin-top: 20px
+								.line
+									max-width: 100%
+									padding: 18.5px 0
+									span
+										font-size: 20px
+								img.separ.mob
+									display: block
+							.input-contacts
+								max-width: none
+								margin-right: -40px
+								.input-outer
+									display: inline-block
+									width: 46%
+									margin-right: 3%
+									margin-top: 0
+									margin-bottom: 20px
+									input
+										padding-left: 12px
+										height: 38px
+										font-size: 14px
+									.placeholder
+										padding: 6px 0 6px 12px
+										span
+											font-size: 14px
+							.submit-block
+								padding-top: 21px
+								padding-bottom: 35px
+								input
+									width: 165px
+									height: 60px
+									font-size: 17px
+									font-weight: bold
+								p.desc 
+									max-width: 70%
+									font-size: 15px
+									margin-left: 45px
+							p.desc 
+								max-width: 100%
+								font-size: 15px
+							.mark
+								padding-top: 40px
+								padding-bottom: 32px
+								span
+									font-size: 15px
+			.mk-feedback
+				.main-content
+					padding-bottom: 75px
+					.anchors-section
+						a.btn-send
+							width: 191px
+							height: 60px
+							line-height: 58px
+							margin-bottom: -111px
+							span
+								font-weight: bold
+								font-size: 17px
+					.btn-more.mob
+						display: block
+						margin-top: 28px
+						margin-bottom: 24px
+					.reviews-list
+						h2
+							font-size: 21px
+							padding: 29.5px 0
+							padding-left: 37px
+						.review-item
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							.content
+								display: flex
+								flex-wrap: wrap
+								width: 90%
+								margin-top: -7px
+								.rating, span.login
+									width: 100%
+								span.name, p.review-text
+									font-size: 20px
+								span.review-date, span.login
+									font-size: 15px
+								.rating
+									margin-left: 0
+									order: 1
+									img
+										width: 21px
+								p.review-text
+									max-width: 830px
+									order: 2
+									margin-top: 5px
+								span.login
+									padding: 10px 0
+			.mk-feedback, .mk-info, .mk-products
+				.main-content
+					.anchors-section
+						margin: 34px 0
+						.anchor-btn
+							height: 60px
+							line-height: 58px
+							font-size: 21px
+							margin-right: 22px
+@media only screen and(max-width: 900px)
+	body
+		section.item-main-section
+			.sm-preview-item
+				.content
+					.tags
+						position: relative
+						margin-bottom: 0
+						padding-left: 85px
+						margin-top: 5px
+					.head
+						span.name
+							padding: 10px 0
+		section.marketing-table
+			.mk-products
+				.main-content
+					.anchors-section
+						margin-bottom: 0
+						.anchor-btn
+							margin-bottom: 34px
+					.items-table
+						.line
+							.item
+								.content
+									.price
+										margin-top: 8px
+										position: relative
+										top: 0
+										right: 0
+										span
+											display: inline-block
+											vertical-align: middle
+										span.old-price-value
+											position: relative
+											top: 0
+											margin-left: 10px
+									.additional
+										.category
+											span
+												margin-left: 11px
+			.mk-info
+				.main-content
+					.credit
+						form.credit-form
+							.submit-block
+								p.desc
+									max-width: 50%
+									margin-left: 7%
+@media only screen and(max-width: 768px)
+	body
+		section.item-main-section
+			.sm-preview-item
+				margin-bottom: 15px
+				img.shop-preview
+					width: 106px
+				.content
+					.head, .tags
+						padding-left: 11px
+					.head
+						span.name
+							font-size: 19px
+							padding: 9.5px 0
+						span.desc
+							font-size: 13px
+						.category-text
+							font-size: 13px
+							margin-right: 15px
+							padding: 14px 0
+					.tags
+						img.tag-img
+							width: 25px
+							height: 25px
+							margin-right: 4px
+			.r-sidebar
+				.info-block
+					.name
+						max-width: 75%
+						line-height: 1.2
+					.brand, .name, a.send
+						font-size: 22px
+				.settings
+					.availability
+						margin-right: 15px
+						span
+							font-size: 19px
+							margin-left: 15px
+						.circle
+							width: 15px
+							height: 15px
+		section.marketing-table
+			.marketing-navbar
+				.buttonSwitch
+					margin: 0 15px
+			.mk-products
+				.main-content
+					.items-table
+						.line
+							.item
+								.content
+									padding-left: 15px
+									.price
+										span.price-value
+											font-size: 22px
+									.headtext
+										span.name
+											font-size: 19px
+			.mk-info
+				.main-content
+					.delivery
+						form.form-block
+							.delivery-type
+								flex-wrap: wrap
+								.radio-item
+									width: 48%
+									margin-right: 2%
+									margin-bottom: 15px
+							.choice-city
+								.radio-item
+									label
+										margin-right: 70px
+					.credit
+						form.credit-form
+							.range-item
+								position: relative
+								padding-bottom: 20px
+								.range-points
+									border: 0.5px solid rgba(0, 0, 0, 0.3)
+									border-radius: 5px 5px 0px 0px
+									padding: 18px 0
+									white-space: nowrap
+									position: relative
+									span
+										display: none
+										opacity: 1
+										position: relative
+									span.range1-range-point0, span.range2-range-point0
+										display: inline
+									span.range1-range-point0
+										left: 0
+									span.range1-range-point1
+										left: 10%
+									span.range1-range-point2
+										left: 29%
+									span.range1-range-point3
+										left: 44%
+									span.range1-range-point4
+										left: 62%
+									span.range1-range-point5
+										left: 81%
+
+									span.range2-range-point0
+										left: 0
+									span.range2-range-point1
+										left: 15%
+									span.range2-range-point2
+										left: 38%
+									span.range2-range-point3
+										left: 60%
+									span.range2-range-point4
+										left: 85%
+								input[type=range]
+									position: absolute
+									bottom: 20px
+									z-index: 1
+			.mk-feedback
+				.main-content
+					.reviews-list
+						.review-item
+							position: relative
+							.content
+								padding-left: 0
+								width: 100%
+								span.name, .rating, span.login
+									padding-left: 89px
+							.photo-profile
+								position: absolute
+								top: 0
+								left: 0
+								margin-top: 12px
+								margin-left: 37px
+			.mk-feedback, .mk-info, .mk-products
+				.main-content
+					.anchors-section
+						.anchor-btn
+							font-size: 19px
+							margin-right: 15px
+
+@media only screen and(max-width: 600px)
+	body
+		section.marketing-table
+			.marketing-navbar
+				margin-top: 0
+				margin-bottom: 15px
+				.buttonSwitch
+					width: 24%
+					margin: 0 10px
+					span
+						font-size: 19px
+			.mk-products
+				.main-content
+					.items-table
+							.line
+								.item
+									img.new-mark
+										width: 35px
+										margin-left: 15px
+									.content
+										.additional
+											margin-top: 0
+											.category
+												margin-top: 8px
+												img.category-flag
+													width: 18px
+												span
+													margin-left: 5px
+											.rating
+												img
+													width: 16px
+													margin-bottom: -2px
+										.price
+											span.old-price-value
+												font-size: 13px
+							.btn-more
+								height: 54px
+								line-height: 50px
+								span
+									font-size: 20px
+				.items-table.publications
+					.swiper-block
+						padding-left: 0
+						padding-right: 0
+						.slide
+							width: 44.5%
+			.mk-info
+				.main-content
+					.about-shop
+						.categories, .brands
+							.content
+								flex-wrap: wrap
+								.category-column, .brands-column
+									width: 50%
+					.delivery
+						form.form-block
+							.choice-city
+								white-space: normal
+								padding: 0
+								margin-bottom: 30px
+								.radio-item
+									margin-right: 0
+									margin-bottom: 30px
+						.inf-block
+							.line
+								span
+									display: inline-block
+									max-width: 80%
+									line-height: 1.2
+					.reimb
+						p.desc
+							font-size: 19px
+							line-height: 1.2
+						.questions
+							.item
+								.headline
+									span.name
+										font-size: 19px
+								.hidden
+									.text
+										p
+											font-size: 19px
+											line-height: 1.4
+			.mk-feedback
+				.main-content
+					.anchors-section
+						a.btn-send
+							width: 160px
+							height: 52px
+							line-height: 50px
+							margin-right: 15px
+							margin-bottom: -66px
+					.btn-more.mob
+						height: 54px
+						line-height: 50px
+						margin-top: 15px
+						margin-bottom: 15px
+						span
+							font-size: 20px
+					.reviews-list
+						h2
+							max-width: 250px
+							line-height: 1.2
+			.mk-feedback, .mk-info, .mk-products
+				.main-content
+					.anchors-section
+						margin-top: 21px
+						margin-bottom: 0
+						.anchor-btn
+							width: 100%
+							height: 52px
+							line-height: 50px
+							text-align: center
+							margin-right: 0
+							margin-bottom: 15px
+@media only screen and(max-width: 500px)
+	body
+		section.item-main-section
+			padding-bottom: 0
+			.r-sidebar
+				margin-top: 4px
+				.info-block
+					padding-left: 15px
+					padding-bottom: 25px
+					img.new-mark
+						width: 35px
+						height: 18px
+						margin-top: 20px
+						margin-right: 15px
+					.brand, .articleN
+						font-size: 13px
+					a.send
+						font-size: 19px
+						padding: 10px 0
+					.name
+						padding-top: 15px
+						padding-bottom: 10px
+					.articleN
+						padding-top: 35px
+						padding-bottom: 0
+					.additional
+						.rating
+							img
+								width: 24px
+								vertical-align: bottom
+						.price
+							padding: 7px 0
+							span.price-value
+								font-size: 22px
+							span.old-price-value
+								font-size: 13px
+						.range
+							font-size: 10px
+							padding: 0
+							padding-bottom: 25px
+				.settings
+					padding-left: 15px
+					margin-top: 15px
+					span.subhead
+						font-size: 19px
+						padding-top: 21px
+					.colour, .size
+						margin-top: 0
+						.var
+							margin-top: 15px
+							margin-bottom: 0
+					.availability
+						margin-top: 24px
+					.delivery-btn
+						margin-top: 33px
+						padding: 10px 0
+						margin-left: -15px
+						span
+							font-size: 19px
+					span.region
+						font-size: 19px
+						padding: 9px 0
+						margin-top: 33px
+						margin-bottom: 19px
+				.arrows
+					margin: 15px 0
+					a
+						img
+							width: 10px
+					span
+						font-size: 19px
+						margin: 0 35px
+				.sidebar-btns
+					padding-bottom: 0
+					a.btn
+						margin-top: 0
+						margin-bottom: 20px
+						font-size: 19px
+					a.btn.desk
+						display: none
+					a.btn.mob
+						display: block
+		section.marketing-table
+			.marketing-navbar
+				padding: 15px 0
+				.buttonSwitch
+					width: 28%
+					margin: 0 1%
+					padding: 12.5px 0
+					span
+						font-size: 16px
+			.mk-products
+				.main-content
+					.items-table
+						margin-bottom: 30px
+						.header
+							padding: 22px 0
+							padding-left: 15px
+							margin-bottom: 17px
+							span
+								font-size: 
+						.line
+							.item
+								width: 48%
+								margin-left: 2%
+								a.like-mark
+									z-index: 1
+									bottom: 0
+									right: 0
+									top: auto
+									margin-top: 0
+									margin-right: 15px
+									margin-bottom: 13px
+									img
+										width: 20px
+								.content
+									a.unhidden-mark
+										display: none
+									.headtext 
+										span.creator
+									.additional
+										.rating
+											span.info
+												font-size: 13px
+											img
+												width: 14px
+												margin-bottom: -1px
+										.category
+											margin-top: 14px
+											span
+												margin-left: 7px
+						.btn-more
+							width: 100%
+							margin-top: 16px
+							margin-bottom: 30px
+					.items-table.publications
+						.swiper-block
+							margin: 0 15px
+							.slide
+								margin-right: 11px
+							.slide-more
+								.text
+									font-size: 13px
+			.mk-info
+				.main-content
+					.mk-info-section
+						padding-left: 15px
+						h2
+							font-size: 22px
+							padding: 12px 0
+					.delivery
+						padding-right: 15px
+						h2
+							margin-bottom: 10px
+						form.form-block
+							.delivery-type
+								display: block
+								.radio-item
+									padding-top: 10px
+									width: 100%	
+									margin-right: 0
+									label
+										margin-left: 13px
+										padding-left: 60px
+										font-size: 19px
+									label::before
+										width: 40px
+										height: 40px
+									label::after
+										width: 34px
+										height: 34px
+									.ext-text
+										padding: 6px 0
+										padding-left: 73px
+										span
+											font-size: 19px
+							.choice-city
+								margin-top: 65px
+								margin-bottom: 0
+								.radio-item
+									label
+										font-size: 19px
+										padding: 8px 0
+										padding-left: 60px
+									label::before
+										width: 40px
+										height: 40px
+									label::after
+										width: 34px
+										height: 34px
+						.inf-block
+							.line
+								padding: 8px 0
+								span
+									font-size: 19px
+									max-width: 65%
+								span.ext
+									opacity: 0.5
+									font-size: 13px
+							img.separ
+								padding-right: 0
+					.reimb
+						span.footnote
+							font-size: 13px
+							padding: 13px 0
+							line-height: 1.2
+						p.desc, span.footnote
+							padding-right: 15px
+						.questions
+							margin-left: -15px
+							.item
+								padding-left: 15px
+								.headline
+									padding: 4.5px 0
+									img.arrow
+										margin-left: 15px
+								.hidden
+									.text
+										p
+											line-height: 1.2
+					.credit
+						.instruction
+							padding-right: 15px
+							span.point
+								font-size: 19px
+								padding: 14.5px 0
+								line-height: 1.2
+						form.credit-form
+							padding-right: 15px
+							.range-item
+								.headtext
+									font-size: 19px
+									padding: 14.5px 0
+									margin-bottom: 0
+								input[type=range]::-webkit-slider-runnable-track
+									height: 5px
+								input[type=range]::-moz-range-track
+									height: 5px
+								input[type=range]::-ms-track
+									height: 5px
+								input[type=range]::-ms-fill-lower
+									height: 5px
+								input[type=range]::-ms-fill-upper
+									height: 5px
+								input[type=range]::-webkit-slider-runnable-track
+									height: 5px
+								input[type=range]::-moz-range-track
+									height: 5px
+								input[type=range]::-ms-track
+									height: 5px
+								input[type=range]::-webkit-slider-thumb
+									width: 37px
+									height: 37px
+									margin-top: -17px
+								input[type=range]::-moz-range-thumb
+									width: 37px
+									height: 37px
+									margin-top: -17px
+								input[type=range]::-ms-thumb
+									width: 37px
+									height: 37px
+									margin-top: -17px
+								.range-points
+									span.range1-range-point0
+										left: 0
+									span.range1-range-point1
+										left: 3%
+									span.range1-range-point2
+										left: 20%
+									span.range1-range-point3
+										left: 34%
+									span.range1-range-point4
+										left: 52%
+									span.range1-range-point5
+										left: 69%
+									span
+										font-size: 19px
+							.calc-values
+								.line
+									padding: 4.5px 0
+									span
+										font-size: 19px
+							.input-contacts
+								margin-right: 0
+								margin-top: 30px
+								.input-outer
+									width: 100%
+									margin-right: 0
+									margin-bottom: 14px
+									input
+										height: 60px
+										padding-left: 21px
+										font-size: 13px
+									.placeholder
+										padding: 16px 0 16px 21px
+										span
+											font-size: 13px
+							.submit-block
+								padding-top: 29px
+								padding-bottom: 15px
+								input
+									height: 52px
+									font-size: 19px
+								input, p.desc
+									width: 100%
+								p.desc 
+									margin-top: 48px
+									max-width: none
+									margin-left: 0
+									font-size: 13px
+							p.desc
+								font-size: 13px
+							.mark
+								padding: 15px 0
+								span
+									font-size: 13px
+									line-height: 1.2
+									a
+										display: block
+			.mk-feedback
+				.main-content
+					padding-bottom: 5px
+					.btn-more.mob
+						width: 100%
+					.reviews-list
+						h2
+							font-size: 22px
+							padding: 22px 0
+						.review-item
+							padding-top: 32px
+							padding-bottom: 23px
+							.photo-profile
+								margin-left: 15px
+								margin-top: 32px
+								width: 75px
+								height: 75px
+							.content
+								span.review-date
+									margin-left: auto
+									margin-right: 15px
+								span.login 
+									padding: 5px 0
+								p.review-text
+									line-height: 1.2
+									margin-top: 33px
+								span.name, .rating, span.login
+									padding-left: 99px
+								span.name, p.review-text
+									font-size: 19px
+								span.login, span.review-date
+									font-size: 13px
+
+						h2, .review-item
+							padding-left: 15px
+@media only screen and(max-width: 400px)
+	body
+		section.item-main-section
+			.sm-preview-item
+				img.shop-preview
+					width: 100px
+				.content
+					.head
+						.category-text
+							position: relative
+							padding: 0
+							margin: 0
+							line-height: 1
+							font-size: 10px
+							padding: 5px 0
+						span.desc
+							font-size: 13px
+							color: #333
+							line-height: 1.15
+							margin-top: 11px
+							max-width: 170px
+						span.name
+							font-size: 16px
+							padding-top: 9px
+							padding-bottom: 0
+					.tags
+						display: none
+			.r-sidebar
+				margin-top: 0
+				.info-block
+					padding-top: 16px
+					padding-bottom: 30px
+					img.new-mark
+						position: relative
+						display: block
+						margin: 0
+					.name
+						font-size: 16px
+						max-width: none
+					a.send
+						font-size: 15px
+						padding: 0
+					.articleN
+						padding-top: 16px
+					.additional
+						.rating, .price, .range
+							margin-right: 15px
+						.rating
+							img
+								width: 18px
+								height: 18px
+						.price
+							padding: 0
+							margin-top: 5px
+							span.price-value
+								font-size: 19px
+								margin-left: 10px
+							span.old-price-value
+								font-size: 13px
+						.range
+							padding-bottom: 10px
+				.settings
+					.availability
+						margin-top: 11px
+						margin-right: 15px
+						.circle
+							width: 10px
+							height: 10px
+						span
+							font-size: 13px
+							margin-left: 10px
+					span.subhead
+						font-size: 16px
+						padding-top: 10px
+						margin-bottom: 12px
+					.colour, .size
+						.var
+							width: 35px
+							height: 35px
+							margin-right: 7px
+							margin-bottom: 10px
+							margin-top: 0
+							font-size: 16px
+							line-height: 32px
+					.delivery-btn
+						margin-top: 22px
+						padding: 13px 0
+						span
+							font-size: 16px
+						img
+							width: auto
+							height: 20px
+					span.region
+						padding: 0
+						margin-top: 14px
+						margin-bottom: 6px
+						font-size: 16px
+				.arrows
+					span
+						font-size: 16px
+				.sidebar-btns
+					a.btn
+						margin-bottom: 15px
+						font-size: 16px
+						height: 40px
+						line-height: 38px
+						width: 48.5%
+		section.marketing-table
+			.marketing-navbar
+				.buttonSwitch
+					width: 100px
+					margin: 0 1px
+					span
+						font-size: 15px
+			.mk-products
+				.main-content
+					.items-table
+						margin-bottom: 20px
+						.header
+							padding: 14.5px 0
+							padding-left: 16px
+							span
+								font-size: 19px
+						.line
+							.item 
+								a.like-mark
+									img
+										width: 15px
+								img.new-mark
+									margin-top: 8px
+								.content
+									padding-right: 8px
+									padding-bottom: 11px
+									.headtext
+										margin-top: 5px
+										span.name, span.creator
+											font-size: 13px
+									.additional
+										.rating
+											display: none
+									.price
+										margin-top: 0
+										span.price-value
+											font-size: 19px
+										span.old-price-value
+											display: none
+									.category
+										display: none
+						.btn-more
+							height: 40px
+							line-height: 40px
+							margin-bottom: 0
+							span
+								font-size: 16px
+					.items-table.publications
+						.swiper-block 
+							margin: -15px
+							padding-left: 15px
+							padding-right: 15px
+							.slide
+								width: 34.5%
+								margin-right: 6px
+			.mk-info
+				.main-content
+					.delivery
+						form.form-block
+							.delivery-type
+								.radio-item
+									label
+										margin-left: 16px
+										padding-left: 46px
+										font-size: 16px
+									label::before
+										width: 30px
+										height: 30px
+									label::after
+										width: 24px
+										height: 24px
+									.ext-text
+										padding-left: 62px
+										span
+											font-size: 14px
+							.choice-city
+								margin-top: 22px
+								margin-bottom: 7px
+								.radio-item
+									margin-bottom: 15px
+									label
+										padding: 5.5px 0
+										padding-left: 50px
+										font-size: 16px
+										margin-right: 0
+									label::before
+										width: 30px
+										height: 30px
+									label::after
+										width: 24px
+										height: 24px
+						.inf-block
+							.line
+								padding: 10.5px 0
+								span
+									font-size: 16px
+									max-width: 70%
+								span.ext
+									font-size: 10px
+					.reimb
+						p.desc
+							font-size: 16px
+						span.footnote
+							padding: 5px 0
+						.questions
+							.item
+								.headline
+									span.name
+										font-size: 16px
+										max-width: 220px
+										line-height: 1.2
+									img.arrow
+										width: 10px
+										float: right
+										margin-right: 15px
+								.hidden
+									.text
+										p
+											font-size: 16px
+					.credit
+						.instruction
+							span.point
+								font-size: 16px
+								padding: 11px 0
+						form.credit-form
+							.range-item
+								padding-bottom: 7px
+								.headtext
+									font-size: 16px
+									padding: 9.5px 0
+								input[type=range]
+									bottom: 7px
+								input[type=range]::-webkit-slider-thumb
+									width: 21px
+									height: 21px
+									margin-top: -8px
+								input[type=range]::-moz-range-thumb
+									width: 21px
+									height: 21px
+									margin-top: -8px
+								input[type=range]::-ms-thumb
+									width: 21px
+									height: 21px
+									margin-top: -8px
+								.range-points
+									padding: 14.5px 0
+									span.range1-range-point0
+										left: 0
+									span.range1-range-point1
+										left: 10%
+									span.range1-range-point2
+										left: 29%
+									span.range1-range-point3
+										left: 44%
+									span.range1-range-point4
+										left: 62%
+									span.range1-range-point5
+										left: 65%
+									span
+										font-size: 16px
+							.calc-values
+								.line
+									padding: 9.5px 0
+									span
+										font-size: 16px
+										display: inline-block
+										max-width: 150px
+										line-height: 1.2
+							.input-contacts
+								margin-top: 15px
+								.input-outer
+									margin-bottom: 15px
+									input
+										height: 40px
+									.placeholder
+										padding: 6px 0 6px 21px
+							.submit-block
+								padding-top: 15px
+								input
+									height: 40px
+									font-size: 16px
+								p.desc
+									margin-top: 30px
+							.mark
+								line-height: 1.2
+					.reimb, .credit
+						h2
+							font-size: 19px
+							padding: 19.5px 0
+			.mk-feedback
+				.main-content
+					padding-bottom: 10px
+					.anchors-section
+						a.btn-send
+							font-size: 16px
+							height: 40px
+							line-height: 38px
+							position: relative
+							width: 100%
+							display: block
+							margin: 0
+							margin-bottom: 15px
+							span 
+								font-size: 16px
+					.btn-more.mob
+						height: 40px
+						line-height: 40px
+						margin-bottom: 0
+						span
+							font-size: 16px
+					.reviews-list
+						h2
+							font-size: 19px
+							padding: 24px 0
+							padding-left: 15px
+							max-width: 100%
+						.review-item	
+							padding-top: 15px
+							padding-bottom: 15px
+							.photo-profile
+								width: 45px
+								height: 45px
+								margin-top: 15px
+							.content
+								.rating
+									img
+										width: 18px
+								span.login
+									padding: 0
+								p.review-text
+									margin-top: 5px
+								span.name, p.review-text
+									font-size: 16px
+								span.review-date
+									font-size: 10px
+								span.name, .rating, span.login
+									padding-left: 61px
+			.mk-feedback, .mk-info, .mk-products
+				.main-content
+					.anchors-section
+						margin-top: 15px
+						.anchor-btn
+							font-size: 16px
+							height: 40px
+							line-height: 38px

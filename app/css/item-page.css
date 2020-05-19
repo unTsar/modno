@@ -187,6 +187,41 @@ body section.item-main-section .preview-content .desc-block p.text {
   line-height: 1.2;
 }
 
+body section.item-main-section .preview-content .desc-block p.text span.hidden {
+  display: none;
+}
+
+body section.item-main-section .preview-content .desc-block .desc-btnShow, body section.item-main-section .preview-content .desc-block .desc-btnHide {
+  display: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 25px 0 30px 0;
+}
+
+body section.item-main-section .preview-content .desc-block .desc-btnShow span, body section.item-main-section .preview-content .desc-block .desc-btnShow img, body section.item-main-section .preview-content .desc-block .desc-btnHide span, body section.item-main-section .preview-content .desc-block .desc-btnHide img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body section.item-main-section .preview-content .desc-block .desc-btnShow span, body section.item-main-section .preview-content .desc-block .desc-btnHide span {
+  font-size: 19px;
+  color: #B2B2B2;
+}
+
+body section.item-main-section .preview-content .desc-block .desc-btnShow img, body section.item-main-section .preview-content .desc-block .desc-btnHide img {
+  margin-top: 3px;
+  margin-left: 10px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body section.item-main-section .preview-content .desc-block .desc-btnHide img {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 body section.item-main-section .sm-preview-item:hover {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -687,10 +722,6 @@ body section.marketing-table .mk-products .anchors-section .anchor-btn.disabled 
   pointer-events: none;
 }
 
-body section.marketing-table .mk-products .items-table {
-  margin-bottom: 38px;
-}
-
 body section.marketing-table .mk-products .items-table .header {
   background-color: #fff;
   -webkit-border-radius: 5px;
@@ -705,22 +736,9 @@ body section.marketing-table .mk-products .items-table .header span {
   font-size: 18px;
 }
 
-body section.marketing-table .mk-products .items-table .line {
-  padding: 15px 0;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body section.marketing-table .mk-products .items-table .line .item {
+body section.marketing-table .mk-products .items-table .slider .item {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -730,21 +748,22 @@ body section.marketing-table .mk-products .items-table .line .item {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   margin-bottom: 14px;
-  width: 18.6%;
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
 }
 
-body section.marketing-table .mk-products .items-table .line .item img.new-mark {
+body section.marketing-table .mk-products .items-table .slider .item img.new-mark {
   position: absolute;
   top: 0;
   left: 0;
+  width: 28px;
+  height: 13px;
   margin-top: 10px;
   margin-left: 12px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item a.like-mark {
+body section.marketing-table .mk-products .items-table .slider .item a.like-mark {
   position: absolute;
   top: 0;
   right: 0;
@@ -752,20 +771,20 @@ body section.marketing-table .mk-products .items-table .line .item a.like-mark {
   margin-right: 7px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item img.img-preview {
+body section.marketing-table .mk-products .items-table .slider .item img.img-preview {
   width: 100%;
   -webkit-border-radius: 5px 5px 0 0;
           border-radius: 5px 5px 0 0;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content {
+body section.marketing-table .mk-products .items-table .slider .item .content {
   position: relative;
   padding-left: 18px;
   padding-right: 13px;
   padding-bottom: 12px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content a.unhidden-mark {
+body section.marketing-table .mk-products .items-table .slider .item .content a.unhidden-mark {
   position: absolute;
   top: -32px;
   right: 0;
@@ -773,63 +792,71 @@ body section.marketing-table .mk-products .items-table .line .item .content a.un
   margin-right: 9px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .headtext {
+body section.marketing-table .mk-products .items-table .slider .item .content .headtext {
   margin-top: 11px;
   line-height: 1.95;
   width: 100%;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .headtext span.name {
+body section.marketing-table .mk-products .items-table .slider .item .content .headtext span.name {
   font-size: 12px;
   font-weight: bold;
   line-height: 1.2;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .headtext span.creator {
+body section.marketing-table .mk-products .items-table .slider .item .content .headtext span.creator {
   font-size: 10px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .additional {
+body section.marketing-table .mk-products .items-table .slider .item .content .additional {
   margin-top: 5px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .additional .rating img {
+body section.marketing-table .mk-products .items-table .slider .item .content .additional .rating img {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
   margin-bottom: -1px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .additional .rating span.info {
+body section.marketing-table .mk-products .items-table .slider .item .content .additional .rating span.info {
   font-size: 10px;
   color: #808080;
   margin-left: 7px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .additional .category {
+body section.marketing-table .mk-products .items-table .slider .item .content .additional .category {
   margin-top: 9px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .additional .category span, body section.marketing-table .mk-products .items-table .line .item .content .additional .category img.category-flag {
+body section.marketing-table .mk-products .items-table .slider .item .content .additional .category span, body section.marketing-table .mk-products .items-table .slider .item .content .additional .category img.category-flag {
   display: inline-block;
   vertical-align: middle;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .additional .category span {
+body section.marketing-table .mk-products .items-table .slider .item .content .additional .category img.category-flag {
+  width: 15px;
+  height: 15px;
+}
+
+body section.marketing-table .mk-products .items-table .slider .item .content .additional .category span {
   font-size: 9px;
   color: #808080;
   margin-left: 4px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .price {
+body section.marketing-table .mk-products .items-table .slider .item .content .price {
   position: absolute;
   bottom: 11px;
   right: 13px;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .price span.price-value {
+body section.marketing-table .mk-products .items-table .slider .item .content .price span.price-value {
   font-size: 12px;
   font-weight: bold;
 }
 
-body section.marketing-table .mk-products .items-table .line .item .content .price span.old-price-value {
+body section.marketing-table .mk-products .items-table .slider .item .content .price span.old-price-value {
   position: absolute;
   font-size: 10px;
   color: #808080;
@@ -838,119 +865,56 @@ body section.marketing-table .mk-products .items-table .line .item .content .pri
   text-decoration: line-through;
 }
 
-body section.marketing-table .mk-products .items-table .line .item:hover {
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-stage-outer {
+  padding: 20px 0;
 }
 
-body section.marketing-table .mk-products .items-table .btn-more {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  border: 0.5px solid rgba(0, 0, 0, 0.3);
-  width: 206px;
-  height: 30px;
-  line-height: 24px;
-  text-align: center;
-  cursor: pointer;
-  margin: 0 auto;
-}
-
-body section.marketing-table .mk-products .items-table .btn-more span {
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  font-weight: bold;
-  font-size: 13px;
-  color: #000;
-}
-
-body section.marketing-table .mk-products .items-table .btn-more:hover {
-  background-color: #157EE1;
-  border-color: #157EE1;
-}
-
-body section.marketing-table .mk-products .items-table .btn-more:hover span {
-  color: #fff;
-}
-
-body section.marketing-table .mk-products .items-table.publications .swiper-block {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
-  position: relative;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-next, body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-prev {
   outline: none;
-  vertical-align: top;
-  display: inline-block;
-  height: 150px;
-  width: 150px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-}
-
-body section.marketing-table .mk-products .items-table.publications .swiper-block .slide:hover {
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-}
-
-body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more-outer img {
-  opacity: 0;
-}
-
-body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more {
   position: absolute;
-  z-index: 20;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f2f2f2;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more .text {
-  width: 100%;
-  height: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 1.4;
-  color: #808080;
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-next span, body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-prev span {
+  display: none;
+}
+
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-next::after {
+  content: url("../img/item-page/arrow-right.svg");
+  margin-right: -2px;
+}
+
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-prev::after {
+  content: url("../img/item-page/arrow-left.svg");
+  margin-left: -2px;
+}
+
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-next::after, body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-prev::after {
+  display: inline-block;
+}
+
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-next {
+  right: -15px;
+}
+
+body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav button.owl-prev {
+  left: -15px;
+}
+
+body section.marketing-table .mk-products .items-table.publications .slider .slide img {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 body section.marketing-table .mk-info {
@@ -1020,17 +984,18 @@ body section.marketing-table .mk-info .main-content .about-product .headblock {
   background-color: #E5E5E5;
   padding: 12.75px 0 12.75px 37px;
   margin-left: -37px;
+  margin-right: -37px;
 }
 
 body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
   font-size: 15px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list {
+body section.marketing-table .mk-info .main-content .about-product .prices {
   padding-right: 37px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item {
+body section.marketing-table .mk-info .main-content .about-product .prices .item {
   width: 100%;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1049,83 +1014,83 @@ body section.marketing-table .mk-info .main-content .about-product .prices .list
           justify-content: space-between;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .item .receive {
   width: 34.8%;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
   width: 18.2%;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
   width: 12.2%;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .head {
   padding: 17px 0;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head span, body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head img {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .head span, body section.marketing-table .mk-info .main-content .about-product .prices .item .head img {
   vertical-align: middle;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head span.name {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .head span.name {
   font-size: 15px;
   font-weight: bold;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head img.i-img {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .head img.i-img {
   width: 17px;
   height: 17px;
   margin-left: 34px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line {
   height: 30px;
   line-height: 25px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line .img-outer {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
   display: inline-block;
   width: 20px;
   height: 19px;
   text-align: center;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line .img-outer img {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer img {
   margin: auto;
   display: block;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line .img-outer .w-full {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer .w-full {
   width: 100%;
   margin: 3px 0;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line span, body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line .img-outer {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span, body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
   vertical-align: middle;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line span {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span {
   font-size: 15px;
   margin-left: 11px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
   padding: 18px 0;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value span {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value span {
   font-size: 15px;
   font-weight: bold;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
   padding: 15px 0;
   margin-left: auto;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer a.btn {
+body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
   display: inline-block;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1139,7 +1104,7 @@ body section.marketing-table .mk-info .main-content .about-product .prices .list
   color: #fff;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .list img.separ {
+body section.marketing-table .mk-info .main-content .about-product .prices img.separ {
   width: 100%;
   max-height: 2px;
   display: block;
@@ -1178,23 +1143,9 @@ body section.marketing-table .mk-info .main-content .about-product .properties .
 }
 
 body section.marketing-table .mk-info .main-content .about-product .properties .table .item {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 48.3%;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 40px;
+  padding: 8px 0;
+  position: relative;
 }
 
 body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name {
@@ -1205,12 +1156,22 @@ body section.marketing-table .mk-info .main-content .about-product .properties .
 body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
   font-size: 15px;
   color: #000;
+  float: right;
+  text-align: right;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .properties .table img.separ {
-  width: 48.3%;
+body section.marketing-table .mk-info .main-content .about-product .properties .table .item img.separ {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   max-height: 2px;
   display: block;
+}
+
+body section.marketing-table .mk-info .main-content .about-product .properties .table .item img.separ.mob {
+  display: none;
 }
 
 body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item input, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item input {
@@ -1916,13 +1877,6 @@ body section.marketing-table .mk-block {
   }
 }
 
-@media only screen and (max-width: 1100px) {
-  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
-    width: 140px;
-    height: 140px;
-  }
-}
-
 @media only screen and (max-width: 1024px) {
   body section.item-main-section {
     padding: 15px;
@@ -1966,7 +1920,16 @@ body section.marketing-table .mk-block {
     width: 100%;
   }
   body section.item-main-section .preview-content .desc-block {
-    display: none;
+    padding-left: 35px;
+    padding-bottom: 30px;
+    margin-top: 25px;
+  }
+  body section.item-main-section .preview-content .desc-block span.head {
+    font-size: 23px;
+    padding: 28px 0;
+  }
+  body section.item-main-section .preview-content .desc-block p.text {
+    font-size: 20px;
   }
   body section.item-main-section .r-sidebar {
     padding-top: 0;
@@ -2245,36 +2208,72 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-products .items-table .btn-more span {
     font-size: 21px;
   }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block {
-    display: block;
-    overflow-x: scroll;
-    padding: 8px 10px;
-    margin: 0 16px;
-    white-space: nowrap;
-  }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
-    display: inline-block;
-    margin-right: 19px;
-    width: 29.3%;
-    height: auto;
-  }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more-outer img.slide {
-    width: 100%;
-  }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more {
-    height: 100%;
-  }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide-more .text {
-    font-size: 19px;
-  }
   body section.marketing-table .mk-info .main-content .mk-info-section {
     padding-left: 30px;
   }
   body section.marketing-table .mk-info .main-content .mk-info-section h2 {
     font-size: 21px;
     padding: 29.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .headblock {
+    padding-top: 29px;
+    padding-bottom: 29px;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
+    font-size: 21px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices {
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head {
+    padding: 29px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head span.name {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive {
+    width: 38.8%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line {
+    margin: 5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value {
+    width: 12.2%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer {
+    width: 14.2%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer a.btn {
+    height: 60px;
+    line-height: 58px;
+    font-size: 22px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties {
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties span.subhead {
+    font-size: 20px;
+    padding: 29.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item, body section.marketing-table .mk-info .main-content .about-product .properties .table img.separ {
+    width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item {
+    padding: 18.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item img.separ.mob {
+    display: block;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name, body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
+    font-size: 20px;
   }
   body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
     width: 30.4%;
@@ -2636,6 +2635,68 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-products .main-content .items-table .line .item .content .headtext span.name {
     font-size: 19px;
   }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
+    padding: 14.5px 0;
+    width: 50%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .head span.name {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .head img.i-img {
+    width: 22px;
+    height: 22px;
+    margin-left: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
+    text-align: right;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value span {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line {
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
+    width: 32px;
+    height: 26px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer img {
+    height: 100%;
+    margin: auto;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span {
+    font-size: 19px;
+    margin-left: 33px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
+    width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    height: 52px;
+    line-height: 50px;
+    font-size: 20px;
+  }
   body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2772,20 +2833,10 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-products .main-content .items-table .btn-more span {
     font-size: 20px;
   }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  body section.marketing-table .mk-products .items-table.publications .swiper-block .slide {
-    width: 44.5%;
-  }
-  body section.marketing-table .mk-info .main-content .about-shop .categories .content, body section.marketing-table .mk-info .main-content .about-shop .brands .content {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-  body section.marketing-table .mk-info .main-content .about-shop .categories .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .categories .content .brands-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .category-column, body section.marketing-table .mk-info .main-content .about-shop .brands .content .brands-column {
-    width: 50%;
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.slash {
+    opacity: 0;
+    display: block;
+    font-size: 10px;
   }
   body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city {
     white-space: normal;
@@ -2854,6 +2905,7 @@ body section.marketing-table .mk-block {
     margin-top: 4px;
   }
   body section.item-main-section .r-sidebar .info-block {
+    margin-top: 15px;
     padding-left: 15px;
     padding-bottom: 25px;
   }
@@ -2952,6 +3004,20 @@ body section.marketing-table .mk-block {
   body section.item-main-section .r-sidebar .sidebar-btns a.btn.mob {
     display: block;
   }
+  body section.item-main-section .preview-content .desc-block {
+    padding: 0 15px;
+    margin-top: 5px;
+  }
+  body section.item-main-section .preview-content .desc-block span.head {
+    font-size: 22px;
+    padding: 22px 0;
+  }
+  body section.item-main-section .preview-content .desc-block p.text {
+    font-size: 19px;
+  }
+  body section.item-main-section .preview-content .desc-block .desc-btnShow {
+    display: block;
+  }
   body section.marketing-table .marketing-navbar {
     padding: 15px 0;
   }
@@ -3008,21 +3074,42 @@ body section.marketing-table .mk-block {
     margin-top: 16px;
     margin-bottom: 30px;
   }
-  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block {
-    margin: 0 15px;
-  }
-  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block .slide {
-    margin-right: 11px;
-  }
-  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block .slide-more .text {
-    font-size: 13px;
-  }
   body section.marketing-table .mk-info .main-content .mk-info-section {
     padding-left: 15px;
   }
   body section.marketing-table .mk-info .main-content .mk-info-section h2 {
     font-size: 22px;
     padding: 12px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .headblock {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 14.5px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
+    font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices, body section.marketing-table .mk-info .main-content .about-product .properties {
+    padding-right: 15px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
+    width: 100%;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties span.subhead {
+    font-size: 19px;
+    padding: 14.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item {
+    padding: 4.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name, body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
+    font-size: 19px;
   }
   body section.marketing-table .mk-info .main-content .delivery {
     padding-right: 15px;
@@ -3316,6 +3403,20 @@ body section.marketing-table .mk-block {
   body section.item-main-section .sm-preview-item .content .tags {
     display: none;
   }
+  body section.item-main-section .preview-content .desc-block span.head {
+    font-size: 19px;
+    padding: 19.5px 0;
+  }
+  body section.item-main-section .preview-content .desc-block p.text {
+    font-size: 16px;
+  }
+  body section.item-main-section .preview-content .desc-block .desc-btnShow span, body section.item-main-section .preview-content .desc-block .desc-btnHide span {
+    font-size: 16px;
+  }
+  body section.item-main-section .preview-content .desc-block .desc-btnShow img, body section.item-main-section .preview-content .desc-block .desc-btnHide img {
+    width: 10px;
+    margin-left: 15px;
+  }
   body section.item-main-section .r-sidebar {
     margin-top: 0;
   }
@@ -3469,14 +3570,52 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-products .main-content .items-table .btn-more span {
     font-size: 16px;
   }
-  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block {
-    margin: -15px;
-    padding-left: 15px;
-    padding-right: 15px;
+  body section.marketing-table .mk-info .main-content .mk-info-section h2 {
+    font-size: 19px;
+    padding: 19.5px 0;
   }
-  body section.marketing-table .mk-products .main-content .items-table.publications .swiper-block .slide {
-    width: 34.5%;
-    margin-right: 6px;
+  body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
+    padding: 8.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .head span.name {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .head img.i-img {
+    width: 16px;
+    height: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span {
+    font-size: 16px;
+    margin-left: 22px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
+    width: 22px;
+    height: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
+    height: 40px;
+    line-height: 38px;
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties span.subhead {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item {
+    padding: 8px 0;
+  }
+  body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name, body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
+    font-size: 13px;
   }
   body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
     margin-left: 16px;

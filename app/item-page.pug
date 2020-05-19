@@ -3,6 +3,9 @@ extends _layouts/home
 block styles
 	link(rel="stylesheet", href="css/item-page.css")
 	link(rel="stylesheet", href="css/fotorama.css")
+	
+	link(rel="stylesheet", href="css/owl.carousel.min.css")
+	link(rel="stylesheet", href="css/owl.theme.default.min.css")
 block content
 
 	include _partials/header.pug
@@ -31,7 +34,13 @@ block content
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
 					.desc-block
 						span.head Описание
-						p.text Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок.
+						p.text Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок. #[span.hidden#main-desc-textHidden Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок.]
+						.desc-btnShow
+							span Развернуть
+							img(src="img/item-page/arrow-right.svg", alt="arrow-right.svg")
+						.desc-btnHide
+							span Свернуть
+							img(src="img/item-page/arrow-right.svg", alt="arrow-right.svg")
 				.r-sidebar
 					.info-block
 						img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
@@ -104,25 +113,22 @@ block content
 						.items-table.publications
 							.header
 								span Публикации товара
-							.swiper-block
-								img.slide(src="img/index/slide-img1.jpg", alt="slide-img1.jpg")
-								img.slide(src="img/index/slide-img2.jpg", alt="slide-img2.jpg")
-								img.slide(src="img/index/slide-img3.jpg", alt="slide-img3.jpg")
-								img.slide(src="img/index/slide-img4.jpg", alt="slide-img4.jpg")
-								img.slide(src="img/index/slide-img5.jpg", alt="slide-img5.jpg")
-								img.slide(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
-								.slide.slide-more-outer
-									img.slide(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
-									.slide-more
-										.text
-											|Смотреть
-											br
-											|всё
+							.slider.owl-carousel.owl-theme#publications-slider
+								.slide
+									img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+								.slide
+									img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+								.slide
+									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+								.slide
+									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+								.slide
+									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
 						.items-table.similar-items
 							.header
 								span Похожие товары
-							.line
-								- for(var i = 1; i <= 5; i++)
+							.slider.owl-carousel.owl-theme.mk-products-slider
+								- for(var i = 1; i <= 6; i++)
 									.item
 										img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
 										a.like-mark(href="#")
@@ -149,13 +155,11 @@ block content
 												.category
 													img.category-flag(src="img/shop-page/category-flag.svg", alt="category-flag.svg")
 													span lady &amp; gentleman
-							.btn-more
-								span Показать ещё
 						.items-table.withThis
 							.header
 								span С этим товаром выбирают
-							.line
-								- for(var i = 1; i <= 5; i++)
+							.slider.owl-carousel.owl-theme.mk-products-slider
+								- for(var i = 1; i <= 6; i++)
 									.item
 										img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
 										a.like-mark(href="#")
@@ -182,8 +186,6 @@ block content
 												.category
 													img.category-flag(src="img/shop-page/category-flag.svg", alt="category-flag.svg")
 													span lady &amp; gentleman
-							.btn-more
-								span Показать ещё
 				.mk-block.mk-info
 					.main-content
 						.anchors-section
@@ -191,148 +193,151 @@ block content
 							.anchor-btn(href="#" onclick="$.scrollTo('.delivery', 500);") Доставка
 							.anchor-btn(href="#" onclick="$.scrollTo('.reimb', 500);") Возврат
 							.anchor-btn(href="#" onclick="$.scrollTo('.credit', 500);") Кредит
-						//- .about-product.mk-info-section
-						//- 	h2 О товаре
-						//- 	.prices
-						//- 		.headblock
-						//- 			span.headname Цены
-						//- 		.list
-						//- 			.item
-						//- 				.head
-						//- 					span.name Affiction
-						//- 					img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
-						//- 				.receive
-						//- 					.line
-						//- 						.img-outer
-						//- 							img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
-						//- 						span Доставка, 26 ноября
-						//- 					.line
-						//- 						.img-outer
-						//- 							img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
-						//- 						span Самовывоз, 26 ноября
-						//- 				.price-value 
-						//- 					span 3 500 &#8381;
-						//- 				.btn-outer
-						//- 					a(href="#").btn Купить
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				.head
-						//- 					span.name Affiction
-						//- 					img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
-						//- 				.receive
-						//- 					.line
-						//- 						.img-outer
-						//- 							img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
-						//- 						span Доставка, 26 ноября
-						//- 					.line
-						//- 						.img-outer
-						//- 							img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
-						//- 						span Самовывоз, 26 ноября
-						//- 				.price-value 
-						//- 					span 3 500 &#8381;
-						//- 				.btn-outer
-						//- 					a(href="#").btn Купить
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				.head
-						//- 					span.name Affiction
-						//- 					img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
-						//- 				.receive
-						//- 					.line
-						//- 						.img-outer
-						//- 							img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
-						//- 						span Доставка, 26 ноября
-						//- 					.line
-						//- 						.img-outer
-						//- 							img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
-						//- 						span Самовывоз, 26 ноября
-						//- 				.price-value 
-						//- 					span 3 500 &#8381;
-						//- 				.btn-outer
-						//- 					a(href="#").btn Купить
-						//- 	.properties
-						//- 		.headblock
-						//- 			span.headname Характеристики
-						//- 		span.subhead Заводские данные о товаре
-						//- 		.table
-						//- 			.item
-						//- 				span.name Артикул
-						//- 				span.value L40672400
-						//- 			.item
-						//- 				span.name Наименование модели
-						//- 				span.value XA Pro 3D
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Модель
-						//- 				span.value XA Pro 3D
-						//- 			.item
-						//- 				span.name Страна-производитель
-						//- 				span.value Франция
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Бренд
-						//- 				span.value Salomon
-						//- 			.item
-						//- 				span.name Цвета производителя
-						//- 				span.value bluebird/caneel bay/acid lime
-						//- 		span.subhead Основные характеристики
-						//- 		.table
-						//- 			.item
-						//- 				span.name Тип
-						//- 				span.value Высокие
-						//- 			.item
-						//- 				span.name Назначение
-						//- 				span.value для бега
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Пол
-						//- 				span.value Женский
-						//- 			.item
-						//- 				span.name Средний вес пары, кг
-						//- 				span.value 0.7
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Размер производителя
-						//- 				span.value 5 UK
-						//- 			.item
-						//- 				span.name Модельный год
-						//- 				span.value 2019
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Размер RU
-						//- 				span.value 36,5
-						//- 			.item
-						//- 				span.name Сезон
-						//- 				span.value лето
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Длина стопы, см
-						//- 				span.value 23,5
-						//- 			.item
-						//- 				span.name Вид фиксации
-						//- 				span.value быстрая шнуровка
-						//- 		span.subhead Материалы и цвет
-						//- 		.table
-						//- 			.item
-						//- 				span.name Цвет
-						//- 				span.value зеленый
-						//- 			.item
-						//- 				span.name Материал внутреннего слоя
-						//- 				span.value полиэстр
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			img.separ(src="img/index/separ.svg", alt="separ.svg")
-						//- 			.item
-						//- 				span.name Материал верха
-						//- 				span.value нейлон
-						//- 			.item
-						//- 				span.name Материал подошвы
-						//- 				span.value EVA, резина
+						.about-product.mk-info-section
+							h2 О товаре
+							.prices
+								.headblock
+									span.headname Цены
+								.item
+									.head
+										span.name Affiction
+										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+									.receive
+										.line
+											.img-outer
+												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+											span Доставка, 26 ноября
+										.line
+											.img-outer
+												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+											span Самовывоз, 26 ноября
+									.price-value 
+										span 3 500 &#8381;
+									.btn-outer
+										a(href="#").btn Купить
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.head
+										span.name Affiction
+										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+									.receive
+										.line
+											.img-outer
+												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+											span Доставка, 26 ноября
+										.line
+											.img-outer
+												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+											span Самовывоз, 26 ноября
+									.price-value 
+										span 3 500 &#8381;
+									.btn-outer
+										a(href="#").btn Купить
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.head
+										span.name Affiction
+										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+									.receive
+										.line
+											.img-outer
+												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+											span Доставка, 26 ноября
+										.line
+											.img-outer
+												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+											span Самовывоз, 26 ноября
+									.price-value 
+										span 3 500 &#8381;
+									.btn-outer
+										a(href="#").btn Купить
+							.properties
+								.headblock
+									span.headname Характеристики
+								span.subhead Заводские данные о товаре
+								.table
+									.item
+										span.name Артикул
+										span.value L40672400
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Наименование модели
+										span.value XA Pro 3D
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Модель
+										span.value XA Pro 3D
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Страна-производитель
+										span.value Франция
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Бренд
+										span.value Salomon
+										img.separ.mob(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Цвета производителя
+										span.value bluebird#[span.slash /]caneel bay#[span.slash /]acid lime
+
+								span.subhead Основные характеристики
+								.table
+									.item
+										span.name Тип
+										span.value Высокие
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Назначение
+										span.value для бега
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Пол
+										span.value Женский
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Средний вес пары, кг
+										span.value 0.7
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Размер производителя
+										span.value 5 UK
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Модельный год
+										span.value 2019
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Размер RU
+										span.value 36,5
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Сезон
+										span.value лето
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Длина стопы, см
+										span.value 23,5
+										img.separ.mob(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Вид фиксации
+										span.value быстрая шнуровка
+								span.subhead Материалы и цвет
+								.table
+									.item
+										span.name Цвет
+										span.value зеленый
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Материал внутреннего слоя
+										span.value полиэстр
+										img.separ(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Материал верха
+										span.value нейлон
+										img.separ.mob(src="img/index/separ.svg", alt="separ.svg")
+									.item
+										span.name Материал подошвы
+										span.value EVA, резина
 						.delivery.mk-info-section
 							h2 Доставка
 							form(action="#").form-block
@@ -538,6 +543,9 @@ block scripts
 	script(src="js/jquery.scrollTo.min.js")
 	script(src="js/jquery.maskedinput.min.js")
 	script(src="js/fotorama.js")
+
+	script(src="js/owl.carousel.min.js")
+
 	script.
 		$(document).ready(function(){
 			$('.mknav-buttonSwitch').click(function(){
@@ -733,5 +741,33 @@ block scripts
 						nav: 'dots',
 					});
 				}
+			});
+
+			//- Preview Desc slideToggle
+			$('.desc-btnShow').click(function(){
+				$(this).hide()
+				$('.desc-btnHide').show()
+				$("#main-desc-textHidden").show()
+			});
+			$('.desc-btnHide').click(function(){
+				$(this).hide()
+				$('.desc-btnShow').show()
+				$("#main-desc-textHidden").hide()
+			});
+
+			//- - mk-products sliders -
+			$('#publications-slider').owlCarousel({
+				items: 4,
+				margin: 10,
+				nav: true,
+				dots: false,
+				loop: true
+			});
+			$('.mk-products-slider').owlCarousel({
+				items: 5,
+				margin: 19,
+				nav: true,
+				dots: false,
+				loop: true
 			});
 		});

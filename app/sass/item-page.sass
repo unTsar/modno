@@ -482,7 +482,6 @@ body
 						cursor: pointer
 						background-color: #fff
 						border-radius: 5px
-						margin-bottom: 14px
 						font-size: 0
 						letter-spacing: 0
 						word-spacing: 0
@@ -581,13 +580,23 @@ body
 							span
 								display: none
 						button.owl-next::after
-							content: url('../img/item-page/arrow-right.svg')
+							content: ''
+							background-image: url('../img/item-page/arrow-right.svg')
+							background-position: center
+							background-repeat: no-repeat
+							background-size: contain
 							margin-right: -2px
 						button.owl-prev::after
-							content: url('../img/item-page/arrow-left.svg')
+							content: ''
+							background-image: url('../img/item-page/arrow-left.svg')
+							background-position: center
+							background-repeat: no-repeat
+							background-size: contain
 							margin-left: -2px
 						button.owl-next::after, button.owl-prev::after
 							display: inline-block
+							width: 8px
+							height: 14px
 						button.owl-next
 							right: -15px
 						button.owl-prev
@@ -1231,6 +1240,17 @@ body
 						max-height: 2px
 		.mk-block
 			display: none
+@media only screen and(max-width: 1200px)
+	body
+		section.marketing-table
+			.mk-products
+				.items-table
+					.owl-carousel
+						.owl-nav
+							button.owl-next
+								right: 0
+							button.owl-prev
+								left: 0
 @media only screen and(max-width: 1140px)
 	body
 		section.marketing-table
@@ -1427,25 +1447,31 @@ body
 						color: #000
 			.mk-products
 				.items-table
-					margin-bottom: 34px
 					.header
 						padding: 29.5px 0
 						padding-left: 28px
-						margin-bottom: 32px
 						span
 							font-size: 21px
-					.line
-						flex-wrap: wrap
-						justify-content: flex-start
-						padding-top: 0
-						padding-bottom: 0
-						margin-bottom: 0
-						margin-left: -1.1%
+					.owl-carousel
+						.owl-stage-outer
+							padding: 40px 0
+						.owl-nav
+							button.owl-prev, button.owl-next
+								width: 60px
+								height: 60px
+								line-height: 22px
+							button.owl-prev::after, button.owl-next::after
+								width: 19px
+								height: 34px
+							button.owl-prev
+								left: -11px
+							button.owl-next
+								right: -11px
+					.slider
 						.item
-							width: 32.2%
-							margin-left: 1.1%
 							img.new-mark
 								width: 60px
+								height: 30px
 								margin-top: 15px
 								margin-left: 18px
 							a.like-mark
@@ -1475,13 +1501,15 @@ body
 									.category
 										margin-top: 16px
 										img.category-flag
-											width: 24px
+											width: 26px
+											height: 26px
 										span
 											font-size: 13px
 											margin-left: 3px
 									.rating
 										img
 											width: 21px
+											height: 21px
 											margin-bottom: -4px
 										span.info
 											font-size: 15px
@@ -1492,16 +1520,6 @@ body
 									span.old-price-value
 										font-size: 15px
 										top: -36px
-					.btn-more
-						margin-top: 20px
-						margin-bottom: 34px
-						width: 200px
-						height: 60px
-						line-height: 60px
-						span
-							font-size: 21px
-				.items-table.publications
-
 			.mk-info
 				.main-content
 					.mk-info-section
@@ -1779,7 +1797,7 @@ body
 						.anchor-btn
 							margin-bottom: 34px
 					.items-table
-						.line
+						.slider
 							.item
 								.content
 									.price
@@ -1854,7 +1872,7 @@ body
 			.mk-products
 				.main-content
 					.items-table
-						.line
+						.slider
 							.item
 								.content
 									padding-left: 15px
@@ -2003,32 +2021,27 @@ body
 			.mk-products
 				.main-content
 					.items-table
-							.line
-								.item
-									img.new-mark
-										width: 35px
-										margin-left: 15px
-									.content
-										.additional
-											margin-top: 0
-											.category
-												margin-top: 8px
-												img.category-flag
-													width: 18px
-												span
-													margin-left: 5px
-											.rating
-												img
-													width: 16px
-													margin-bottom: -2px
-										.price
-											span.old-price-value
-												font-size: 13px
-							.btn-more
-								height: 54px
-								line-height: 50px
-								span
-									font-size: 20px
+						.slider
+							.item
+								img.new-mark
+									width: 35px
+									margin-left: 15px
+								.content
+									.additional
+										margin-top: 0
+										.category
+											margin-top: 8px
+											img.category-flag
+												width: 18px
+											span
+												margin-left: 5px
+										.rating
+											img
+												width: 16px
+												margin-bottom: -2px
+									.price
+										span.old-price-value
+											font-size: 13px
 				.items-table.publications
 					
 			.mk-info
@@ -2208,17 +2221,29 @@ body
 			.mk-products
 				.main-content
 					.items-table
-						margin-bottom: 30px
 						.header
 							padding: 22px 0
 							padding-left: 15px
-							margin-bottom: 17px
 							span
-								font-size: 
-						.line
+								font-size: 22px
+						.owl-carousel
+							.owl-nav
+								button.owl-prev, button.owl-next
+									width: 40px
+									height: 40px
+									line-height: 17px
+								button.owl-prev::after, button.owl-next::after	
+									width: 13px
+									height: 22px
+								button.owl-prev
+									left: -9px
+								button.owl-next
+									right: -9px
+							.owl-stage-outer
+								padding: 15px 0
+
+						.slider
 							.item
-								width: 48%
-								margin-left: 2%
 								a.like-mark
 									z-index: 1
 									bottom: 0
@@ -2245,11 +2270,6 @@ body
 											margin-top: 14px
 											span
 												margin-left: 7px
-						.btn-more
-							width: 100%
-							margin-top: 16px
-							margin-bottom: 30px
-					.items-table.publications
 						
 			.mk-info
 				.main-content
@@ -2619,13 +2639,12 @@ body
 			.mk-products
 				.main-content
 					.items-table
-						margin-bottom: 20px
 						.header
 							padding: 14.5px 0
 							padding-left: 16px
 							span
 								font-size: 19px
-						.line
+						.slider
 							.item 
 								a.like-mark
 									img
@@ -2650,13 +2669,6 @@ body
 											display: none
 									.category
 										display: none
-						.btn-more
-							height: 40px
-							line-height: 40px
-							margin-bottom: 0
-							span
-								font-size: 16px
-					.items-table.publications
 						
 			.mk-info
 				.main-content

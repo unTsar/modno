@@ -32,15 +32,6 @@ block content
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
 						img.slide(src="img/item-page/item-main-section-img.jpg", alt="item-main-section-img.jpg")
-					.desc-block
-						span.head Описание
-						p.text Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок. #[span.hidden#main-desc-textHidden Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок.]
-						.desc-btnShow
-							span Развернуть
-							img(src="img/item-page/arrow-right.svg", alt="arrow-right.svg")
-						.desc-btnHide
-							span Свернуть
-							img(src="img/item-page/arrow-right.svg", alt="arrow-right.svg")
 				.r-sidebar
 					.info-block
 						img.new-mark(src="img/shop-page/new-mark.svg", alt="new-mark.svg")
@@ -190,67 +181,18 @@ block content
 					.main-content
 						.anchors-section
 							.anchor-btn(href="#" onclick="$.scrollTo('.about-product', 500);") О товаре
+							.anchor-btn(href="#" onclick="$.scrollTo('.prices', 500);") Цены
 							.anchor-btn(href="#" onclick="$.scrollTo('.delivery', 500);") Доставка
 							.anchor-btn(href="#" onclick="$.scrollTo('.reimb', 500);") Возврат
 							.anchor-btn(href="#" onclick="$.scrollTo('.credit', 500);") Кредит
 						.about-product.mk-info-section
 							h2 О товаре
-							.prices
+							.description
 								.headblock
-									span.headname Цены
-								.item
-									.head
-										span.name Affiction
-										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
-									.receive
-										.line
-											.img-outer
-												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
-											span Доставка, 26 ноября
-										.line
-											.img-outer
-												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
-											span Самовывоз, 26 ноября
-									.price-value 
-										span 3 500 &#8381;
-									.btn-outer
-										a(href="#").btn Купить
-								img.separ(src="img/index/separ.svg", alt="separ.svg")
-								.item
-									.head
-										span.name Affiction
-										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
-									.receive
-										.line
-											.img-outer
-												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
-											span Доставка, 26 ноября
-										.line
-											.img-outer
-												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
-											span Самовывоз, 26 ноября
-									.price-value 
-										span 3 500 &#8381;
-									.btn-outer
-										a(href="#").btn Купить
-								img.separ(src="img/index/separ.svg", alt="separ.svg")
-								.item
-									.head
-										span.name Affiction
-										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
-									.receive
-										.line
-											.img-outer
-												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
-											span Доставка, 26 ноября
-										.line
-											.img-outer
-												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
-											span Самовывоз, 26 ноября
-									.price-value 
-										span 3 500 &#8381;
-									.btn-outer
-										a(href="#").btn Купить
+									span.headname Описание
+								p.text Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок. Сенсационная тушь в новой сияющей упаковке. Поражай эффектом веерных ресниц! Революционная щеточка-веер с 10 типами щетинок.
+
+
 							.properties
 								.headblock
 									span.headname Характеристики
@@ -338,6 +280,122 @@ block content
 									.item
 										span.name Материал подошвы
 										span.value EVA, резина
+						.prices.mk-info-section
+							h2 Цены
+							.item
+								.head
+									span.name Affiction
+									img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+								.receive
+									.line
+										.img-outer
+											img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+										span Доставка, 26 ноября
+									.line
+										.img-outer
+											img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+										span Самовывоз, 26 ноября
+								.price-value 
+									span 3 500 &#8381;
+								.btn-outer
+									a(href="#").btn Купить
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.item
+								.head
+									span.name Affiction
+									img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+								.receive
+									.line
+										.img-outer
+											img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+										span Доставка, 26 ноября
+									.line
+										.img-outer
+											img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+										span Самовывоз, 26 ноября
+								.price-value 
+									span 3 500 &#8381;
+								.btn-outer
+									a(href="#").btn Купить
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.item
+								.head
+									span.name Affiction
+									img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+								.receive
+									.line
+										.img-outer
+											img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+										span Доставка, 26 ноября
+									.line
+										.img-outer
+											img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+										span Самовывоз, 26 ноября
+								.price-value 
+									span 3 500 &#8381;
+								.btn-outer
+									a(href="#").btn Купить
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.hidden#mk-info-prices-Hidden
+								.item
+									.head
+										span.name Affiction
+										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+									.receive
+										.line
+											.img-outer
+												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+											span Доставка, 26 ноября
+										.line
+											.img-outer
+												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+											span Самовывоз, 26 ноября
+									.price-value 
+										span 3 500 &#8381;
+									.btn-outer
+										a(href="#").btn Купить
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.head
+										span.name Affiction
+										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+									.receive
+										.line
+											.img-outer
+												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+											span Доставка, 26 ноября
+										.line
+											.img-outer
+												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+											span Самовывоз, 26 ноября
+									.price-value 
+										span 3 500 &#8381;
+									.btn-outer
+										a(href="#").btn Купить
+								img.separ(src="img/index/separ.svg", alt="separ.svg")
+								.item
+									.head
+										span.name Affiction
+										img.i-img(src="img/item-page/i-img.svg", alt="i-img.svg")
+									.receive
+										.line
+											.img-outer
+												img.icon.w-full(src="img/item-page/delivery-light.svg", alt="delivery-light.svg" style="opacity: 0.5")
+											span Доставка, 26 ноября
+										.line
+											.img-outer
+												img.icon(src="img/item-page/map-marker.svg", alt="map-marker.svg")
+											span Самовывоз, 26 ноября
+									.price-value 
+										span 3 500 &#8381;
+									.btn-outer
+										a(href="#").btn Купить
+							.btnToggle.btnShow.mk-info-prices-btn-HiddenToggle
+								span Развернуть
+								img(src="img/item-page/arrow-right.svg", alt="arrow-right.svg")
+							.btnToggle.btnHide.mk-info-prices-btn-HiddenToggle
+								span Свернуть
+								img(src="img/item-page/arrow-right.svg", alt="arrow-right.svg")
 						.delivery.mk-info-section
 							h2 Доставка
 							form(action="#").form-block
@@ -715,46 +773,39 @@ block scripts
 			});
 			$('#fotorama').fotorama({
 				autoplay: 3000,
-				glimpse: "13.38%",
-				ratio: 1.7,
-				nav: 'thumbs',
 			});
 			$(window).on('load resize', function(){
-				if($(window).width() > 1024){
+				if($(window).width() >= 1025){
 					$('#fotorama').fotorama({
+						ratio: 1.39,
 						thumbwidth: 113,
 						thumbheight: 70,
+						nav: 'thumbs',
+						glimpse: 0,
 					});
-				}else if($(window).width() > 500){
+				}
+				if($(window).width() <= 1024){
 					$('#fotorama').fotorama({
 						thumbwidth: 178,
 						thumbheight: 116,
+						glimpse: "13.38%",
+						ratio: 1.9,
+						nav: 'thumbs',
 					});
-				}else if($(window).width() > 400){
+				}
+				if($(window).width() <= 500){
 					$('#fotorama').fotorama({
 						thumbwidth: 130,
 						thumbheight: 94,
 						nav: 'thumbs'
 					});
-				}else if($(window).width() > 0){
+				}
+				if($(window).width() <= 400){
 					$('#fotorama').fotorama({
 						nav: 'dots',
 					});
 				}
 			});
-
-			//- Preview Desc slideToggle
-			$('.desc-btnShow').click(function(){
-				$(this).hide()
-				$('.desc-btnHide').show()
-				$("#main-desc-textHidden").show()
-			});
-			$('.desc-btnHide').click(function(){
-				$(this).hide()
-				$('.desc-btnShow').show()
-				$("#main-desc-textHidden").hide()
-			});
-
 			//- - mk-products sliders -
 			$('#publications-slider').owlCarousel({
 				margin: 10,
@@ -791,5 +842,14 @@ block scripts
 						margin: 19,
 					}
 				}
+			});
+
+
+			//- mk-info-prices-Hidden
+			$('.mk-info-prices-btn-HiddenToggle').click(function(){
+				$('.mk-info-prices-btn-HiddenToggle').show();
+				$(this).hide()
+
+				$('#mk-info-prices-Hidden').slideToggle(250);
 			});
 		});

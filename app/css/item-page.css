@@ -239,8 +239,8 @@ body section.item-main-section .sm-preview-item {
   right: 0;
   top: 0;
   margin-top: 15px;
-  cursor: pointer;
   margin-bottom: 16px;
+  cursor: pointer;
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
@@ -307,7 +307,7 @@ body section.item-main-section .sm-preview-item .content .tags .tag-img {
 }
 
 body section.item-main-section .r-sidebar {
-  padding-top: 88px;
+  padding-top: 89px;
   width: 38%;
   margin-left: 1%;
 }
@@ -416,7 +416,6 @@ body section.item-main-section .r-sidebar .settings {
   padding-left: 15px;
   padding-top: 12px;
   padding-bottom: 11px;
-  margin-top: 16px;
   position: relative;
 }
 
@@ -543,7 +542,6 @@ body section.item-main-section .r-sidebar .settings span.region span.value {
 
 body section.item-main-section .r-sidebar .arrows {
   text-align: center;
-  margin-top: 17px;
   padding: 9px 0;
   position: relative;
   line-height: 10px;
@@ -578,7 +576,12 @@ body section.item-main-section .r-sidebar .arrows span {
   line-height: 15px;
 }
 
+body section.item-main-section .r-sidebar .arrows, body section.item-main-section .r-sidebar .settings {
+  margin-top: 8px;
+}
+
 body section.item-main-section .r-sidebar .sidebar-btns {
+  margin-top: 14px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -600,7 +603,7 @@ body section.item-main-section .r-sidebar .sidebar-btns a.btn {
   width: 48.8%;
   height: 38.5px;
   line-height: 37px;
-  margin-top: 17px;
+  margin-bottom: 8px;
   background-color: transparent;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1002,123 +1005,15 @@ body section.marketing-table .mk-info .main-content .about-product .headblock sp
   font-size: 15px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices {
+body section.marketing-table .mk-info .main-content .about-product .description {
   padding-right: 37px;
 }
 
-body section.marketing-table .mk-info .main-content .about-product .prices .item {
-  width: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .item .receive {
-  width: 34.8%;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
-  width: 18.2%;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
-  width: 12.2%;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .head {
-  padding: 17px 0;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .head span, body section.marketing-table .mk-info .main-content .about-product .prices .item .head img {
-  vertical-align: middle;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .head span.name {
+body section.marketing-table .mk-info .main-content .about-product .description p.text {
   font-size: 15px;
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .head img.i-img {
-  width: 17px;
-  height: 17px;
-  margin-left: 34px;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line {
-  height: 30px;
-  line-height: 25px;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
-  display: inline-block;
-  width: 20px;
-  height: 19px;
-  text-align: center;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer img {
-  margin: auto;
-  display: block;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer .w-full {
-  width: 100%;
-  margin: 3px 0;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span, body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
-  vertical-align: middle;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span {
-  font-size: 15px;
-  margin-left: 11px;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
-  padding: 18px 0;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value span {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
+  color: #000;
   padding: 15px 0;
-  margin-left: auto;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
-  display: inline-block;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  background-color: #157EE1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-  color: #fff;
-}
-
-body section.marketing-table .mk-info .main-content .about-product .prices img.separ {
-  width: 100%;
-  max-height: 2px;
-  display: block;
+  margin: 0;
 }
 
 body section.marketing-table .mk-info .main-content .about-product .properties {
@@ -1183,6 +1078,163 @@ body section.marketing-table .mk-info .main-content .about-product .properties .
 
 body section.marketing-table .mk-info .main-content .about-product .properties .table .item img.separ.mob {
   display: none;
+}
+
+body section.marketing-table .mk-info .main-content .prices {
+  padding-right: 37px;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .head, body section.marketing-table .mk-info .main-content .prices .item .receive {
+  width: 34.8%;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .price-value {
+  width: 18.2%;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
+  width: 12.2%;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .head {
+  padding: 17px 0;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .head span, body section.marketing-table .mk-info .main-content .prices .item .head img {
+  vertical-align: middle;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .head span.name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .head img.i-img {
+  width: 17px;
+  height: 17px;
+  margin-left: 34px;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .receive .line {
+  height: 30px;
+  line-height: 25px;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer {
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  text-align: center;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer img {
+  margin: auto;
+  display: block;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer .w-full {
+  width: 100%;
+  margin: 3px 0;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .receive .line span, body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer {
+  vertical-align: middle;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .receive .line span {
+  font-size: 15px;
+  margin-left: 11px;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .price-value {
+  padding: 18px 0;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .price-value span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
+  padding: 15px 0;
+  margin-left: auto;
+}
+
+body section.marketing-table .mk-info .main-content .prices .item .btn-outer a.btn {
+  display: inline-block;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #157EE1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+}
+
+body section.marketing-table .mk-info .main-content .prices img.separ {
+  width: 100%;
+  max-height: 2px;
+  display: block;
+}
+
+body section.marketing-table .mk-info .main-content .prices .hidden {
+  display: none;
+}
+
+body section.marketing-table .mk-info .main-content .prices .btnToggle {
+  cursor: pointer;
+  padding: 20px 0;
+  text-align: center;
+}
+
+body section.marketing-table .mk-info .main-content .prices .btnToggle span {
+  font-size: 15px;
+  color: #000;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+body section.marketing-table .mk-info .main-content .prices .btnToggle img {
+  margin-left: 8px;
+  margin-bottom: -3px;
+}
+
+body section.marketing-table .mk-info .main-content .prices .btnShow img {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body section.marketing-table .mk-info .main-content .prices .btnHide {
+  display: none;
+}
+
+body section.marketing-table .mk-info .main-content .prices .btnHide img {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item input, body section.marketing-table .mk-info .main-content .delivery form.form-block .choice-city .radio-item input {
@@ -1953,7 +2005,7 @@ body section.marketing-table .mk-block {
   }
   body section.item-main-section .r-sidebar {
     padding-top: 0;
-    margin-top: 34px;
+    margin-top: 22px;
     margin-left: 0;
   }
   body section.item-main-section .r-sidebar .info-block {
@@ -2099,7 +2151,6 @@ body section.marketing-table .mk-block {
     font-size: 21px;
   }
   body section.marketing-table .marketing-navbar {
-    margin-bottom: 34px;
     padding: 19px 0;
   }
   body section.marketing-table .marketing-navbar .input-outer {
@@ -2234,37 +2285,13 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
     font-size: 21px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices {
+  body section.marketing-table .mk-info .main-content .about-product .description {
     padding-right: 30px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head {
-    padding: 29px 0;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .head span.name {
+  body section.marketing-table .mk-info .main-content .about-product .description p.text {
     font-size: 20px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive {
-    width: 38.8%;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line {
-    margin: 5px 0;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .receive .line span {
-    font-size: 20px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value {
-    width: 12.2%;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .price-value span {
-    font-size: 20px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer {
-    width: 14.2%;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .list .item .btn-outer a.btn {
-    height: 60px;
-    line-height: 58px;
-    font-size: 22px;
+    line-height: 1.15;
+    padding: 34px 0;
   }
   body section.marketing-table .mk-info .main-content .about-product .properties {
     padding-right: 30px;
@@ -2284,6 +2311,38 @@ body section.marketing-table .mk-block {
   }
   body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name, body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
     font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .prices {
+    padding-right: 30px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .head {
+    padding: 29px 0;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .head span.name {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .receive {
+    width: 38.8%;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line {
+    margin: 5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .price-value {
+    width: 12.2%;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .price-value span {
+    font-size: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
+    width: 14.2%;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer a.btn {
+    height: 60px;
+    line-height: 58px;
+    font-size: 22px;
   }
   body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item {
     width: 30.4%;
@@ -2538,13 +2597,14 @@ body section.marketing-table .mk-block {
     padding: 10px 0;
   }
   body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section, body section.marketing-table .mk-products .main-content .anchors-section {
-    margin: 34px 0;
+    margin: 34px 0 0 0;
   }
   body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn {
     height: 60px;
     line-height: 58px;
     font-size: 21px;
     margin-right: 22px;
+    margin-bottom: 34px;
   }
 }
 
@@ -2645,60 +2705,60 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-products .main-content .items-table .slider .item .content .headtext span.name {
     font-size: 19px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item {
+  body section.marketing-table .mk-info .main-content .prices .item {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
+  body section.marketing-table .mk-info .main-content .prices .item .head, body section.marketing-table .mk-info .main-content .prices .item .price-value {
     padding: 14.5px 0;
     width: 50%;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .head span.name {
+  body section.marketing-table .mk-info .main-content .prices .item .head span.name {
     font-size: 19px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .head img.i-img {
+  body section.marketing-table .mk-info .main-content .prices .item .head img.i-img {
     width: 22px;
     height: 22px;
     margin-left: 20px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
+  body section.marketing-table .mk-info .main-content .prices .item .price-value {
     text-align: right;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value span {
+  body section.marketing-table .mk-info .main-content .prices .item .price-value span {
     font-size: 19px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive {
+  body section.marketing-table .mk-info .main-content .prices .item .receive {
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3;
     width: 100%;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line {
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line {
     margin-bottom: 3px;
     margin-top: 3px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer {
     width: 32px;
     height: 26px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer img {
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer img {
     height: 100%;
     margin: auto;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span {
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line span {
     font-size: 19px;
     margin-left: 33px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
     -webkit-box-ordinal-group: 5;
     -webkit-order: 4;
         -ms-flex-order: 4;
             order: 4;
     width: 100%;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer a.btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -2908,7 +2968,6 @@ body section.marketing-table .mk-block {
     margin-top: 4px;
   }
   body section.item-main-section .r-sidebar .info-block {
-    margin-top: 15px;
     padding-left: 15px;
     padding-bottom: 25px;
   }
@@ -3102,15 +3161,12 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
     font-size: 19px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices, body section.marketing-table .mk-info .main-content .about-product .properties {
+  body section.marketing-table .mk-info .main-content .about-product .properties, body section.marketing-table .mk-info .main-content .about-product .description {
     padding-right: 15px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
-    padding-top: 16px;
-    padding-bottom: 24px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
-    width: 100%;
+  body section.marketing-table .mk-info .main-content .about-product .description p.text {
+    font-size: 19px;
+    padding: 15px 0;
   }
   body section.marketing-table .mk-info .main-content .about-product .properties span.subhead {
     font-size: 19px;
@@ -3121,6 +3177,13 @@ body section.marketing-table .mk-block {
   }
   body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name, body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
     font-size: 19px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer a.btn {
+    width: 100%;
   }
   body section.marketing-table .mk-info .main-content .delivery {
     padding-right: 15px;
@@ -3577,34 +3640,7 @@ body section.marketing-table .mk-block {
   body section.marketing-table .mk-info .main-content .about-product .headblock span.headname {
     font-size: 16px;
   }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .head, body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value {
-    padding: 8.5px 0;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .head span.name {
-    font-size: 16px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .head img.i-img {
-    width: 16px;
-    height: 16px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line span {
-    font-size: 16px;
-    margin-left: 22px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .receive .line .img-outer {
-    width: 22px;
-    height: 20px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .price-value span {
-    font-size: 16px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer {
-    padding-top: 12px;
-    padding-bottom: 10px;
-  }
-  body section.marketing-table .mk-info .main-content .about-product .prices .item .btn-outer a.btn {
-    height: 40px;
-    line-height: 38px;
+  body section.marketing-table .mk-info .main-content .about-product .description p.text {
     font-size: 16px;
   }
   body section.marketing-table .mk-info .main-content .about-product .properties span.subhead {
@@ -3616,6 +3652,36 @@ body section.marketing-table .mk-block {
   }
   body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.name, body section.marketing-table .mk-info .main-content .about-product .properties .table .item span.value {
     font-size: 13px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .head, body section.marketing-table .mk-info .main-content .prices .item .price-value {
+    padding: 8.5px 0;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .head span.name {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .head img.i-img {
+    width: 16px;
+    height: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line span {
+    font-size: 16px;
+    margin-left: 22px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .receive .line .img-outer {
+    width: 22px;
+    height: 20px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .price-value span {
+    font-size: 16px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
+  body section.marketing-table .mk-info .main-content .prices .item .btn-outer a.btn {
+    height: 40px;
+    line-height: 38px;
+    font-size: 16px;
   }
   body section.marketing-table .mk-info .main-content .delivery form.form-block .delivery-type .radio-item label {
     margin-left: 16px;

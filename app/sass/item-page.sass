@@ -144,8 +144,8 @@ body
 			right: 0
 			top: 0
 			margin-top: 15px
-			cursor: pointer
 			margin-bottom: 16px
+			cursor: pointer
 			font-size: 0
 			letter-spacing: 0
 			word-spacing: 0
@@ -191,7 +191,7 @@ body
 						height: 25px
 						margin-right: 3px
 		.r-sidebar
-			padding-top: 88px
+			padding-top: 89px
 			width: 38%
 			margin-left: 1%
 			.info-block, .settings, .arrows
@@ -265,7 +265,6 @@ body
 				padding-left: 15px
 				padding-top: 12px
 				padding-bottom: 11px
-				margin-top: 16px
 				position: relative
 				.availability
 					position: absolute
@@ -348,7 +347,6 @@ body
 						color: $accent-blue
 			.arrows
 				text-align: center
-				margin-top: 17px
 				padding: 9px 0
 				position: relative
 				line-height: 10px
@@ -371,7 +369,10 @@ body
 					font-size: 11px
 					color: #7F7F7F
 					line-height: 15px
+			.arrows, .settings
+				margin-top: 8px
 			.sidebar-btns
+				margin-top: 14px
 				display: -webkit-flex
 				display: -moz-flex
 				display: -ms-flex
@@ -384,7 +385,7 @@ body
 					width: 48.8%
 					height: 38.5px
 					line-height: 37px
-					margin-top: 17px
+					margin-bottom: 8px
 					background-color: transparent
 					border-radius: 5px
 					border: 0.5px solid #000
@@ -659,77 +660,13 @@ body
 						margin-right: -37px
 						span.headname
 							font-size: 15px
-					.prices
+					.description
 						padding-right: 37px
-						.item
-							width: 100%
-							display: -webkit-flex
-							display: -moz-flex
-							display: -ms-flex
-							display: -o-flex
-							display: flex
-							align-items: center
-							justify-content: space-between
-							.head, .receive
-								width: 34.8%
-							.price-value
-								width: 18.2%
-							.btn-outer
-								width: 12.2%
-							.head
-								padding: 17px 0
-								span, img
-									vertical-align: middle
-								span.name
-									font-size: 15px
-									font-weight: bold
-								img.i-img
-									width: 17px
-									height: 17px
-									margin-left: 34px
-							.receive
-								.line
-									height: 30px
-									line-height: 25px
-									.img-outer
-										display: inline-block
-										width: 20px
-										height: 19px
-										text-align: center
-										img
-											margin: auto
-											display: block
-										.w-full
-											width: 100%
-											margin: 3px 0
-									span, .img-outer
-										vertical-align: middle
-									span
-										font-size: 15px
-										margin-left: 11px
-							.price-value
-								padding: 18px 0
-								span
-									font-size: 15px
-									font-weight: bold
-							.btn-outer
-								padding: 15px 0
-								margin-left: auto
-								a.btn
-									display: inline-block
-									border-radius: 5px
-									width: 100%
-									height: 30px
-									line-height: 30px
-									background-color: $accent-blue
-									text-align: center
-									font-weight: bold
-									font-size: 13px
-									color: #fff
-						img.separ
-							width: 100%
-							max-height: 2px
-							display: block
+						p.text
+							font-size: 15px
+							color: #000
+							padding: 15px 0
+							margin: 0
 					.properties
 						padding-right: 37px
 						span.subhead
@@ -768,6 +705,99 @@ body
 									display: block
 								img.separ.mob
 									display: none
+
+				.prices
+					padding-right: 37px
+					.item
+						width: 100%
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						align-items: center
+						justify-content: space-between
+						.head, .receive
+							width: 34.8%
+						.price-value
+							width: 18.2%
+						.btn-outer
+							width: 12.2%
+						.head
+							padding: 17px 0
+							span, img
+								vertical-align: middle
+							span.name
+								font-size: 15px
+								font-weight: bold
+							img.i-img
+								width: 17px
+								height: 17px
+								margin-left: 34px
+						.receive
+							.line
+								height: 30px
+								line-height: 25px
+								.img-outer
+									display: inline-block
+									width: 20px
+									height: 19px
+									text-align: center
+									img
+										margin: auto
+										display: block
+									.w-full
+										width: 100%
+										margin: 3px 0
+								span, .img-outer
+									vertical-align: middle
+								span
+									font-size: 15px
+									margin-left: 11px
+						.price-value
+							padding: 18px 0
+							span
+								font-size: 15px
+								font-weight: bold
+						.btn-outer
+							padding: 15px 0
+							margin-left: auto
+							a.btn
+								display: inline-block
+								border-radius: 5px
+								width: 100%
+								height: 30px
+								line-height: 30px
+								background-color: $accent-blue
+								text-align: center
+								font-weight: bold
+								font-size: 13px
+								color: #fff
+					img.separ
+						width: 100%
+						max-height: 2px
+						display: block
+					.hidden
+						display: none
+					.btnToggle
+						cursor: pointer
+						padding: 20px 0
+						text-align: center
+						span
+							font-size: 15px
+							color: #000
+							opacity: 0.5
+							font-weight: bold
+						img
+							margin-left: 8px
+							margin-bottom: -3px
+					.btnShow
+						img
+							transform: rotate(90deg)
+					.btnHide
+						display: none
+						img
+							transform: rotate(-90deg)
 
 
 				.delivery
@@ -1310,7 +1340,7 @@ body
 						font-size: 20px
 			.r-sidebar
 				padding-top: 0
-				margin-top: 34px
+				margin-top: 22px
 				margin-left: 0
 				.info-block
 					padding-top: 0
@@ -1425,7 +1455,6 @@ body
 						font-size: 21px
 		section.marketing-table
 			.marketing-navbar
-				margin-bottom: 34px
 				padding: 19px 0
 				.input-outer
 					pointer-events: none
@@ -1535,30 +1564,12 @@ body
 							margin-right: -30px
 							span.headname
 								font-size: 21px
-						.prices
+						.description
 							padding-right: 30px
-							.list
-								.item
-									.head
-										padding: 29px 0
-										span.name
-											font-size: 20px
-									.receive
-										width: 38.8%
-										.line
-											margin: 5px 0
-											span
-												font-size: 20px
-									.price-value
-										width: 12.2%
-										span
-											font-size: 20px
-									.btn-outer
-										width: 14.2%
-										a.btn
-											height: 60px
-											line-height: 58px
-											font-size: 22px
+							p.text
+								font-size: 20px
+								line-height: 1.15
+								padding: 34px 0
 						.properties
 							padding-right: 30px
 							span.subhead
@@ -1573,6 +1584,29 @@ body
 										display: block
 									span.name, span.value
 										font-size: 20px
+					.prices
+						padding-right: 30px
+						.item
+							.head
+								padding: 29px 0
+								span.name
+									font-size: 20px
+							.receive
+								width: 38.8%
+								.line
+									margin: 5px 0
+									span
+										font-size: 20px
+							.price-value
+								width: 12.2%
+								span
+									font-size: 20px
+							.btn-outer
+								width: 14.2%
+								a.btn
+									height: 60px
+									line-height: 58px
+									font-size: 22px
 					.delivery
 						form.form-block
 							.delivery-type
@@ -1770,12 +1804,13 @@ body
 			.mk-feedback, .mk-info, .mk-products
 				.main-content
 					.anchors-section
-						margin: 34px 0
+						margin: 34px 0 0 0
 						.anchor-btn
 							height: 60px
 							line-height: 58px
 							font-size: 21px
 							margin-right: 22px
+							margin-bottom: 34px
 @media only screen and(max-width: 900px)
 	body
 		section.item-main-section
@@ -1884,50 +1919,49 @@ body
 											font-size: 19px
 			.mk-info
 				.main-content
-					.about-product
-						.prices
-							.item
-								flex-wrap: wrap
-								.head, .price-value
-									padding: 14.5px 0
-									width: 50%
-								.head
-									span.name
-										font-size: 19px
-									img.i-img
-										width: 22px
-										height: 22px
-										margin-left: 20px
-								.price-value
-									text-align: right
+					.prices
+						.item
+							flex-wrap: wrap
+							.head, .price-value
+								padding: 14.5px 0
+								width: 50%
+							.head
+								span.name
+									font-size: 19px
+								img.i-img
+									width: 22px
+									height: 22px
+									margin-left: 20px
+							.price-value
+								text-align: right
+								span
+									font-size: 19px
+							.receive
+								order: 3
+								width: 100%
+								.line
+									margin-bottom: 3px
+									margin-top: 3px
+									.img-outer
+										width: 32px
+										height: 26px
+										img
+											height: 100%
+											margin: auto
 									span
 										font-size: 19px
-								.receive
-									order: 3
-									width: 100%
-									.line
-										margin-bottom: 3px
-										margin-top: 3px
-										.img-outer
-											width: 32px
-											height: 26px
-											img
-												height: 100%
-												margin: auto
-										span
-											font-size: 19px
-											margin-left: 33px
-								.btn-outer
-									order: 4
-									width: 100%
-									a.btn
-										display: block
-										margin-left: auto
-										margin-right: auto
-										width: 420px
-										height: 52px
-										line-height: 50px
-										font-size: 20px
+										margin-left: 33px
+							.btn-outer
+								order: 4
+								width: 100%
+								a.btn
+									display: block
+									margin-left: auto
+									margin-right: auto
+									width: 420px
+									height: 52px
+									line-height: 50px
+									font-size: 20px
 					.delivery
 						form.form-block
 							.delivery-type
@@ -2122,7 +2156,6 @@ body
 			.r-sidebar
 				margin-top: 4px
 				.info-block
-					margin-top: 15px
 					padding-left: 15px
 					padding-bottom: 25px
 					img.new-mark
@@ -2287,15 +2320,12 @@ body
 							padding-right: 15px
 							span.headname
 								font-size: 19px
-						.prices, .properties
+						.properties, .description
 							padding-right: 15px
-						.prices
-							.item
-								.btn-outer
-									padding-top: 16px
-									padding-bottom: 24px
-									a.btn
-										width: 100%
+						.description
+							p.text
+								font-size: 19px
+								padding: 15px 0
 						.properties
 							span.subhead
 								font-size: 19px
@@ -2305,6 +2335,13 @@ body
 									padding: 4.5px 0
 									span.name, span.value
 										font-size: 19px
+					.prices
+						.item
+							.btn-outer
+								padding-top: 16px
+								padding-bottom: 24px
+								a.btn
+									width: 100%
 					.delivery
 						padding-right: 15px
 						h2
@@ -2679,34 +2716,9 @@ body
 						.headblock
 							span.headname
 								font-size: 16px
-						.prices
-							.item
-								.head, .price-value
-									padding: 8.5px 0
-								.head
-									span.name
-										font-size: 16px
-									img.i-img
-										width: 16px
-										height: 16px
-								.receive
-									.line
-										span
-											font-size: 16px
-											margin-left: 22px
-										.img-outer
-											width: 22px
-											height: 20px
-								.price-value
-									span
-										font-size: 16px
-								.btn-outer
-									padding-top: 12px
-									padding-bottom: 10px
-									a.btn
-										height: 40px
-										line-height: 38px
-										font-size: 16px
+						.description
+							p.text
+								font-size: 16px
 						.properties
 							span.subhead
 								font-size: 16px
@@ -2716,7 +2728,34 @@ body
 									padding: 8px 0
 									span.name, span.value
 										font-size: 13px
-
+					.prices
+						.item
+							.head, .price-value
+								padding: 8.5px 0
+							.head
+								span.name
+									font-size: 16px
+								img.i-img
+									width: 16px
+									height: 16px
+							.receive
+								.line
+									span
+										font-size: 16px
+										margin-left: 22px
+									.img-outer
+										width: 22px
+										height: 20px
+							.price-value
+								span
+									font-size: 16px
+							.btn-outer
+								padding-top: 12px
+								padding-bottom: 10px
+								a.btn
+									height: 40px
+									line-height: 38px
+									font-size: 16px
 					.delivery
 						form.form-block
 							.delivery-type

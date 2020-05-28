@@ -1,0 +1,86 @@
+extends _layouts/home
+
+block styles
+	link(rel="stylesheet", href="css/people.css")
+
+block content
+
+	include _partials/header.pug
+
+	main
+		.container
+			section.main-content
+				.navbar
+					.input-outer.main-block-models-input-outer
+						input.input-search(type="search" placeholder="Поиск по моделям")
+						a(href="#").buttonSearch
+							img.icon(src="img/search.svg", alt="search.svg")
+					.navbar-buttonSwitch.publications.buttonSwitch.active
+						span Публикации
+					.navbar-buttonSwitch.models.buttonSwitch
+						span Модели
+				.main-block.publications.active(style="display: block")
+					a.item(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+					a.item(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+				.main-block.models
+					- for(var i = 1; i <= 16; i++)
+						.model-item
+							img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
+							.text-block
+								.name Екатерина
+								.login ekaterina777
+							.mGallery
+								img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+								img(src="img/people/mGallery-img2.jpg", alt="mGallery-img2.jpg")
+								img(src="img/people/mGallery-img3.jpg", alt="mGallery-img3.jpg")
+							a(href="#").btn-subscribe Подписаться
+
+
+
+
+	include _partials/footer.pug
+
+block scripts
+	script.
+		$(document).ready(function(){
+			$('.navbar-buttonSwitch').click(function(){
+				$(this).addClass('active');
+				$('.navbar-buttonSwitch').not(this).removeClass('active');
+				$('.navbar-buttonSwitch').addClass('disabled');
+				setTimeout(function(){
+					$('.navbar-buttonSwitch').removeClass('disabled');
+				}, 350);
+			});
+			$('.navbar-buttonSwitch.publications').click(function(){
+				$('.main-block').removeClass('active');
+				$('.main-block').fadeOut(250);
+				$('.main-block-models-input-outer').fadeOut(250);
+				setTimeout(function(){
+					$('.main-block.publications').addClass('active');
+					$('.main-block.publications').fadeIn(250);
+				}, 250);
+			});
+			$('.navbar-buttonSwitch.models').click(function(){
+				$('.main-block').removeClass('active');
+				$('.main-block').fadeOut(250);
+				$('.main-block-models-input-outer').fadeIn(250);
+				setTimeout(function(){
+					$('.main-block.models').addClass('active');
+					$('.main-block.models').fadeIn(250);
+				}, 250);
+			});
+		});

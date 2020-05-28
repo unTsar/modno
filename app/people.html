@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Modno</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Front-end by unTsar">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/people.css">
+  </head>
+  <body>
+    <div class="shop-map-outer index-sidebar-map-popup" id="index-sidebar-map-popup">
+      <div class="back-close-btn index-sidebar-map-popup_close-btn"></div>
+      <div class="shop-map"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+        <div class="map" id="index-sidebar-map"></div>
+      </div>
+    </div>
+    <div class="shop-map-outer shop-page-map-popup" id="shop-page-map-popup">
+      <div class="back-close-btn shop-page-map-popup_close-btn"></div>
+      <div class="shop-map"><a class="close-btn shop-page-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
+        <div class="map" id="shop-page-map"></div>
+      </div>
+    </div>
+    <div class="Log-form feedback-form" id="feedback-form"><a class="feedback-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Оставить отзыв</span></div>
+      <form class="form-block" action="#">
+        <div class="input-item">
+          <div class="input-head"> <span>Ваше имя <span class="red">*</span> </span></div>
+          <input type="text">
+        </div>
+        <div class="input-item">
+          <div class="input-head"> <span>Ваша оценка <span class="red">*</span></span></div>
+          <div class="rating"><img src="img/shop-page/star-disable_white.svg" alt="star-disable_white.svg"><img src="img/shop-page/star-disable_white.svg" alt="star-disable_white.svg"><img src="img/shop-page/star-disable_white.svg" alt="star-disable_white.svg"><img src="img/shop-page/star-disable_white.svg" alt="star-disable_white.svg"><img src="img/shop-page/star-disable_white.svg" alt="star-disable_white.svg"></div>
+        </div>
+        <div class="input-item">
+          <div class="input-head"> <span>Комментарий <span class="red">*</span></span></div>
+          <textarea></textarea>
+        </div>
+        <div class="p-policy">
+          <input id="feedback-form_checkbox" type="checkbox">
+          <label for="feedback-form_checkbox"></label>
+          <div class="textblock headtext">Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.</div>
+        </div>
+        <div class="form-buttons">
+          <input class="feedback-form_close-btn" type="submit" value="Отправить">
+        </div>
+      </form>
+    </div>
+    <div class="Log-form mk-filter-drop-popup" id="mk-filter-drop-popup"><a class="filter-drop-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><img class="unfixed-btn img-inner-close filter-drop-popup_close-btn" src="img/index/filter-drop-btn.svg" alt="filter-drop-btn.svg"><span>Сортировка по</span></div>
+      <div class="links"><a class="link" href="#">умолчанию</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">рейтингу</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">популярности</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">скидке</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">цене, дешевле</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">цене, дороже</a><a class="unfixed-btn btn filter-drop-popup_close-btn" href="#"><span>Принять</span></a></div>
+    </div>
+    <div class="Log-form mk-filter-popup" id="mk-filter-popup-products"><a class="filter-popup-products_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Фильтры товаров</span></div>
+      <div class="links">
+        <div class="line"><span class="span-link">Вид одежды</span>
+          <select class="mk-filter-products-select2 js-states form-control" name="state">
+            <option value="Opt1">Мужская</option>
+            <option value="Opt2">Женская</option>
+            <option value="Opt3">Детская</option>
+          </select>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line"><span class="span-link">Категория</span>
+          <select class="mk-filter-products-select2 js-states form-control" name="state">
+            <option value="Opt1">Одежда</option>
+            <option value="Opt2">Обувь</option>
+            <option value="Opt3">Аксессуары</option>
+          </select>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line"><span class="span-link">Тип</span>
+          <select class="mk-filter-products-select2 js-states form-control" name="state">
+            <option value="Opt1">Брюки</option>
+            <option value="Opt2">Кардиганы</option>
+            <option value="Opt3">Свитеры</option>
+            <option value="Opt4">Рубашки</option>
+            <option value="Opt5">Блузы</option>
+            <option value="Opt6">Джемперы</option>
+            <option value="Opt7">Вязаные костюмы</option>
+            <option value="Opt8">Джинсы</option>
+            <option value="Opt9">Комбинезоны</option>
+          </select>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line"><span class="span-link">Размер</span>
+          <div class="input-outer">
+            <input class="value" type="number" value="44">
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line"><span class="span-link">Цвет</span>
+          <select class="mk-filter-products-select2 js-states form-control" name="state">
+            <option value="Opt1">Белый</option>
+            <option value="Opt2">Чёрный</option>
+            <option value="Opt3">Коричневый</option>
+          </select>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line"><span class="span-link">Материал</span>
+          <select class="mk-filter-products-select2 js-states form-control" name="state">
+            <option value="Opt1">Кожа</option>
+            <option value="Opt2">Шёлк</option>
+            <option value="Opt3">Шерсть</option>
+            <option value="Opt4">Кожзам</option>
+          </select>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Новинки</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Скидки</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="g-separ-block"></div>
+      <div class="links">
+        <div class="line"><span class="span-link">Цена, от</span>
+          <div class="input-outer">
+            <input class="value" type="text" value="200"><span class="rouble">&#8381;</span>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line"><span class="span-link">Цена, до</span>
+          <div class="input-outer">
+            <input class="value" type="text" value="200 000"><span class="rouble">&#8381;</span>
+          </div>
+        </div>
+      </div>
+      <div class="g-separ-block"></div>
+      <div class="links">
+        <div class="line hmenu-popup-main-city_btn"><span class="span-link">Город</span><span class="value">Москва</span>
+          <div class="img-arrow"></div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line hmenu-popup-main-delivery_btn"><span class="span-link">Доставка</span><span class="value">Москва</span>
+          <div class="img-arrow"></div>
+        </div>
+      </div>
+      <div class="g-separ-block"></div>
+      <div class="links">
+        <div class="line"><span class="span-link">Сортировка</span>
+          <select class="mk-filter-products-select2 js-states form-control" name="state">
+            <option value="Opt1">по цене</option>
+            <option value="Opt2">по рейтингу</option>
+          </select>
+        </div>
+      </div>
+      <div class="btn-outer"><a class="btn filter-popup-products_close-btn" href="#"><span>Принять</span></a></div>
+    </div>
+    <div class="Log-form mk-filter-popup" id="mk-filter-popup-shops"><a class="filter-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Фильтры</span></div>
+      <div class="links">
+        <div class="line mk-filter-popup-line"><span class="span-link">Монобрендовые</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Мультибрендовые</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Бутики</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Аутлеты</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Онлайн</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div>
+        <div class="btn-outer"><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a></div>
+      </div>
+    </div>
+    <div class="Log-form mk-filter-popup" id="mk-filter-popup-molls"><a class="filter-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Фильтры</span></div>
+      <div class="links">
+        <div class="line mk-filter-popup-line"><span class="span-link">Торговые центры</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Торговые комплексы</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+        <div class="line mk-filter-popup-line"><span class="span-link">Универмаги</span>
+          <div class="buttonOpSw r">
+            <input class="option-checkbox" type="checkbox">
+            <div class="knobs"></div>
+            <div class="layer"></div>
+          </div>
+        </div>
+        <div class="btn-outer"><a class="btn filter-popup_close-btn" href="#"><span>Принять</span></a></div>
+      </div>
+    </div>
+    <div class="Log-form popup-profile-mob" id="popup-profile-mob"><a class="profile-mob_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Кабинет</span></div>
+      <div class="links"><a class="link" href="#">Мои заказы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Мои данные</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Мои сообщения (<span class="msg-val">3</span>)</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Отложенные товары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Подарочные сертификаты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link g" href="#">Подписки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Мои баллы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Отслеживание заказов</a>
+        <div class="track-input">
+          <input class="track-search" type="search" placeholder="Номер заказа">
+        </div><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link profile-mob_close-btn" href="#">Выйти</a>
+      </div>
+    </div>
+    <div class="hmenu-popup-lSettings hmenu-popup hmenu-popup-main-currency" id="hmenu-popup-main-currency">
+      <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
+        <div class="head"><a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Валюта</span></div>
+        <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+          <input class="input-search popup-map-input-search" type="search" placeholder="Введите валюту">
+        </div>
+        <div class="links"><a class="link" href="#">EUR (Euro)</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">USD (US Dollar)</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">RUB (Russian Rouble)</a></div><a class="btn-submit hmenu-popup-inner-close" href="#"><span>Запомнить</span></a>
+      </div>
+    </div>
+    <div class="hmenu-popup-lSettings hmenu-popup hmenu-popup-main-language" id="hmenu-popup-main-language">
+      <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
+        <div class="head"><a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Язык</span></div>
+        <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+          <input class="input-search popup-map-input-search" type="search" placeholder="Введите язык">
+        </div>
+        <div class="links"><a class="link" href="#">Русский</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">English</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Deutsch</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Italiano</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">Español</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" href="#">中文</a></div><a class="btn-submit hmenu-popup-inner-close" href="#"><span>Запомнить</span></a>
+      </div>
+    </div>
+    <div class="hmenu-popup-category hmenu-popup hmenu-popup-category2" id="hmenu-popup-category2">
+      <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
+        <div class="head"> <a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Одежда</span></div>
+        <div class="links"><a class="link hmenu-category-link" href="#">Блузы и рубашки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Брюки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Верхняя одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Вязаные костюмы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Джемперы, свитеры и кардиганы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Джинсы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Домашняя одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Комбинезоны</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Купальники и пляжная одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Носки, чулки и колготки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Пиджаки и костюмы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Платья и сарафаны</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Спортивные костюмы</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Толстовки и свитшоты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Топы и майки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Туники</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Футболки поло</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Шорты</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Одежда больших размеров</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-category-link" href="#">Одежда для беременных</a></div>
+        <div class="offer-section"><img src="img/index/offer-section-img.jpg" alt="offer-section-img.jpg">
+          <div class="desctext">
+            <div class="text headtext">Предложение дня</div>
+            <div class="text name">Mango: одежда и обувь онлайн</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hmenu-popup-category hmenu-popup hmenu-popup-category1" id="hmenu-popup-category1">
+      <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
+        <div class="head"><a class="hmenu-popup-inner-close" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Категории</span></div>
+        <div class="links"><a class="link hmenu-link g" href="#">Новинки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Одежда</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Обувь </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Сумки</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Аксессуары</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Часы </a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Ювелирные украшения</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Парфюмерия</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Красота</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link r" href="#">Sale</a></div>
+      </div>
+    </div>
+    <div class="hmenu-popup hmenu-popup-main" id="hmenu-popup-main">
+      <div class="outer"><img class="hmenu-popup-close" src="img/close.svg" alt="img/close.svg">
+        <div class="head"> <span>Категории</span></div>
+        <div class="links"><a class="link hmenu-link" href="#">Женщины</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Мужчины</a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-link" href="#">Дети</a></div>
+      </div>
+      <div class="outer">
+        <div class="head"> <span>Настройки</span></div>
+        <div class="links"><a class="link hmenu-popup-main-city_btn" href="#">Город: <span class="val">Москва</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link hmenu-popup-main-delivery_btn" href="#">Доставка: <span class="val">Москва</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-language_btn" href="#">Язык: <span class="val">русский</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a><img class="separ" src="img/index/separ.svg" alt="separ.svg"><a class="link" id="hmenu-popup-main-currency_btn" href="#">Валюта: <span class="val">RUB (Russian Rouble)</span><img class="img-arrow" src="img/hmenu-arrow-right.svg" alt="hmenu-arrow-right.svg"></a></div>
+      </div>
+    </div>
+    <div class="dd-popup currency-popup" id="currency-popup"><a class="currency-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Валюта</span></div>
+      <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="input-search popup-map-input-search" type="search" placeholder="Введите валюту">
+      </div>
+      <div class="search-items dd-search-items">
+        <div class="search-item dd-search-item currency-popup_close-btn"><span>EUR (Euro)</span></div>
+        <div class="search-item dd-search-item currency-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>USD (US Dollar)</span></div>
+        <div class="search-item dd-search-item currency-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>RUB (Russian Rouble)</span></div>
+        <div class="search-item dd-search-item"></div>
+        <div class="search-item dd-search-item"></div>
+        <div class="search-item dd-search-item"></div>
+      </div>
+    </div>
+    <div class="dd-popup language-popup" id="language-popup"><a class="language-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Язык</span></div>
+      <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="input-search popup-map-input-search" type="search" placeholder="Введите язык">
+      </div>
+      <div class="search-items dd-search-items">
+        <div class="search-item dd-search-item language-popup_close-btn"><span>Русский</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>English</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>Deutsch</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>Italiano</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>Español</span></div>
+        <div class="search-item dd-search-item language-popup_close-btn"><img class="separ" src="img/index/separ.svg" alt="separ.svg"><span>中文</span></div>
+      </div>
+    </div>
+    <div class="popup-map popup-map-delivery Log-form" id="popup-map2"><img class="hmenu-popup-close img-close popup-map2_close-btn" src="img/close.svg" alt="close.svg">
+      <div class="topline"><a class="hmenu-popup-inner-close popup-map2_close-btn" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Доставка</span></div>
+      <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="input-search popup-map-input-search" type="search" placeholder="Введите город">
+        <div class="search-results">
+          <div class="search-item"><span>Москва</span></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+          <div class="search-item"><span>Санкт-Петербург</span></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+          <div class="search-item"><span>Владивосток</span></div>
+        </div>
+      </div>
+      <div class="mapOuter">
+        <div class="map" id="map2"></div>
+      </div>
+      <div class="map-buttons"><a class="map-btn popup-map2_close-btn" href="#"><span>Запомнить</span></a></div>
+    </div>
+    <div class="popup-map popup-map-city Log-form" id="popup-map1"><img class="hmenu-popup-close img-close popup-map1_close-btn" src="img/close.svg" alt="close.svg">
+      <div class="topline"><a class="hmenu-popup-inner-close popup-map1_close-btn" href="#"><img src="img/arrow-left.svg" alt="arrow-left.svg"></a><span>Местоположение</span></div>
+      <div class="input-outer"><img class="img-search" src="img/search.svg" alt="search.svg">
+        <input class="input-search popup-map-input-search" type="search" placeholder="Введите город">
+        <div class="search-results">
+          <div class="search-item"><span>Москва</span></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+          <div class="search-item"><span>Санкт-Петербург</span></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+          <div class="search-item"><span>Владивосток</span></div>
+        </div>
+      </div>
+      <div class="mapOuter">
+        <div class="map" id="map1"></div>
+      </div>
+      <div class="map-buttons"><a class="map-btn popup-map1_close-btn" href="#"><span>Запомнить</span></a></div>
+    </div>
+    <div class="Log-form LogIn-form" id="LogIn-form"><a class="LogIn-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Войти</span></div>
+      <form class="form-block" action="#">
+        <div class="input-item">
+          <div class="input-head"> <span>Логин <span class="red">*</span> </span><a class="a-logup LogIn-form_close-btn" href="#" id="LogIn-form_btnLogUp">Создать учетную запись</a></div>
+          <input type="text"><a class="a-logup LogIn-form_close-btn mob" href="#" id="LogIn-form_btn_mobLogUp">Создать учетную запись</a>
+        </div>
+        <div class="input-item">
+          <div class="input-head"> <span>Пароль <span class="red">*</span></span><a href="#">Забыли пароль?</a></div>
+          <input type="password"><a class="input-head__a mob" href="#">Забыли пароль?</a>
+        </div>
+        <div class="form-options">
+          <input id="LogIn-form_checkbox" type="checkbox">
+          <label for="LogIn-form_checkbox">Запомнить</label>
+        </div>
+        <div class="form-buttons"><a class="form-btn form-btnLogIn LogIn-form_close-btn" href="#" id="LogIn-form_btnLogIn"><span>Вход</span></a></div>
+      </form>
+    </div>
+    <div class="Log-form LogUp-form" id="LogUp-form"><a class="LogUp-form_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><span>Создать учетную запись</span></div>
+      <form class="form-block" action="#">
+        <div class="input-item">
+          <div class="input-head"> <span>Тип учётной записи</span></div>
+          <div class="radio">
+            <input id="LogUp-form_radio1" type="radio" name="logup-type">
+            <label for="LogUp-form_radio1">Покупатель</label>
+            <input id="LogUp-form_radio2" type="radio" name="logup-type">
+            <label for="LogUp-form_radio2">Продавец</label>
+          </div>
+        </div>
+        <div class="input-item">
+          <div class="input-head"><span>E-mail <span class="red">*</span> </span></div>
+          <input type="email">
+        </div>
+        <div class="input-item">
+          <div class="input-head"><span>Пароль <span class="red">*</span></span></div>
+          <input type="password">
+        </div>
+        <div class="input-item">
+          <div class="input-head"><span>Подтверждение пароля <span class="red">*</span></span></div>
+          <input type="password">
+        </div>
+        <div class="p-policy">
+          <input id="LogUp-form_checkbox" type="checkbox">
+          <label for="LogUp-form_checkbox"></label>
+          <div class="textblock headtext">Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <span class="red">*</span></div>
+          <div class="textblock desctext">Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным <a href="#">здесь текстом</a></div>
+        </div>
+        <div class="form-buttons"><a class="form-btn form-btnLogUp LogUp-form_close-btn" href="#" id="LogUp-form_btnLogUp"><span>Регистрация</span></a></div>
+      </form>
+    </div>
+    <header>
+      <div class="container">
+        <div class="headerLine"><a class="menu">
+            <button class="hamburger hamburger--elastic" id="header-menu-button" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></a><a class="button-like mob" href="#"><img src="img/like.svg" alt="like.svg"></a><a class="logo" href="index.html"><img class="img-logo" src="img/logo.svg" alt="logo.svg"></a><a class="button-shopCart mob" href="#"><img src="img/shopCart.svg" alt="shopCart.svg"></a>
+          <div class="languageSettings">
+            <div class="languageSettings-button" id="languageSettings-button"><img class="flag" src="img/flag-russia.jpg" alt="flag-russia.jpg"><span class="cityName">Москва</span>
+              <div class="buttonOpen">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="dropmenu hide" id="languageSettings-dropmenu">
+              <div class="line hmenu-popup-main-city_btn"><span><span class="black">Город:</span> Москва</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+              <div class="line hmenu-popup-main-delivery_btn"><span><span class="black">Доставка:</span> Москва</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+              <div class="line" id="header-language-popup"><span><span class="black">Язык:</span> Русский</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div><img class="separ" src="img/index/separ.svg" alt="separ.svg">
+              <div class="line" id="header-currency-popup"><span><span class="black">Валюта:</span> RUB (Russian Rouble)</span><img class="img-arrow" src="img/index/drop-menu-arrow.svg" alt="drop-menu-arrow.svg"></div>
+            </div>
+          </div>
+          <div class="input-outer">
+            <input class="input-search" type="search" placeholder="Поиск по товарам"><a class="buttonSearch" href="#"><img class="icon" src="img/search.svg" alt="search.svg"></a>
+          </div>
+          <div class="options"><a class="button-like" href="#"><img src="img/like.svg" alt="like.svg"></a><a class="button-shopCart" href="#"><img src="img/shopCart.svg" alt="shopCart.svg"></a><a class="buttonLogIn" href="#" id="header-btnLogIn"><span>Войти</span></a></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="main-content">
+          <div class="navbar">
+            <div class="input-outer main-block-models-input-outer">
+              <input class="input-search" type="search" placeholder="Поиск по моделям"><a class="buttonSearch" href="#"><img class="icon" src="img/search.svg" alt="search.svg"></a>
+            </div>
+            <div class="navbar-buttonSwitch publications buttonSwitch active"><span>Публикации</span></div>
+            <div class="navbar-buttonSwitch models buttonSwitch"><span>Модели</span></div>
+          </div>
+          <div class="main-block publications active" style="display: block"><a class="item" href="#"><img src="img/item-page/publications-item1.jpg" alt="publications-item1.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item2.jpg" alt="publications-item2.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item3.jpg" alt="publications-item3.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item1.jpg" alt="publications-item1.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item1.jpg" alt="publications-item1.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item2.jpg" alt="publications-item2.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item3.jpg" alt="publications-item3.jpg"></a><a class="item" href="#"><img src="img/item-page/publications-item1.jpg" alt="publications-item1.jpg"></a></div>
+          <div class="main-block models">
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+            <div class="model-item"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+              <div class="text-block">
+                <div class="name">Екатерина</div>
+                <div class="login">ekaterina777</div>
+              </div>
+              <div class="mGallery"><img src="img/people/mGallery-img1.jpg" alt="mGallery-img1.jpg"><img src="img/people/mGallery-img2.jpg" alt="mGallery-img2.jpg"><img src="img/people/mGallery-img3.jpg" alt="mGallery-img3.jpg"></div><a class="btn-subscribe" href="#">Подписаться</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="container">
+          <div class="footer-content-wrapper">
+            <div class="banners"><img class="b1" src="img/banner1.jpg" alt="banner1.jpg"><img class="b2" src="img/banner2.jpg" alt="banner2.jpg"></div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
+            <div class="links">
+              <div class="linkHead footer-links-btn">О компании </div>
+              <div class="list footer-links-hidden"><a href="#">О нас </a><br><a href="#">Оферта </a><br><a href="#">Политика конфидециальности </a><br><a href="#">Бонусные баллы </a><br><a href="#">Подарочные сертификаты </a><br><a href="#">Карта сайта </a><br><a href="#">Контакты </a></div>
+            </div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
+            <div class="links">
+              <div class="linkHead footer-links-btn">Оформление заказа </div>
+              <div class="list footer-links-hidden"><a href="#">Доставка и оплата </a><br><a href="#">Возврат </a><br><a href="#">Способы оплаты </a><br><a href="#">Вопросы и ответы </a></div>
+            </div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
+            <div class="links">
+              <div class="linkHead footer-links-btn">Партнёрам </div>
+              <div class="list footer-links-hidden"><a href="#">Магазинам </a><br><a href="#">Моллам </a><br><a href="#">Веб мастерам </a><br><a href="#">Войти как партнер </a></div>
+            </div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
+            <div class="applinks"><a href="#"><img src="img/googleplay.jpg" alt="googleplay.jpg"></a><a href="#"><img src="img/appstore.jpg" alt="appstore.jpg"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottomLine"><span>&copy; 2010 - 2019 GoGroup.  Платформа для интернет-магазинов</span>
+        <div class="payments"><img class="payment-img" src="img/paypal.jpg" alt="paypal.jpg"><img class="payment-img" src="img/mastercard.jpg" alt="mastercard.jpg"><img class="payment-img" src="img/visa.jpg" alt="visa.jpg"></div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script src="js/jquery.bpopup.js"></script>
+  <script>
+    $(document).ready(function(){
+    
+    	svg4everybody();
+    
+    	$('.hmenu-popup-main-city_btn').click(function(){
+    		$('#popup-map1').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'popup-map1_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    		});
+    	});
+    	$('.hmenu-popup-main-delivery_btn').click(function(){
+    		$('#popup-map2').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'popup-map2_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }	
+    		});
+    	});
+    
+    	var lSbtn = $('#languageSettings-button');
+    	var lSdropmenu = $('#languageSettings-dropmenu');
+    
+    	lSbtn.click(function(){
+    		if (lSdropmenu.hasClass('hide')){
+    			lSdropmenu.fadeIn(50)
+    			lSdropmenu.removeClass('hide');
+    		}else{
+    			lSdropmenu.fadeOut(100)
+    			lSdropmenu.addClass('hide')
+    		}
+    	});
+    
+    	$('#buttonProfile').click(function(){
+    		if($(window).width() >= 1025){
+    			if ($('#profile-dropdown').hasClass('hide')){
+    				$('#profile-dropdown').fadeIn(50)
+    				$('#profile-dropdown').removeClass('hide');
+    			}else{
+    				$('#profile-dropdown').fadeOut(100)
+    				$('#profile-dropdown').addClass('hide')
+    			}
+    		}else{
+    			$('#popup-profile-mob').bPopup({
+    				positionStyle: 'fixed',
+    				closeClass: 'profile-mob_close-btn',
+    				onOpen: function() { $('body').addClass('fixed'); },
+    				onClose: function() { $('body').removeClass('fixed') }				
+    			});
+    		}
+    	});
+    
+    	$(document).click(function (e){
+    		if (!lSbtn.is(e.target) && lSbtn.has(e.target).length === 0) {
+    			lSdropmenu.fadeOut(100);
+    			lSdropmenu.addClass('hide')
+    		}
+    
+    		if ($('#dd-exit-btn').is(e.target) || !$('#profile-dropdown').is(e.target) && $('#profile-dropdown').has(e.target).length === 0 && !$('#buttonProfile').is(e.target) && $('#buttonProfile').has(e.target).length === 0) {
+    			$('#profile-dropdown').fadeOut(100);
+    			$('#profile-dropdown').addClass('hide')
+    		}
+    		//- if (!$('.popup-map-input-search').is(e.target) && $('.popup-map-input-search').has(e.target).length === 0 && !$('.search-results').is(e.target) && $('.search-results').has(e.target).length === 0) {
+    		//- 	$('.popup-map-input-search').siblings('.search-results').hide();
+    		//- }
+    	});
+    
+    	$('#header-btnLogIn').click(function(){
+    		$('#LogIn-form').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'LogIn-form_close-btn',
+    			onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
+    		});
+    	});
+    	$('#LogIn-form_btnLogUp, #LogIn-form_btn_mobLogUp').click(function(){
+    		$('#LogUp-form').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'LogUp-form_close-btn',
+    			onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
+    		});
+    	});
+    
+    	$('#header-language-popup').click(function(){
+    		$('#language-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'language-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
+    		});
+    	});
+    
+    	$('.popup-map-input-search').focusin(function(){
+    		$(this).siblings('.search-results').show();
+    	});
+    	$('.popup-map-input-search + .search-results .search-item').click(function(){
+    		$('.popup-map-input-search + .search-results').hide();
+    	});
+    	$('.popup-map-input-search').focusout(function(){
+    		$(this).siblings('.search-results').hide();
+    	});
+    	
+    
+    
+    	$('#header-currency-popup').click(function(){
+    		$('#currency-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'currency-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }
+    							
+    		});
+    	});
+    
+    	$('.dd-popup-search').on('input', function(){
+    		var str = $(this).val().toLowerCase();
+    		if (str.length <= 1){
+    			$('.dd-search-items .dd-search-item').show();
+    		}
+    		$('.dd-search-items .dd-search-item').each(function(){
+    			if ($(this).text().toLowerCase().indexOf(str) < 0){
+    				$(this).hide();
+    			}
+    		});
+    	});
+    
+    
+    	//- Mobile
+    
+    	$('#header-menu-button').click(function(){
+    		$(this).toggleClass('is-active');
+    		$('#hmenu-popup-main').toggleClass('active');
+    		$('#hmenu-popup-main').fadeToggle(250);
+    		if($('.hmenu-popup').not('#hmenu-popup-main').hasClass('active')){
+    			$('.hmenu-popup').removeClass('active');
+    			$('.hmenu-popup').fadeOut(250);
+    		}
+    		$('body').toggleClass('fixed');
+    	});
+    
+    	$('.hmenu-popup-main .hmenu-link').click(function(){
+    		$('#hmenu-popup-category1').toggleClass('active');
+    		$('#hmenu-popup-category1').fadeToggle(250);
+    	});
+    	$('.hmenu-popup-category1 .hmenu-link').click(function(){
+    		$('#hmenu-popup-category2').toggleClass('active');
+    		$('#hmenu-popup-category2').fadeToggle(250);
+    	});
+    
+    	$('.hmenu-popup-close').click(function(){
+    		$('.hmenu-popup').fadeOut(250);
+    		$('.hmenu-popup').removeClass('active')
+    		$('#header-menu-button').removeClass('is-active')
+    		$('body').removeClass('fixed');
+    	});
+    	$('.hmenu-popup-inner-close').click(function(){
+    		$(this).parents('.hmenu-popup-category').fadeOut(250);
+    		$(this).parents('.hmenu-popup-category').removeClass('active');
+    		$(this).parents('.hmenu-popup-lSettings').fadeOut(250);
+    		$(this).parents('.hmenu-popup-lSettings').removeClass('active');
+    	});
+    	$('#hmenu-popup-main-language_btn').click(function(){
+    		$('#hmenu-popup-main-language').toggleClass('active');
+    		$('#hmenu-popup-main-language').fadeToggle(250);
+    	});
+    	$('#hmenu-popup-main-currency_btn').click(function(){
+    		$('#hmenu-popup-main-currency').toggleClass('active');
+    		$('#hmenu-popup-main-currency').fadeToggle(250);
+    	});
+    
+    	$('.mk-filter-btn-shops').click(function(){
+    		$('#mk-filter-popup-shops').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'filter-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    	});
+    	$('.mk-filter-btn-molls').click(function(){
+    		$('#mk-filter-popup-molls').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'filter-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    	});
+    	$('.mk-filter-btn-products').click(function(){
+    		$('#mk-filter-popup-products').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'filter-popup-products_close-btn',
+    			onOpen: function() { 
+    				$('body').addClass('fixed');
+    			},
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    		$('.mk-filter-products-select2').select2({
+    			minimumResultsForSearch: Infinity,
+    			dropdownCssClass: 'mk-filter-products-select2-dropdown',
+    			dropdownCss: { 'z-index': '10001'},
+    		});
+    	});
+    
+    	//- Фильтр для товаров
+    
+    	//- $('.mk-filter-drop-btn').click(function(){
+    	//- 	$('#mk-filter-drop-popup').bPopup({
+    	//- 		positionStyle: 'fixed',
+    	//- 		closeClass: 'filter-drop-popup_close-btn',
+    	//- 		onOpen: function() { $('body').addClass('fixed'); },
+    	//- 		onClose: function() { $('body').removeClass('fixed') }			
+    	//- 	});
+    	//- });
+    	//- $('.mk-filter-drop-popup .unfixed-btn').click(function(){
+    	//- 	setTimeout(function(){$('body').addClass('fixed'); }, 500);
+    	//- });
+    	//- $('.mk-filter-drop-popup .img-close').click(function(){
+    	//- 	$('.mk-filter-popup .img-close').click();
+    	//- });
+    
+    	$('.mk-filter-popup-line').click(function(){
+    		if($(this).find('.option-checkbox').is(':checked')){
+    			$(this).find('.option-checkbox').prop('checked', false);
+    			$(this).removeClass('checked');
+    		}else{
+    			$(this).find('.option-checkbox').prop('checked', true);
+    			$(this).addClass('checked');
+    		}
+    	});
+    	$('.mk-filter-popup-line .option-checkbox').click(function(){
+    		if($(this).is(':checked')){
+    			$(this).prop('checked', false);
+    			$(this).parents('.line').removeClass('checked');
+    		}else{
+    			$(this).prop('checked', true);
+    			$(this).parents('.line').addClass('checked');
+    		}
+    	});
+    
+    
+    	$('.footer-links-btn').click(function(){
+    		$('.footer-links-btn').not(this).removeClass('active');
+    		$('.footer-links-btn').not(this).next().slideUp(250);
+    		$(this).next().slideToggle(250);
+    		$(this).toggleClass('active');
+    	});
+    
+    	// карта страница магазина
+    	$('#shop-page-map-popup-btn').click(function(){
+    		$('body').addClass('fixed');
+    		$('#shop-page-map-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'shop-page-map-popup_close-btn',
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    		
+    	});
+    	// карта магазинов на главной
+    	$('.index-sidebar-map-popup-btn').click(function(){
+    		$('body').addClass('fixed');
+    		$('#index-sidebar-map-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'index-sidebar-map-popup_close-btn',
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    		
+    	});
+    
+    	
+    
+    
+    
+    
+    });
+    
+  </script>
+  <script>
+    var map1;
+    var map2;
+    var map3;
+    var map4;
+    function initMap() {
+    	map1 = new google.maps.Map(document.getElementById('map1'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    	map2 = new google.maps.Map(document.getElementById('map2'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    	map3 = new google.maps.Map(document.getElementById('shop-page-map'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    	map4 = new google.maps.Map(document.getElementById('index-sidebar-map'), {
+    		center: {lat: 55.754095, lng: 37.616722},
+    		zoom: 12,
+    		streetViewControl: false,
+    		mapTypeControl: false
+    	});
+    }
+  </script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKhp6yO-hzgForGQ3ZJrBGj-QrUCUbZeQ&callback=initMap" async defer></script>
+  <script>
+    $(document).ready(function(){
+    	$('.navbar-buttonSwitch').click(function(){
+    		$(this).addClass('active');
+    		$('.navbar-buttonSwitch').not(this).removeClass('active');
+    		$('.navbar-buttonSwitch').addClass('disabled');
+    		setTimeout(function(){
+    			$('.navbar-buttonSwitch').removeClass('disabled');
+    		}, 350);
+    	});
+    	$('.navbar-buttonSwitch.publications').click(function(){
+    		$('.main-block').removeClass('active');
+    		$('.main-block').fadeOut(250);
+    		$('.main-block-models-input-outer').fadeOut(250);
+    		setTimeout(function(){
+    			$('.main-block.publications').addClass('active');
+    			$('.main-block.publications').fadeIn(250);
+    		}, 250);
+    	});
+    	$('.navbar-buttonSwitch.models').click(function(){
+    		$('.main-block').removeClass('active');
+    		$('.main-block').fadeOut(250);
+    		$('.main-block-models-input-outer').fadeIn(250);
+    		setTimeout(function(){
+    			$('.main-block.models').addClass('active');
+    			$('.main-block.models').fadeIn(250);
+    		}, 250);
+    	});
+    });
+  </script>
+</html>

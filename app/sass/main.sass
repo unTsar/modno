@@ -83,6 +83,147 @@ body
 		width: 1140px
 		margin-left: auto
 		margin-right: auto
+	// публикации
+	.publications-popup::-webkit-scrollbar
+		width: 0px
+		background: transparent
+	.publications-popup
+		width: 1140px
+		padding: 13px 21px 17px 21px
+		border-radius: 5px
+		position: relative
+		max-height: 100%
+		overflow-y: scroll
+		-ms-overflow-style: none
+		scrollbar-width: none
+		display: none
+		background-color: #fff
+		img.img-close
+			position: absolute
+			width: 17px
+			top: 0
+			right: 0
+			margin-top: 26px
+			margin-right: 25px
+		.topline
+			width: 50%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center	
+			margin-bottom: 14px
+			img.model-icon
+				border-radius: 50%
+				width: 68px
+				height: auto
+			.text-block
+				margin-left: 30px
+				.name
+					font-size: 14px
+					font-weight: bold
+					color: #000
+					padding: 6px 0
+					margin-top: 3px
+				.login
+					font-size: 10px
+					color: #999
+			a.btn-subscribe
+				margin-left: auto
+				vertical-align: middle
+				width: 130px
+				height: 30px
+				line-height: 30px
+				text-align: center
+				background-color: $accent-blue
+				font-size: 13px
+				font-weight: bold
+				color: #fff
+				border-radius: 5px
+			.btn-burger
+				margin-left: 25px
+				cursor: pointer
+				.circle
+					width: 6px
+					height: 6px
+					background-color: #C4C4C4
+					border-radius: 50%
+					margin: 5px 0
+		img.pbPhoto, .list
+			display: inline-block
+			vertical-align: top
+		img.pbPhoto
+			width: 50%
+			border-radius: 5px
+			margin-right: 1%
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+		.list
+			width: 48%
+			.item
+				margin-bottom: 10px
+				padding-right: 11px
+				border-top-left-radius: 5px
+				border-bottom-right-radius: 5px
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				img.preview
+					width: 85.4px
+					height: auto
+					vertical-align: top
+				.text-block
+					margin-left: 38px
+					.name
+						font-size: 18px
+						font-weight: bold
+						color: #000
+						padding: 3px 0
+					.desc
+						font-size: 14px
+						color: #000
+					.author
+						margin-bottom: 5px
+						.author-name, img.icon
+							display: inline-block
+							vertical-align: middle
+						.author-name
+							font-size: 11px
+							color: #000
+							opacity: 0.65
+						img.icon
+							width: 14px
+							height: 16px
+							margin-left: 2px
+				.buy-block
+					text-align: right
+					margin-left: auto
+					.price
+						font-size: 17px
+						font-weight: bold
+						color: #000
+						padding: 8px 0
+					a.btn-buy
+						display: inline-block
+						width: 97px
+						height: 30px
+						line-height: 30px
+						border-radius: 5px
+						background-color: $accent-blue
+						text-align: center
+						margin-top: 4px
+						font-size: 13px
+						font-weight: bold
+						color: #fff
+
+
+
+
+
 
 	// карта страница магазина
 	.shop-map-outer

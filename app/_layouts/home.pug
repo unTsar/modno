@@ -34,6 +34,37 @@ html(lang="ru")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
+		//- публикации
+		.publications-popup#publications-popup
+			a.publications-popup_close-btn(href="#")
+				img.img-close(src="img/close.svg", alt="close.svg")
+			.topline
+				img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
+				.text-block
+					.name Екатерина
+					.login ekaterina777
+				a.btn-subscribe(href="#") Подписаться
+				.btn-burger
+					.circle
+					.circle
+					.circle
+			img.pbPhoto(src="img/people/pbPhoto.jpg", alt="pbPhoto.jpg")
+			.list
+				- for(var i = 1; i <= 5; i++)
+					.item
+						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+						.text-block
+							.name Gucci
+							.desc Атласное платье c поясом
+							.author
+								.author-name lamoda
+								img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+						.buy-block
+							.price 3 999 &#8381;
+							a.btn-buy(href="#") Купить
+
+
+
 		//- карта магазинов на главной
 		.shop-map-outer.index-sidebar-map-popup#index-sidebar-map-popup
 			.back-close-btn.index-sidebar-map-popup_close-btn
@@ -878,11 +909,17 @@ html(lang="ru")
 				
 			});
 
-			
+			//- публикации
+			$('.publications-popup-btn').click(function(){
+				$('body').addClass('fixed');
+				$('#publications-popup').bPopup({
+					positionStyle: 'fixed',
+					closeClass: 'publications-popup_close-btn',
+					onClose: function() { $('body').removeClass('fixed') }			
+				});
+			});
 
-
-
-
+		
 		});
 
 	script.

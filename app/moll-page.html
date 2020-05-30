@@ -19,6 +19,81 @@
     <link rel="stylesheet" href="css/moll-page.css">
   </head>
   <body>
+    <div class="publications-popup" id="publications-popup"><a class="publications-popup_close-btn" href="#"><img class="img-close" src="img/close.svg" alt="close.svg"></a>
+      <div class="topline"><img class="model-icon" src="img/people/model-icon.jpg" alt="model-icon.jpg">
+        <div class="text-block">
+          <div class="name">Екатерина</div>
+          <div class="login">ekaterina777</div>
+        </div><a class="btn-subscribe" href="#">Подписаться</a>
+        <div class="btn-burger">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div><img class="pbPhoto" src="img/people/pbPhoto.jpg" alt="pbPhoto.jpg">
+      <div class="list">
+        <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="text-block">
+            <div class="name">Gucci</div>
+            <div class="desc">Атласное платье c поясом</div>
+            <div class="author">
+              <div class="author-name">lamoda</div><img class="icon" src="img/people/usa-flag.svg" alt="usa-flag.svg">
+            </div>
+          </div>
+          <div class="buy-block">
+            <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
+          </div>
+        </div>
+        <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="text-block">
+            <div class="name">Gucci</div>
+            <div class="desc">Атласное платье c поясом</div>
+            <div class="author">
+              <div class="author-name">lamoda</div><img class="icon" src="img/people/usa-flag.svg" alt="usa-flag.svg">
+            </div>
+          </div>
+          <div class="buy-block">
+            <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
+          </div>
+        </div>
+        <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="text-block">
+            <div class="name">Gucci</div>
+            <div class="desc">Атласное платье c поясом</div>
+            <div class="author">
+              <div class="author-name">lamoda</div><img class="icon" src="img/people/usa-flag.svg" alt="usa-flag.svg">
+            </div>
+          </div>
+          <div class="buy-block">
+            <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
+          </div>
+        </div>
+        <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="text-block">
+            <div class="name">Gucci</div>
+            <div class="desc">Атласное платье c поясом</div>
+            <div class="author">
+              <div class="author-name">lamoda</div><img class="icon" src="img/people/usa-flag.svg" alt="usa-flag.svg">
+            </div>
+          </div>
+          <div class="buy-block">
+            <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
+          </div>
+        </div>
+        <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="text-block">
+            <div class="name">Gucci</div>
+            <div class="desc">Атласное платье c поясом</div>
+            <div class="author">
+              <div class="author-name">lamoda</div><img class="icon" src="img/people/usa-flag.svg" alt="usa-flag.svg">
+            </div>
+          </div>
+          <div class="buy-block">
+            <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="shop-map-outer index-sidebar-map-popup" id="index-sidebar-map-popup">
       <div class="back-close-btn index-sidebar-map-popup_close-btn"></div>
       <div class="shop-map"><a class="close-btn index-sidebar-map-popup_close-btn" href="#"><img src="img/close.svg" alt="close.svg"></a>
@@ -1384,9 +1459,15 @@
     		
     	});
     
-    	
-    
-    
+    	//- публикации
+    	$('.publications-popup-btn').click(function(){
+    		$('body').addClass('fixed');
+    		$('#publications-popup').bPopup({
+    			positionStyle: 'fixed',
+    			closeClass: 'publications-popup_close-btn',
+    			onClose: function() { $('body').removeClass('fixed') }			
+    		});
+    	});
     
     
     });

@@ -144,4 +144,90 @@ body
 					font-weight: bold
 					margin: 21px 0
 					margin-left: 12px
-
+			.main-navbar-bottom
+				position: relative
+				margin-bottom: 35px
+				padding-top: 16px
+				padding-bottom: 13px
+				border-radius: 5px
+				text-align: center
+				background-color: #fff
+				.button
+					transition: 0.3s
+					cursor: pointer
+					width: 92px
+					height: 30px
+					border: 0.5px solid rgba(0, 0, 0, 0.3)
+					border-radius: 5px
+					text-align: center
+					span
+						transition: 0.3s
+						line-height: 30px
+						font-size: 9.5px
+						color: #000
+						font-weight: bold
+				.button:hover
+					background-color: $accent-blue
+					border-color: $accent-blue
+					span
+						color: #fff
+				.buttonsPN
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					position: absolute
+					top: 0
+					bottom: 0
+					right: 0
+					padding-right: 23px
+					.buttonPrev, .buttonNext
+						margin: auto
+						margin-left: 16px
+				.buttonMore
+					position: absolute
+					top: 0
+					bottom: 0
+					margin: auto
+					left: 261px
+				.pages
+					position: relative
+					font-size: 0
+					display: inline-block
+					border-radius: 5px
+					.page
+						transition: 0.3s
+						cursor: pointer
+						border: 0.5px solid #ededed
+						border-left: none
+						width: 29px
+						height: 30px
+						display: inline-block
+						span
+							font-size: 10.5px
+							line-height: 30px
+							color: #b3b3b3
+							transition: 0.3s
+							font-weight: bold
+					.page:first-child
+						border-top-left-radius: 5px
+						border-bottom-left-radius: 5px
+						border-left: 0.5px solid #ededed
+					.page:nth-last-child(1)
+						border-top-right-radius: 5px
+						border-bottom-right-radius: 5px
+					.page.active
+						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+						background-color: #ededed
+						border-color: white
+						margin: 1px 0
+						span
+							color: #000
+					.page:hover
+						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+						background-color: #ededed
+						border-color: white
+						margin: 1px 0
+						span
+							color: #000

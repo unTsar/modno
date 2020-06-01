@@ -48,10 +48,36 @@ html(lang="ru")
 					.circle
 					.circle
 					.circle
-			img.pbPhoto(src="img/people/pbPhoto.jpg", alt="pbPhoto.jpg")
-			.list
-				- for(var i = 1; i <= 5; i++)
-					.item
+			.main-content
+				.pbPhoto-outer
+					img.pbPhoto(src="img/people/pbPhoto.jpg", alt="pbPhoto.jpg")
+					.tag-button.tag-button1#pb-tag-btn1(style='background-color: #D4E0B6')
+					.tag-button.tag-button2#pb-tag-btn2(style='background-color: #F8CF8D')
+				.list#pb-scrollBlock
+					.item#pb-scrollItem2
+						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+						.text-block
+							.name Gucci
+							.desc Атласное платье c поясом
+							.author
+								.author-name lamoda
+								img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+						.buy-block
+							.price 3 999 &#8381;
+							a.btn-buy(href="#") Купить
+					- for(var i = 1; i <= 5; i++)
+						.item
+							img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+							.text-block
+								.name Gucci
+								.desc Атласное платье c поясом
+								.author
+									.author-name lamoda
+									img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+							.buy-block
+								.price 3 999 &#8381;
+								a.btn-buy(href="#") Купить
+					.item#pb-scrollItem1
 						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
 						.text-block
 							.name Gucci
@@ -636,6 +662,7 @@ html(lang="ru")
 	script(src="js/jquery.min.js")
 	script(src="js/svg4everybody.min.js")
 	script(src="js/jquery.bpopup.js")
+	script(src="js/jquery.scrollTo.min.js")
 	script.
 		$(document).ready(function(){
 
@@ -918,6 +945,33 @@ html(lang="ru")
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
 			});
+
+			for(let i = 1; i <= 2; i++){
+				$('#pb-tag-btn' + i).mouseenter(function(){
+					$('#pb-scrollBlock').scrollTo('#pb-scrollItem' + i, {
+						duration: 350,
+						offset: -5
+					});
+
+					$('#pb-scrollItem' + i).addClass('hovered')
+				});
+
+				$('#pb-tag-btn' + i).mouseleave(function(){
+					$('#pb-scrollItem' + i).removeClass('hovered')
+				});
+
+				//- !
+
+				$('#pb-scrollItem' + i).mouseenter(function(){
+					$('#pb-tag-btn' + i).addClass('anim');
+				});
+				$('#pb-scrollItem' + i).mouseleave(function(){
+					$('#pb-tag-btn' + i).removeClass('anim');
+				});
+
+			}
+
+
 
 		
 		});

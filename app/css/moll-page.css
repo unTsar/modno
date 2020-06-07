@@ -1172,14 +1172,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     padding: 19px 0;
   }
   body section.marketing-table .marketing-navbar .input-outer {
-    pointer-events: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  body section.marketing-table .marketing-navbar .input-outer * {
-    display: none;
+    display: none !important;
   }
   body section.marketing-table .marketing-navbar .buttonSwitch {
     padding-top: 21px;

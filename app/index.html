@@ -36,7 +36,7 @@
           <div class="tag-button tag-button2" id="pb-tag-btn2" style="background-color: #F8CF8D"></div>
         </div>
         <div class="list" id="pb-scrollBlock">
-          <div class="item" id="pb-scrollItem2"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item" id="pb-scrollItem2"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -48,7 +48,7 @@
               <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
             </div>
           </div>
-          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -60,7 +60,7 @@
               <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
             </div>
           </div>
-          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -72,7 +72,7 @@
               <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
             </div>
           </div>
-          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -84,7 +84,7 @@
               <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
             </div>
           </div>
-          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -96,7 +96,7 @@
               <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
             </div>
           </div>
-          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -108,7 +108,7 @@
               <div class="price">3 999 &#8381;</div><a class="btn-buy" href="#">Купить</a>
             </div>
           </div>
-          <div class="item" id="pb-scrollItem1"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg">
+          <div class="item" id="pb-scrollItem1"><img class="preview" src="img/people/popup-list-item.jpg" alt="popup-list-item.jpg"><img class="preview-mob" src="img/people/popup-list-item-mob.jpg" alt="popup-list-item-mob.jpg">
             <div class="text-block">
               <div class="name">Gucci</div>
               <div class="desc">Атласное платье c поясом</div>
@@ -1369,6 +1369,12 @@
     				duration: 350,
     				offset: -5
     			});
+    			if($(window).width() <= 1024){
+    				$('.publications-popup').scrollTo('#pb-scrollItem' + i, {
+    					duration: 350,
+    					offset: -5
+    				});
+    			}
     
     			$('#pb-scrollItem' + i).addClass('hovered')
     		});

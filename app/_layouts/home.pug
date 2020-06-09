@@ -56,6 +56,7 @@ html(lang="ru")
 				.list#pb-scrollBlock
 					.item#pb-scrollItem2
 						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+						img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
 						.text-block
 							.name Gucci
 							.desc Атласное платье c поясом
@@ -68,6 +69,7 @@ html(lang="ru")
 					- for(var i = 1; i <= 5; i++)
 						.item
 							img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+							img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
 							.text-block
 								.name Gucci
 								.desc Атласное платье c поясом
@@ -79,6 +81,7 @@ html(lang="ru")
 								a.btn-buy(href="#") Купить
 					.item#pb-scrollItem1
 						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+						img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
 						.text-block
 							.name Gucci
 							.desc Атласное платье c поясом
@@ -952,6 +955,12 @@ html(lang="ru")
 						duration: 350,
 						offset: -5
 					});
+					if($(window).width() <= 1024){
+						$('.publications-popup').scrollTo('#pb-scrollItem' + i, {
+							duration: 350,
+							offset: -5
+						});
+					}
 
 					$('#pb-scrollItem' + i).addClass('hovered')
 				});

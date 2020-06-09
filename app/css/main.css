@@ -166,6 +166,7 @@ body .publications-popup {
 
 body .publications-popup img.img-close {
   position: absolute;
+  z-index: 1;
   width: 17px;
   top: 0;
   right: 0;
@@ -390,10 +391,21 @@ body .publications-popup .list .item {
           align-items: center;
 }
 
+body .publications-popup .list .item img {
+  -webkit-border-top-left-radius: 5px;
+          border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+}
+
 body .publications-popup .list .item img.preview {
-  width: 85.4px;
+  width: 89px;
   height: auto;
   vertical-align: top;
+}
+
+body .publications-popup .list .item img.preview-mob {
+  display: none;
 }
 
 body .publications-popup .list .item .text-block {
@@ -2176,9 +2188,96 @@ body footer .footer-bottomLine .payments img.payment-img {
   body .container {
     width: 100%;
   }
+  body .publications-popup {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    margin: 15px auto;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
+  body .publications-popup {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  body .publications-popup img.img-close {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  body .publications-popup .topline {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  body .publications-popup .topline a.btn-subscribe {
+    width: 278px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 19px;
+  }
+  body .publications-popup .topline img.model-icon {
+    width: 156px;
+  }
+  body .publications-popup .topline .text-block {
+    margin-right: 15px;
+  }
+  body .publications-popup .topline .text-block .name {
+    font-size: 33px;
+    margin-top: -20px;
+  }
+  body .publications-popup .topline .text-block .login {
+    font-size: 25px;
+  }
+  body .publications-popup .main-content {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  body .publications-popup .main-content .pbPhoto-outer, body .publications-popup .main-content .list {
+    width: 100%;
+  }
+  body .publications-popup .main-content .list {
+    padding-top: 53px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    overflow: visible;
+  }
+  body .publications-popup .main-content .list .item {
+    margin-bottom: 34px;
+    padding-right: 20px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .publications-popup .main-content .list .item img.preview {
+    width: 156px;
+  }
+  body .publications-popup .main-content .list .item .text-block {
+    margin-left: 50px;
+  }
+  body .publications-popup .main-content .list .item .text-block .name {
+    font-size: 25px;
+    padding: 7px 0;
+  }
+  body .publications-popup .main-content .list .item .text-block .desc {
+    font-size: 20px;
+  }
+  body .publications-popup .main-content .list .item .text-block .author {
+    margin-top: 20px;
+  }
+  body .publications-popup .main-content .list .item .buy-block .price {
+    font-size: 25px;
+    padding: 17.5px 0;
+  }
+  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+    width: 217px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+  }
   body .popup-map {
     width: 100%;
     height: 100%;
@@ -2465,6 +2564,79 @@ body footer .footer-bottomLine .payments img.payment-img {
 }
 
 @media only screen and (max-width: 768px) {
+  body .publications-popup .topline {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    position: relative;
+  }
+  body .publications-popup .topline img.model-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body .publications-popup .topline .text-block {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body .publications-popup .topline .text-block .name {
+    margin-top: 0;
+    padding: 0;
+  }
+  body .publications-popup .topline .text-block, body .publications-popup .topline a.btn-subscribe {
+    margin-left: 171px;
+  }
+  body .publications-popup .main-content .list .item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    position: relative;
+    height: 202px;
+  }
+  body .publications-popup .main-content .list .item img.preview {
+    display: none;
+  }
+  body .publications-popup .main-content .list .item img.preview-mob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  body .publications-popup .main-content .list .item .text-block, body .publications-popup .main-content .list .item .buy-block {
+    width: 100%;
+    margin-left: 167px;
+  }
+  body .publications-popup .main-content .list .item .buy-block {
+    text-align: left;
+  }
+  body .publications-popup .main-content .list .item .buy-block .price {
+    font-size: 22px;
+    padding: 0;
+  }
+  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+    height: 52px;
+    line-height: 52px;
+    margin-top: 10px;
+  }
+  body .publications-popup .main-content .list .item .text-block .name {
+    font-size: 19px;
+    padding: 0;
+    margin-top: 10px;
+  }
+  body .publications-popup .main-content .list .item .text-block .desc {
+    font-size: 14px;
+  }
+  body .publications-popup .main-content .list .item .text-block .author {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  body .publications-popup .main-content .list .item .text-block .author .author-name {
+    font-size: 14px;
+  }
+  body .publications-popup .main-content .list .item .text-block .author img.icon {
+    width: 18px;
+    margin-left: 5px;
+  }
   body .shop-map-outer {
     padding: 20px;
   }
@@ -2500,6 +2672,24 @@ body footer .footer-bottomLine .payments img.payment-img {
 }
 
 @media only screen and (max-width: 600px) {
+  body .publications-popup .topline img.model-icon {
+    width: 106px;
+  }
+  body .publications-popup .topline .text-block, body .publications-popup .topline a.btn-subscribe {
+    margin-left: 121px;
+  }
+  body .publications-popup .topline .text-block {
+    margin-bottom: 5px;
+  }
+  body .publications-popup .topline .text-block .name {
+    font-size: 19px;
+  }
+  body .publications-popup .topline .text-block .login {
+    font-size: 14px;
+  }
+  body .publications-popup .topline .btn-burger {
+    margin-left: 15px;
+  }
   body header .container .headerLine {
     height: 73px;
     padding-right: 15px;
@@ -2547,6 +2737,36 @@ body footer .footer-bottomLine .payments img.payment-img {
 }
 
 @media only screen and (max-width: 500px) {
+  body .publications-popup {
+    padding: 21px 15px 21px 15px;
+  }
+  body .publications-popup .topline {
+    margin-bottom: 15px;
+  }
+  body .publications-popup .topline a.btn-subscribe {
+    width: -webkit-calc(100% - 150px);
+    width: calc(100% - 150px);
+  }
+  body .publications-popup .main-content .list {
+    padding-top: 30px;
+  }
+  body .publications-popup .main-content .list .item {
+    margin-bottom: 15px;
+    padding-right: 5px;
+  }
+  body .publications-popup .main-content .list .item .text-block, body .publications-popup .main-content .list .item .buy-block {
+    margin-left: 151px;
+  }
+  body .publications-popup .main-content .list .item .text-block .name {
+    line-height: 1.4;
+  }
+  body .publications-popup .main-content .list .item .text-block .author {
+    margin: 0;
+  }
+  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+    margin-bottom: 22px;
+    width: 85%;
+  }
   body .popup-profile-mob .links {
     padding: 0 30px;
   }
@@ -2825,6 +3045,86 @@ body footer .footer-bottomLine .payments img.payment-img {
 }
 
 @media only screen and (max-width: 400px) {
+  body .publications-popup {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  body .publications-popup img.img-close {
+    width: 15px;
+    height: 15px;
+    margin-top: 17px;
+    margin-right: 15px;
+  }
+  body .publications-popup .topline {
+    margin-bottom: 13px;
+  }
+  body .publications-popup .topline img.model-icon {
+    width: 85px;
+  }
+  body .publications-popup .topline .text-block, body .publications-popup .topline a.btn-subscribe {
+    margin-left: 100px;
+  }
+  body .publications-popup .topline .text-block {
+    margin-bottom: 10px;
+  }
+  body .publications-popup .topline .text-block .name {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  body .publications-popup .topline .text-block .login {
+    font-size: 13px;
+  }
+  body .publications-popup .topline a.btn-subscribe {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    width: -webkit-calc(100% - 125px);
+    width: calc(100% - 125px);
+  }
+  body .publications-popup .main-content .list {
+    padding-top: 15px;
+  }
+  body .publications-popup .main-content .list .item {
+    height: 162px;
+  }
+  body .publications-popup .main-content .list .item img.preview-mob {
+    height: 162px;
+    width: 89px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .publications-popup .main-content .list .item .text-block, body .publications-popup .main-content .list .item .buy-block {
+    margin-left: 100px;
+  }
+  body .publications-popup .main-content .list .item .text-block .name {
+    font-size: 16px;
+  }
+  body .publications-popup .main-content .list .item .text-block .desc {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  body .publications-popup .main-content .list .item .text-block .author {
+    line-height: 1.2;
+  }
+  body .publications-popup .main-content .list .item .text-block .author .author-name {
+    font-size: 13px;
+  }
+  body .publications-popup .main-content .list .item .text-block .author img.icon {
+    width: 24px;
+    height: 19px;
+  }
+  body .publications-popup .main-content .list .item .buy-block .price {
+    line-height: 1.2;
+    font-size: 16px;
+  }
+  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    width: 139px;
+    margin-bottom: 12px;
+    margin-top: 8px;
+  }
   body .popup-profile-mob .links {
     padding: 0 15px;
   }

@@ -100,6 +100,7 @@ body
 		background-color: #fff
 		img.img-close
 			position: absolute
+			z-index: 1
 			width: 17px
 			top: 0
 			right: 0
@@ -235,10 +236,15 @@ body
 				display: -o-flex
 				display: flex
 				align-items: center
+				img
+					border-top-left-radius: 5px
+					border-bottom-left-radius: 5px
 				img.preview
-					width: 85.4px
+					width: 89px
 					height: auto
 					vertical-align: top
+				img.preview-mob
+					display: none
 				.text-block
 					margin-left: 38px
 					.name
@@ -1467,9 +1473,71 @@ body
 	body
 		.container
 			width: 100%
+		.publications-popup
+			width: calc(100% - 30px)
+			margin: 15px auto
 
 @media only screen and(max-width: 1024px)
 	body
+		.publications-popup
+			padding-top: 20px
+			padding-bottom: 40px
+			img.img-close
+				margin-top: 20px
+				margin-right: 20px
+				width: 20px
+				height: 20px
+			.topline
+				width: 100%
+				margin-bottom: 20px
+				a.btn-subscribe
+					width: 278px
+					height: 52px
+					line-height: 52px
+					font-size: 19px
+				img.model-icon
+					width: 156px
+				.text-block
+					margin-right: 15px
+					.name
+						font-size: 33px
+						margin-top: -20px
+					.login
+						font-size: 25px
+			.main-content
+				flex-wrap: wrap
+				.pbPhoto-outer, .list
+					width: 100%
+				.list
+					padding-top: 53px
+					padding-left: 0
+					padding-right: 0
+					position: relative
+					overflow: visible
+					.item
+						margin-bottom: 34px
+						padding-right: 20px
+						align-items: flex-start
+						img.preview
+							width: 156px
+						.text-block
+							margin-left: 50px
+							.name
+								font-size: 25px
+								padding: 7px 0
+							.desc
+								font-size: 20px
+							.author
+								margin-top: 20px
+						.buy-block
+							.price
+								font-size: 25px
+								padding: 17.5px 0
+							a.btn-buy
+								width: 217px
+								height: 60px
+								line-height: 60px
+								font-size: 17px
 		.popup-map
 			width: 100%
 			height: 100%
@@ -1695,6 +1763,63 @@ body
 					padding-right: 15px
 @media only screen and(max-width: 768px)
 	body
+		.publications-popup
+			.topline
+				flex-wrap: wrap
+				position: relative
+				img.model-icon
+					position: absolute
+					top: 0
+					left: 0
+				.text-block
+					width: 100%
+					margin-bottom: 10px
+					.name
+						margin-top: 0
+						padding: 0
+				.text-block, a.btn-subscribe
+					margin-left: 171px
+			.main-content
+				.list
+					.item
+						flex-wrap: wrap
+						position: relative
+						height: 202px
+						img.preview
+							display: none
+						img.preview-mob
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+						.text-block, .buy-block
+							width: 100%
+							margin-left: 167px
+						.buy-block
+							text-align: left
+							.price
+								font-size: 22px
+								padding: 0
+							a.btn-buy
+								height: 52px
+								line-height: 52px
+								margin-top: 10px
+						.text-block
+							.name
+								font-size: 19px
+								padding: 0
+								margin-top: 10px
+							.desc
+								font-size: 14px
+							.author
+								margin-top: 5px
+								margin-bottom: 0
+								.author-name
+									font-size: 14px
+								img.icon
+									width: 18px
+									margin-left: 5px
+
 		.shop-map-outer
 			padding: 20px
 		header
@@ -1725,6 +1850,20 @@ body
 					display: none
 @media only screen and(max-width: 600px)
 	body
+		.publications-popup
+			.topline
+				img.model-icon
+					width: 106px
+				.text-block, a.btn-subscribe
+					margin-left: 121px
+				.text-block
+					margin-bottom: 5px
+					.name
+						font-size: 19px
+					.login
+						font-size: 14px
+				.btn-burger
+					margin-left: 15px
 		header
 			.container
 				.headerLine
@@ -1766,6 +1905,30 @@ body
 									font-size: 14px
 @media only screen and(max-width: 500px)
 	body
+		.publications-popup
+			padding: 21px 15px 21px 15px
+			.topline
+				margin-bottom: 15px
+				a.btn-subscribe
+					width: calc(100% - 150px)
+			.main-content
+				.list
+					padding-top: 30px
+					.item
+						margin-bottom: 15px
+						padding-right: 5px
+						.text-block, .buy-block
+							margin-left: 151px
+						.text-block
+							.name
+								line-height: 1.4
+							.author
+								margin: 0
+						.buy-block
+							a.btn-buy
+								margin-bottom: 22px
+								width: 85%
+
 		.popup-profile-mob
 			.links
 				padding: 0 30px
@@ -2004,6 +2167,68 @@ body
 					font-size: 13px
 @media only screen and(max-width: 400px)
 	body
+		.publications-popup
+			padding-top: 15px
+			padding-bottom: 15px
+			img.img-close
+				width: 15px
+				height: 15px
+				margin-top: 17px
+				margin-right: 15px
+			.topline
+				margin-bottom: 13px
+				img.model-icon
+					width: 85px
+				.text-block, a.btn-subscribe
+					margin-left: 100px
+				.text-block
+					margin-bottom: 10px
+					.name
+						font-size: 16px
+						line-height: 1.2
+					.login
+						font-size: 13px
+				a.btn-subscribe
+					height: 30px
+					line-height: 30px
+					font-size: 16px
+					width: calc(100% - 125px)
+			.main-content
+				.list
+					padding-top: 15px
+					.item
+						height: 162px
+						img.preview-mob
+							height: 162px
+							width: 89px
+							object-fit: cover
+						.text-block, .buy-block
+							margin-left: 100px
+						.text-block
+							.name
+								font-size: 16px
+							.desc
+								font-size: 13px
+								line-height: 1.2
+							.author
+								line-height: 1.2
+								.author-name
+									font-size: 13px
+								img.icon
+									width: 24px
+									height: 19px
+						.buy-block
+							.price
+								line-height: 1.2
+								font-size: 16px
+							a.btn-buy
+								height: 30px
+								line-height: 30px
+								font-size: 16px
+								width: 139px
+								margin-bottom: 12px
+								margin-top: 8px
+
 		.popup-profile-mob
 			.links
 				padding: 0 15px

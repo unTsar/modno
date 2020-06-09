@@ -1,0 +1,80 @@
+@import "vars"
+@import "fonts"
+
+body
+	.model-card
+		margin: 15px 12.5%
+		background-color: #fff
+		border-top-left-radius: 60px
+		border-bottom-left-radius: 60px
+		border-top-right-radius: 5px
+		border-bottom-right-radius: 5px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+		img.model-icon
+			width: 121px
+			vertical-align: bottom
+			border-radius: 50%
+			margin-left: -1px
+		.text-block
+			width: 100%
+			margin-left: 43px
+			.login
+				padding: 8.5px 0 6px 0
+				font-size: 20px
+				font-weight: bold
+				color: #000
+			.name
+
+				font-size: 11px
+				color: #7F7F7F
+			.counters
+				.counter
+					display: inline-block
+					padding: 13px 0
+					padding-right: 47px
+					span
+						font-size: 15px
+						color: #999999
+					span.b
+						color: #000000
+						font-weight: bold
+		.btn-block
+			text-align: right
+			margin-right: 15px
+			a.btn
+				display: inline-block
+				height: 30px
+				line-height: 30px
+				text-align: center
+				border-radius: 5px
+				width: 145px
+				font-size: 14px
+				font-weight: bold
+				margin-top: 19px
+				margin-bottom: 4px
+			a.btn-write
+				border: 0.5px solid #000000
+				color: #000
+				transition: 0.3s
+			a.btn-write:hover, a.btn-subscribe
+				background-color: $accent-blue
+				color: #fff
+				border-color: $accent-blue
+	.publications-table
+		.flex-table
+			margin-left: -10px
+			a.item
+				width: calc((100% / 4) - 10px)
+				margin-left: 10px
+				display: inline-block
+				margin-bottom: 7.5px
+				img
+					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+					width: 100%
+					vertical-align: bottom
+					border-radius: 5px

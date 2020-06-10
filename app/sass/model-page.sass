@@ -2,69 +2,70 @@
 @import "fonts"
 
 body
-	.model-card
-		margin: 15px 12.5%
-		background-color: #fff
-		border-top-left-radius: 60px
-		border-bottom-left-radius: 60px
-		border-top-right-radius: 5px
-		border-bottom-right-radius: 5px
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
-		img.model-icon
-			width: 121px
-			vertical-align: bottom
-			border-radius: 50%
-			margin-left: -1px
-		.text-block
-			width: 100%
-			margin-left: 43px
-			.login
-				padding: 8.5px 0 6px 0
-				font-size: 20px
-				font-weight: bold
-				color: #000
-			.name
-
-				font-size: 11px
-				color: #7F7F7F
-			.counters
-				.counter
-					display: inline-block
-					padding: 13px 0
-					padding-right: 47px
-					span
-						font-size: 15px
-						color: #999999
-					span.b
-						color: #000000
-						font-weight: bold
-		.btn-block
-			text-align: right
-			margin-right: 15px
-			a.btn
-				display: inline-block
-				height: 30px
-				line-height: 30px
-				text-align: center
-				border-radius: 5px
+	.model-card-outer
+		padding: 15px 0
+		padding-left: 51px
+		margin: 0 12.5%
+		.model-card
+			background-color: #fff
+			border-radius: 5px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+			img.model-icon
+				width: 121px
+				vertical-align: bottom
+				border-radius: 50%
+				margin-left: -51px
+			.text-block
+				margin-left: 43px
+				.name
+					padding: 8.5px 0 6px 0
+					font-size: 20px
+					font-weight: bold
+					color: #000
+				.login
+					font-size: 11px
+					color: #7F7F7F
+				.counters
+					margin-left: -47px
+					.counter
+						display: inline-block
+						padding: 13px 0
+						margin-left: 47px
+						span
+							font-size: 15px
+							color: #999999
+						span.b
+							color: #000000
+							font-weight: bold
+			.btn-block
+				text-align: right
+				margin-right: 15px
+				margin-left: auto
 				width: 145px
-				font-size: 14px
-				font-weight: bold
-				margin-top: 19px
-				margin-bottom: 4px
-			a.btn-write
-				border: 0.5px solid #000000
-				color: #000
-				transition: 0.3s
-			a.btn-write:hover, a.btn-subscribe
-				background-color: $accent-blue
-				color: #fff
-				border-color: $accent-blue
+				a.btn
+					display: inline-block
+					height: 30px
+					line-height: 30px
+					text-align: center
+					border-radius: 5px
+					width: 100%
+					font-size: 14px
+					font-weight: bold
+					margin-top: 19px
+					margin-bottom: 4px
+				a.btn-write
+					border: 0.5px solid #000000
+					color: #000
+					transition: 0.3s
+				a.btn-write:hover, a.btn-subscribe
+					background-color: $accent-blue
+					color: #fff
+					border-color: $accent-blue
 	.publications-table
 		.flex-table
 			margin-left: -10px
@@ -78,3 +79,217 @@ body
 					width: 100%
 					vertical-align: bottom
 					border-radius: 5px
+		.btn-more.mob
+			transition: 0.3s
+			display: none
+			border-radius: 5px
+			border: 0.5px solid rgba(0, 0, 0, 0.3)
+			width: 200px
+			height: 60px
+			line-height: 60px
+			text-align: center
+			cursor: pointer
+			margin: 0 auto
+			span
+				transition: 0.3s
+				font-weight: bold
+				font-size: 21px
+				color: #000
+		.btn-more.mob:hover
+			background-color: $accent-blue
+			border-color: $accent-blue
+			span
+				color: #fff
+
+@media only screen and(max-width: 1140px)
+	body
+		main
+			.publications-table
+				padding: 0 15px
+@media only screen and(max-width: 1024px)
+	body
+		main
+			.model-card-outer
+				padding: 34px 0 34px 85px
+				margin: 0 15px
+				.model-card
+					img.model-icon
+						width: 175px
+						margin-left: -85px
+					.text-block
+						.name
+							font-size: 30px
+						.login
+							font-size: 20px
+						.counters
+							.counter
+								line-height: 1.2
+								span
+									font-size: 20px
+									span.b
+										font-size: 24px
+										display: block
+										text-align: center
+					.btn-block
+						width: 197px
+						margin-right: 20px
+						a.btn
+							height: 60px
+							line-height: 60px
+							font-size: 17px
+			.publications-table
+				.flex-table
+					margin-left: -15px
+					a.item
+						width: calc((100% / 3) - 15px)
+						margin-left: 15px
+						margin-bottom: 15px
+				.btn-more.mob
+					display: block
+					margin-top: 20px
+					margin-bottom: 11px
+@media only screen and(max-width: 900px)
+	body
+		main
+			.model-card-outer
+				padding-left: 0
+				.model-card
+					padding: 7px 15px 15px 15px
+					flex-wrap: wrap
+					img.model-icon
+						margin: 0
+					.text-block
+						margin: 0
+						.name, .login
+							margin-left: 35px
+					.btn-block
+						width: 100%
+						text-align: center
+						margin-top: 15px
+						margin-right: 0
+						a.btn
+							width: 205px
+							vertical-align: top
+							margin: 0 5px
+@media only screen and(max-width: 700px)
+	body
+		main
+			.model-card-outer
+				.model-card
+					img.model-icon
+						width: 126px
+					.text-block	
+						.name
+							font-size: 22px
+						.login
+							font-size: 13px
+						.counters
+							margin-left: -28px
+							.counter
+								padding: 5px 0
+								margin-left: 28px
+								span
+									font-size: 13px
+									span.b
+										font-size: 19px
+@media only screen and(max-width: 600px)
+	body
+		main
+			.publications-table
+				.btn-more.mob
+					height: 54px
+					line-height: 50px
+					span
+						font-size: 20px
+@media only screen and(max-width: 500px)
+	body
+		main
+			.model-card-outer
+				padding-top: 15px
+				padding-bottom: 15px
+				.model-card
+					img.model-icon
+						width: 126px
+						height: 126px
+					.text-block
+						width: 61%
+						.name
+							padding-bottom: 0
+							line-height: 1.2
+						.login
+							line-height: 1
+							margin-top: 5px
+						.counters
+							margin-top: 16px
+							.counter
+								margin-left: 23px
+					.btn-block
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						justify-content: space-between
+						a.btn
+							margin: 0
+							width: calc((100% / 2) - 5px)
+							height: 52px
+							line-height: 52px
+						
+			.publications-table
+				.flex-table
+					margin-left: -10px
+					a.item
+						width: calc((100% / 3 ) - 10px)
+						margin-left: 10px
+				.btn-more.mob
+					width: 100%
+					margin-top: 15px
+					margin-bottom: 2px
+
+@media only screen and(max-width: 400px)
+	body
+		main
+			.model-card-outer
+				.model-card
+					position: relative
+					padding-top: 16px
+					img.model-icon
+						width: 74px
+						height: 74px
+						position: absolute
+						top: 16px
+						left: 15px
+					.text-block
+						width: 100%
+						.name, .login 
+							margin-left: 87px
+						.name
+							font-size: 18px
+							margin-top: 5px
+						.counters
+							margin-left: -23px
+							margin-top: 28px
+							.counter
+								span
+									span.b
+										font-size: 16px
+					.btn-block
+						a.btn
+							height: 40px
+							line-height: 40px
+							font-size: 16px
+			.publications-table
+				.flex-table
+					margin-left: -4px
+					a.item
+						width: calc((100% / 3) - 4px)
+						margin-left: 4px
+						margin-bottom: 4px
+				.btn-more.mob
+					margin-top: 24px
+					margin-bottom: 8px
+					height: 40px
+					line-height: 40px
+					span
+						font-size: 16px

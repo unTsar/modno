@@ -8,21 +8,22 @@ block content
 
 	main
 		.container
-			.model-card
-				img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
-				.text-block
-					.login ekaterina777
-					.name Екатерина Власова
-					.counters
-						.counter
-							span #[span.b 17] магазинов
-						.counter
-							span #[span.b 42,4] подписчиков
-						.counter
-							span #[span.b 1] подписка
-				.btn-block
-					a.btn.btn-write Написать
-					a.btn.btn-subscribe Подписаться
+			.model-card-outer
+				.model-card
+					img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
+					.text-block
+						.name Екатерина Власова
+						.login ekaterina777
+						.counters
+							.counter
+								span #[span.b 17] магазинов
+							.counter
+								span #[span.b 42,4] подписчиков
+							.counter
+								span #[span.b 1] подписка
+					.btn-block
+						a.btn.btn-write Написать
+						a.btn.btn-subscribe Подписаться
 			.publications-table
 				.flex-table
 					a.item.publications-popup-btn(href="#")
@@ -41,6 +42,8 @@ block content
 						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
 					a.item.publications-popup-btn(href="#")
 						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+				.btn-more.mob
+					span Показать ещё
 
 	include _partials/footer.pug
 

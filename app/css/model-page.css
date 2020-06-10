@@ -14,17 +14,16 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
-body .model-card {
-  margin: 15px 12.5%;
+body .model-card-outer {
+  padding: 15px 0;
+  padding-left: 51px;
+  margin: 0 12.5%;
+}
+
+body .model-card-outer .model-card {
   background-color: #fff;
-  -webkit-border-top-left-radius: 60px;
-          border-top-left-radius: 60px;
-  -webkit-border-bottom-left-radius: 60px;
-          border-bottom-left-radius: 60px;
-  -webkit-border-top-right-radius: 5px;
-          border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-          border-bottom-right-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -36,67 +35,72 @@ body .model-card {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-body .model-card img.model-icon {
+body .model-card-outer .model-card img.model-icon {
   width: 121px;
   vertical-align: bottom;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  margin-left: -1px;
+  margin-left: -51px;
 }
 
-body .model-card .text-block {
-  width: 100%;
+body .model-card-outer .model-card .text-block {
   margin-left: 43px;
 }
 
-body .model-card .text-block .login {
+body .model-card-outer .model-card .text-block .name {
   padding: 8.5px 0 6px 0;
   font-size: 20px;
   font-weight: bold;
   color: #000;
 }
 
-body .model-card .text-block .name {
+body .model-card-outer .model-card .text-block .login {
   font-size: 11px;
   color: #7F7F7F;
 }
 
-body .model-card .text-block .counters .counter {
-  display: inline-block;
-  padding: 13px 0;
-  padding-right: 47px;
+body .model-card-outer .model-card .text-block .counters {
+  margin-left: -47px;
 }
 
-body .model-card .text-block .counters .counter span {
+body .model-card-outer .model-card .text-block .counters .counter {
+  display: inline-block;
+  padding: 13px 0;
+  margin-left: 47px;
+}
+
+body .model-card-outer .model-card .text-block .counters .counter span {
   font-size: 15px;
   color: #999999;
 }
 
-body .model-card .text-block .counters .counter span.b {
+body .model-card-outer .model-card .text-block .counters .counter span.b {
   color: #000000;
   font-weight: bold;
 }
 
-body .model-card .btn-block {
+body .model-card-outer .model-card .btn-block {
   text-align: right;
   margin-right: 15px;
+  margin-left: auto;
+  width: 145px;
 }
 
-body .model-card .btn-block a.btn {
+body .model-card-outer .model-card .btn-block a.btn {
   display: inline-block;
   height: 30px;
   line-height: 30px;
   text-align: center;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  width: 145px;
+  width: 100%;
   font-size: 14px;
   font-weight: bold;
   margin-top: 19px;
   margin-bottom: 4px;
 }
 
-body .model-card .btn-block a.btn-write {
+body .model-card-outer .model-card .btn-block a.btn-write {
   border: 0.5px solid #000000;
   color: #000;
   -webkit-transition: 0.3s;
@@ -104,7 +108,7 @@ body .model-card .btn-block a.btn-write {
   transition: 0.3s;
 }
 
-body .model-card .btn-block a.btn-write:hover, body .model-card .btn-block a.btn-subscribe {
+body .model-card-outer .model-card .btn-block a.btn-write:hover, body .model-card-outer .model-card .btn-block a.btn-subscribe {
   background-color: #157EE1;
   color: #fff;
   border-color: #157EE1;
@@ -129,4 +133,277 @@ body .publications-table .flex-table a.item img {
   vertical-align: bottom;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+}
+
+body .publications-table .btn-more.mob {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+body .publications-table .btn-more.mob span {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000;
+}
+
+body .publications-table .btn-more.mob:hover {
+  background-color: #157EE1;
+  border-color: #157EE1;
+}
+
+body .publications-table .btn-more.mob:hover span {
+  color: #fff;
+}
+
+@media only screen and (max-width: 1140px) {
+  body main .publications-table {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body main .model-card-outer {
+    padding: 34px 0 34px 85px;
+    margin: 0 15px;
+  }
+  body main .model-card-outer .model-card img.model-icon {
+    width: 175px;
+    margin-left: -85px;
+  }
+  body main .model-card-outer .model-card .text-block .name {
+    font-size: 30px;
+  }
+  body main .model-card-outer .model-card .text-block .login {
+    font-size: 20px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter {
+    line-height: 1.2;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter span {
+    font-size: 20px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter span span.b {
+    font-size: 24px;
+    display: block;
+    text-align: center;
+  }
+  body main .model-card-outer .model-card .btn-block {
+    width: 197px;
+    margin-right: 20px;
+  }
+  body main .model-card-outer .model-card .btn-block a.btn {
+    height: 60px;
+    line-height: 60px;
+    font-size: 17px;
+  }
+  body main .publications-table .flex-table {
+    margin-left: -15px;
+  }
+  body main .publications-table .flex-table a.item {
+    width: -webkit-calc((100% / 3) - 15px);
+    width: calc((100% / 3) - 15px);
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  body main .publications-table .btn-more.mob {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 11px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body main .model-card-outer {
+    padding-left: 0;
+  }
+  body main .model-card-outer .model-card {
+    padding: 7px 15px 15px 15px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  body main .model-card-outer .model-card img.model-icon {
+    margin: 0;
+  }
+  body main .model-card-outer .model-card .text-block {
+    margin: 0;
+  }
+  body main .model-card-outer .model-card .text-block .name, body main .model-card-outer .model-card .text-block .login {
+    margin-left: 35px;
+  }
+  body main .model-card-outer .model-card .btn-block {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 0;
+  }
+  body main .model-card-outer .model-card .btn-block a.btn {
+    width: 205px;
+    vertical-align: top;
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body main .model-card-outer .model-card img.model-icon {
+    width: 126px;
+  }
+  body main .model-card-outer .model-card .text-block .name {
+    font-size: 22px;
+  }
+  body main .model-card-outer .model-card .text-block .login {
+    font-size: 13px;
+  }
+  body main .model-card-outer .model-card .text-block .counters {
+    margin-left: -28px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter {
+    padding: 5px 0;
+    margin-left: 28px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter span {
+    font-size: 13px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter span span.b {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body main .publications-table .btn-more.mob {
+    height: 54px;
+    line-height: 50px;
+  }
+  body main .publications-table .btn-more.mob span {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body main .model-card-outer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  body main .model-card-outer .model-card img.model-icon {
+    width: 126px;
+    height: 126px;
+  }
+  body main .model-card-outer .model-card .text-block {
+    width: 61%;
+  }
+  body main .model-card-outer .model-card .text-block .name {
+    padding-bottom: 0;
+    line-height: 1.2;
+  }
+  body main .model-card-outer .model-card .text-block .login {
+    line-height: 1;
+    margin-top: 5px;
+  }
+  body main .model-card-outer .model-card .text-block .counters {
+    margin-top: 16px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter {
+    margin-left: 23px;
+  }
+  body main .model-card-outer .model-card .btn-block {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main .model-card-outer .model-card .btn-block a.btn {
+    margin: 0;
+    width: -webkit-calc((100% / 2) - 5px);
+    width: calc((100% / 2) - 5px);
+    height: 52px;
+    line-height: 52px;
+  }
+  body main .publications-table .flex-table {
+    margin-left: -10px;
+  }
+  body main .publications-table .flex-table a.item {
+    width: -webkit-calc((100% / 3 ) - 10px);
+    width: calc((100% / 3 ) - 10px);
+    margin-left: 10px;
+  }
+  body main .publications-table .btn-more.mob {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 2px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body main .model-card-outer .model-card {
+    position: relative;
+    padding-top: 16px;
+  }
+  body main .model-card-outer .model-card img.model-icon {
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+  }
+  body main .model-card-outer .model-card .text-block {
+    width: 100%;
+  }
+  body main .model-card-outer .model-card .text-block .name, body main .model-card-outer .model-card .text-block .login {
+    margin-left: 87px;
+  }
+  body main .model-card-outer .model-card .text-block .name {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  body main .model-card-outer .model-card .text-block .counters {
+    margin-left: -23px;
+    margin-top: 28px;
+  }
+  body main .model-card-outer .model-card .text-block .counters .counter span span.b {
+    font-size: 16px;
+  }
+  body main .model-card-outer .model-card .btn-block a.btn {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+  body main .publications-table .flex-table {
+    margin-left: -4px;
+  }
+  body main .publications-table .flex-table a.item {
+    width: -webkit-calc((100% / 3) - 4px);
+    width: calc((100% / 3) - 4px);
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+  body main .publications-table .btn-more.mob {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    height: 40px;
+    line-height: 40px;
+  }
+  body main .publications-table .btn-more.mob span {
+    font-size: 16px;
+  }
 }

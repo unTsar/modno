@@ -37,6 +37,7 @@ body .model-card-outer .model-card {
 
 body .model-card-outer .model-card img.model-icon {
   width: 121px;
+  height: 121px;
   vertical-align: bottom;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -182,6 +183,7 @@ body .publications-table .btn-more.mob:hover span {
   }
   body main .model-card-outer .model-card img.model-icon {
     width: 175px;
+    height: 175px;
     margin-left: -85px;
   }
   body main .model-card-outer .model-card .text-block .name {
@@ -261,6 +263,7 @@ body .publications-table .btn-more.mob:hover span {
 @media only screen and (max-width: 700px) {
   body main .model-card-outer .model-card img.model-icon {
     width: 126px;
+    height: 126px;
   }
   body main .model-card-outer .model-card .text-block .name {
     font-size: 22px;
@@ -297,10 +300,6 @@ body .publications-table .btn-more.mob:hover span {
   body main .model-card-outer {
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-  body main .model-card-outer .model-card img.model-icon {
-    width: 126px;
-    height: 126px;
   }
   body main .model-card-outer .model-card .text-block {
     width: 61%;

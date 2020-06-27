@@ -570,7 +570,7 @@
               <div class="delivery-btn"><img src="img/item-page/delivery-light.svg" alt="delivery-light.svg"><span>Доставка: от <b>1 &#8381;</b></span></div><span class="region">Ваш регион: <span class="value">Москва</span></span>
             </div>
             <div class="arrows"><a class="arrow arrow-left" href="#"><img src="img/item-page/arrow-left.svg" alt="arrow-left.svg"></a><span>Ещё в 5 магазинах</span><a class="arrow arrow-right" href="#"><img src="img/item-page/arrow-right.svg" alt="arrow-right.svg"></a></div>
-            <div class="sidebar-btns"><a class="btn" href="#">Купить</a><a class="btn" href="#">Купить в кредит</a><a class="btn" href="#">Заказать</a><a class="btn desk" href="#">Написать сообщение</a><a class="btn mob" href="#">Cообщение</a></div>
+            <div class="sidebar-btns"><a class="btn b" href="#">Купить</a><a class="btn" href="#">Купить в кредит</a><a class="btn" href="#">Заказать</a><a class="btn desk" href="#">Написать сообщение</a><a class="btn mob" href="#">Cообщение</a></div>
           </div>
         </section>
         <section class="marketing-table">
@@ -1399,6 +1399,7 @@
     			onOpen: function() { $('body').addClass('fixed'); },
     			onClose: function() { $('body').removeClass('fixed') }
     		});
+    		initMap()
     	});
     	$('.hmenu-popup-main-delivery_btn').click(function(){
     		$('#popup-map2').bPopup({
@@ -1407,6 +1408,7 @@
     			onOpen: function() { $('body').addClass('fixed'); },
     			onClose: function() { $('body').removeClass('fixed') }	
     		});
+    		initMap()
     	});
     
     	var lSbtn = $('#languageSettings-button');
@@ -1641,23 +1643,23 @@
     
     	// карта страница магазина
     	$('#shop-page-map-popup-btn').click(function(){
-    		$('body').addClass('fixed');
     		$('#shop-page-map-popup').bPopup({
     			positionStyle: 'fixed',
     			closeClass: 'shop-page-map-popup_close-btn',
-    			onClose: function() { $('body').removeClass('fixed') }			
+    			onOpen: function() { $('body').addClass('fixed'); },
+    			onClose: function() { $('body').removeClass('fixed') }	
     		});
-    		
+    		initMap()
     	});
     	// карта магазинов на главной
     	$('.index-sidebar-map-popup-btn').click(function(){
-    		$('body').addClass('fixed');
     		$('#index-sidebar-map-popup').bPopup({
     			positionStyle: 'fixed',
     			closeClass: 'index-sidebar-map-popup_close-btn',
+    			onOpen: function() { $('body').addClass('fixed'); },
     			onClose: function() { $('body').removeClass('fixed') }			
     		});
-    		
+    		initMap()
     	});
     
     	//- публикации

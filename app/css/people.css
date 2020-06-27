@@ -91,6 +91,8 @@ body section.main-content .search-items-outer .search-items .filter-btn img {
 }
 
 body section.main-content .navbar {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin: 15px 0;
   padding-top: 14px;
   padding-bottom: 15px;
@@ -291,6 +293,8 @@ body section.main-content .models .flex-table {
 }
 
 body section.main-content .models .flex-table .model-item {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -377,6 +381,8 @@ body section.main-content .models .flex-table .model-item a.btn-subscribe {
 }
 
 body section.main-content .models .main-navbar-bottom {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin-bottom: 35px;
   padding-top: 16px;

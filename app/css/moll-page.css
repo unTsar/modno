@@ -139,6 +139,8 @@ body section.shop-card .card-item .img-map-link img.img-map {
 }
 
 body section.marketing-table .marketing-navbar {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding-top: 14px;
   padding-bottom: 15px;
   position: relative;
@@ -274,6 +276,8 @@ body section.marketing-table .mk-products .main-content {
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .number, body section.marketing-table .mk-products .main-content .sidebar .options {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 252px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -560,6 +564,8 @@ body section.marketing-table .mk-products .main-content .items-table .content .c
 }
 
 body section.marketing-table .mk-products .main-content .items-table .content .item {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -646,6 +652,8 @@ body section.marketing-table .mk-info {
 }
 
 body section.marketing-table .mk-info .main-content .mk-info-section {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 5px;
           border-radius: 5px;
   background-color: #fff;
@@ -777,6 +785,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section {
 }
 
 body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn {
+  background-color: #fff;
   display: inline-block;
   position: relative;
   padding: 0px 28px;
@@ -870,6 +879,8 @@ body section.marketing-table .mk-feedback .main-content .btn-more.mob:hover span
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
   background-color: #fff;
   -webkit-border-radius: 5px;
@@ -955,6 +966,8 @@ body section.marketing-table .mk-feedback .main-content .reviews-list img.separ 
 }
 
 body section.marketing-table .marketing-navbar-bottom {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin-bottom: 35px;
   padding-top: 16px;

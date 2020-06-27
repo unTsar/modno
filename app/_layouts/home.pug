@@ -678,6 +678,7 @@ html(lang="ru")
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }
 				});
+				initMap()
 			});
 			$('.hmenu-popup-main-delivery_btn').click(function(){
 				$('#popup-map2').bPopup({
@@ -686,6 +687,7 @@ html(lang="ru")
 					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }	
 				});
+				initMap()
 			});
 
 			var lSbtn = $('#languageSettings-button');
@@ -920,23 +922,23 @@ html(lang="ru")
 
 			// карта страница магазина
 			$('#shop-page-map-popup-btn').click(function(){
-				$('body').addClass('fixed');
 				$('#shop-page-map-popup').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'shop-page-map-popup_close-btn',
-					onClose: function() { $('body').removeClass('fixed') }			
+					onOpen: function() { $('body').addClass('fixed'); },
+					onClose: function() { $('body').removeClass('fixed') }	
 				});
-				
+				initMap()
 			});
 			// карта магазинов на главной
 			$('.index-sidebar-map-popup-btn').click(function(){
-				$('body').addClass('fixed');
 				$('#index-sidebar-map-popup').bPopup({
 					positionStyle: 'fixed',
 					closeClass: 'index-sidebar-map-popup_close-btn',
+					onOpen: function() { $('body').addClass('fixed'); },
 					onClose: function() { $('body').removeClass('fixed') }			
 				});
-				
+				initMap()
 			});
 
 			//- публикации

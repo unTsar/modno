@@ -15,6 +15,8 @@
 }
 
 body section.category-links {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 15px;
   position: relative;
   background-color: #fff;
@@ -209,6 +211,8 @@ body section.swiper-block {
 }
 
 body section.swiper-block .slide {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -233,6 +237,8 @@ body section.swiper-block .slide-more-outer img {
 }
 
 body section.swiper-block .slide-more {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   position: absolute;
   z-index: 20;
   top: 0;
@@ -270,6 +276,8 @@ body section.swiper-block .slide-more .text {
 }
 
 body section.marketing-table .marketing-navbar {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding-top: 14px;
   padding-bottom: 15px;
   position: relative;
@@ -477,6 +485,8 @@ body section.marketing-table .main-content .sidebar {
 }
 
 body section.marketing-table .main-content .sidebar .number, body section.marketing-table .main-content .sidebar .options {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 252px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -613,6 +623,8 @@ body section.marketing-table .main-content .sidebar .options .line .buttonOpSw.r
 }
 
 body section.marketing-table .main-content .sidebar a.img-map-link {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 5px;
           border-radius: 5px;
   margin-top: 15px;
@@ -699,6 +711,8 @@ body section.marketing-table .main-content .items-table .content .category-item,
 }
 
 body section.marketing-table .main-content .items-table .content .item {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -904,6 +918,8 @@ body section.marketing-table .main-content .items-table.mob .content .btns .btn-
 }
 
 body section.marketing-table .marketing-navbar-bottom {
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin-bottom: 35px;
   padding-top: 16px;

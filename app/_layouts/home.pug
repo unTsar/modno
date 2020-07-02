@@ -5,8 +5,8 @@ html(lang="ru")
 
 		title Modno
 		meta(name="description" content="")
-		meta(name="keywords" content="")
-		meta(name="author" content="Front-end by unTsar")
+		meta(name="keywords" content="VV")
+		meta(name="author" content="Vladimir Vostrikov")
 		meta(name="robots" content ="index, follow")
 
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
@@ -34,375 +34,36 @@ html(lang="ru")
 		//- link(rel="icon", type="image/x-icon", href="img/fav/ws_48x48.ico")
 	
 	body
-		//- публикации
-		.publications-popup#publications-popup
-			a.publications-popup_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
-				.text-block
-					.name Екатерина
-					.login ekaterina777
-				a.btn-subscribe(href="#") Подписаться
-				.btn-burger
-					.circle
-					.circle
-					.circle
-			.main-content
-				.pbPhoto-outer
-					img.pbPhoto(src="img/people/pbPhoto.jpg", alt="pbPhoto.jpg")
-					.tag-button.tag-button1#pb-tag-btn1(style='background-color: #D4E0B6')
-					.tag-button.tag-button2#pb-tag-btn2(style='background-color: #F8CF8D')
-				.list#pb-scrollBlock
-					.item#pb-scrollItem2
-						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
-						img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
-						.text-block
-							.name Gucci
-							.desc Атласное платье c поясом
-							.author
-								.author-name lamoda
-								img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
-						.buy-block
-							.price 3 999 &#8381;
-							a.btn-buy(href="#") Купить
-					- for(var i = 1; i <= 5; i++)
-						.item
-							img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
-							img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
-							.text-block
-								.name Gucci
-								.desc Атласное платье c поясом
-								.author
-									.author-name lamoda
-									img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
-							.buy-block
-								.price 3 999 &#8381;
-								a.btn-buy(href="#") Купить
-					.item#pb-scrollItem1
-						img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
-						img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
-						.text-block
-							.name Gucci
-							.desc Атласное платье c поясом
-							.author
-								.author-name lamoda
-								img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
-						.buy-block
-							.price 3 999 &#8381;
-							a.btn-buy(href="#") Купить
 
-
-
-		//- карта магазинов на главной
-		.shop-map-outer.index-sidebar-map-popup#index-sidebar-map-popup
-			.back-close-btn.index-sidebar-map-popup_close-btn
-			.shop-map
-				a.close-btn.index-sidebar-map-popup_close-btn(href="#")
-					img(src="img/close.svg", alt="close.svg")
-				.map#index-sidebar-map
-		//- карта страница магазина
-		.shop-map-outer.shop-page-map-popup#shop-page-map-popup
-			.back-close-btn.shop-page-map-popup_close-btn
-			.shop-map
-				a.close-btn.shop-page-map-popup_close-btn(href="#")
-					img(src="img/close.svg", alt="close.svg")
-				.map#shop-page-map
-		//- Send feedback
-		.Log-form.feedback-form#feedback-form
-			a.feedback-form_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Оставить отзыв
-			form(action="#").form-block
-				.input-item
-					.input-head 
-						span Ваше имя #[span.red *] 
-					input(type="text")
-				.input-item
-					.input-head 
-						span Ваша оценка #[span.red *]
-					.rating
-						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
-						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
-						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
-						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
-						img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
-				.input-item
-					.input-head 
-						span Комментарий #[span.red *]
-					textarea
-				.p-policy
-					input#feedback-form_checkbox(type="checkbox")
-					label(for="feedback-form_checkbox")
-					.textblock.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.
-				.form-buttons
-					input.feedback-form_close-btn(type="submit" value="Отправить")
-
-		.Log-form.mk-filter-drop-popup#mk-filter-drop-popup
-			a.filter-drop-popup_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				img.unfixed-btn.img-inner-close.filter-drop-popup_close-btn(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
-				span Сортировка по
-			.links
-				a.link(href="#") умолчанию
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") рейтингу
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") популярности
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") скидке
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") цене, дешевле
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") цене, дороже
-				a(href="#").unfixed-btn.btn.filter-drop-popup_close-btn
-					span Принять
-		//- Фильтр для товаров
-		.Log-form.mk-filter-popup#mk-filter-popup-products
-			a.filter-popup-products_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Фильтры товаров
-			.links
-				.line
-					span.span-link Вид одежды
-					select.mk-filter-products-select2.js-states.form-control(name="state")
-						option(value="Opt1") Мужская
-						option(value="Opt2") Женская
-						option(value="Opt3") Детская
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line
-					span.span-link Категория
-					select.mk-filter-products-select2.js-states.form-control(name="state")
-						option(value="Opt1") Одежда
-						option(value="Opt2") Обувь
-						option(value="Opt3") Аксессуары
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line
-					span.span-link Тип
-					select.mk-filter-products-select2.js-states.form-control(name="state")
-						option(value="Opt1") Брюки
-						option(value="Opt2") Кардиганы
-						option(value="Opt3") Свитеры
-						option(value="Opt4") Рубашки
-						option(value="Opt5") Блузы
-						option(value="Opt6") Джемперы
-						option(value="Opt7") Вязаные костюмы
-						option(value="Opt8") Джинсы
-						option(value="Opt9") Комбинезоны
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line
-					span.span-link Размер
-					.input-outer
-						input.value(type="number" value="44")
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line
-					span.span-link Цвет
-					select.mk-filter-products-select2.js-states.form-control(name="state")
-						option(value="Opt1") Белый
-						option(value="Opt2") Чёрный
-						option(value="Opt3") Коричневый
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line
-					span.span-link Материал
-					select.mk-filter-products-select2.js-states.form-control(name="state")
-						option(value="Opt1") Кожа
-						option(value="Opt2") Шёлк
-						option(value="Opt3") Шерсть
-						option(value="Opt4") Кожзам
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Новинки
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Скидки
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-			.g-separ-block
-			.links
-				.line
-					span.span-link Цена, от
-					.input-outer
-						input.value(type="text" value="200")
-						span.rouble &#8381;
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line
-					span.span-link Цена, до
-					.input-outer
-						input.value(type="text" value="200 000")
-						span.rouble &#8381;
-			.g-separ-block
-			.links
-				.line.hmenu-popup-main-city_btn
-					span.span-link Город
-					span.value Москва
-					.img-arrow
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.hmenu-popup-main-delivery_btn
-
-					span.span-link Доставка
-					span.value Москва
-					.img-arrow
-			.g-separ-block
-			.links
-				.line
-					span.span-link Сортировка
-					select.mk-filter-products-select2.js-states.form-control(name="state")
-						option(value="Opt1") по цене
-						option(value="Opt2") по рейтингу
-			.btn-outer
-				a(href="#").btn.filter-popup-products_close-btn
-					span Принять
-		.Log-form.mk-filter-popup#mk-filter-popup-shops
-			a.filter-popup_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Фильтры
-			.links
-				.line.mk-filter-popup-line
-					span.span-link Монобрендовые
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Мультибрендовые
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Бутики
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Аутлеты
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Онлайн
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				.btn-outer
-					a(href="#").btn.filter-popup_close-btn
-						span Принять
-		.Log-form.mk-filter-popup#mk-filter-popup-molls
-			a.filter-popup_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Фильтры
-			.links
-				.line.mk-filter-popup-line
-					span.span-link Торговые центры
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Торговые комплексы
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				.line.mk-filter-popup-line
-					span.span-link Универмаги
-					.buttonOpSw.r
-						input.option-checkbox(type="checkbox")
-						.knobs
-						.layer
-				.btn-outer
-					a(href="#").btn.filter-popup_close-btn
-						span Принять
-
-		.Log-form.popup-profile-mob#popup-profile-mob
-			a.profile-mob_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Кабинет
-			.links
-				a.link(href="#") Мои заказы
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") Мои данные
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") Мои сообщения (#[span.msg-val 3])
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") Отложенные товары
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") Подарочные сертификаты
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#").g Подписки
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") Мои баллы
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#") Отслеживание заказов
-				.track-input
-					input.track-search(type="search" placeholder="Номер заказа")
-				img.separ(src="img/index/separ.svg", alt="separ.svg")
-				a.link(href="#").profile-mob_close-btn Выйти
-
-		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-currency#hmenu-popup-main-currency
+		//- Боковое меню
+		//- Главный экран
+		.hmenu-popup.hmenu-popup-main#hmenu-popup-main
 			.outer
 				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
-				.head
-					a(href="#").hmenu-popup-inner-close
-						img(src="img/arrow-left.svg", alt="arrow-left.svg")
-					span Валюта
-				.input-outer
-					img.img-search(src="img/search.svg", alt="search.svg")
-					input.input-search.popup-map-input-search(type="search" placeholder="Введите валюту")
+				.head 
+					span Категории
 				.links
-					a.link(href="#") EUR (Euro)
+					a.link.hmenu-link(href="#") Женщины
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") USD (US Dollar)
+					a.link.hmenu-link(href="#") Мужчины
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") RUB (Russian Rouble)
-				a(href="#").btn-submit.hmenu-popup-inner-close
-					span Запомнить
-		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-language#hmenu-popup-main-language
+					a.link.hmenu-link(href="#") Дети
 			.outer
-				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
-				.head
-					a(href="#").hmenu-popup-inner-close
-						img(src="img/arrow-left.svg", alt="arrow-left.svg")
-					span Язык
-				.input-outer
-					img.img-search(src="img/search.svg", alt="search.svg")
-					input.input-search.popup-map-input-search(type="search" placeholder="Введите язык")
+				.head 
+					span Настройки
 				.links
-					a.link(href="#") Русский
+					a.link.hmenu-popup-main-city_btn.popup-open(href="#") Город: #[span.val Москва]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") English
+					a.link.hmenu-popup-main-delivery_btn.popup-open(href="#") Доставка: #[span.val Москва]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") Deutsch
+					a.link#hmenu-popup-main-language_btn(href="#") Язык: #[span.val русский]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") Italiano
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") Español
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link(href="#") 中文
-				a(href="#").btn-submit.hmenu-popup-inner-close
-					span Запомнить
-
+					a.link#hmenu-popup-main-currency_btn(href="#") Валюта: #[span.val RUB (Russian Rouble)]
+						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
+		//- Категории
 		.hmenu-popup-category.hmenu-popup.hmenu-popup-category2#hmenu-popup-category2
 			.outer
 				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
@@ -482,211 +143,593 @@ html(lang="ru")
 					a.link.hmenu-link(href="#") Красота
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
 					a.link.hmenu-link(href="#").r Sale
-		.hmenu-popup.hmenu-popup-main#hmenu-popup-main
+		//- Валюта и язык
+		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-currency#hmenu-popup-main-currency
 			.outer
 				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
-				.head 
-					span Категории
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Валюта
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search.popup-map-input-search(type="search" placeholder="Введите валюту")
 				.links
-					a.link.hmenu-link(href="#") Женщины
+					a.link(href="#") EUR (Euro)
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Мужчины
+					a.link(href="#") USD (US Dollar)
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-link(href="#") Дети
-			.outer
-				.head 
-					span Настройки
-				.links
-					a.link.hmenu-popup-main-city_btn(href="#") Город: #[span.val Москва]
-						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link.hmenu-popup-main-delivery_btn(href="#") Доставка: #[span.val Москва]
-						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link#hmenu-popup-main-language_btn(href="#") Язык: #[span.val русский]
-						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					a.link#hmenu-popup-main-currency_btn(href="#") Валюта: #[span.val RUB (Russian Rouble)]
-						img.img-arrow(src="img/hmenu-arrow-right.svg", alt="hmenu-arrow-right.svg")
-		.dd-popup.currency-popup#currency-popup
-			a.currency-popup_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Валюта
-			.input-outer
-				img.img-search(src="img/search.svg", alt="search.svg")
-				input.input-search.popup-map-input-search(type="search" placeholder="Введите валюту")
-			.search-items.dd-search-items
-				.search-item.dd-search-item.currency-popup_close-btn
-					span EUR (Euro)
-				.search-item.dd-search-item.currency-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span USD (US Dollar)
-				.search-item.dd-search-item.currency-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span RUB (Russian Rouble)
-				.search-item.dd-search-item
-				.search-item.dd-search-item
-				.search-item.dd-search-item
-		.dd-popup.language-popup#language-popup
-			a.language-popup_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Язык
-			.input-outer
-				img.img-search(src="img/search.svg", alt="search.svg")
-				input.input-search.popup-map-input-search(type="search" placeholder="Введите язык")
-			.search-items.dd-search-items
-				.search-item.dd-search-item.language-popup_close-btn
-					span Русский
-				.search-item.dd-search-item.language-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span English
-				.search-item.dd-search-item.language-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span Deutsch
-				.search-item.dd-search-item.language-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span Italiano
-				.search-item.dd-search-item.language-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span Español
-				.search-item.dd-search-item.language-popup_close-btn
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					span 中文
-		.popup-map.popup-map-delivery#popup-map2.Log-form
-			img.hmenu-popup-close.img-close.popup-map2_close-btn(src="img/close.svg", alt="close.svg")
-			.topline
-				a(href="#").hmenu-popup-inner-close.popup-map2_close-btn
-					img(src="img/arrow-left.svg", alt="arrow-left.svg")
-				span Доставка
-			.input-outer
-				img.img-search(src="img/search.svg", alt="search.svg")
-				input.input-search.popup-map-input-search(type="search" placeholder="Введите город")
-				.search-results
-					.search-item
-						span Москва
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					.search-item
-						span Санкт-Петербург
-					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					.search-item
-						span Владивосток
-			.mapOuter
-				.map#map2
-			.map-buttons
-				a(href="#").map-btn.popup-map2_close-btn
+					a.link(href="#") RUB (Russian Rouble)
+				a(href="#").btn-submit.hmenu-popup-inner-close
 					span Запомнить
-		.popup-map.popup-map-city#popup-map1.Log-form
-			img.hmenu-popup-close.img-close.popup-map1_close-btn(src="img/close.svg", alt="close.svg")
-			.topline
-				a(href="#").hmenu-popup-inner-close.popup-map1_close-btn
-					img(src="img/arrow-left.svg", alt="arrow-left.svg")
-				span Местоположение
-			.input-outer
-				img.img-search(src="img/search.svg", alt="search.svg")
-				input.input-search.popup-map-input-search(type="search" placeholder="Введите город")
-				.search-results
-					.search-item
-						span Москва
+		.hmenu-popup-lSettings.hmenu-popup.hmenu-popup-main-language#hmenu-popup-main-language
+			.outer
+				img.hmenu-popup-close(src="img/close.svg", alt="img/close.svg")
+				.head
+					a(href="#").hmenu-popup-inner-close
+						img(src="img/arrow-left.svg", alt="arrow-left.svg")
+					span Язык
+				.input-outer
+					img.img-search(src="img/search.svg", alt="search.svg")
+					input.input-search.popup-map-input-search(type="search" placeholder="Введите язык")
+				.links
+					a.link(href="#") Русский
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					.search-item
-						span Санкт-Петербург
+					a.link(href="#") English
 					img.separ(src="img/index/separ.svg", alt="separ.svg")
-					.search-item
-						span Владивосток
-			.mapOuter
-				.map#map1
-			.map-buttons
-				a(href="#").map-btn.popup-map1_close-btn
+					a.link(href="#") Deutsch
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") Italiano
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") Español
+					img.separ(src="img/index/separ.svg", alt="separ.svg")
+					a.link(href="#") 中文
+				a(href="#").btn-submit.hmenu-popup-inner-close
 					span Запомнить
 
-		.Log-form.LogIn-form#LogIn-form
-			a.LogIn-form_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Войти
-			form(action="#").form-block
-				.input-item
-					.input-head 
-						span Логин #[span.red *] 
-						a(href="#").a-logup#LogIn-form_btnLogUp.LogIn-form_close-btn Создать учетную запись
-					input(type="text")
-					a(href="#").a-logup#LogIn-form_btn_mobLogUp.LogIn-form_close-btn.mob Создать учетную запись
-				.input-item
-					.input-head 
-						span Пароль #[span.red *]
-						a(href="#") Забыли пароль?
-					input(type="password")
-					a(href="#").input-head__a.mob Забыли пароль?
-				.form-options
-					input#LogIn-form_checkbox(type="checkbox")
-					label(for="LogIn-form_checkbox") Запомнить
-				.form-buttons
-					a(href="#").form-btn.form-btnLogIn#LogIn-form_btnLogIn.LogIn-form_close-btn
-						span Вход
-		.Log-form.LogUp-form#LogUp-form
-			a.LogUp-form_close-btn(href="#")
-				img.img-close(src="img/close.svg", alt="close.svg")
-			.topline
-				span Создать учетную запись
-			form(action="#").form-block
-				.input-item
-					.input-head 
-						span Тип учётной записи
-					.radio
-						input#LogUp-form_radio1(type="radio" name="logup-type")
-						label(for="LogUp-form_radio1") Покупатель
-						input#LogUp-form_radio2(type="radio" name="logup-type")
-						label(for="LogUp-form_radio2") Продавец
-				.input-item
-					.input-head
-						span E-mail #[span.red *] 
-					input(type="email")
-				.input-item
-					.input-head
-						span Пароль #[span.red *]
-					input(type="password")
-				.input-item
-					.input-head
-						span Подтверждение пароля #[span.red *]
-					input(type="password")
-				.p-policy
-					input#LogUp-form_checkbox(type="checkbox")
-					label(for="LogUp-form_checkbox")
-					.textblock.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. #[span.red *]
-					.textblock.desctext Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным #[a(href="#") здесь текстом]
-				.form-buttons
-					a(href="#").form-btn.form-btnLogUp#LogUp-form_btnLogUp.LogUp-form_close-btn
-						span Регистрация
+
+		.popup-container#popup-container
+			.wrap#popup-wrap
+				//- Вход и Регистрация (кнопки в header)
+				.popup-content.Log-form.LogIn-form#LogIn-form
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Войти
+					form(action="#").form-block
+						.input-item
+							.input-head 
+								span Логин #[span.red *] 
+								a(href="#").a-logup#LogIn-form_btnLogUp.popup-open Создать учетную запись
+							input(type="text")
+							a(href="#").a-logup#LogIn-form_btn_mobLogUp.popup-open.mob Создать учетную запись
+						.input-item
+							.input-head 
+								span Пароль #[span.red *]
+								a(href="#") Забыли пароль?
+							input(type="password")
+							a(href="#").input-head__a.mob Забыли пароль?
+						.form-options
+							input#LogIn-form_checkbox(type="checkbox")
+							label(for="LogIn-form_checkbox") Запомнить
+						.form-buttons
+							.form-btn.form-btnLogIn.popup-close
+								span Вход
+				.popup-content.Log-form.LogUp-form#LogUp-form
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Создать учетную запись
+					form(action="#").form-block
+						.input-item
+							.input-head 
+								span Тип учётной записи
+							.radio
+								input#LogUp-form_radio1(type="radio" name="logup-type")
+								label(for="LogUp-form_radio1") Покупатель
+								input#LogUp-form_radio2(type="radio" name="logup-type")
+								label(for="LogUp-form_radio2") Продавец
+						.input-item
+							.input-head
+								span E-mail #[span.red *] 
+							input(type="email")
+						.input-item
+							.input-head
+								span Пароль #[span.red *]
+							input(type="password")
+						.input-item
+							.input-head
+								span Подтверждение пароля #[span.red *]
+							input(type="password")
+						.p-policy
+							input#LogUp-form_checkbox(type="checkbox")
+							label(for="LogUp-form_checkbox")
+							.textblock.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. #[span.red *]
+							.textblock.desctext Нажимая кнопку "Регистрация", я подтверждаю свою дееспособность и согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным #[a(href="#") здесь текстом]
+						.form-buttons
+							.form-btn.form-btnLogUp.popup-close
+								span Регистрация
+
+				//- Кнопка региональных особенностей в header
+				.popup-content.dd-popup.currency-popup#currency-popup
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Валюта
+					.input-outer
+						img.img-search(src="img/search.svg", alt="search.svg")
+						input.input-search.popup-map-input-search(type="search" placeholder="Введите валюту")
+					.search-items.dd-search-items
+						.search-item.dd-search-item.popup-close
+							span EUR (Euro)
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span USD (US Dollar)
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span RUB (Russian Rouble)
+						.search-item.dd-search-item
+						.search-item.dd-search-item
+						.search-item.dd-search-item
+				.popup-content.dd-popup.language-popup#language-popup
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Язык
+					.input-outer
+						img.img-search(src="img/search.svg", alt="search.svg")
+						input.input-search.popup-map-input-search(type="search" placeholder="Введите язык")
+					.search-items.dd-search-items
+						.search-item.dd-search-item.popup-close
+							span Русский
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span English
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span Deutsch
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span Italiano
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span Español
+						.search-item.dd-search-item.popup-close
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							span 中文
+
+				//- Город и Доставка
+				.popup-content.popup-map.popup-map-city#popup-map1.Log-form
+					img.img-close.popup-close.hmenu-popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						a(href="#").popup-close.hmenu-popup-inner-close
+							img(src="img/arrow-left.svg", alt="arrow-left.svg")
+						span Местоположение
+					.input-outer
+						img.img-search(src="img/search.svg", alt="search.svg")
+						input.input-search.popup-map-input-search(type="search" placeholder="Введите город")
+						.search-results
+							.search-item
+								span Москва
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.search-item
+								span Санкт-Петербург
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.search-item
+								span Владивосток
+					.mapOuter
+						.map#map1
+					.map-buttons
+						a(href="#").map-btn.popup-close
+							span Запомнить
+				.popup-content.popup-map.popup-map-delivery#popup-map2.Log-form
+					img.img-close.popup-close.hmenu-popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						a(href="#").popup-close.hmenu-popup-inner-close
+							img(src="img/arrow-left.svg", alt="arrow-left.svg")
+						span Доставка
+					.input-outer
+						img.img-search(src="img/search.svg", alt="search.svg")
+						input.input-search.popup-map-input-search(type="search" placeholder="Введите город")
+						.search-results
+							.search-item
+								span Москва
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.search-item
+								span Санкт-Петербург
+							img.separ(src="img/index/separ.svg", alt="separ.svg")
+							.search-item
+								span Владивосток
+					.mapOuter
+						.map#map2
+					.map-buttons
+						a(href="#").map-btn.popup-close
+							span Запомнить
+				
+				//- Если авторизован - мобильный попап настроек авторизации
+				.popup-content.Log-form.popup-profile-mob#popup-profile-mob
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Кабинет
+					.links
+						a.link(href="#") Мои заказы
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Мои данные
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Мои сообщения (#[span.msg-val 3])
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Отложенные товары
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Подарочные сертификаты
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#").g Подписки
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Мои баллы
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") Отслеживание заказов
+						.track-input
+							input.track-search(type="search" placeholder="Номер заказа")
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#").popup-close Выйти
+
+				//- Фильтр для товаров
+				.popup-content.Log-form.mk-filter-popup#mk-filter-popup-products
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Фильтры товаров
+					.links
+						.line
+							span.span-link Вид одежды
+							select.mk-filter-products-select2.js-states.form-control(name="state")
+								option(value="Opt1") Мужская
+								option(value="Opt2") Женская
+								option(value="Opt3") Детская
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line
+							span.span-link Категория
+							select.mk-filter-products-select2.js-states.form-control(name="state")
+								option(value="Opt1") Одежда
+								option(value="Opt2") Обувь
+								option(value="Opt3") Аксессуары
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line
+							span.span-link Тип
+							select.mk-filter-products-select2.js-states.form-control(name="state")
+								option(value="Opt1") Брюки
+								option(value="Opt2") Кардиганы
+								option(value="Opt3") Свитеры
+								option(value="Opt4") Рубашки
+								option(value="Opt5") Блузы
+								option(value="Opt6") Джемперы
+								option(value="Opt7") Вязаные костюмы
+								option(value="Opt8") Джинсы
+								option(value="Opt9") Комбинезоны
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line
+							span.span-link Размер
+							.input-outer
+								input.value(type="number" value="44")
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line
+							span.span-link Цвет
+							select.mk-filter-products-select2.js-states.form-control(name="state")
+								option(value="Opt1") Белый
+								option(value="Opt2") Чёрный
+								option(value="Opt3") Коричневый
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line
+							span.span-link Материал
+							select.mk-filter-products-select2.js-states.form-control(name="state")
+								option(value="Opt1") Кожа
+								option(value="Opt2") Шёлк
+								option(value="Opt3") Шерсть
+								option(value="Opt4") Кожзам
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Новинки
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Скидки
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+					.g-separ-block
+					.links
+						.line
+							span.span-link Цена, от
+							.input-outer
+								input.value(type="text" value="200")
+								span.rouble &#8381;
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line
+							span.span-link Цена, до
+							.input-outer
+								input.value(type="text" value="200 000")
+								span.rouble &#8381;
+					.g-separ-block
+					.links
+						.line.hmenu-popup-main-city_btn.popup-open.return-filter
+							span.span-link Город
+							span.value Москва
+							.img-arrow
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.hmenu-popup-main-delivery_btn.popup-open.return-filter
+
+							span.span-link Доставка
+							span.value Москва
+							.img-arrow
+					.g-separ-block
+					.links
+						.line
+							span.span-link Сортировка
+							select.mk-filter-products-select2.js-states.form-control(name="state")
+								option(value="Opt1") по цене
+								option(value="Opt2") по рейтингу
+					.btn-outer
+						a(href="#").btn.popup-close
+							span Принять
+				.popup-content.Log-form.mk-filter-popup#mk-filter-popup-shops
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Фильтры
+					.links
+						.line.mk-filter-popup-line
+							span.span-link Монобрендовые
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Мультибрендовые
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Бутики
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Аутлеты
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Онлайн
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						.btn-outer
+							a(href="#").btn.popup-close
+								span Принять
+				.popup-content.Log-form.mk-filter-popup#mk-filter-popup-molls
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Фильтры
+					.links
+						.line.mk-filter-popup-line
+							span.span-link Торговые центры
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Торговые комплексы
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						.line.mk-filter-popup-line
+							span.span-link Универмаги
+							.buttonOpSw.r
+								input.option-checkbox(type="checkbox")
+								.knobs
+								.layer
+						.btn-outer
+							a(href="#").btn.popup-close
+								span Принять
+				.popup-content.Log-form.mk-filter-drop-popup#mk-filter-drop-popup
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						img.unfixed-btn.img-inner-close.popup-close(src="img/index/filter-drop-btn.svg", alt="filter-drop-btn.svg")
+						span Сортировка по
+					.links
+						a.link(href="#") умолчанию
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") рейтингу
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") популярности
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") скидке
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") цене, дешевле
+						img.separ(src="img/index/separ.svg", alt="separ.svg")
+						a.link(href="#") цене, дороже
+						a(href="#").unfixed-btn.btn.popup-close
+							span Принять
+
+				//- публикации
+				.popup-content.publications-popup#publications-popup
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
+						.text-block
+							.name Екатерина
+							.login ekaterina777
+						a.btn-subscribe(href="#") Подписаться
+						.btn-burger
+							.circle
+							.circle
+							.circle
+					.main-content
+						.pbPhoto-outer
+							img.pbPhoto(src="img/people/pbPhoto.jpg", alt="pbPhoto.jpg")
+							.tag-button.tag-button1#pb-tag-btn1(style='background-color: #D4E0B6')
+							.tag-button.tag-button2#pb-tag-btn2(style='background-color: #F8CF8D')
+						.list#pb-scrollBlock
+							.item#pb-scrollItem2
+								img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+								img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+								.text-block
+									.name Gucci
+									.desc Атласное платье c поясом
+									.author
+										.author-name lamoda
+										img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+								.buy-block
+									.price 3 999 &#8381;
+									a.btn-buy(href="#") Купить
+							- for(var i = 1; i <= 5; i++)
+								.item
+									img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+									img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+									.text-block
+										.name Gucci
+										.desc Атласное платье c поясом
+										.author
+											.author-name lamoda
+											img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+									.buy-block
+										.price 3 999 &#8381;
+										a.btn-buy(href="#") Купить
+							.item#pb-scrollItem1
+								img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+								img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+								.text-block
+									.name Gucci
+									.desc Атласное платье c поясом
+									.author
+										.author-name lamoda
+										img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+								.buy-block
+									.price 3 999 &#8381;
+									a.btn-buy(href="#") Купить
+
+				//- карта магазинов на главной
+				.popup-content.shop-map-outer.index-sidebar-map-popup#index-sidebar-map-popup
+					.back-close-btn.popup-close
+					.shop-map
+						a.close-btn.popup-close(href="#")
+							img(src="img/close.svg", alt="close.svg")
+						.map#index-sidebar-map
+				
+				//- карта страница магазина
+				.popup-content.shop-map-outer.shop-page-map-popup#shop-page-map-popup
+					.back-close-btn.popup-close
+					.shop-map
+						a.close-btn.popup-close(href="#")
+							img(src="img/close.svg", alt="close.svg")
+						.map#shop-page-map
+				
+				//- Send feedback
+				.popup-content.Log-form.feedback-form#feedback-form
+					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
+					.topline
+						span Оставить отзыв
+					form(action="#").form-block
+						.input-item
+							.input-head 
+								span Ваше имя #[span.red *] 
+							input(type="text")
+						.input-item
+							.input-head 
+								span Ваша оценка #[span.red *]
+							.rating
+								img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+								img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+								img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+								img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+								img(src="img/shop-page/star-disable_white.svg", alt="star-disable_white.svg")
+						.input-item
+							.input-head 
+								span Комментарий #[span.red *]
+							textarea
+						.p-policy
+							input#feedback-form_checkbox(type="checkbox")
+							label(for="feedback-form_checkbox")
+							.textblock.headtext Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.
+						.form-buttons
+							input.popup-close(type="submit" value="Отправить")
+				
+
+				
 		block content
 	
 	//- Scripts
 	script(src="js/jquery.min.js")
 	script(src="js/svg4everybody.min.js")
-	script(src="js/jquery.bpopup.js")
 	script(src="js/jquery.scrollTo.min.js")
 	script.
 		$(document).ready(function(){
 
 			svg4everybody();
 
+			function existVerticalScroll() {
+				return $('body').outerHeight() > $(window).innerHeight()
+			}
+
+			$('.popup-open').click(function(){
+				if(existVerticalScroll() && $('body').css('top') === "0px"){ 
+					wScrollTop = $(document).scrollTop();
+					$('body').css('top', '-' + wScrollTop + 'px' )
+					$('body').addClass('fixed')
+				}
+				$('.popup-content').fadeOut(150);
+				setTimeout(function(){
+					$('#popup-container').fadeIn(250);
+					$(popupID).fadeIn(250);
+				}, 150)
+			});
+
+			$('#popup-wrap').click(function(e){
+				if (!$('.popup-content').is(e.target) && $('.popup-content').has(e.target).length === 0) {
+					$('.popup-content').fadeOut(150)
+					$('#popup-container').fadeOut(150);
+					$('body').removeClass('fixed')
+					$('body').css('top', '0')
+					$(document).scrollTop(wScrollTop)
+				}
+			});
+
+			$('.popup-close').click(function(){
+				$('.popup-content').fadeOut(150)
+				$('#popup-container').fadeOut(150);
+				$('body').removeClass('fixed')
+				$('body').css('top', '0')
+				$(document).scrollTop(wScrollTop)
+			});
+
+			$('#header-btnLogIn').click(function(){
+				popupID = "#LogIn-form"
+			});
+			$('#LogIn-form_btnLogUp, #LogIn-form_btn_mobLogUp').click(function(){
+				popupID = "#LogUp-form"
+			});
+			$('#header-language-popup').click(function(){
+				popupID = '#language-popup'
+			});
+			$('#header-currency-popup').click(function(){
+				popupID = '#currency-popup'
+			});
+
+
 			$('.hmenu-popup-main-city_btn').click(function(){
-				$('#popup-map1').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'popup-map1_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }
-				});
+				popupID = '#popup-map1'
 				initMap()
 			});
 			$('.hmenu-popup-main-delivery_btn').click(function(){
-				$('#popup-map2').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'popup-map2_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }	
-				});
+				popupID = '#popup-map2'
 				initMap()
 			});
 
@@ -713,12 +756,17 @@ html(lang="ru")
 						$('#profile-dropdown').addClass('hide')
 					}
 				}else{
-					$('#popup-profile-mob').bPopup({
-						positionStyle: 'fixed',
-						closeClass: 'profile-mob_close-btn',
-						onOpen: function() { $('body').addClass('fixed'); },
-						onClose: function() { $('body').removeClass('fixed') }				
-					});
+					if(existVerticalScroll() && $('body').css('top') === "0px"){ 
+						wScrollTop = $(document).scrollTop();
+						$('body').css('top', '-' + wScrollTop + 'px' )
+						$('body').addClass('fixed')
+					}
+					$('.popup-content').fadeOut(150);
+					$('#popup-container').fadeIn(250);
+					setTimeout(function(){
+						$(popupID).fadeIn(250);
+					}, 150)
+					popupID = '#popup-profile-mob'
 				}
 			});
 
@@ -737,34 +785,7 @@ html(lang="ru")
 				//- }
 			});
 
-			$('#header-btnLogIn').click(function(){
-				$('#LogIn-form').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'LogIn-form_close-btn',
-					onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
-			});
-			$('#LogIn-form_btnLogUp, #LogIn-form_btn_mobLogUp').click(function(){
-				$('#LogUp-form').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'LogUp-form_close-btn',
-					onOpen: function() { setTimeout(function(){$('body').addClass('fixed'); }, 500); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
-			});
-
-			$('#header-language-popup').click(function(){
-				$('#language-popup').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'language-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
-			});
+			//- Полная хуйня
 
 			$('.popup-map-input-search').focusin(function(){
 				$(this).siblings('.search-results').show();
@@ -777,18 +798,8 @@ html(lang="ru")
 			});
 			
 
-
-			$('#header-currency-popup').click(function(){
-				$('#currency-popup').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'currency-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
-			});
-
 			$('.dd-popup-search').on('input', function(){
+				alert('done')
 				var str = $(this).val().toLowerCase();
 				if (str.length <= 1){
 					$('.dd-search-items .dd-search-item').show();
@@ -799,6 +810,8 @@ html(lang="ru")
 					}
 				});
 			});
+
+			//- КОНЕЦ ПОЛНОЙ ХУЙНИ
 
 
 			//- Mobile
@@ -844,35 +857,37 @@ html(lang="ru")
 				$('#hmenu-popup-main-currency').fadeToggle(250);
 			});
 
+			//- Фильтры
+
 			$('.mk-filter-btn-shops').click(function(){
-				$('#mk-filter-popup-shops').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'filter-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#mk-filter-popup-shops'
 			});
 			$('.mk-filter-btn-molls').click(function(){
-				$('#mk-filter-popup-molls').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'filter-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#mk-filter-popup-molls'
 			});
 			$('.mk-filter-btn-products').click(function(){
-				$('#mk-filter-popup-products').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'filter-popup-products_close-btn',
-					onOpen: function() { 
-						$('body').addClass('fixed');
-					},
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#mk-filter-popup-products'
 				$('.mk-filter-products-select2').select2({
 					minimumResultsForSearch: Infinity,
 					dropdownCssClass: 'mk-filter-products-select2-dropdown',
 					dropdownCss: { 'z-index': '10001'},
+				});
+			});
+
+			$('.hmenu-popup-main-city_btn.return-filter, .hmenu-popup-main-delivery_btn.return-filter').click(function(){
+				$("#popup-map1, #popup-map2").find('.hmenu-popup-inner-close').addClass('return-filter-btn')
+				$('a.return-filter-btn').click(function(){
+					if(existVerticalScroll() && $('body').css('top') === "0px"){ 
+						wScrollTop = $(document).scrollTop();
+						$('body').css('top', '-' + wScrollTop + 'px' )
+						$('body').addClass('fixed')
+					}
+					$('.popup-content').fadeOut(150);
+					$('#popup-container').fadeIn(250);
+					setTimeout(function(){
+						$(popupID).fadeIn(250);
+					}, 150)
+					popupID = '#mk-filter-popup-products'
 				});
 			});
 
@@ -922,33 +937,18 @@ html(lang="ru")
 
 			// карта страница магазина
 			$('#shop-page-map-popup-btn').click(function(){
-				$('#shop-page-map-popup').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'shop-page-map-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }	
-				});
+				popupID = '#shop-page-map-popup'
 				initMap()
 			});
 			// карта магазинов на главной
 			$('.index-sidebar-map-popup-btn').click(function(){
-				$('#index-sidebar-map-popup').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'index-sidebar-map-popup_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#index-sidebar-map-popup'
 				initMap()
 			});
 
 			//- публикации
 			$('.publications-popup-btn').click(function(){
-				$('body').addClass('fixed');
-				$('#publications-popup').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'publications-popup_close-btn',
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#publications-popup'
 			});
 
 			for(let i = 1; i <= 2; i++){

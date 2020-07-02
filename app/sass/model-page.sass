@@ -2,10 +2,12 @@
 @import "fonts"
 
 body
+	main
+		.container
+			padding: 0 142px
 	.model-card-outer
 		padding: 15px 0
 		padding-left: 51px
-		margin: 0 12.5%
 		.model-card
 			background-color: #fff
 			border-radius: 5px
@@ -69,12 +71,11 @@ body
 					border-color: $accent-blue
 	.publications-table
 		.flex-table
-			margin-left: -10px
+			margin: 0 -6px
 			a.item
-				width: calc((100% / 4) - 10px)
-				margin-left: 10px
+				width: calc((100% / 4) - 12px)
+				margin: 0 6px 15px 6px
 				display: inline-block
-				margin-bottom: 7.5px
 				img
 					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 					width: 100%
@@ -110,6 +111,8 @@ body
 @media only screen and(max-width: 1024px)
 	body
 		main
+			.container
+				padding: 0
 			.model-card-outer
 				padding: 34px 0 34px 85px
 				margin: 0 15px
@@ -142,9 +145,11 @@ body
 			.publications-table
 				.flex-table
 					margin-left: -15px
+					margin-right: 0
 					a.item
 						width: calc((100% / 3) - 15px)
 						margin-left: 15px
+						margin-right: 0
 						margin-bottom: 15px
 				.btn-more.mob
 					display: block

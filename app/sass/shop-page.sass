@@ -85,8 +85,7 @@ body
 	section.marketing-table
 		.marketing-navbar
 			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
-			padding-top: 14px
-			padding-bottom: 15px
+			padding: 15px 0
 			position: relative
 			text-align: center
 			background-color: #fff
@@ -96,13 +95,12 @@ body
 				cursor: pointer
 				display: inline-block
 				text-align: center
-				padding-top: 6px
-				padding-bottom: 7px
+				height: 30px
+				line-height: 26px
 				width: 123px
 				margin: 0 5px
 				border: 0.5px solid #ededed
 				border-radius: 5px
-				line-height: 15px
 				span
 					user-select: none
 					opacity: 0.75
@@ -112,11 +110,17 @@ body
 			.buttonSwitch.active
 				box-shadow: inset 0px 4px 4px #bfbfbf
 				background-color: #F0F0F0
+				span
+					color: #000
+					opacity: 1
 			.buttonSwitch.disabled
 				pointer-events: none
 			.buttonSwitch:hover
 				box-shadow: inset 0px 4px 4px #bfbfbf
 				background-color: #F0F0F0
+				span
+					color: #000
+					opacity: 1
 			.input-outer
 				position: absolute
 				width: 240px
@@ -176,6 +180,8 @@ body
 				.sidebar > *
 					margin-bottom: 15px
 				.sidebar
+					position: relative
+					z-index: 1
 					select
 						width: 100%
 					.select2.select2-container
@@ -1283,8 +1289,8 @@ body
 				.input-outer
 					display: none !important
 				.buttonSwitch
-					padding-top: 21px
-					padding-bottom: 21px
+					height: 60px
+					line-height: 60px
 					margin: 0 28px
 					width: 165px
 					span
@@ -1970,7 +1976,8 @@ body
 				.buttonSwitch
 					width: 28%
 					margin: 0 1%
-					padding: 12.5px 0
+					height: 52px
+					line-height: 52px
 					span
 						font-size: 16px
 			.mk-products

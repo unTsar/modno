@@ -14,6 +14,14 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "roboto-light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+}
+
 body section.category-links {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -22,8 +30,8 @@ body section.category-links {
   background-color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  padding-top: 18px;
-  padding-bottom: 19px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   line-height: 1;
 }
 
@@ -50,7 +58,7 @@ body section.category-links .category-h1 a.active {
 }
 
 body section.category-links .category-h2 {
-  margin-top: 20px;
+  margin-top: 17px;
   text-align: center;
 }
 
@@ -69,6 +77,7 @@ body section.category-links .category-h2 a.btn-category {
 
 body section.category-links .category-h2 a.btn-category span {
   font-size: 15px;
+  font-family: 'roboto-light';
 }
 
 body section.category-links .category-h2 a.btn-category span.g {
@@ -278,8 +287,7 @@ body section.swiper-block .slide-more .text {
 body section.marketing-table .marketing-navbar {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   position: relative;
   text-align: center;
   background-color: #fff;
@@ -294,14 +302,13 @@ body section.marketing-table .marketing-navbar .buttonSwitch {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  padding-top: 6px;
-  padding-bottom: 7px;
+  height: 30px;
+  line-height: 26px;
   width: 123px;
   margin: 0 5px;
   border: 0.5px solid #ededed;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  line-height: 15px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch span {
@@ -319,20 +326,19 @@ body section.marketing-table .marketing-navbar .buttonSwitch.mob {
   display: none;
 }
 
-body section.marketing-table .marketing-navbar .buttonSwitch.active {
+body section.marketing-table .marketing-navbar .buttonSwitch.active, body section.marketing-table .marketing-navbar .buttonSwitch:hover {
   -webkit-box-shadow: inset 0px 4px 4px #bfbfbf;
           box-shadow: inset 0px 4px 4px #bfbfbf;
   background-color: #F0F0F0;
+}
+
+body section.marketing-table .marketing-navbar .buttonSwitch.active span, body section.marketing-table .marketing-navbar .buttonSwitch:hover span {
+  color: #000;
+  opacity: 1;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch.disabled {
   pointer-events: none;
-}
-
-body section.marketing-table .marketing-navbar .buttonSwitch:hover {
-  -webkit-box-shadow: inset 0px 4px 4px #bfbfbf;
-          box-shadow: inset 0px 4px 4px #bfbfbf;
-  background-color: #F0F0F0;
 }
 
 body section.marketing-table .marketing-navbar .input-outer {
@@ -721,9 +727,10 @@ body section.marketing-table .main-content .items-table .content .item {
   background-color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  margin-left: 1%;
-  margin-bottom: 10px;
-  width: 49%;
+  margin-left: 13px;
+  margin-bottom: 15px;
+  width: -webkit-calc((100% / 2) - 13px);
+  width: calc((100% / 2) - 13px);
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
@@ -735,7 +742,7 @@ body section.marketing-table .main-content .items-table .content .item img.shop-
 }
 
 body section.marketing-table .main-content .items-table .content .item img.shop-preview {
-  width: 72px;
+  width: 80px;
   -webkit-border-top-left-radius: 5px;
           border-top-left-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -752,14 +759,14 @@ body section.marketing-table .main-content .items-table .content .item .content 
 }
 
 body section.marketing-table .main-content .items-table .content .item .content .head span.name {
-  padding: 11px 0;
+  padding: 11px 0 0 0;
   font-size: 14px;
   font-weight: bold;
   color: #000;
 }
 
 body section.marketing-table .main-content .items-table .content .item .content .head span.desc {
-  margin-top: 5px;
+  margin-top: 9px;
   font-size: 10px;
   color: #999;
 }
@@ -780,7 +787,7 @@ body section.marketing-table .main-content .items-table .content .item .content 
   bottom: 0;
   right: 0;
   padding-right: 17px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 body section.marketing-table .main-content .items-table .content .item .content .tags .tag-img {
@@ -922,8 +929,8 @@ body section.marketing-table .marketing-navbar-bottom {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin-bottom: 35px;
-  padding-top: 16px;
-  padding-bottom: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   text-align: center;
@@ -935,7 +942,7 @@ body section.marketing-table .marketing-navbar-bottom .button {
   -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
-  width: 92px;
+  width: 122px;
   height: 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 5px;
@@ -947,8 +954,8 @@ body section.marketing-table .marketing-navbar-bottom .button span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  line-height: 30px;
-  font-size: 9.5px;
+  line-height: 27px;
+  font-size: 13px;
   color: #000;
   font-weight: bold;
 }
@@ -987,7 +994,8 @@ body section.marketing-table .marketing-navbar-bottom .buttonMore {
   top: 0;
   bottom: 0;
   margin: auto;
-  left: 261px;
+  left: 212px;
+  width: 129px;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages {
@@ -996,6 +1004,7 @@ body section.marketing-table .marketing-navbar-bottom .pages {
   display: inline-block;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  margin-left: -14px;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page {
@@ -1040,7 +1049,6 @@ body section.marketing-table .marketing-navbar-bottom .pages .page.active {
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #ededed;
   border-color: white;
-  margin: 1px 0;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page.active span {
@@ -1052,7 +1060,6 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover {
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #ededed;
   border-color: white;
-  margin: 1px 0;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
@@ -1113,8 +1120,8 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     display: none;
   }
   body main section.marketing-table .marketing-navbar .buttonSwitch {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    height: 60px;
+    line-height: 60px;
     margin: 0 28px;
     width: 165px;
   }
@@ -1160,6 +1167,9 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body main section.marketing-table .main-content .items-table .content .item .content .head span.desc {
     font-size: 23px;
     margin-top: 0;
+  }
+  body main section.marketing-table .main-content .items-table .content .item .content .head span.desc span.only-desk {
+    display: none;
   }
   body main section.marketing-table .main-content .items-table .content .item .content .category-text {
     font-size: 18px;
@@ -1309,6 +1319,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
 @media only screen and (max-width: 500px) {
   body main section.swiper-block {
     margin: 0 15px;
+    padding: 15px 0;
   }
   body main section.swiper-block .slide {
     margin-right: 11px;
@@ -1317,12 +1328,14 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     font-size: 13px;
   }
   body main section.marketing-table .marketing-navbar {
+    margin-top: 0;
     padding: 15px 0;
   }
   body main section.marketing-table .marketing-navbar .buttonSwitch {
     width: 28%;
     margin: 0 1%;
-    padding: 12.5px 0;
+    height: 52px;
+    line-height: 52px;
   }
   body main section.marketing-table .main-content {
     padding: 0 15px 10px;
@@ -1412,9 +1425,6 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body main section.swiper-block .slide {
     width: 34.5%;
     margin-right: 6px;
-  }
-  body main section.marketing-table .marketing-navbar {
-    margin-top: 18px;
   }
   body main section.marketing-table .marketing-navbar .buttonSwitch {
     width: 92px;

@@ -87,12 +87,12 @@ block content
 									.text.headtext Предложение дня
 									.text.name Mango: одежда и обувь онлайн
 			section.swiper-block
-				img.slide.publications-popup-btn(src="img/index/slide-img1.jpg", alt="slide-img1.jpg")
-				img.slide.publications-popup-btn(src="img/index/slide-img2.jpg", alt="slide-img2.jpg")
-				img.slide.publications-popup-btn(src="img/index/slide-img3.jpg", alt="slide-img3.jpg")
-				img.slide.publications-popup-btn(src="img/index/slide-img4.jpg", alt="slide-img4.jpg")
-				img.slide.publications-popup-btn(src="img/index/slide-img5.jpg", alt="slide-img5.jpg")
-				img.slide.publications-popup-btn(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
+				img.slide.publications-popup-btn.popup-open(src="img/index/slide-img1.jpg", alt="slide-img1.jpg")
+				img.slide.publications-popup-btn.popup-open(src="img/index/slide-img2.jpg", alt="slide-img2.jpg")
+				img.slide.publications-popup-btn.popup-open(src="img/index/slide-img3.jpg", alt="slide-img3.jpg")
+				img.slide.publications-popup-btn.popup-open(src="img/index/slide-img4.jpg", alt="slide-img4.jpg")
+				img.slide.publications-popup-btn.popup-open(src="img/index/slide-img5.jpg", alt="slide-img5.jpg")
+				img.slide.publications-popup-btn.popup-open(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
 				a(href="people.html").slide.slide-more-outer
 					img.slide(src="img/index/slide-img6.jpg", alt="slide-img6.jpg")
 					.slide-more
@@ -148,7 +148,7 @@ block content
 									input.option-checkbox(type="checkbox" checked)
 									.knobs
 									.layer
-						a(href="#" title="Проверить местоположение").img-map-link.index-sidebar-map-popup-btn
+						a(href="#" title="Проверить местоположение").img-map-link.index-sidebar-map-popup-btn.popup-open
 							<svg class="property-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 29"><ellipse class="shadow" fill="#000000" fill-opacity="0.24" cx="9" cy="27" rx="6" ry="2"></ellipse><path class="pin" d="M9,27 C7,27 0,16.9704016 0,9 C2.28269391e-16,4.02943725 4.02943725,0 9,0 C13.9705627,0 18,4.02943725 18,9 C18,16.9704016 11,27 9,27 Z M9,13 C11.209139,13 13,11.209139 13,9 C13,6.790861 11.209139,5 9,5 C6.790861,5 5,6.790861 5,9 C5,11.209139 6.790861,13 9,13 Z"></path></svg>
 					.sidebar.molls
 						.number
@@ -173,27 +173,31 @@ block content
 									input.option-checkbox(type="checkbox" checked)
 									.knobs
 									.layer
-						a(href="#" title="Проверить местоположение").img-map-link.index-sidebar-map-popup-btn
+						a(href="#" title="Проверить местоположение").img-map-link.index-sidebar-map-popup-btn.popup-open
 							<svg class="property-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 29"><ellipse class="shadow" fill="#000000" fill-opacity="0.24" cx="9" cy="27" rx="6" ry="2"></ellipse><path class="pin" d="M9,27 C7,27 0,16.9704016 0,9 C2.28269391e-16,4.02943725 4.02943725,0 9,0 C13.9705627,0 18,4.02943725 18,9 C18,16.9704016 11,27 9,27 Z M9,13 C11.209139,13 13,11.209139 13,9 C13,6.790861 11.209139,5 9,5 C6.790861,5 5,6.790861 5,9 C5,11.209139 6.790861,13 9,13 Z"></path></svg>
 					.items-table.molls
 						.content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по моллам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn.mk-filter-btn-molls
+								.filter-btn.mk-filter-btn-molls.popup-open
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
-							- for(var i = 1; i <= 20; i++)
+							- for(var i = 1; i <= 20; i++){
 								.item
 									img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
 									.content
 										.head
 											span.name Affiction
 											.category-text Монобрендовый
-											span.desc Russia, Moscow, Ходынский бульвар, д. 4
+											span.desc 
+												|Russia, Moscow, Ходынский бульвар, д. 4
+												br
+												|#[span.only-desk Russia, Moscow, Ходынский бульвар, д. 4]
 										.tags
 											img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
 											img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
 											img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+							- }
 							.btn-more.mob
 								span Показать ещё
 					.items-table.shops.active(style="display: block")
@@ -201,20 +205,24 @@ block content
 							.search-items.mob
 								input(type="search" placeholder="Поиск по магазинам")
 								img.search(src="img/search.svg", alt="search.svg")
-								.filter-btn.mk-filter-btn-shops
+								.filter-btn.mk-filter-btn-shops.popup-open
 									img(src="img/filter-settings.svg", alt="filter-settings.svg")
-							- for(var i = 1; i <= 20; i++)
+							- for(var i = 1; i <= 20; i++){
 								.item
 									img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
 									.content
 										.head
 											span.name Affiction
 											.category-text Монобрендовый
-											span.desc Russia, Moscow, Ходынский бульвар, д. 4
+											span.desc 
+												|Russia, Moscow, Ходынский бульвар, д. 4
+												br
+												|#[span.only-desk Russia, Moscow, Ходынский бульвар, д. 4]
 										.tags
 											img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
 											img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
 											img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+							- }
 							.btn-more.mob
 								span Показать ещё
 					.items-table.products.mob
@@ -369,22 +377,10 @@ block scripts
 			});
 
 			$('#mk-products-btnLogIn').click(function(){
-				$('#LogIn-form').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'LogIn-form_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
+				popupID = '#LogIn-form'
 			});
 			$('#mk-products-btnLogUp').click(function(){
-				$('#LogUp-form').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'LogUp-form_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }
-									
-				});
+				popupID = '#LogUp-form'
 			});
 
 

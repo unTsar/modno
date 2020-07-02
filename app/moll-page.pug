@@ -23,7 +23,7 @@ block content
 							.counter
 								span #[span.b 1] подписка
 					.semiposition
-						a(href="#").img-map-link#shop-page-map-popup-btn
+						a(href="#").img-map-link#shop-page-map-popup-btn.popup-open
 							img.img-map(src="img/shop-page/card-item-map.jpg", alt="card-item-map.jpg")
 						a(href="#").btn-subscribe
 							span Подписаться
@@ -69,20 +69,24 @@ block content
 								.search-items.mob
 									input(type="search" placeholder="Поиск по моллам")
 									img.search(src="img/search.svg", alt="search.svg")
-									.filter-btn.mk-filter-btn-molls
+									.filter-btn.mk-filter-btn-molls.popup-open
 										img(src="img/filter-settings.svg", alt="filter-settings.svg")
-								- for(var i = 1; i <= 20; i++)
+								- for(var i = 1; i <= 20; i++){
 									.item
 										img.shop-preview(src="img/index/shop-preview.jpg", alt="shop-preview.jpg")
 										.content
 											.head
 												span.name Affiction
 												.category-text Монобрендовый
-												span.desc Russia, Moscow, Ходынский бульвар, д. 4
+												span.desc 
+													|Russia, Moscow, Ходынский бульвар, д. 4
+													br
+													|#[span.only-desk Russia, Moscow, Ходынский бульвар, д. 4]
 											.tags
 												img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
 												img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
 												img.tag-img(src="img/index/tag3.svg", alt="tag3.svg")
+								- }
 								.btn-more.mob
 									span Показать ещё
 					.marketing-navbar-bottom
@@ -195,7 +199,7 @@ block content
 							a.anchor-btn.mk-feedback-anchor-btn.active.review-all(href="#") Все
 							a.anchor-btn.mk-feedback-anchor-btn.review-positive(href="#") Положительные
 							a.anchor-btn.mk-feedback-anchor-btn.review-negative(href="#") Отрицательные
-							a(href="#").btn-send.feedback-form-btn
+							a(href="#").btn-send.feedback-form-btn.popup-open
 								span Оставить отзыв
 						.reviews-list.review-all.active(style='display: block')
 							h2 Отзывы (все)
@@ -435,12 +439,7 @@ block scripts
 			//- Send feedback popup
 
 			$('.feedback-form-btn').click(function(){
-				$('#feedback-form').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'feedback-form_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#feedback-form'
 			});
 
 			//- mk sidebar filters Select2 

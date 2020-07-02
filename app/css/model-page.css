@@ -14,10 +14,21 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "roboto-light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+}
+
+body main .container {
+  padding: 0 142px;
+}
+
 body .model-card-outer {
   padding: 15px 0;
   padding-left: 51px;
-  margin: 0 12.5%;
 }
 
 body .model-card-outer .model-card {
@@ -116,15 +127,14 @@ body .model-card-outer .model-card .btn-block a.btn-write:hover, body .model-car
 }
 
 body .publications-table .flex-table {
-  margin-left: -10px;
+  margin: 0 -6px;
 }
 
 body .publications-table .flex-table a.item {
-  width: -webkit-calc((100% / 4) - 10px);
-  width: calc((100% / 4) - 10px);
-  margin-left: 10px;
+  width: -webkit-calc((100% / 4) - 12px);
+  width: calc((100% / 4) - 12px);
+  margin: 0 6px 15px 6px;
   display: inline-block;
-  margin-bottom: 7.5px;
 }
 
 body .publications-table .flex-table a.item img {
@@ -177,6 +187,9 @@ body .publications-table .btn-more.mob:hover span {
 }
 
 @media only screen and (max-width: 1024px) {
+  body main .container {
+    padding: 0;
+  }
   body main .model-card-outer {
     padding: 34px 0 34px 85px;
     margin: 0 15px;
@@ -214,11 +227,13 @@ body .publications-table .btn-more.mob:hover span {
   }
   body main .publications-table .flex-table {
     margin-left: -15px;
+    margin-right: 0;
   }
   body main .publications-table .flex-table a.item {
     width: -webkit-calc((100% / 3) - 15px);
     width: calc((100% / 3) - 15px);
     margin-left: 15px;
+    margin-right: 0;
     margin-bottom: 15px;
   }
   body main .publications-table .btn-more.mob {

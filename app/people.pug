@@ -14,7 +14,7 @@ block content
 					.search-items
 						input(type="search" placeholder="Поиск по моделям")
 						img.search(src="img/search.svg", alt="search.svg")
-						.filter-btn.mk-filter-btn-molls
+						.filter-btn.mk-filter-btn-molls.popup-open
 							img(src="img/filter-settings.svg", alt="filter-settings.svg")
 				.navbar
 					.input-outer.main-block-models-input-outer
@@ -27,31 +27,47 @@ block content
 						span Модели
 				.main-block.publications.active(style="display: block")
 					.flex-table
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
-						a.item.publications-popup-btn(href="#")
+						a.item.publications-popup-btn.popup-open(href="#")
 							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+						a.item.publications-popup-btn.popup-open(href="#")
+							img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
 					.btn-more.mob
 						span Показать ещё
 				.main-block.models
 					.flex-table
-						- for(var i = 1; i <= 16; i++)
-							.model-item.publications-popup-btn
+						- for(var i = 1; i <= 16; i++){
+							.model-item.publications-popup-btn.popup-open
 								img.model-icon(src="img/people/model-icon.jpg", alt="model-icon.jpg")
 								.text-block
-									.name Екатерина
+									.name Екатерина Власова
 									.login ekaterina777
 								.mGallery
 									img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
@@ -59,6 +75,7 @@ block content
 									img(src="img/people/mGallery-img3.jpg", alt="mGallery-img3.jpg")
 									img.mob(src="img/people/mGallery-img3.jpg", alt="mGallery-img3.jpg")
 								a(href="#").btn-subscribe Подписаться
+						- }
 					.btn-more.mob
 						span Показать ещё
 					.main-navbar-bottom

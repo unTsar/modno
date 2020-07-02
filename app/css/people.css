@@ -14,8 +14,12 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
-body section.main-content {
-  overflow: hidden;
+@font-face {
+  font-family: "roboto-light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
 }
 
 body section.main-content .search-items-outer {
@@ -110,14 +114,13 @@ body section.main-content .navbar .buttonSwitch {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  padding-top: 6px;
-  padding-bottom: 7px;
+  height: 30px;
+  line-height: 26px;
   width: 123px;
   margin: 0 5px;
   border: 0.5px solid #ededed;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  line-height: 15px;
 }
 
 body section.main-content .navbar .buttonSwitch span {
@@ -137,6 +140,11 @@ body section.main-content .navbar .buttonSwitch.active {
   background-color: #F0F0F0;
 }
 
+body section.main-content .navbar .buttonSwitch.active span {
+  color: #000;
+  opacity: 1;
+}
+
 body section.main-content .navbar .buttonSwitch.disabled {
   pointer-events: none;
 }
@@ -145,6 +153,11 @@ body section.main-content .navbar .buttonSwitch:hover {
   -webkit-box-shadow: inset 0px 4px 4px #bfbfbf;
           box-shadow: inset 0px 4px 4px #bfbfbf;
   background-color: #F0F0F0;
+}
+
+body section.main-content .navbar .buttonSwitch:hover span {
+  color: #000;
+  opacity: 1;
 }
 
 body section.main-content .navbar .input-outer {
@@ -261,15 +274,14 @@ body section.main-content .main-block .btn-more.mob:hover span {
 }
 
 body section.main-content .publications .flex-table {
-  margin-left: -22px;
+  padding: 0 136px;
 }
 
 body section.main-content .publications .flex-table a.item {
-  width: -webkit-calc((100% / 4) - 22px);
-  width: calc((100% / 4) - 22px);
-  margin-left: 22px;
+  width: -webkit-calc((100% / 4) - 12px);
+  width: calc((100% / 4) - 12px);
+  margin: 0 6px 15px 6px;
   display: inline-block;
-  margin-bottom: 16px;
 }
 
 body section.main-content .publications .flex-table a.item img {
@@ -292,9 +304,22 @@ body section.main-content .models .flex-table {
   margin-left: -25px;
 }
 
-body section.main-content .models .flex-table .model-item {
+body section.main-content .models .flex-table .model-item::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: -webkit-calc(100% - 39px);
+  width: calc(100% - 39px);
+  right: 0;
+  height: 100%;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body section.main-content .models .flex-table .model-item {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -302,22 +327,17 @@ body section.main-content .models .flex-table .model-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   width: -webkit-calc((100% / 2) - 25px);
   width: calc((100% / 2) - 25px);
   margin-left: 25px;
   margin-bottom: 15px;
   cursor: pointer;
-  background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-border-top-left-radius: 36px;
-          border-top-left-radius: 36px;
-  -webkit-border-bottom-left-radius: 36px;
-          border-bottom-left-radius: 36px;
+  background-color: transparent;
 }
 
 body section.main-content .models .flex-table .model-item img.model-icon {
-  width: 72px;
+  width: 80px;
   height: auto;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -332,6 +352,7 @@ body section.main-content .models .flex-table .model-item .text-block .name {
   font-size: 14px;
   font-weight: bold;
   padding: 9.5px 0;
+  line-height: 1.2;
 }
 
 body section.main-content .models .flex-table .model-item .text-block .login {
@@ -539,8 +560,8 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
     display: none !important;
   }
   body main section.main-content .navbar .buttonSwitch {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    height: 60px;
+    line-height: 60px;
     margin: 0 28px;
     width: 165px;
   }
@@ -563,11 +584,13 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
   }
   body main section.main-content .publications .flex-table {
     margin-left: -15px;
+    padding: 0;
   }
   body main section.main-content .publications .flex-table a.item {
     width: -webkit-calc((100% / 3) - 15px);
     width: calc((100% / 3) - 15px);
     margin-left: 15px;
+    margin-right: 0px;
     margin-bottom: 15px;
   }
   body main section.main-content .publications .flex-table a.item img {
@@ -577,16 +600,14 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
   body main section.main-content .models .flex-table {
     margin-left: 0;
   }
+  body main section.main-content .models .flex-table .model-item::before {
+    width: -webkit-calc(100% - 78px);
+    width: calc(100% - 78px);
+  }
   body main section.main-content .models .flex-table .model-item {
-    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin-left: 0;
     margin-bottom: 34px;
-    -webkit-border-top-left-radius: 78px;
-            border-top-left-radius: 78px;
-    -webkit-border-bottom-left-radius: 78px;
-            border-bottom-left-radius: 78px;
   }
   body main section.main-content .models .flex-table .model-item img.model-icon {
     width: 156px;
@@ -597,7 +618,7 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
   body main section.main-content .models .flex-table .model-item .text-block .name {
     font-size: 33px;
     padding: 8px 0;
-    margin-top: 15px;
+    margin-top: 7px;
   }
   body main section.main-content .models .flex-table .model-item .text-block .login {
     font-size: 25px;
@@ -634,13 +655,20 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
 }
 
 @media only screen and (max-width: 900px) {
+  body main section.main-content .models .flex-table .model-item:before {
+    content: none;
+  }
   body main section.main-content .models .flex-table .model-item {
+    background-color: #fff;
     padding: 10px 15px 30px 15px;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     -webkit-border-radius: 5px;
             border-radius: 5px;
+  }
+  body main section.main-content .models .flex-table .model-item .text-block {
+    max-width: 30%;
   }
   body main section.main-content .models .flex-table .model-item .mGallery {
     padding-top: 29px;
@@ -691,8 +719,12 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
     height: 52px;
     line-height: 52px;
   }
+  body main section.main-content .models .flex-table .model-item .text-block {
+    max-width: none;
+  }
   body main section.main-content .models .flex-table .model-item .text-block .name {
     padding: 0;
+    margin-top: 20px;
   }
   body main section.main-content .models .flex-table .model-item .text-block .login, body main section.main-content .models .flex-table .model-item .text-block .name {
     font-size: 19px;
@@ -727,7 +759,8 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
   body main section.main-content .navbar .buttonSwitch {
     width: 46%;
     margin: 0 1%;
-    padding: 17.5px 0;
+    height: 52px;
+    line-height: 52px;
   }
   body main section.main-content .main-block .btn-more.mob {
     width: 100%;
@@ -793,7 +826,6 @@ body section.main-content .models .main-navbar-bottom .pages .page:hover span {
   }
   body main section.main-content .navbar .buttonSwitch {
     width: 140px;
-    padding: 12px 0;
     margin: 0 5px;
   }
   body main section.main-content .navbar .buttonSwitch span {

@@ -4,6 +4,38 @@
 body
 	.fotorama--fullscreen
 		.fotorama__wrap
+			.fotorama__arr
+				outline: none
+				width: 30px
+				height: 30px
+				line-height: 31px
+				text-align: center
+				border-radius: 50%
+				background-color: #fff
+				background-image: none
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+			.fotorama__arr--next
+				right: 13px
+			.fotorama__arr--prev
+				left: 13px
+			.fotorama__arr--next::after
+				content: ''
+				background-image: url('../img/item-page/arrow-right.svg')
+				background-position: center
+				background-repeat: no-repeat
+				background-size: contain
+				margin-right: -2px
+			.fotorama__arr--prev::after
+				content: ''
+				background-image: url('../img/item-page/arrow-left.svg')
+				background-position: center
+				background-repeat: no-repeat
+				background-size: contain
+				margin-left: -2px
+			.fotorama__arr--next::after, .fotorama__arr--prev::after
+				display: inline-block
+				width: 8px
+				height: 14px
 			.fotorama__nav-wrap
 				.fotorama__nav.fotorama__nav--thumbs
 					width: 100% !important
@@ -42,6 +74,38 @@ body
 				width: 100%
 				img.fotorama__img
 					border-radius: 5px
+				.fotorama__arr
+					outline: none
+					width: 30px
+					height: 30px
+					line-height: 44px
+					text-align: center
+					border-radius: 50%
+					background-color: #fff
+					background-image: none
+					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+				.fotorama__arr--next
+					right: 13px
+				.fotorama__arr--prev
+					left: 13px
+				.fotorama__arr--next::after
+					content: ''
+					background-image: url('../img/item-page/arrow-right.svg')
+					background-position: center
+					background-repeat: no-repeat
+					background-size: contain
+					margin-right: -2px
+				.fotorama__arr--prev::after
+					content: ''
+					background-image: url('../img/item-page/arrow-left.svg')
+					background-position: center
+					background-repeat: no-repeat
+					background-size: contain
+					margin-left: -2px
+				.fotorama__arr--next::after, .fotorama__arr--prev::after
+					display: inline-block
+					width: 8px
+					height: 14px
 				.fotorama__stage
 					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 				.fotorama__nav:after, .fotorama__stage:after
@@ -147,7 +211,7 @@ body
 			right: 0
 			top: 0
 			margin-top: 15px
-			margin-bottom: 16px
+			margin-bottom: 15px
 			cursor: pointer
 			font-size: 0
 			letter-spacing: 0
@@ -156,7 +220,7 @@ body
 				display: inline-block
 				vertical-align: top
 			img.shop-preview
-				width: 72px
+				width: 80px
 				border-top-left-radius: 5px
 				border-bottom-left-radius: 5px
 			.content
@@ -166,12 +230,12 @@ body
 						display: block
 						line-height: 1.4
 					span.name
-						padding: 11px 0
+						padding: 11px 0 0 0
 						font-size: 14px
 						font-weight: bold
 						color: #000
 					span.desc
-						margin-top: 5px
+						margin-top: 9px
 						font-size: 10px
 						color: #999
 				.category-text
@@ -194,7 +258,7 @@ body
 						height: 25px
 						margin-right: 3px
 		.r-sidebar
-			padding-top: 89px
+			padding-top: 95px
 			width: 38%
 			margin-left: 1%
 			.info-block, .settings, .arrows
@@ -351,7 +415,7 @@ body
 						color: $accent-blue
 			.arrows
 				text-align: center
-				padding: 9px 0
+				padding: 6.5px 0
 				position: relative
 				line-height: 10px
 				a
@@ -360,7 +424,7 @@ body
 					bottom: 0
 					height: 100%
 					img
-						margin: 10px 0
+						margin: 8px 0
 						width: 8px
 						height: auto
 				.arrow-left
@@ -376,7 +440,7 @@ body
 			.arrows, .settings
 				margin-top: 15px
 			.sidebar-btns
-				margin-top: 17px
+				margin-top: 16px
 				display: -webkit-flex
 				display: -moz-flex
 				display: -ms-flex
@@ -408,8 +472,7 @@ body
 	section.marketing-table
 		.marketing-navbar
 			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
-			padding-top: 14px
-			padding-bottom: 15px
+			padding: 15px 0
 			position: relative
 			text-align: center
 			background-color: #fff
@@ -419,13 +482,12 @@ body
 				cursor: pointer
 				display: inline-block
 				text-align: center
-				padding-top: 6px
-				padding-bottom: 7px
+				height: 30px
+				line-height: 26px
 				width: 123px
 				margin: 0 5px
 				border: 0.5px solid #ededed
 				border-radius: 5px
-				line-height: 15px
 				span
 					user-select: none
 					opacity: 0.75
@@ -435,11 +497,17 @@ body
 			.buttonSwitch.active
 				box-shadow: inset 0px 4px 4px #bfbfbf
 				background-color: #F0F0F0
+				span
+					color: #000
+					opacity: 1
 			.buttonSwitch.disabled
 				pointer-events: none
 			.buttonSwitch:hover
 				box-shadow: inset 0px 4px 4px #bfbfbf
 				background-color: #F0F0F0
+				span
+					color: #000
+					opacity: 1
 		.mk-products
 			.anchors-section
 				position: relative
@@ -476,7 +544,7 @@ body
 					background-color: #fff
 					border-radius: 5px
 					width: 100%
-					padding: 19.5px 0
+					padding: 15.5px 0
 					padding-left: 37px
 					span
 						font-weight: bold
@@ -571,8 +639,9 @@ body
 									text-decoration: line-through
 				.owl-carousel
 					.owl-stage-outer
-						padding: 20px 0
+						padding: 15px 0
 					.owl-nav
+						margin-top: 0
 						button.owl-next, button.owl-prev
 							outline: none
 							position: absolute
@@ -1324,6 +1393,8 @@ body
 						span.desc
 							font-size: 23px
 							margin-top: 0
+							span.only-desk
+								display: none
 					.category-text
 						margin-right: 40px
 						font-size: 18px
@@ -1472,8 +1543,8 @@ body
 					*
 						display: none
 				.buttonSwitch
-					padding-top: 21px
-					padding-bottom: 21px
+					height: 60px
+					line-height: 60px
 					margin: 0 28px
 					width: 165px
 					span
@@ -1498,7 +1569,7 @@ body
 							button.owl-prev, button.owl-next
 								width: 60px
 								height: 60px
-								line-height: 22px
+								line-height: 16px
 							button.owl-prev::after, button.owl-next::after
 								width: 19px
 								height: 34px
@@ -2258,7 +2329,8 @@ body
 				.buttonSwitch
 					width: 28%
 					margin: 0 1%
-					padding: 12.5px 0
+					height: 52px
+					line-height: 52px
 					span
 						font-size: 16px
 			.mk-products

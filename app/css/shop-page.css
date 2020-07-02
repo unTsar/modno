@@ -14,6 +14,14 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "roboto-light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+}
+
 body .select2-container--default .mk-sidebar-select2-dropdown {
   border: none;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -146,8 +154,7 @@ body section.shop-card .card-item .img-map-link img.img-map {
 body section.marketing-table .marketing-navbar {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   position: relative;
   text-align: center;
   background-color: #fff;
@@ -162,14 +169,13 @@ body section.marketing-table .marketing-navbar .buttonSwitch {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  padding-top: 6px;
-  padding-bottom: 7px;
+  height: 30px;
+  line-height: 26px;
   width: 123px;
   margin: 0 5px;
   border: 0.5px solid #ededed;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  line-height: 15px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch span {
@@ -189,6 +195,11 @@ body section.marketing-table .marketing-navbar .buttonSwitch.active {
   background-color: #F0F0F0;
 }
 
+body section.marketing-table .marketing-navbar .buttonSwitch.active span {
+  color: #000;
+  opacity: 1;
+}
+
 body section.marketing-table .marketing-navbar .buttonSwitch.disabled {
   pointer-events: none;
 }
@@ -197,6 +208,11 @@ body section.marketing-table .marketing-navbar .buttonSwitch:hover {
   -webkit-box-shadow: inset 0px 4px 4px #bfbfbf;
           box-shadow: inset 0px 4px 4px #bfbfbf;
   background-color: #F0F0F0;
+}
+
+body section.marketing-table .marketing-navbar .buttonSwitch:hover span {
+  color: #000;
+  opacity: 1;
 }
 
 body section.marketing-table .marketing-navbar .input-outer {
@@ -282,6 +298,11 @@ body section.marketing-table .mk-products .main-content {
 
 body section.marketing-table .mk-products .main-content .sidebar > * {
   margin-bottom: 15px;
+}
+
+body section.marketing-table .mk-products .main-content .sidebar {
+  position: relative;
+  z-index: 1;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar select {
@@ -1927,8 +1948,8 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     display: none !important;
   }
   body section.marketing-table .marketing-navbar .buttonSwitch {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    height: 60px;
+    line-height: 60px;
     margin: 0 28px;
     width: 165px;
   }
@@ -2710,7 +2731,8 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.marketing-table .marketing-navbar .buttonSwitch {
     width: 28%;
     margin: 0 1%;
-    padding: 12.5px 0;
+    height: 52px;
+    line-height: 52px;
   }
   body section.marketing-table .marketing-navbar .buttonSwitch span {
     font-size: 16px;

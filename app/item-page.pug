@@ -19,7 +19,10 @@ block content
 						.head
 							span.name Affiction
 							.category-text Монобрендовый
-							span.desc Russia, Moscow, Ходынский бульвар, д. 4
+							span.desc
+								|Russia, Moscow, Ходынский бульвар, д. 4
+								br
+								|#[span.only-desk Russia, Moscow, Ходынский бульвар, д. 4]
 						.tags
 							img.tag-img(src="img/index/tag1.svg", alt="tag1.svg")
 							img.tag-img(src="img/index/tag2.svg", alt="tag2.svg")
@@ -115,6 +118,8 @@ block content
 									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
 								.slide
 									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+								.slide
+									img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
 						.items-table.similar-items
 							.header
 								span Похожие товары
@@ -535,7 +540,7 @@ block content
 							.anchor-btn.mk-feedback-anchor-btn.active.review-all Все
 							.anchor-btn.mk-feedback-anchor-btn.review-positive Положительные
 							.anchor-btn.mk-feedback-anchor-btn.review-negative Отрицательные
-							a(href="#").btn-send.feedback-form-btn
+							a(href="#").btn-send.feedback-form-btn.popup-open
 								span Оставить отзыв
 						.reviews-list.review-all.active(style='display: block')
 							h2 Отзывы (все)
@@ -764,12 +769,7 @@ block scripts
 			//- Send feedback popup
 
 			$('.feedback-form-btn').click(function(){
-				$('#feedback-form').bPopup({
-					positionStyle: 'fixed',
-					closeClass: 'feedback-form_close-btn',
-					onOpen: function() { $('body').addClass('fixed'); },
-					onClose: function() { $('body').removeClass('fixed') }			
-				});
+				popupID = '#feedback-form'
 			});
 			$('#fotorama').fotorama({
 				autoplay: 3000,
@@ -820,7 +820,7 @@ block scripts
 						items: 3
 					},
 					1025 : {
-						items: 4
+						items: 5
 					}
 				}
 			});
@@ -839,7 +839,7 @@ block scripts
 					},
 					1025 : {
 						items: 5,
-						margin: 19,
+						margin: 20,
 					}
 				}
 			});

@@ -987,8 +987,8 @@ body section.marketing-table .marketing-navbar-bottom {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   margin-bottom: 35px;
-  padding-top: 16px;
-  padding-bottom: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   text-align: center;
@@ -1000,9 +1000,8 @@ body section.marketing-table .marketing-navbar-bottom .button {
   -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
-  width: 92px;
+  width: 122px;
   height: 30px;
-  line-height: 23px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1013,7 +1012,8 @@ body section.marketing-table .marketing-navbar-bottom .button span {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-size: 9.5px;
+  line-height: 27px;
+  font-size: 13px;
   color: #000;
   font-weight: bold;
 }
@@ -1052,7 +1052,8 @@ body section.marketing-table .marketing-navbar-bottom .buttonMore {
   top: 0;
   bottom: 0;
   margin: auto;
-  left: 261px;
+  left: 212px;
+  width: 129px;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages {
@@ -1061,6 +1062,7 @@ body section.marketing-table .marketing-navbar-bottom .pages {
   display: inline-block;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  margin-left: -14px;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page {
@@ -1105,7 +1107,6 @@ body section.marketing-table .marketing-navbar-bottom .pages .page.active {
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #ededed;
   border-color: white;
-  margin: 1px 0;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page.active span {
@@ -1117,7 +1118,6 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover {
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #ededed;
   border-color: white;
-  margin: 1px 0;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {

@@ -330,6 +330,20 @@ body main .publications .btn-more.mob:hover span {
 }
 
 @media only screen and (max-width: 500px) {
+  body main .item-block {
+    height: 202px;
+    margin-top: 13px;
+  }
+  body main .item-block .buy-block a.btn-buy {
+    width: 188px;
+    font-size: 20px;
+  }
+  body main .item-block img.preview-mob {
+    width: 156px;
+    height: 202px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   body main .publications .btn-more.mob {
     width: 100%;
     margin-top: 15px;
@@ -356,12 +370,10 @@ body main .publications .btn-more.mob:hover span {
   }
   body main .item-block img.preview-mob {
     height: 162px;
-    width: 89px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 119px;
   }
   body main .item-block .text-block, body main .item-block .buy-block {
-    margin-left: 100px;
+    margin-left: 135px;
   }
   body main .item-block .text-block .name {
     font-size: 16px;
@@ -390,7 +402,7 @@ body main .publications .btn-more.mob:hover span {
     font-size: 16px;
     width: 139px;
     margin-bottom: 12px;
-    margin-bottom-margin-top: 8px;
+    margin-top: 8px;
   }
   body main .publications .btn-more.mob {
     margin-top: 24px;

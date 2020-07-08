@@ -2417,6 +2417,11 @@ body footer .footer-bottomLine .payments img.payment-img {
     position: relative;
     overflow: visible;
   }
+  body .publications-popup .main-content .list .item:hover, body .publications-popup .main-content .list .item.hovered {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
   body .publications-popup .main-content .list .item {
     margin-bottom: 34px;
   }
@@ -3013,12 +3018,6 @@ body footer .footer-bottomLine .payments img.payment-img {
     height: 52px;
     line-height: 52px;
   }
-  body .publications-popup .main-content .list .item:hover, body .publications-popup .main-content .list .item.hovered {
-    -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05);
-    margin-bottom: 25px;
-  }
   body .popup-profile-mob .links {
     padding: 0 30px;
   }
@@ -3337,12 +3336,6 @@ body footer .footer-bottomLine .payments img.payment-img {
   body .publications-popup .main-content .list {
     padding-top: 15px;
   }
-  body .publications-popup .main-content .list .item:hover, body .publications-popup .main-content .list .item.hovered {
-    -webkit-transform: scale(1.08);
-        -ms-transform: scale(1.08);
-            transform: scale(1.08);
-    margin-top: 25px;
-  }
   body .publications-popup .main-content .list .item .item-content {
     height: 162px;
   }
@@ -3378,7 +3371,7 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body .publications-popup .main-content .list .item .item-content .buy-block a.btn-buy {
     height: 30px;
-    line-height: 30px;
+    line-height: 27px;
     font-size: 16px;
     width: 139px;
     margin-bottom: 12px;

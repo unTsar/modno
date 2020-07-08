@@ -548,7 +548,9 @@ body section.marketing-table .mk-products .main-content .items-table .content .b
   display: none;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 200px;
   height: 60px;
   line-height: 60px;
@@ -801,7 +803,8 @@ body section.marketing-table .mk-feedback .main-content .anchors-section {
   margin: 17px 0;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn {
+  cursor: pointer;
   background-color: #fff;
   display: inline-block;
   position: relative;
@@ -818,7 +821,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.ancho
   transition: 0.3s;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn::before {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -831,13 +834,13 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.ancho
           border-radius: 5px;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn:hover, body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn.active {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn:hover, body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn.active {
   -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #E5E5E5;
 }
 
-body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn.disabled {
+body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn.disabled {
   pointer-events: none;
 }
 
@@ -868,7 +871,9 @@ body section.marketing-table .mk-feedback .main-content .btn-more.mob {
   display: none;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 200px;
   height: 60px;
   line-height: 60px;
@@ -1585,7 +1590,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section {
     margin: 34px 0;
   }
-  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn {
     height: 60px;
     line-height: 58px;
     font-size: 21px;
@@ -1690,7 +1695,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     margin-top: 12px;
     margin-left: 37px;
   }
-  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn {
     font-size: 19px;
     margin-right: 15px;
   }
@@ -1833,7 +1838,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     margin-top: 21px;
     margin-bottom: 0;
   }
-  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn {
     width: 100%;
     height: 52px;
     line-height: 50px;
@@ -2602,7 +2607,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
   body section.marketing-table .mk-feedback .main-content .anchors-section, body section.marketing-table .mk-info .main-content .anchors-section {
     margin-top: 15px;
   }
-  body section.marketing-table .mk-feedback .main-content .anchors-section a.anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section a.anchor-btn {
+  body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn {
     font-size: 16px;
     height: 40px;
     line-height: 38px;

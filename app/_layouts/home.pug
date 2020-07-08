@@ -189,7 +189,7 @@ html(lang="ru")
 
 
 		.popup-container#popup-container
-			.wrap#popup-wrap
+			.wrap#popup-wrap.popup-wrap
 				//- Вход и Регистрация (кнопки в header)
 				.popup-content.Log-form.LogIn-form#LogIn-form
 					img.img-close.popup-close(src="img/close.svg", alt="close.svg")
@@ -579,19 +579,7 @@ html(lang="ru")
 							.tag-button.tag-button2#pb-tag-btn2(style='background-color: #F8CF8D')
 						.list#pb-scrollBlock
 							.item#pb-scrollItem2
-								img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
-								img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
-								.text-block
-									.name Gucci
-									.desc Атласное платье c поясом
-									.author
-										.author-name lamoda
-										img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
-								.buy-block
-									.price 3 999 &#8381;
-									a.btn-buy(href="#") Купить
-							- for(var i = 1; i <= 5; i++)
-								.item
+								.item-content
 									img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
 									img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
 									.text-block
@@ -603,18 +591,57 @@ html(lang="ru")
 									.buy-block
 										.price 3 999 &#8381;
 										a.btn-buy(href="#") Купить
+								.withThis
+									.subhead С этим товаром покупают
+									.mGallery
+										img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+										img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+										img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+										img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+										img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+										img(src="img/people/mGallery-img1.jpg", alt="mGallery-img1.jpg")
+									.btn-more
+										span Смотреть всё
+							.item.out
+								.item-content
+									img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+									img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+									.text-block
+										.name Gucci
+										.desc Атласное платье c поясом
+										.author
+											.author-name lamoda
+											img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+									.buy-block
+										.price нет в наличии
+										a.btn-buy(href="#") Найти
+							- for(var i = 1; i <= 4; i++)
+								.item
+									.item-content
+										img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+										img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+										.text-block
+											.name Gucci
+											.desc Атласное платье c поясом
+											.author
+												.author-name lamoda
+												img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+										.buy-block
+											.price 3 999 &#8381;
+											a.btn-buy(href="#") Купить
 							.item#pb-scrollItem1
-								img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
-								img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
-								.text-block
-									.name Gucci
-									.desc Атласное платье c поясом
-									.author
-										.author-name lamoda
-										img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
-								.buy-block
-									.price 3 999 &#8381;
-									a.btn-buy(href="#") Купить
+								.item-content
+									img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+									img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+									.text-block
+										.name Gucci
+										.desc Атласное платье c поясом
+										.author
+											.author-name lamoda
+											img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+									.buy-block
+										.price 3 999 &#8381;
+										a.btn-buy(href="#") Купить
 
 				//- карта магазинов на главной
 				.popup-content.shop-map-outer.index-sidebar-map-popup#index-sidebar-map-popup
@@ -692,7 +719,7 @@ html(lang="ru")
 				}, 150)
 			});
 
-			$('#popup-wrap').click(function(e){
+			$('.popup-wrap').click(function(e){
 				if (!$('.popup-content').is(e.target) && $('.popup-content').has(e.target).length === 0) {
 					$('.popup-content').fadeOut(150)
 					$('#popup-container').fadeOut(150);
@@ -709,6 +736,7 @@ html(lang="ru")
 				$('body').css('top', '0')
 				$(document).scrollTop(wScrollTop)
 			});
+
 
 			$('#header-btnLogIn').click(function(){
 				popupID = "#LogIn-form"

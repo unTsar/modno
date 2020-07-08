@@ -1,0 +1,62 @@
+extends _layouts/home
+
+block styles
+	link(rel="stylesheet", href="css/compatible.css")
+block content
+
+	include _partials/header.pug
+
+	main
+		.container
+			.item-block
+				img.preview(src="img/people/popup-list-item.jpg", alt="popup-list-item.jpg")
+				img.preview-mob(src="img/people/popup-list-item-mob.jpg", alt="popup-list-item-mob.jpg")
+				.text-block
+					.name Gucci
+					.desc Атласное платье c поясом
+					.author
+						.author-name lamoda
+						img.icon(src="img/people/usa-flag.svg", alt="usa-flag.svg")
+				.buy-block
+					.price 3 999 &#8381;
+					a.btn-buy(href="#") Купить
+			.publications
+				.flex-table
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
+					a.item.publications-popup-btn.popup-open(href="#")
+						img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
+				.btn-more.mob
+					span Показать ещё
+
+	include _partials/footer.pug
+
+block scripts

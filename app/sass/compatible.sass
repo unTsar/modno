@@ -1,0 +1,279 @@
+@import "vars"
+@import "fonts"
+
+body
+	main
+		.container
+			padding: 0 136px
+		.item-block
+			transition: 0.3s
+			margin: 15px 0
+			padding-right: 13px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			background-color: #fff
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+			border-radius: 5px
+			img
+				border-top-left-radius: 5px
+				border-bottom-left-radius: 5px
+			img.preview
+				width: 80px
+				height: auto
+				vertical-align: top
+			img.preview-mob
+				display: none
+			.text-block
+				margin-left: 38px
+				line-height: 1.4
+				.name
+					font-size: 18px
+					font-weight: bold
+					color: #000
+					margin-top: 11px
+					line-height: 1.2
+				.desc
+					font-size: 14px
+					color: #000
+					margin-top: 4px
+					margin-bottom: 3px
+				.author
+					line-height: 1
+					margin-bottom: 5px
+					.author-name, img.icon
+						display: inline-block
+						vertical-align: middle
+					.author-name
+						font-size: 11px
+						color: #000
+						opacity: 0.65
+					img.icon
+						width: 14px
+						height: 16px
+						margin-left: 2px
+						margin-top: -2px
+			.buy-block
+				text-align: right
+				margin-left: auto
+				.price
+					line-height: 1
+					font-size: 17px
+					font-weight: bold
+					color: #000
+					padding: 11px 0 8px 0
+				a.btn-buy
+					display: inline-block
+					width: 97px
+					height: 30px
+					line-height: 30px
+					border-radius: 5px
+					background-color: $accent-blue
+					text-align: center
+					font-size: 13px
+					font-weight: bold
+					color: #fff
+		.publications
+			.flex-table
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-wrap: wrap
+				margin: 0 -6px
+				a.item
+					width: calc((100% / 4) - 12px)
+					margin: 0 6px 15px 6px
+					display: inline-block
+					img
+						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+						width: 100%
+						vertical-align: bottom
+						border-radius: 5px
+			.btn-more.mob
+				transition: 0.3s
+				display: none
+				border-radius: 5px
+				background-color: #fff
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+				width: 200px
+				height: 60px
+				line-height: 60px
+				text-align: center
+				cursor: pointer
+				margin: 0 auto
+				span
+					transition: 0.3s
+					font-weight: bold
+					font-size: 21px
+					color: #000
+			.btn-more.mob:hover
+				background-color: $accent-blue
+				border-color: $accent-blue
+				span
+					color: #fff
+@media only screen and(max-width: 1024px)
+	body
+		main
+			.container
+				padding: 0 15px
+			.item-block
+				margin-top: 34px
+				margin-bottom: 14px
+				padding-right: 20px
+				align-items: flex-start
+				img.preview
+					width: 156px
+				.text-block
+					margin-left: 50px
+					.name
+						font-size: 25px
+						padding: 7px 0
+					.desc
+						font-size: 20px
+					.author
+						margin-top: 30px
+				.buy-block
+					.price
+						font-size: 25px
+						padding: 26.5px 0
+					a.btn-buy
+						width: 217px
+						height: 60px
+						line-height: 60px
+						font-size: 17px
+			.publications
+				.btn-more.mob
+					display: block
+					margin-top: 0
+					margin-bottom: 25px
+				.flex-table
+					margin-left: -15px
+					margin-right: 0
+					a.item
+						width: calc((100% / 3) - 15px)
+						margin-left: 15px
+						margin-right: 0px
+						margin-bottom: 15px
+						img
+							box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+@media only screen and(max-width: 768px)
+	body
+		main
+			.item-block
+				margin: 15px 0
+				flex-wrap: wrap
+				position: relative
+				height: 202px
+				img.preview
+					display: none
+				img.preview-mob
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+				.text-block, .buy-block
+					width: 100%
+					margin-left: 167px
+				.buy-block
+					text-align: left
+					.price
+						font-size: 22px
+						padding: 0
+					a.btn-buy
+						height: 52px
+						line-height: 52px
+						margin-top: 10px
+				.text-block
+					.name
+						font-size: 19px
+						padding: 0
+						margin-top: 10px
+					.desc
+						font-size: 14px
+					.author
+						margin-top: 5px
+						margin-bottom: 0
+						.author-name
+							font-size: 14px
+						img.icon
+							width: 18px
+							margin-left: 5px
+@media only screen and(max-width: 600px)
+	body
+		main
+			.publications
+				.btn-more.mob
+					height: 54px
+					line-height: 50px
+					span
+						font-size: 20px
+@media only screen and(max-width: 500px)
+	body
+		main
+			.publications
+				.btn-more.mob
+					width: 100%
+					margin-top: 15px
+					margin-bottom: 2px
+				.flex-table
+					margin-left: -10px
+					a.item
+						width: calc((100% / 3) - 10px)
+						margin-left: 10px
+						img
+							box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+@media only screen and(max-width: 400px)
+	body
+		main
+			.item-block
+				height: 162px
+				margin-top: 13px
+				img.preview-mob
+					height: 162px
+					width: 89px
+					object-fit: cover
+				.text-block, .buy-block
+					margin-left: 100px
+				.text-block
+					.name
+						font-size: 16px
+					.desc
+						font-size: 13px
+						line-height: 1.2
+					.author
+						line-height: 1.2
+						.author-name
+							font-size: 13px
+						img.icon
+							width: 24px
+							height: 19px
+				.buy-block
+					.price
+						line-height: 1.2
+						font-size: 16px
+					a.btn-buy
+						height: 30px
+						line-height: 30px
+						font-size: 16px
+						width: 139px
+						margin-bottom: 12px
+									margin-top: 8px
+			.publications
+				.btn-more.mob
+					margin-top: 24px
+					margin-bottom: 8px
+					height: 40px
+					line-height: 40px
+					span
+						font-size: 16px
+				.flex-table
+					margin-left: -4px
+					a.item
+						width: calc((100% / 3) - 4px)
+						margin-left: 4px
+						margin-bottom: 4px

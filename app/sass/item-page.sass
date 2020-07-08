@@ -508,36 +508,40 @@ body
 				span
 					color: #000
 					opacity: 1
+		.mk-info, .mk-products, .mk-feedback
+			.main-content
+				.anchors-section
+					.anchor-btn
+						cursor: pointer
+						background-color: #fff
+						display: inline-block
+						position: relative
+						padding: 0px 28px
+						font-size: 13px
+						font-weight: bold
+						height: 30px
+						line-height: 30px
+						border-radius: 5px
+						margin-right: 7px
+						transition: 0.3s
+					.anchor-btn::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+						border-radius: 5px
+					.anchor-btn:hover, .anchor-btn.active 
+						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+						background-color: #E5E5E5
+					.anchor-btn.disabled
+						pointer-events: none
 		.mk-products
 			.anchors-section
 				position: relative
 				margin: 15px 0 20px 0
-				.anchor-btn
-					background-color: #fff
-					display: inline-block
-					position: relative
-					padding: 0px 28px
-					font-size: 13px
-					font-weight: bold
-					height: 30px
-					line-height: 30px
-					border-radius: 5px
-					margin-right: 7px
-					transition: 0.3s
-				.anchor-btn::before
-					content: ''
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
-					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
-					border-radius: 5px
-				.anchor-btn:hover, .anchor-btn.active 
-					box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
-					background-color: #E5E5E5
-				.anchor-btn.disabled
-					pointer-events: none
 			.items-table
 				.header
 					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
@@ -680,42 +684,18 @@ body
 			.items-table.publications
 				.slider
 					.slide
+						cursor: pointer
+						display: inline-block
 						img
 							box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 							border-radius: 5px
-
-
-
 		.mk-info
 			font-size: 15px
 			.main-content
 				.anchors-section
 					margin: 17px 0
-					.anchor-btn
-						background-color: #fff
-						display: inline-block
-						position: relative
-						padding: 0 20px
-						font-size: 13px
-						font-weight: bold
-						height: 30px
-						line-height: 30px
-						border-radius: 5px
-						margin-right: 7px
-						transition: 0.3s
-					.anchor-btn::before
-						content: ''
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
-						border-radius: 5px
-					.anchor-btn:hover 
-						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
-						background-color: #E5E5E5
 				.mk-info-section
+					display: none
 					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 					border-radius: 5px
 					background-color: #fff
@@ -1230,32 +1210,6 @@ body
 				.anchors-section
 					position: relative
 					margin: 17px 0
-					.anchor-btn
-						background-color: #fff
-						display: inline-block
-						position: relative
-						padding: 0px 28px
-						font-size: 13px
-						font-weight: bold
-						height: 30px
-						line-height: 30px
-						border-radius: 5px
-						margin-right: 7px
-						transition: 0.3s
-					.anchor-btn::before
-						content: ''
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						height: 100%
-						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
-						border-radius: 5px
-					.anchor-btn:hover, .anchor-btn.active 
-						box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
-						background-color: #E5E5E5
-					.anchor-btn.disabled
-						pointer-events: none
 					a.btn-send
 						position: absolute
 						bottom: 0
@@ -1275,7 +1229,8 @@ body
 					transition: 0.3s
 					display: none
 					border-radius: 5px
-					border: 0.5px solid rgba(0, 0, 0, 0.3)
+					background-color: #fff
+					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
 					width: 200px
 					height: 60px
 					line-height: 60px

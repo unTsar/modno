@@ -307,6 +307,9 @@ body
 				.form-btn
 					margin-top: 35px
 	
+	.dd-popup::-webkit-scrollbar
+		width: 0px
+		background: transparent
 	.dd-popup
 		position: relative
 		display: none
@@ -315,6 +318,8 @@ body
 		border-radius: 5px
 		background-color: #fff
 		overflow-y: scroll
+		-ms-overflow-style: none
+		scrollbar-width: none
 		max-height: 100%
 		img.img-close
 			position: absolute
@@ -623,10 +628,10 @@ body
 		.list::-webkit-scrollbar-thumb
 			-webkit-border-radius: 5px
 			border-radius: 5px
-			background-color: $accent-blue
+			background-color: #BDBDBD
 
 		.list::-webkit-scrollbar-thumb:hover
-			background-color: #5EAAF0
+			opacity: 0.5
 
 		.list::-webkit-scrollbar
 			width: 8px
@@ -642,77 +647,137 @@ body
 			overflow-y: scroll
 			.item:hover, .item.hovered
 				transform: scale(1.03)
+			.item.out
+				.item-content
+					.buy-block
+						.price
+							font-size: 13px
+							text-align: center
+						a.btn-buy
+							border: 0.5px solid rgba(0, 0, 0, 0.3)
+							color: #000
+							transition: 0.3s
+							background-color: #fff
+						a.btn-buy:hover
+							background-color: $accent-blue
+							border-color: $accent-blue
+							color: #fff
+
 			.item
-				cursor: pointer
 				transition: 0.3s
 				margin-bottom: 15px
-				padding-right: 13px
-				border-radius: 5px
 				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
-				display: flex
-				align-items: center
-				img
-					border-top-left-radius: 5px
-					border-bottom-left-radius: 5px
-				img.preview
-					width: 80px
-					height: auto
-					vertical-align: top
-				img.preview-mob
-					display: none
-				.text-block
-					margin-left: 38px
-					line-height: 1.4
-					.name
-						font-size: 18px
+				background-color: #fff
+				border-radius: 5px
+				.item-content
+					cursor: pointer
+					padding-right: 13px
+					border-radius: 5px
+					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					img
+						border-top-left-radius: 5px
+						border-bottom-left-radius: 5px
+					img.preview
+						width: 80px
+						height: auto
+						vertical-align: top
+					img.preview-mob
+						display: none
+					.text-block
+						margin-left: 38px
+						line-height: 1.4
+						.name
+							font-size: 18px
+							font-weight: bold
+							color: #000
+							margin-top: 11px
+							line-height: 1.2
+						.desc
+							font-size: 14px
+							color: #000
+							margin-top: 4px
+							margin-bottom: 3px
+						.author
+							line-height: 1
+							margin-bottom: 5px
+							.author-name, img.icon
+								display: inline-block
+								vertical-align: middle
+							.author-name
+								font-size: 11px
+								color: #000
+								opacity: 0.65
+							img.icon
+								width: 14px
+								height: 16px
+								margin-left: 2px
+								margin-top: -2px
+					.buy-block
+						text-align: right
+						margin-left: auto
+						.price
+							line-height: 1
+							font-size: 17px
+							font-weight: bold
+							color: #000
+							padding: 11px 0 8px 0
+						a.btn-buy
+							display: inline-block
+							width: 97px
+							height: 30px
+							line-height: 30px
+							border-radius: 5px
+							background-color: $accent-blue
+							text-align: center
+							font-size: 13px
+							font-weight: bold
+							color: #fff
+				.withThis
+					padding: 0 13px 11px 13px
+					.subhead
+						padding: 5px 0
 						font-weight: bold
+						font-size: 18px
 						color: #000
-						margin-top: 11px
-						line-height: 1.2
-					.desc
-						font-size: 14px
-						color: #000
-						margin-top: 4px
-						margin-bottom: 3px
-					.author
-						line-height: 1
-						margin-bottom: 5px
-						.author-name, img.icon
+					.mGallery, .btn-more	
+						display: inline-block
+						vertical-align: middle
+					.mGallery
+						img
 							display: inline-block
 							vertical-align: middle
-						.author-name
-							font-size: 11px
-							color: #000
-							opacity: 0.65
-						img.icon
-							width: 14px
-							height: 16px
-							margin-left: 2px
-							margin-top: -2px
-				.buy-block
-					text-align: right
-					margin-left: auto
-					.price
-						line-height: 1
-						font-size: 17px
-						font-weight: bold
-						color: #000
-						padding: 11px 0 8px 0
-					a.btn-buy
-						display: inline-block
+						img
+							width: 39px
+							height: 39px
+							margin-right: 12px
+							border-radius: 5px
+					.btn-more
+						cursor: pointer
+						transition: 0.3s
+						margin-left: 3px
 						width: 97px
 						height: 30px
-						line-height: 30px
-						border-radius: 5px
-						background-color: $accent-blue
+						line-height: 26px
 						text-align: center
-						font-size: 13px
-						font-weight: bold
-						color: #fff
+						border-radius: 5px
+						border: 0.5px solid rgba(0, 0, 0, 0.3)
+						span
+							font-weight: bold
+							font-size: 13px
+							color: #000
+							transition: 0.3s
+					.btn-more:hover
+						background-color: $accent-blue
+						border-color: $accent-blue
+						span
+							color: #fff
+								
 
 	// карта страница магазина
 	.shop-map-outer
@@ -1565,28 +1630,51 @@ body
 					overflow: visible
 					.item
 						margin-bottom: 34px
-						padding-right: 20px
-						align-items: flex-start
-						img.preview
-							width: 156px
-						.text-block
-							margin-left: 50px
-							.name
-								font-size: 25px
-								padding: 7px 0
-							.desc
-								font-size: 20px
-							.author
-								margin-top: 20px
-						.buy-block
-							.price
-								font-size: 25px
-								padding: 17.5px 0
-							a.btn-buy
-								width: 217px
+						.item-content
+							padding-right: 20px
+							align-items: flex-start
+							img.preview
+								width: 156px
+							.text-block
+								margin-left: 50px
+								.name
+									font-size: 25px
+									padding: 7px 0
+								.desc
+									font-size: 20px
+								.author
+									margin-top: 20px
+							.buy-block
+								.price
+									font-size: 25px
+									padding: 17.5px 0
+								a.btn-buy
+									width: 217px
+									height: 60px
+									line-height: 60px
+									font-size: 17px
+						.withThis
+							padding: 0 19px 0 19px
+							.subhead
+								font-size: 21px
+								padding: 20.5px 0
+							.mGallery
+								width: 75%
+								img
+									margin-bottom: 25px
+								img
+									width: 15%
+									height: auto
+									margin-right: 1.5%
+							.btn-more
+								margin-left: 1%
+								width: 23%
 								height: 60px
 								line-height: 60px
-								font-size: 17px
+								margin-bottom: 25px
+								span
+									font-size: 17px
+
 		.popup-map
 			width: 100%
 			height: 100%
@@ -1828,45 +1916,62 @@ body
 					margin-left: 171px
 			.main-content
 				.list
+					.item.out
+						.item-content
+							.buy-block
+								.price
+									text-align: left
 					.item
-						flex-wrap: wrap
-						position: relative
-						height: 202px
-						img.preview
-							display: none
-						img.preview-mob
-							position: absolute
-							top: 0
-							left: 0
-							display: block
-						.text-block, .buy-block
-							width: 100%
-							margin-left: 167px
-						.buy-block
-							text-align: left
-							.price
-								font-size: 22px
-								padding: 0
-							a.btn-buy
-								height: 52px
-								line-height: 52px
-								margin-top: 10px
-						.text-block
-							.name
-								font-size: 19px
-								padding: 0
-								margin-top: 10px
-							.desc
-								font-size: 14px
-							.author
-								margin-top: 5px
-								margin-bottom: 0
-								.author-name
+						.item-content
+							flex-wrap: wrap
+							position: relative
+							height: 202px
+							img.preview
+								display: none
+							img.preview-mob
+								position: absolute
+								top: 0
+								left: 0
+								display: block
+							.text-block, .buy-block
+								width: 100%
+								margin-left: 167px
+							.buy-block
+								text-align: left
+								.price
+									font-size: 22px
+									padding: 0
+								a.btn-buy
+									height: 52px
+									line-height: 52px
+									margin-top: 10px
+							.text-block
+								.name
+									font-size: 19px
+									padding: 0
+									margin-top: 10px
+								.desc
 									font-size: 14px
-								img.icon
-									width: 18px
-									margin-left: 5px
-
+								.author
+									margin-top: 5px
+									margin-bottom: 0
+									.author-name
+										font-size: 14px
+									img.icon
+										width: 18px
+										margin-left: 5px
+						.withThis
+							.mGallery
+								width: 100%
+								img
+									width: calc((100% / 6) - 14px)
+									margin-right: 7px
+									margin-left: 7px
+							.btn-more	
+								width: 100%
+								margin-left: 0
+								span
+									font-size: 19px	
 		.shop-map-outer
 			padding: 20px
 		header
@@ -1963,20 +2068,39 @@ body
 					padding-top: 30px
 					.item
 						margin-bottom: 15px
-						padding-right: 5px
-						.text-block, .buy-block
-							margin-left: 151px
-						.text-block
-							.name
-								line-height: 1.4
-							.author
-								margin: 0
-						.buy-block
-							a.btn-buy
-								margin-bottom: 22px
-								width: 85%
+						.item-content
+							padding-right: 5px
+							.text-block, .buy-block
+								margin-left: 151px
+							.text-block
+								.name
+									line-height: 1.4
+								.author
+									margin: 0
+							.buy-block
+								a.btn-buy
+									margin-bottom: 22px
+									width: 85%
+						.withThis
+							padding: 0 15px
+							.subhead
+								font-size: 19px
+								padding: 10.5px 0
+							.mGallery
+								width: calc(100% + 10px)
+								margin-left: -10px
+								img
+									width: calc((100% / 3) - 10px)
+									margin-right: 0
+									margin-left: 10px
+									margin-bottom: 10px
+							.btn-more
+								margin-bottom: 34px
+								height: 52px
+								line-height: 52px
 					.item:hover, .item.hovered
 						transform: scale(1.05)
+						margin-bottom: 25px
 
 		.popup-profile-mob
 			.links
@@ -2248,38 +2372,59 @@ body
 					padding-top: 15px
 					.item:hover, .item.hovered
 						transform: scale(1.08)
+						margin-top: 25px
 					.item
-						height: 162px
-						img.preview-mob
+						.item-content
 							height: 162px
-							width: 89px
-							object-fit: cover
-						.text-block, .buy-block
-							margin-left: 100px
-						.text-block
-							.name
-								font-size: 16px
-							.desc
-								font-size: 13px
-								line-height: 1.2
-							.author
-								line-height: 1.2
-								.author-name
+							img.preview-mob
+								height: 162px
+								width: 89px
+								object-fit: cover
+							.text-block, .buy-block
+								margin-left: 100px
+							.text-block
+								.name
+									font-size: 16px
+								.desc
 									font-size: 13px
-								img.icon
-									width: 24px
-									height: 19px
-						.buy-block
-							.price
-								line-height: 1.2
+									line-height: 1.2
+								.author
+									line-height: 1.2
+									.author-name
+										font-size: 13px
+									img.icon
+										width: 24px
+										height: 19px
+							.buy-block
+								.price
+									line-height: 1.2
+									font-size: 16px
+								a.btn-buy
+									height: 30px
+									line-height: 30px
+									font-size: 16px
+									width: 139px
+									margin-bottom: 12px
+									margin-top: 8px
+						.withThis
+							.subhead
 								font-size: 16px
-							a.btn-buy
+								padding: 9.5px 0
+							.mGallery
+								width: calc(100% + 4px)
+								margin-left: -4px
+								img
+									width: calc((100% / 3) - 4px)
+									margin-left: 4px
+									margin-bottom: 4px
+							.btn-more
+								margin-top: 4px
+								margin-bottom: 12px
 								height: 30px
 								line-height: 30px
-								font-size: 16px
-								width: 139px
-								margin-bottom: 12px
-								margin-top: 8px
+								span
+									font-size: 16px
+
 
 		.popup-profile-mob
 			.links
@@ -2515,7 +2660,7 @@ body
 					.options
 						a.buttonLogIn
 							width: 34px
-							height: 28px
+							height: 30px
 							span
 								font-size: 10px
 						a.buttonProfile

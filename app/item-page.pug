@@ -101,24 +101,24 @@ block content
 				.mk-block.mk-products.active(style="display: block")
 					.main-content
 						.anchors-section
-							.anchor-btn(href="#" onclick="$.scrollTo('.publications', 500)") Публикации товара
-							.anchor-btn(href="#" onclick="$.scrollTo('.similar-items', 500)") Похожие товары
-							.anchor-btn(href="#" onclick="$.scrollTo('.withThis', 500)") С этим товаром выбирают
+							.anchor-btn(href="#" onclick="$.scrollTo('.items-table.publications', 500)") Публикации товара
+							.anchor-btn(href="#" onclick="$.scrollTo('.items-table.similar-items', 500)") Похожие товары
+							.anchor-btn(href="#" onclick="$.scrollTo('.items-table.withThis', 500)") С этим товаром выбирают
 						.items-table.publications
 							.header
 								span Публикации товара
 							.slider.owl-carousel.owl-theme#publications-slider
-								.slide
+								.slide.publications-popup-btn.popup-open
 									img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
-								.slide
+								.slide.publications-popup-btn.popup-open
 									img(src="img/item-page/publications-item2.jpg", alt="publications-item2.jpg")
-								.slide
+								.slide.publications-popup-btn.popup-open
 									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
-								.slide
+								.slide.publications-popup-btn.popup-open
 									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
-								.slide
+								.slide.publications-popup-btn.popup-open
 									img(src="img/item-page/publications-item3.jpg", alt="publications-item3.jpg")
-								.slide
+								.slide.publications-popup-btn.popup-open
 									img(src="img/item-page/publications-item1.jpg", alt="publications-item1.jpg")
 						.items-table.similar-items
 							.header
@@ -185,12 +185,12 @@ block content
 				.mk-block.mk-info
 					.main-content
 						.anchors-section
-							.anchor-btn(href="#" onclick="$.scrollTo('.about-product', 500);") О товаре
-							.anchor-btn(href="#" onclick="$.scrollTo('.prices', 500);") Цены
-							.anchor-btn(href="#" onclick="$.scrollTo('.delivery', 500);") Доставка
-							.anchor-btn(href="#" onclick="$.scrollTo('.reimb', 500);") Возврат
-							.anchor-btn(href="#" onclick="$.scrollTo('.credit', 500);") Кредит
-						.about-product.mk-info-section
+							.anchor-btn.mk-info-anchor-btn.about-product.active О товаре
+							.anchor-btn.mk-info-anchor-btn.prices Цены
+							.anchor-btn.mk-info-anchor-btn.delivery Доставка
+							.anchor-btn.mk-info-anchor-btn.reimb Возврат
+							.anchor-btn.mk-info-anchor-btn.credit Кредит
+						.about-product.mk-info-section(style="display: block")
 							h2 О товаре
 							.description
 								.headblock
@@ -653,30 +653,56 @@ block scripts
 				setTimeout(function(){
 					$('.mk-feedback-anchor-btn').removeClass('disabled');
 				}, 350);
+
+				$('.mk-feedback .reviews-list').removeClass('active');
+				$('.mk-feedback .reviews-list').fadeOut(250);
+
+				setTimeout(function(){
+					$('.mk-feedback').find(mkFeedbackListClass).addClass('active');
+					$('.mk-feedback').find(mkFeedbackListClass).fadeIn(250);
+				}, 250);
 			});
 			$('.mk-feedback-anchor-btn.review-all').click(function(){
-				$('.mk-feedback .reviews-list').removeClass('active');
-				$('.mk-feedback .reviews-list').fadeOut(250);
-				setTimeout(function(){
-					$('.mk-feedback .review-all').addClass('active');
-					$('.mk-feedback .review-all').fadeIn(250);
-				}, 250);
+				mkFeedbackListClass = '.review-all'
 			});
 			$('.mk-feedback-anchor-btn.review-positive').click(function(){
-				$('.mk-feedback .reviews-list').removeClass('active');
-				$('.mk-feedback .reviews-list').fadeOut(250);
-				setTimeout(function(){
-					$('.mk-feedback .review-positive').addClass('active');
-					$('.mk-feedback .review-positive').fadeIn(250);
-				}, 250);
+				mkFeedbackListClass = '.review-positive'
 			});
 			$('.mk-feedback-anchor-btn.review-negative').click(function(){
-				$('.mk-feedback .reviews-list').removeClass('active');
-				$('.mk-feedback .reviews-list').fadeOut(250);
+				mkFeedbackListClass = '.review-negative'
+			});
+
+			//- Mk info switch sections
+			$('.mk-info-anchor-btn').click(function(){
+				$(this).addClass('active');
+				$('.mk-info-anchor-btn').not(this).removeClass('active');
+				$('.mk-info-anchor-btn').addClass('disabled');
 				setTimeout(function(){
-					$('.mk-feedback .review-negative').addClass('active');
-					$('.mk-feedback .review-negative').fadeIn(250);
+					$('.mk-info-anchor-btn').removeClass('disabled');
+				}, 350);
+
+				$('.mk-info .mk-info-section').removeClass('active');
+				$('.mk-info .mk-info-section').fadeOut(250);
+
+				setTimeout(function(){
+					$('.mk-info').find(mkInfoSectionClass).addClass('active');
+					$('.mk-info').find(mkInfoSectionClass).fadeIn(250);
 				}, 250);
+			});
+			$('.mk-info-anchor-btn.about-product').click(function(){
+				mkInfoSectionClass = '.about-product'
+			});
+			$('.mk-info-anchor-btn.delivery').click(function(){
+				mkInfoSectionClass = '.delivery'
+			});
+			$('.mk-info-anchor-btn.prices').click(function(){
+				mkInfoSectionClass = '.prices'
+			});
+			$('.mk-info-anchor-btn.reimb').click(function(){
+				mkInfoSectionClass = '.reimb'
+			});
+			$('.mk-info-anchor-btn.credit').click(function(){
+				mkInfoSectionClass = '.credit'
 			});
 
 			//- Mk info
@@ -822,6 +848,23 @@ block scripts
 					1025 : {
 						items: 5
 					}
+				},
+				onTranslated: function(){
+					function existVerticalScroll() {
+						return $('body').outerHeight() > $(window).innerHeight()
+					}
+					$('.popup-open').click(function(){
+						if(existVerticalScroll() && $('body').css('top') === "0px"){ 
+							wScrollTop = $(document).scrollTop();
+							$('body').css('top', '-' + wScrollTop + 'px' )
+							$('body').addClass('fixed')
+						}
+						$('.popup-content').fadeOut(150);
+						setTimeout(function(){
+							$('#popup-container').fadeIn(250);
+							$(popupID).fadeIn(250);
+						}, 150)
+					});
 				}
 			});
 			$('.mk-products-slider').owlCarousel({

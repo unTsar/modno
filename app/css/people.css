@@ -245,7 +245,9 @@ body section.main-content .main-block .btn-more.mob {
   display: none;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 200px;
   height: 60px;
   line-height: 60px;
@@ -361,6 +363,7 @@ body section.main-content .models .flex-table .model-item .text-block .login {
 }
 
 body section.main-content .models .flex-table .model-item .mGallery {
+  cursor: pointer;
   margin-left: auto;
   display: -webkit-flex;
   display: -moz-flex;
@@ -369,7 +372,7 @@ body section.main-content .models .flex-table .model-item .mGallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 11px 0;
+  padding: 13px 0;
 }
 
 body section.main-content .models .flex-table .model-item .mGallery img {
@@ -377,8 +380,8 @@ body section.main-content .models .flex-table .model-item .mGallery img {
   vertical-align: middle;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   margin-left: 8px;
 }
 

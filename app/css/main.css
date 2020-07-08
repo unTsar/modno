@@ -495,6 +495,11 @@ body .LogUp-form form.form-block .form-buttons .form-btn {
   margin-top: 35px;
 }
 
+body .dd-popup::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 body .dd-popup {
   position: relative;
   display: none;
@@ -505,6 +510,8 @@ body .dd-popup {
           border-radius: 5px;
   background-color: #fff;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   max-height: 100%;
 }
 
@@ -978,11 +985,11 @@ body .publications-popup .list::-webkit-scrollbar-track {
 body .publications-popup .list::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color: #157EE1;
+  background-color: #BDBDBD;
 }
 
 body .publications-popup .list::-webkit-scrollbar-thumb:hover {
-  background-color: #5EAAF0;
+  opacity: 0.5;
 }
 
 body .publications-popup .list::-webkit-scrollbar {
@@ -1006,12 +1013,40 @@ body .publications-popup .list .item:hover, body .publications-popup .list .item
           transform: scale(1.03);
 }
 
+body .publications-popup .list .item.out .item-content .buy-block .price {
+  font-size: 13px;
+  text-align: center;
+}
+
+body .publications-popup .list .item.out .item-content .buy-block a.btn-buy {
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  color: #000;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+body .publications-popup .list .item.out .item-content .buy-block a.btn-buy:hover {
+  background-color: #157EE1;
+  border-color: #157EE1;
+  color: #fff;
+}
+
 body .publications-popup .list .item {
-  cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   margin-bottom: 15px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+body .publications-popup .list .item .item-content {
+  cursor: pointer;
   padding-right: 13px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1030,29 +1065,29 @@ body .publications-popup .list .item {
           align-items: center;
 }
 
-body .publications-popup .list .item img {
+body .publications-popup .list .item .item-content img {
   -webkit-border-top-left-radius: 5px;
           border-top-left-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
           border-bottom-left-radius: 5px;
 }
 
-body .publications-popup .list .item img.preview {
+body .publications-popup .list .item .item-content img.preview {
   width: 80px;
   height: auto;
   vertical-align: top;
 }
 
-body .publications-popup .list .item img.preview-mob {
+body .publications-popup .list .item .item-content img.preview-mob {
   display: none;
 }
 
-body .publications-popup .list .item .text-block {
+body .publications-popup .list .item .item-content .text-block {
   margin-left: 38px;
   line-height: 1.4;
 }
 
-body .publications-popup .list .item .text-block .name {
+body .publications-popup .list .item .item-content .text-block .name {
   font-size: 18px;
   font-weight: bold;
   color: #000;
@@ -1060,42 +1095,42 @@ body .publications-popup .list .item .text-block .name {
   line-height: 1.2;
 }
 
-body .publications-popup .list .item .text-block .desc {
+body .publications-popup .list .item .item-content .text-block .desc {
   font-size: 14px;
   color: #000;
   margin-top: 4px;
   margin-bottom: 3px;
 }
 
-body .publications-popup .list .item .text-block .author {
+body .publications-popup .list .item .item-content .text-block .author {
   line-height: 1;
   margin-bottom: 5px;
 }
 
-body .publications-popup .list .item .text-block .author .author-name, body .publications-popup .list .item .text-block .author img.icon {
+body .publications-popup .list .item .item-content .text-block .author .author-name, body .publications-popup .list .item .item-content .text-block .author img.icon {
   display: inline-block;
   vertical-align: middle;
 }
 
-body .publications-popup .list .item .text-block .author .author-name {
+body .publications-popup .list .item .item-content .text-block .author .author-name {
   font-size: 11px;
   color: #000;
   opacity: 0.65;
 }
 
-body .publications-popup .list .item .text-block .author img.icon {
+body .publications-popup .list .item .item-content .text-block .author img.icon {
   width: 14px;
   height: 16px;
   margin-left: 2px;
   margin-top: -2px;
 }
 
-body .publications-popup .list .item .buy-block {
+body .publications-popup .list .item .item-content .buy-block {
   text-align: right;
   margin-left: auto;
 }
 
-body .publications-popup .list .item .buy-block .price {
+body .publications-popup .list .item .item-content .buy-block .price {
   line-height: 1;
   font-size: 17px;
   font-weight: bold;
@@ -1103,7 +1138,7 @@ body .publications-popup .list .item .buy-block .price {
   padding: 11px 0 8px 0;
 }
 
-body .publications-popup .list .item .buy-block a.btn-buy {
+body .publications-popup .list .item .item-content .buy-block a.btn-buy {
   display: inline-block;
   width: 97px;
   height: 30px;
@@ -1114,6 +1149,68 @@ body .publications-popup .list .item .buy-block a.btn-buy {
   text-align: center;
   font-size: 13px;
   font-weight: bold;
+  color: #fff;
+}
+
+body .publications-popup .list .item .withThis {
+  padding: 0 13px 11px 13px;
+}
+
+body .publications-popup .list .item .withThis .subhead {
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+body .publications-popup .list .item .withThis .mGallery, body .publications-popup .list .item .withThis .btn-more {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .publications-popup .list .item .withThis .mGallery img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .publications-popup .list .item .withThis .mGallery img {
+  width: 39px;
+  height: 39px;
+  margin-right: 12px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+body .publications-popup .list .item .withThis .btn-more {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: 3px;
+  width: 97px;
+  height: 30px;
+  line-height: 26px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+body .publications-popup .list .item .withThis .btn-more span {
+  font-weight: bold;
+  font-size: 13px;
+  color: #000;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .publications-popup .list .item .withThis .btn-more:hover {
+  background-color: #157EE1;
+  border-color: #157EE1;
+}
+
+body .publications-popup .list .item .withThis .btn-more:hover span {
   color: #fff;
 }
 
@@ -2322,36 +2419,66 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body .publications-popup .main-content .list .item {
     margin-bottom: 34px;
+  }
+  body .publications-popup .main-content .list .item .item-content {
     padding-right: 20px;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  body .publications-popup .main-content .list .item img.preview {
+  body .publications-popup .main-content .list .item .item-content img.preview {
     width: 156px;
   }
-  body .publications-popup .main-content .list .item .text-block {
+  body .publications-popup .main-content .list .item .item-content .text-block {
     margin-left: 50px;
   }
-  body .publications-popup .main-content .list .item .text-block .name {
+  body .publications-popup .main-content .list .item .item-content .text-block .name {
     font-size: 25px;
     padding: 7px 0;
   }
-  body .publications-popup .main-content .list .item .text-block .desc {
+  body .publications-popup .main-content .list .item .item-content .text-block .desc {
     font-size: 20px;
   }
-  body .publications-popup .main-content .list .item .text-block .author {
+  body .publications-popup .main-content .list .item .item-content .text-block .author {
     margin-top: 20px;
   }
-  body .publications-popup .main-content .list .item .buy-block .price {
+  body .publications-popup .main-content .list .item .item-content .buy-block .price {
     font-size: 25px;
     padding: 17.5px 0;
   }
-  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+  body .publications-popup .main-content .list .item .item-content .buy-block a.btn-buy {
     width: 217px;
     height: 60px;
     line-height: 60px;
+    font-size: 17px;
+  }
+  body .publications-popup .main-content .list .item .withThis {
+    padding: 0 19px 0 19px;
+  }
+  body .publications-popup .main-content .list .item .withThis .subhead {
+    font-size: 21px;
+    padding: 20.5px 0;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery {
+    width: 75%;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery img {
+    margin-bottom: 25px;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery img {
+    width: 15%;
+    height: auto;
+    margin-right: 1.5%;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more {
+    margin-left: 1%;
+    width: 23%;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 25px;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more span {
     font-size: 17px;
   }
   body .popup-map {
@@ -2660,56 +2787,75 @@ body footer .footer-bottomLine .payments img.payment-img {
   body .publications-popup .topline .text-block, body .publications-popup .topline a.btn-subscribe {
     margin-left: 171px;
   }
-  body .publications-popup .main-content .list .item {
+  body .publications-popup .main-content .list .item.out .item-content .buy-block .price {
+    text-align: left;
+  }
+  body .publications-popup .main-content .list .item .item-content {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     position: relative;
     height: 202px;
   }
-  body .publications-popup .main-content .list .item img.preview {
+  body .publications-popup .main-content .list .item .item-content img.preview {
     display: none;
   }
-  body .publications-popup .main-content .list .item img.preview-mob {
+  body .publications-popup .main-content .list .item .item-content img.preview-mob {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
   }
-  body .publications-popup .main-content .list .item .text-block, body .publications-popup .main-content .list .item .buy-block {
+  body .publications-popup .main-content .list .item .item-content .text-block, body .publications-popup .main-content .list .item .item-content .buy-block {
     width: 100%;
     margin-left: 167px;
   }
-  body .publications-popup .main-content .list .item .buy-block {
+  body .publications-popup .main-content .list .item .item-content .buy-block {
     text-align: left;
   }
-  body .publications-popup .main-content .list .item .buy-block .price {
+  body .publications-popup .main-content .list .item .item-content .buy-block .price {
     font-size: 22px;
     padding: 0;
   }
-  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+  body .publications-popup .main-content .list .item .item-content .buy-block a.btn-buy {
     height: 52px;
     line-height: 52px;
     margin-top: 10px;
   }
-  body .publications-popup .main-content .list .item .text-block .name {
+  body .publications-popup .main-content .list .item .item-content .text-block .name {
     font-size: 19px;
     padding: 0;
     margin-top: 10px;
   }
-  body .publications-popup .main-content .list .item .text-block .desc {
+  body .publications-popup .main-content .list .item .item-content .text-block .desc {
     font-size: 14px;
   }
-  body .publications-popup .main-content .list .item .text-block .author {
+  body .publications-popup .main-content .list .item .item-content .text-block .author {
     margin-top: 5px;
     margin-bottom: 0;
   }
-  body .publications-popup .main-content .list .item .text-block .author .author-name {
+  body .publications-popup .main-content .list .item .item-content .text-block .author .author-name {
     font-size: 14px;
   }
-  body .publications-popup .main-content .list .item .text-block .author img.icon {
+  body .publications-popup .main-content .list .item .item-content .text-block .author img.icon {
     width: 18px;
     margin-left: 5px;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery {
+    width: 100%;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery img {
+    width: -webkit-calc((100% / 6) - 14px);
+    width: calc((100% / 6) - 14px);
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more {
+    width: 100%;
+    margin-left: 0;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more span {
+    font-size: 19px;
   }
   body .shop-map-outer {
     padding: 20px;
@@ -2826,25 +2972,52 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body .publications-popup .main-content .list .item {
     margin-bottom: 15px;
+  }
+  body .publications-popup .main-content .list .item .item-content {
     padding-right: 5px;
   }
-  body .publications-popup .main-content .list .item .text-block, body .publications-popup .main-content .list .item .buy-block {
+  body .publications-popup .main-content .list .item .item-content .text-block, body .publications-popup .main-content .list .item .item-content .buy-block {
     margin-left: 151px;
   }
-  body .publications-popup .main-content .list .item .text-block .name {
+  body .publications-popup .main-content .list .item .item-content .text-block .name {
     line-height: 1.4;
   }
-  body .publications-popup .main-content .list .item .text-block .author {
+  body .publications-popup .main-content .list .item .item-content .text-block .author {
     margin: 0;
   }
-  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+  body .publications-popup .main-content .list .item .item-content .buy-block a.btn-buy {
     margin-bottom: 22px;
     width: 85%;
+  }
+  body .publications-popup .main-content .list .item .withThis {
+    padding: 0 15px;
+  }
+  body .publications-popup .main-content .list .item .withThis .subhead {
+    font-size: 19px;
+    padding: 10.5px 0;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery {
+    width: -webkit-calc(100% + 10px);
+    width: calc(100% + 10px);
+    margin-left: -10px;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery img {
+    width: -webkit-calc((100% / 3) - 10px);
+    width: calc((100% / 3) - 10px);
+    margin-right: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more {
+    margin-bottom: 34px;
+    height: 52px;
+    line-height: 52px;
   }
   body .publications-popup .main-content .list .item:hover, body .publications-popup .main-content .list .item.hovered {
     -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
             transform: scale(1.05);
+    margin-bottom: 25px;
   }
   body .popup-profile-mob .links {
     padding: 0 30px;
@@ -3168,47 +3341,72 @@ body footer .footer-bottomLine .payments img.payment-img {
     -webkit-transform: scale(1.08);
         -ms-transform: scale(1.08);
             transform: scale(1.08);
+    margin-top: 25px;
   }
-  body .publications-popup .main-content .list .item {
+  body .publications-popup .main-content .list .item .item-content {
     height: 162px;
   }
-  body .publications-popup .main-content .list .item img.preview-mob {
+  body .publications-popup .main-content .list .item .item-content img.preview-mob {
     height: 162px;
     width: 89px;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  body .publications-popup .main-content .list .item .text-block, body .publications-popup .main-content .list .item .buy-block {
+  body .publications-popup .main-content .list .item .item-content .text-block, body .publications-popup .main-content .list .item .item-content .buy-block {
     margin-left: 100px;
   }
-  body .publications-popup .main-content .list .item .text-block .name {
+  body .publications-popup .main-content .list .item .item-content .text-block .name {
     font-size: 16px;
   }
-  body .publications-popup .main-content .list .item .text-block .desc {
+  body .publications-popup .main-content .list .item .item-content .text-block .desc {
     font-size: 13px;
     line-height: 1.2;
   }
-  body .publications-popup .main-content .list .item .text-block .author {
+  body .publications-popup .main-content .list .item .item-content .text-block .author {
     line-height: 1.2;
   }
-  body .publications-popup .main-content .list .item .text-block .author .author-name {
+  body .publications-popup .main-content .list .item .item-content .text-block .author .author-name {
     font-size: 13px;
   }
-  body .publications-popup .main-content .list .item .text-block .author img.icon {
+  body .publications-popup .main-content .list .item .item-content .text-block .author img.icon {
     width: 24px;
     height: 19px;
   }
-  body .publications-popup .main-content .list .item .buy-block .price {
+  body .publications-popup .main-content .list .item .item-content .buy-block .price {
     line-height: 1.2;
     font-size: 16px;
   }
-  body .publications-popup .main-content .list .item .buy-block a.btn-buy {
+  body .publications-popup .main-content .list .item .item-content .buy-block a.btn-buy {
     height: 30px;
     line-height: 30px;
     font-size: 16px;
     width: 139px;
     margin-bottom: 12px;
     margin-top: 8px;
+  }
+  body .publications-popup .main-content .list .item .withThis .subhead {
+    font-size: 16px;
+    padding: 9.5px 0;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery {
+    width: -webkit-calc(100% + 4px);
+    width: calc(100% + 4px);
+    margin-left: -4px;
+  }
+  body .publications-popup .main-content .list .item .withThis .mGallery img {
+    width: -webkit-calc((100% / 3) - 4px);
+    width: calc((100% / 3) - 4px);
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    height: 30px;
+    line-height: 30px;
+  }
+  body .publications-popup .main-content .list .item .withThis .btn-more span {
+    font-size: 16px;
   }
   body .popup-profile-mob .links {
     padding: 0 15px;
@@ -3499,7 +3697,7 @@ body footer .footer-bottomLine .payments img.payment-img {
   }
   body header .container .headerLine .options a.buttonLogIn {
     width: 34px;
-    height: 28px;
+    height: 30px;
   }
   body header .container .headerLine .options a.buttonLogIn span {
     font-size: 10px;

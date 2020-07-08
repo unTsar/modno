@@ -222,11 +222,11 @@ block content
 				.mk-block.mk-info
 					.main-content
 						.anchors-section
-							a.anchor-btn(href="#" onclick="$.scrollTo('.about-shop', 500);") О магазине
-							a.anchor-btn(href="#" onclick="$.scrollTo('.delivery', 500);") Доставка
-							a.anchor-btn(href="#" onclick="$.scrollTo('.reimb', 500);") Возврат
-							a.anchor-btn(href="#" onclick="$.scrollTo('.credit', 500);") Кредит
-						.about-shop.mk-info-section
+							.anchor-btn.mk-info-anchor-btn.about-shop.active О магазине
+							.anchor-btn.mk-info-anchor-btn.delivery Доставка
+							.anchor-btn.mk-info-anchor-btn.reimb Возврат
+							.anchor-btn.mk-info-anchor-btn.credit Кредит
+						.about-shop.mk-info-section.active(style="display: block")
 							h2 О магазине
 							.main-info
 								.headblock
@@ -435,14 +435,14 @@ block content
 				.mk-block.mk-feedback
 					.main-content
 						.anchors-section
-							a.anchor-btn.mk-feedback-anchor-btn.active.review-all(href="#") Все
-							a.anchor-btn.mk-feedback-anchor-btn.review-positive(href="#") Положительные
-							a.anchor-btn.mk-feedback-anchor-btn.review-negative(href="#") Отрицательные
+							.anchor-btn.mk-feedback-anchor-btn.active.review-all Все
+							.anchor-btn.mk-feedback-anchor-btn.review-positive Положительные
+							.anchor-btn.mk-feedback-anchor-btn.review-negative Отрицательные
 							a(href="#").btn-send.feedback-form-btn.popup-open
 								span Оставить отзыв
 						.reviews-list.review-all.active(style='display: block')
 							h2 Отзывы (все)
-							- for(var i = 1; i <= 17; i++)
+							- for(var i = 1; i <= 17; i++) {
 								.review-item
 									.photo-profile.circle
 									.content
@@ -458,9 +458,10 @@ block content
 										p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
 								if i != 17
 									img.separ(src="img/index/separ.svg", alt="separ.svg")
+							- }
 						.reviews-list.review-positive
 							h2 Отзывы (положительные)
-							- for(var i = 1; i <= 17; i++)
+							- for(var i = 1; i <= 17; i++) {
 								.review-item
 									.photo-profile.circle
 									.content
@@ -476,9 +477,10 @@ block content
 										p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
 								if i != 17
 									img.separ(src="img/index/separ.svg", alt="separ.svg")
+							- }
 						.reviews-list.review-negative
 							h2 Отзывы (отрицательные)
-							- for(var i = 1; i <= 17; i++)
+							- for(var i = 1; i <= 17; i++) {
 								.review-item
 									.photo-profile.circle
 									.content
@@ -494,6 +496,7 @@ block content
 										p.review-text Отличный магазин. Качественные товары, быстрая доставка. Рекомендую
 								if i != 17
 									img.separ(src="img/index/separ.svg", alt="separ.svg")
+							- }
 						.btn-more.mob
 							span Показать ещё
 
@@ -504,7 +507,6 @@ block content
 
 block scripts
 	script(src="js/jquery.maskedinput.min.js")
-	script(src="js/jquery.scrollTo.min.js")
 	script(src="js/select2.full.min.js")
 	script.
 		$(document).ready(function(){
@@ -558,30 +560,53 @@ block scripts
 				setTimeout(function(){
 					$('.mk-feedback-anchor-btn').removeClass('disabled');
 				}, 350);
+
+				$('.mk-feedback .reviews-list').removeClass('active');
+				$('.mk-feedback .reviews-list').fadeOut(250);
+
+				setTimeout(function(){
+					$('.mk-feedback').find(mkFeedbackListClass).addClass('active');
+					$('.mk-feedback').find(mkFeedbackListClass).fadeIn(250);
+				}, 250);
 			});
 			$('.mk-feedback-anchor-btn.review-all').click(function(){
-				$('.mk-feedback .reviews-list').removeClass('active');
-				$('.mk-feedback .reviews-list').fadeOut(250);
-				setTimeout(function(){
-					$('.mk-feedback .review-all').addClass('active');
-					$('.mk-feedback .review-all').fadeIn(250);
-				}, 250);
+				mkFeedbackListClass = '.review-all'
 			});
 			$('.mk-feedback-anchor-btn.review-positive').click(function(){
-				$('.mk-feedback .reviews-list').removeClass('active');
-				$('.mk-feedback .reviews-list').fadeOut(250);
-				setTimeout(function(){
-					$('.mk-feedback .review-positive').addClass('active');
-					$('.mk-feedback .review-positive').fadeIn(250);
-				}, 250);
+				mkFeedbackListClass = '.review-positive'
 			});
 			$('.mk-feedback-anchor-btn.review-negative').click(function(){
-				$('.mk-feedback .reviews-list').removeClass('active');
-				$('.mk-feedback .reviews-list').fadeOut(250);
+				mkFeedbackListClass = '.review-negative'
+			});
+
+			//- Mk info switch sections
+			$('.mk-info-anchor-btn').click(function(){
+				$(this).addClass('active');
+				$('.mk-info-anchor-btn').not(this).removeClass('active');
+				$('.mk-info-anchor-btn').addClass('disabled');
 				setTimeout(function(){
-					$('.mk-feedback .review-negative').addClass('active');
-					$('.mk-feedback .review-negative').fadeIn(250);
+					$('.mk-info-anchor-btn').removeClass('disabled');
+				}, 350);
+
+				$('.mk-info .mk-info-section').removeClass('active');
+				$('.mk-info .mk-info-section').fadeOut(250);
+
+				setTimeout(function(){
+					$('.mk-info').find(mkInfoSectionClass).addClass('active');
+					$('.mk-info').find(mkInfoSectionClass).fadeIn(250);
 				}, 250);
+			});
+			$('.mk-info-anchor-btn.about-shop').click(function(){
+				mkInfoSectionClass = '.about-shop'
+			});
+			$('.mk-info-anchor-btn.delivery').click(function(){
+				mkInfoSectionClass = '.delivery'
+			});
+			$('.mk-info-anchor-btn.reimb').click(function(){
+				mkInfoSectionClass = '.reimb'
+			});
+			$('.mk-info-anchor-btn.credit').click(function(){
+				mkInfoSectionClass = '.credit'
 			});
 
 

@@ -314,7 +314,8 @@ block scripts
 					$(this).parents('.line').addClass('checked')
 				}
 			})
-
+			
+			let timeoutID;
 			$('.btn-category').mouseenter(function(){
 				timeoutID = setTimeout(function(){
 					$('#subCategory-popup').show();

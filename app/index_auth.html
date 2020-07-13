@@ -1096,6 +1096,7 @@
     		return $('body').outerHeight() > $(window).innerHeight()
     	}
     
+    	let wScrollTop;
     	$('.popup-open').click(function(){
     		if(existVerticalScroll() && $('body').css('top') === "0px"){ 
     			wScrollTop = $(document).scrollTop();

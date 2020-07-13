@@ -2,5 +2,177 @@
 @import "fonts"
 
 body
+	.select2-container--default
+		.mk-sidebar-select2-dropdown
+			border: none
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+			.select2-results__group
+				padding-left: 12px
+			.select2-results > .select2-results__options
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+				.select2-results__option
+					font-size: 13px
+					transition: 0.3s
+					padding-left: 14px
+				.select2-results__option[role=group]
+					padding-left: 0
+					.select2-results__option
+						padding-left: 28px
+			.select2-results__option--highlighted[aria-selected]
+				background-color: #ddd
+				color: #000
+			.select2-results__option[aria-selected=true]
+				background-color: $accent-blue
+				color: #fff
 	main
-		
+		.container
+			.main-content
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				padding-top: 14px
+				align-items: flex-start
+				nav.sidebar
+					margin-right: 10px
+					padding: 5px 0
+					width: 252px
+					background-color: #fff
+					border-radius: 5px
+					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+					ul
+						padding: 0
+						margin: 0
+						list-style: none
+						li
+							cursor: pointer
+							padding-left: 18px
+							position: relative
+							height: 35px
+							line-height: 35px
+							font-size: 13px
+							color: #000
+							opacity: 0.5
+							transition: 0.3s
+						li.active, li:hover
+							opacity: 1
+							background-color: #E5E5E5
+						li.active::before, li:hover::before
+							content: ''
+							position: absolute
+							top: 0
+							bottom: 0
+							left: 0
+							height: 100%
+							background-color: #c4c4c4
+							width: 3px
+				.lk-section
+					width: 100%
+					.lk-article
+						border-radius: 5px
+						background-color: #fff
+						box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+						padding-left: 37px
+						padding-bottom: 34px
+						p.head
+							margin-top: 0
+							margin-bottom: 19px
+							padding: 17.5px 0
+							font-size: 20px
+							font-weight: bold
+							color: #000
+						.input-outer:last-child
+							margin-bottom: 23px
+						.input-outer
+							position: relative
+							margin-bottom: 26px
+							span.input-name
+								position: absolute
+								top: -17px
+								left: 13px
+								font-size: 10px
+								color: #B2B2B2
+								transition: 0.3s
+								span.red
+									color: #ff0000
+							span.input-name.black
+								color: #000
+							input
+								outline: #000
+								width: 269px
+								height: 30px
+								padding-left: 13px
+								color: #000
+								line-height: 30px
+								font-size: 13px
+								background-color: #fff
+								border-radius: 5px
+								border: 0.5px solid #B3B3B3
+								transition: 0.3s
+							input:focus, input:hover
+								border-color: $accent-blue
+							input:hover ~ span, input:focus ~ span
+								color: #000
+							input::-moz-placeholder
+								font-size: 10px
+								color: #B2B2B2
+								transition: 0.3s
+							input::-ms-input-placeholder
+								font-size: 10px
+								color: #B2B2B2
+								transition: 0.3s
+							input::-webkit-input-placeholder
+								font-size: 10px
+								color: #B2B2B2
+								transition: 0.3s
+							input::placeholder
+								font-size: 10px
+								color: #B2B2B2
+								transition: 0.3s
+							input:focus::-moz-placeholder
+								color: #000
+							input:focus::-ms-input-placeholder
+								color: #000
+							input:focus::-webkit-input-placeholder
+								color: #000
+							input:focus::placeholder
+								color: #000
+							input:hover::-moz-placeholder
+								color: #000
+							input:hover::-ms-input-placeholder
+								color: #000
+							input:hover::-webkit-input-placeholder
+								color: #000
+							input:hover::placeholder
+								color: #000
+							select.day
+								width: 52px
+							select.month
+								width: 134px
+							select.year
+								width: 134px
+							.select2:hover ~ span.input-name
+								color: #000
+							.select2:checked ~ span.input-name
+								color: #000
+							.select2:not(:last-child)
+								margin-right: 0
+							.select2-container--default
+								.select2-selection--single
+									border: 0.5px solid #B3B3B3
+									transition: 0.3s
+								.select2-selection--single:hover
+									border-color: $accent-blue
+								.select2-selection--single:focus
+									outline: 0.5px auto $accent-blue
+							.select2-container
+								.select2-selection--single
+									height: 30px
+							.select2-container
+								.select2-selection--single
+									.select2-selection__rendered
+										padding-left: 12px
+										font-size: 13px
+										color: #000
+								

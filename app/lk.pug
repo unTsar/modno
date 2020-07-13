@@ -1,6 +1,7 @@
 extends _layouts/home
 
 block styles
+	link(rel="stylesheet", href="css/select2.css")
 	link(rel="stylesheet", href="css/lk.css")
 block content
 
@@ -8,8 +9,112 @@ block content
 
 	main
 		.container
-			
+			.main-content
+				nav.sidebar
+					ul
+						li.lk-sidebar-link.active Личные данные
+						li.lk-sidebar-link Адреса
+						li.lk-sidebar-link Заказы
+						li.lk-sidebar-link Избранные товары
+						li.lk-sidebar-link Сообщения
+						li.lk-sidebar-link Отзывы
+				.lk-section
+					.lk-article
+						form
+							p.head Контактные данные
+							.input-outer
+								input(type="text" name="Фамилия")
+								span.input-name Фамилия #[span.red *]
+							.input-outer
+								input(type="text" name="Имя")
+								span.input-name Имя #[span.red *]
+							.input-outer
+								input(type="text" name="Отчество" placeholder="Отчество")
+							.input-outer
+								select.custom-select2.js-states.form-control(name="state").day
+									option(value="1") 1
+									option(value="2") 2
+									option(value="3") 3
+									option(value="4") 4
+									option(value="5") 5
+									option(value="6") 6
+									option(value="7") 7
+									option(value="8") 8
+									option(value="9") 9
+									option(value="10") 10
+									option(value="11") 11
+									option(value="12") 12
+									option(value="13") 13
+									option(value="14") 14
+									option(value="15") 15
+									option(value="16") 16
+									option(value="17") 17
+									option(value="18") 18
+									option(value="19") 19
+									option(value="20") 20
+									option(value="21") 21
+									option(value="22") 22
+									option(value="23") 23
+									option(value="24") 24
+									option(value="25") 25
+									option(value="26") 26
+									option(value="27") 27
+									option(value="28") 28
+									option(value="29") 29
+									option(value="30") 30
+									option(value="31") 31
+								select.custom-select2.js-states.form-control(name="state").month
+									option(value="Январь") Январь
+									option(value="Февраль") Февраль
+									option(value="Март") Март
+									option(value="Апрель") Апрель
+									option(value="Май ") Май 
+									option(value="Июнь") Июнь
+									option(value="Июль") Июль
+									option(value="Август") Август
+									option(value="Сентябрь") Сентябрь
+									option(value="Октябрь") Октябрь
+									option(value="Ноябрь") Ноябрь
+									option(value="Декабрь") Декабрь
+								select.custom-select2.js-states.form-control(name="state").year
+									- for(i = 2020; i>1919; i--)
+										option=i
+								span.input-name Дата рождения #[span.red *]
+							.input-outer
+								input(type="email")
+								span.input-name E-mail #[span.red *]
+							.input-outer
+								input(type="tel")
+								span.input-name Телефон #[span.red *]
+
+
 
 	include _partials/footer.pug
 
 block scripts
+	script(src="js/jquery.maskedinput.min.js")
+	script(src="js/select2.full.min.js")
+	script.
+		$(document).ready(function(){
+			$(function($) {
+				$('input[type="tel"]').mask("+7 (999) 999-99-99")
+			});
+			$('.custom-select2').select2({
+				minimumResultsForSearch: Infinity,
+				dropdownCssClass: 'mk-sidebar-select2-dropdown'
+			});
+			$('.lk-sidebar-link').click(function(){
+				$(this).addClass('active');
+				$('.lk-sidebar-link').not(this).removeClass('active');
+				$('.lk-sidebar-link').addClass('disabled');
+				setTimeout(function(){
+					$('.lk-sidebar-link').removeClass('disabled');
+				}, 350);
+			});
+			$('.select2-selection--single').focus(function(){
+				$(this).parents('.input-outer').find('span.input-name').addClass('black');
+			});
+			$('.select2-selection--single').blur(function(){
+				$(this).parents('.input-outer').find('span.input-name').removeClass('black');
+			});
+		});

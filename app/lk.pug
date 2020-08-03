@@ -15,11 +15,15 @@ block content
 						li.lk-sidebar-link.active Личные данные
 						li.lk-sidebar-link Адреса
 						li.lk-sidebar-link Заказы
+							span.value 3
 						li.lk-sidebar-link Избранные товары
+							span.value 6
 						li.lk-sidebar-link Сообщения
+							span.value 3
 						li.lk-sidebar-link Отзывы
+							span.value 5
 				.lk-section
-					.lk-article
+					.lk-article.contacts-info
 						form
 							p.head Контактные данные
 							.input-outer
@@ -80,14 +84,33 @@ block content
 									- for(i = 2020; i>1919; i--)
 										option=i
 								span.input-name Дата рождения #[span.red *]
+								.checkbox-outer
+									span.name Пол #[span.red *]
+									input#lk-form__gender_female(type="radio" name="lk-form__gender")
+									label(for="lk-form__gender_female") Женский
+									input#lk-form__gender_male(type="radio" name="lk-form__gender")
+									label(for="lk-form__gender_male") Мужской
+
+
 							.input-outer
 								input(type="email")
 								span.input-name E-mail #[span.red *]
 							.input-outer
 								input(type="tel")
 								span.input-name Телефон #[span.red *]
-
-
+							.pp-outer
+								input#lk-form__pp(type="checkbox")
+								label(for="lk-form__pp") Я согласен/согласна на обработку своих персональных данных указанным образом.
+							a.btn(href="#") 
+								span Сохранить изменения
+					.lk-article.passChange
+						form
+							p.head Смена пароля
+							input(type="password" placeholder="Действующий пароль")
+							input(type="password" placeholder="Новый пароль")
+							input(type="password" placeholder="Повторите новый пароль")
+							a.btn(href="#")
+								span Сохранить изменения
 
 	include _partials/footer.pug
 

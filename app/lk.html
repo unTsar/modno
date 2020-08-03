@@ -554,14 +554,14 @@
             <ul>
               <li class="lk-sidebar-link active">Личные данные</li>
               <li class="lk-sidebar-link">Адреса</li>
-              <li class="lk-sidebar-link">Заказы</li>
-              <li class="lk-sidebar-link">Избранные товары</li>
-              <li class="lk-sidebar-link">Сообщения</li>
-              <li class="lk-sidebar-link">Отзывы</li>
+              <li class="lk-sidebar-link">Заказы<span class="value">3</span></li>
+              <li class="lk-sidebar-link">Избранные товары<span class="value">6</span></li>
+              <li class="lk-sidebar-link">Сообщения<span class="value">3</span></li>
+              <li class="lk-sidebar-link">Отзывы<span class="value">5</span></li>
             </ul>
           </nav>
           <div class="lk-section">
-            <div class="lk-article">
+            <div class="lk-article contacts-info">
               <form>
                 <p class="head">Контактные данные</p>
                 <div class="input-outer">
@@ -724,6 +724,12 @@
                     <option>1921</option>
                     <option>1920</option>
                   </select><span class="input-name">Дата рождения <span class="red">*</span></span>
+                  <div class="checkbox-outer"><span class="name">Пол <span class="red">*</span></span>
+                    <input id="lk-form__gender_female" type="radio" name="lk-form__gender">
+                    <label for="lk-form__gender_female">Женский</label>
+                    <input id="lk-form__gender_male" type="radio" name="lk-form__gender">
+                    <label for="lk-form__gender_male">Мужской</label>
+                  </div>
                 </div>
                 <div class="input-outer">
                   <input type="email"><span class="input-name">E-mail <span class="red">*</span></span>
@@ -731,6 +737,18 @@
                 <div class="input-outer">
                   <input type="tel"><span class="input-name">Телефон <span class="red">*</span></span>
                 </div>
+                <div class="pp-outer">
+                  <input id="lk-form__pp" type="checkbox">
+                  <label for="lk-form__pp">Я согласен/согласна на обработку своих персональных данных указанным образом.</label>
+                </div><a class="btn" href="#"> <span>Сохранить изменения</span></a>
+              </form>
+            </div>
+            <div class="lk-article passChange">
+              <form>
+                <p class="head">Смена пароля</p>
+                <input type="password" placeholder="Действующий пароль">
+                <input type="password" placeholder="Новый пароль">
+                <input type="password" placeholder="Повторите новый пароль"><a class="btn" href="#"><span>Сохранить изменения</span></a>
               </form>
             </div>
           </div>

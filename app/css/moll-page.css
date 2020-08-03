@@ -65,8 +65,7 @@ body section.shop-card {
 body section.shop-card .card-item {
   position: relative;
   background-color: #fff;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   margin: 0 12.5%;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -121,8 +120,7 @@ body section.shop-card .card-item .btn-subscribe {
   width: 126px;
   height: 30px;
   line-height: 26px;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -153,8 +151,7 @@ body section.marketing-table .marketing-navbar {
   position: relative;
   text-align: center;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch {
@@ -169,8 +166,7 @@ body section.marketing-table .marketing-navbar .buttonSwitch {
   width: 123px;
   margin: 0 5px;
   border: 0.5px solid #ededed;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch span {
@@ -226,8 +222,7 @@ body section.marketing-table .marketing-navbar .input-outer input.input-search {
   height: 100%;
   padding-left: 14px;
   padding-right: 25px;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   border: none;
   background-color: #e6e6e6;
 }
@@ -295,8 +290,7 @@ body section.marketing-table .mk-products .main-content .sidebar .number, body s
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 252px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
 }
 
@@ -386,8 +380,7 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
   width: 11px;
   height: 11px;
   background-color: #fff;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw .layer {
@@ -425,13 +418,11 @@ body section.marketing-table .mk-products .main-content .sidebar .options .line 
 }
 
 body section.marketing-table .mk-products .main-content .sidebar .options .line .buttonOpSw.r, body section.marketing-table .mk-products .main-content .sidebar .options .line .layer {
-  -webkit-border-radius: 100px;
-          border-radius: 100px;
+  border-radius: 100px;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar a.img-map-link {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-top: 15px;
   display: block;
   text-align: center;
@@ -443,8 +434,7 @@ body section.marketing-table .mk-products .main-content .sidebar a.img-map-link 
   background-image: url("../img/shop-page/card-item-map.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 body section.marketing-table .mk-products .main-content .sidebar a.img-map-link svg {
@@ -486,8 +476,7 @@ body section.marketing-table .mk-products .main-content .items-table .content .s
   padding-left: 49px;
   background-color: transparent;
   border: 0.5px solid #000000;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   font-size: 19px;
   color: #000;
 }
@@ -546,8 +535,7 @@ body section.marketing-table .mk-products .main-content .items-table .content .b
   -o-transition: 0.3s;
   transition: 0.3s;
   display: none;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -590,8 +578,7 @@ body section.marketing-table .mk-products .main-content .items-table .content .i
   position: relative;
   cursor: pointer;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-left: 12px;
   margin-bottom: 15px;
   width: -webkit-calc((100% / 2) - 12px);
@@ -608,10 +595,8 @@ body section.marketing-table .mk-products .main-content .items-table .content .i
 
 body section.marketing-table .mk-products .main-content .items-table .content .item img.shop-preview {
   width: 80px;
-  -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 body section.marketing-table .mk-products .main-content .items-table .content .item .content .head {
@@ -673,8 +658,7 @@ body section.marketing-table .mk-info {
 body section.marketing-table .mk-info .main-content .mk-info-section {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   padding-left: 37px;
   margin-bottom: 15px;
@@ -737,8 +721,7 @@ body section.marketing-table .mk-info .main-content .about-shop .main-info .deli
 body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .circle {
   width: 11px;
   height: 9px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 body section.marketing-table .mk-info .main-content .about-shop .main-info .contacts .undgr .circle.c1 {
@@ -813,8 +796,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section .anchor
   font-weight: bold;
   height: 30px;
   line-height: 30px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-right: 7px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -830,8 +812,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section .anchor
   height: 100%;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn:hover, body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn.active {
@@ -851,8 +832,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-s
   margin-bottom: -66px;
   margin-right: 38px;
   background-color: #157EE1;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   width: 126px;
   height: 30px;
   line-height: 28px;
@@ -869,8 +849,7 @@ body section.marketing-table .mk-feedback .main-content .btn-more.mob {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: none;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -905,8 +884,7 @@ body section.marketing-table .mk-feedback .main-content .reviews-list {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
@@ -929,8 +907,7 @@ body section.marketing-table .mk-feedback .main-content .reviews-list .review-it
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .circle {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   width: 65px;
   height: 65px;
   background-color: #C4C4C4;
@@ -994,8 +971,7 @@ body section.marketing-table .marketing-navbar-bottom {
   margin-bottom: 35px;
   padding-top: 10px;
   padding-bottom: 10px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   text-align: center;
   background-color: #fff;
 }
@@ -1008,8 +984,7 @@ body section.marketing-table .marketing-navbar-bottom .button {
   width: 122px;
   height: 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -1065,8 +1040,7 @@ body section.marketing-table .marketing-navbar-bottom .pages {
   position: relative;
   font-size: 0;
   display: inline-block;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-left: -14px;
 }
 
@@ -1093,18 +1067,14 @@ body section.marketing-table .marketing-navbar-bottom .pages .page span {
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:first-child {
-  -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border-left: 0.5px solid #ededed;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:nth-last-child(1) {
-  -webkit-border-top-right-radius: 5px;
-          border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-          border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page.active {
@@ -1600,8 +1570,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
 
 @media only screen and (max-width: 900px) {
   body section.shop-card .card-item img.img-shop-preview {
-    -webkit-border-radius: 0px 0px 5px 0px;
-            border-radius: 0px 0px 5px 0px;
+    border-radius: 0px 0px 5px 0px;
   }
   body section.shop-card .card-item .semiposition {
     text-align: center;

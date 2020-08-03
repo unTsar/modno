@@ -28,8 +28,7 @@ body .fotorama--fullscreen .fotorama__wrap .fotorama__arr {
   height: 30px;
   line-height: 31px;
   text-align: center;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #fff;
   background-image: none;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -49,8 +48,7 @@ body .fotorama--fullscreen .fotorama__wrap .fotorama__arr--next::after {
   background-image: url("../img/item-page/arrow-right.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   margin-right: -2px;
 }
 
@@ -59,8 +57,7 @@ body .fotorama--fullscreen .fotorama__wrap .fotorama__arr--prev::after {
   background-image: url("../img/item-page/arrow-left.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   margin-left: -2px;
 }
 
@@ -76,13 +73,11 @@ body .fotorama--fullscreen .fotorama__wrap .fotorama__nav-wrap .fotorama__nav.fo
 
 body .fotorama--fullscreen .fotorama__wrap .fotorama__nav-wrap .fotorama__thumb-border {
   border-color: #157EE1;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .fotorama--fullscreen .fotorama__wrap .fotorama__nav-wrap .fotorama__thumb {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .fotorama--fullscreen .fotorama__wrap .fotorama__dot {
@@ -103,8 +98,7 @@ body .fotorama--fullscreen .fotorama__wrap .fotorama__nav__frame.fotorama__activ
 }
 
 body .fotorama--fullscreen .fotorama__img {
-  -webkit-border-radius: 15px !important;
-          border-radius: 15px !important;
+  border-radius: 15px !important;
 }
 
 body section.item-main-section {
@@ -128,8 +122,7 @@ body section.item-main-section .preview-content .photoswiper {
 }
 
 body section.item-main-section .preview-content .photoswiper img.fotorama__img {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.item-main-section .preview-content .photoswiper .fotorama__arr {
@@ -138,8 +131,7 @@ body section.item-main-section .preview-content .photoswiper .fotorama__arr {
   height: 30px;
   line-height: 44px;
   text-align: center;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #fff;
   background-image: none;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -159,8 +151,7 @@ body section.item-main-section .preview-content .photoswiper .fotorama__arr--nex
   background-image: url("../img/item-page/arrow-right.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   margin-right: -2px;
 }
 
@@ -169,8 +160,7 @@ body section.item-main-section .preview-content .photoswiper .fotorama__arr--pre
   background-image: url("../img/item-page/arrow-left.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   margin-left: -2px;
 }
 
@@ -197,8 +187,7 @@ body section.item-main-section .preview-content .photoswiper .fotorama__thumb-bo
   border-color: #157EE1;
   background-image: none;
   margin-top: 12px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.item-main-section .preview-content .photoswiper .fotorama__stage__shaft {
@@ -239,8 +228,7 @@ body section.item-main-section .preview-content .photoswiper .fotorama__fullscre
 }
 
 body section.item-main-section .preview-content .photoswiper .fotorama__thumb {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.item-main-section .preview-content .photoswiper .fotorama__thumb img.fotorama__img {
@@ -279,8 +267,7 @@ body section.item-main-section .preview-content .desc-block {
   padding: 0 37px;
   padding-bottom: 26px;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.item-main-section .preview-content .desc-block span.head {
@@ -341,8 +328,7 @@ body section.item-main-section .sm-preview-item {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 38%;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -364,10 +350,8 @@ body section.item-main-section .sm-preview-item img.shop-preview, body section.i
 
 body section.item-main-section .sm-preview-item img.shop-preview {
   width: 80px;
-  -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 body section.item-main-section .sm-preview-item .content .head {
@@ -427,8 +411,7 @@ body section.item-main-section .r-sidebar .info-block, body section.item-main-se
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   width: 100%;
 }
 
@@ -544,8 +527,7 @@ body section.item-main-section .r-sidebar .settings .availability .circle {
   display: inline-block;
   width: 9px;
   height: 9px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #55BB00;
 }
 
@@ -568,8 +550,7 @@ body section.item-main-section .r-sidebar .settings .colour .var, body section.i
   display: inline-block;
   vertical-align: bottom;
   cursor: pointer;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: 1px solid transparent;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -627,8 +608,7 @@ body section.item-main-section .r-sidebar .settings .delivery-btn {
   width: 196px;
   padding: 2px 0;
   text-align: center;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #EDEDED;
 }
 
@@ -718,8 +698,7 @@ body section.item-main-section .r-sidebar .sidebar-btns a.btn {
   line-height: 30px;
   margin-bottom: 8px;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   text-align: center;
   font-size: 13px;
   font-weight: bold;
@@ -746,8 +725,7 @@ body section.marketing-table .marketing-navbar {
   position: relative;
   text-align: center;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch {
@@ -762,8 +740,7 @@ body section.marketing-table .marketing-navbar .buttonSwitch {
   width: 123px;
   margin: 0 5px;
   border: 0.5px solid #ededed;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch span {
@@ -813,8 +790,7 @@ body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn
   font-weight: bold;
   height: 30px;
   line-height: 30px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-right: 7px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -830,8 +806,7 @@ body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn
   height: 100%;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn:hover, body section.marketing-table .mk-info .main-content .anchors-section .anchor-btn.active, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn:hover, body section.marketing-table .mk-products .main-content .anchors-section .anchor-btn.active, body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn:hover, body section.marketing-table .mk-feedback .main-content .anchors-section .anchor-btn.active {
@@ -853,8 +828,7 @@ body section.marketing-table .mk-products .items-table .header {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   width: 100%;
   padding: 10.5px 0;
   padding-left: 37px;
@@ -874,8 +848,7 @@ body section.marketing-table .mk-products .items-table .slider .item {
   position: relative;
   cursor: pointer;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   font-size: 0;
   letter-spacing: 0;
   word-spacing: 0;
@@ -901,8 +874,7 @@ body section.marketing-table .mk-products .items-table .slider .item a.like-mark
 
 body section.marketing-table .mk-products .items-table .slider .item img.img-preview {
   width: 100%;
-  -webkit-border-radius: 5px 5px 0 0;
-          border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 body section.marketing-table .mk-products .items-table .slider .item .content {
@@ -1009,8 +981,7 @@ body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav bu
   margin: auto;
   width: 30px;
   height: 30px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1025,8 +996,7 @@ body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav bu
   background-image: url("../img/item-page/arrow-right.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   margin-right: -2px;
 }
 
@@ -1035,8 +1005,7 @@ body section.marketing-table .mk-products .items-table .owl-carousel .owl-nav bu
   background-image: url("../img/item-page/arrow-left.svg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   margin-left: -2px;
 }
 
@@ -1062,8 +1031,7 @@ body section.marketing-table .mk-products .items-table.publications .slider .sli
 body section.marketing-table .mk-products .items-table.publications .slider .slide img {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .mk-info {
@@ -1078,8 +1046,7 @@ body section.marketing-table .mk-info .main-content .mk-info-section {
   display: none;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   padding-left: 37px;
   margin-bottom: 15px;
@@ -1284,8 +1251,7 @@ body section.marketing-table .mk-info .main-content .prices .item .btn-outer {
 
 body section.marketing-table .mk-info .main-content .prices .item .btn-outer a.btn {
   display: inline-block;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   width: 100%;
   height: 30px;
   line-height: 30px;
@@ -1366,8 +1332,7 @@ body section.marketing-table .mk-info .main-content .delivery form.form-block .d
   content: '';
   position: absolute;
   display: inline-block;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: 0.5px solid #808080;
 }
 
@@ -1377,8 +1342,7 @@ body section.marketing-table .mk-info .main-content .delivery form.form-block .d
   display: inline-block;
   display: none;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-image: url("../img/checkbox-img.svg");
 }
 
@@ -1414,8 +1378,7 @@ body section.marketing-table .mk-info .main-content .delivery form.form-block .d
   padding-bottom: 16px;
   margin-right: 2.2%;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1622,8 +1585,7 @@ body section.marketing-table .mk-info .main-content .credit form.credit-form .ra
   -webkit-appearance: none;
   height: 20px;
   width: 20px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: #157EE1;
   cursor: pointer;
   margin-top: -9px;
@@ -1778,8 +1740,7 @@ body section.marketing-table .mk-info .main-content .credit form.credit-form .in
   padding-left: 17px;
   line-height: 31px;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .mk-info .main-content .credit form.credit-form .input-contacts .input-outer .placeholder {
@@ -1816,8 +1777,7 @@ body section.marketing-table .mk-info .main-content .credit form.credit-form .su
   height: 30px;
   line-height: 30px;
   background-color: #157EE1;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -1862,8 +1822,7 @@ body section.marketing-table .mk-feedback .main-content .anchors-section a.btn-s
   margin-bottom: -66px;
   margin-right: 38px;
   background-color: #157EE1;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   width: 126px;
   height: 30px;
   line-height: 28px;
@@ -1880,8 +1839,7 @@ body section.marketing-table .mk-feedback .main-content .btn-more.mob {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: none;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1916,8 +1874,7 @@ body section.marketing-table .mk-feedback .main-content .reviews-list {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: none;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list h2 {
@@ -1940,8 +1897,7 @@ body section.marketing-table .mk-feedback .main-content .reviews-list .review-it
 }
 
 body section.marketing-table .mk-feedback .main-content .reviews-list .review-item .circle {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   width: 65px;
   height: 65px;
   background-color: #C4C4C4;
@@ -2173,8 +2129,7 @@ body section.marketing-table .mk-block {
     display: block;
     width: auto;
     margin-left: -29px;
-    -webkit-border-radius: 0;
-            border-radius: 0;
+    border-radius: 0;
     padding: 17px 0;
     margin-top: 50px;
   }
@@ -2857,8 +2812,7 @@ body section.marketing-table .mk-block {
   }
   body section.marketing-table .mk-info .main-content .credit form.credit-form .range-item .range-points {
     border: 0.5px solid rgba(0, 0, 0, 0.3);
-    -webkit-border-radius: 5px 5px 0px 0px;
-            border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     padding: 18px 0;
     white-space: nowrap;
     position: relative;

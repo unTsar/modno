@@ -1,5 +1,5 @@
 {
-  "name": "Modno",
+  "name": "modno",
   "version": "4.0.0",
   "description": "Front-end for Modno",
   "main": "index.js",
@@ -26,5 +26,13 @@
     "gulp-pug": "^4.0.1",
     "select2": "^4.0.11",
     "yargs": "^14.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unTsar/modno.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unTsar/modno/issues"
+  },
+  "homepage": "https://github.com/unTsar/modno#readme"
 }

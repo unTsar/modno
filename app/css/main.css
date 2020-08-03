@@ -201,8 +201,7 @@ body .Log-form::-webkit-scrollbar {
 }
 
 body .Log-form {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   position: relative;
   max-height: 100%;
   margin: auto;
@@ -278,12 +277,26 @@ body .Log-form form.form-block .input-item input {
   border: 0.5px solid rgba(0, 0, 0, 0.3);
   background-color: #FFF;
   width: 100%;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   padding-left: 9px;
 }
 
-body .Log-form form.form-block .input-item input::-webkit-input-placeholder, body .Log-form form.form-block .input-item input:-moz-placeholder, body .Log-form form.form-block .input-item input::-moz-placeholder, body .Log-form form.form-block .input-item input:-ms-input-placeholder {
+body .Log-form form.form-block .input-item input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #808080;
+}
+
+body .Log-form form.form-block .input-item input:-moz-placeholder {
+  font-size: 12px;
+  color: #808080;
+}
+
+body .Log-form form.form-block .input-item input::-moz-placeholder {
+  font-size: 12px;
+  color: #808080;
+}
+
+body .Log-form form.form-block .input-item input:-ms-input-placeholder {
   font-size: 12px;
   color: #808080;
 }
@@ -304,8 +317,7 @@ body .Log-form .form-buttons .form-btn, body .Log-form .form-buttons .map-btn, b
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #157EE1;
   width: 100%;
   height: 34px;
@@ -322,8 +334,7 @@ body .Log-form .form-buttons input[type=submit], body .Log-form .map-buttons inp
   width: 100%;
   height: 34px;
   border: none;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -385,8 +396,7 @@ body .LogIn-form form.form-block .form-options label:before {
   left: 0;
   width: 20px;
   height: 20px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: 0.5px solid #000;
 }
 
@@ -400,8 +410,7 @@ body .LogIn-form form.form-block .form-options label::after {
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-image: url("../img/checkbox-img.svg");
 }
 
@@ -459,8 +468,7 @@ body .LogUp-form form.form-block .input-item .radio label::before {
   left: 0;
   width: 29px;
   height: 29px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: 0.5px solid #808080;
 }
 
@@ -474,8 +482,7 @@ body .LogUp-form form.form-block .input-item .radio label::after {
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-image: url("../img/checkbox-img.svg");
 }
 
@@ -506,8 +513,7 @@ body .dd-popup {
   width: 330px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   overflow-y: scroll;
   -ms-overflow-style: none;
@@ -557,8 +563,7 @@ body .dd-popup .input-outer input.input-search {
   height: 31px;
   width: 100%;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .dd-popup .input-outer input.input-search::-webkit-input-placeholder, body .dd-popup .input-outer input.input-search:-moz-placeholder, body .dd-popup .input-outer input.input-search::-moz-placeholder, body .dd-popup .input-outer input.input-search:-ms-input-placeholder {
@@ -641,8 +646,7 @@ body .popup-map .input-outer input.input-search {
   height: 31px;
   width: 100%;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .popup-map .input-outer input.input-search::-webkit-input-placeholder {
@@ -767,8 +771,7 @@ body .popup-profile-mob .links .track-input input.track-search {
   width: 100%;
   height: 42px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .popup-profile-mob .links .track-input input.track-search::-webkit-input-placeholder {
@@ -799,8 +802,7 @@ body .publications-popup::-webkit-scrollbar {
 body .publications-popup {
   width: 1140px;
   padding: 13px 21px 17px 21px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   position: relative;
   max-height: 100%;
   overflow-y: scroll;
@@ -837,8 +839,7 @@ body .publications-popup .topline {
 }
 
 body .publications-popup .topline img.model-icon {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   width: 68px;
   height: auto;
 }
@@ -871,8 +872,7 @@ body .publications-popup .topline a.btn-subscribe {
   font-size: 13px;
   font-weight: bold;
   color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .publications-popup .topline .btn-burger {
@@ -884,8 +884,7 @@ body .publications-popup .topline .btn-burger .circle {
   width: 6px;
   height: 6px;
   background-color: #C4C4C4;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   margin: 5px 0;
 }
 
@@ -910,8 +909,7 @@ body .publications-popup .pbPhoto-outer .tag-button {
   height: 28px;
   position: absolute;
   z-index: 1;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 body .publications-popup .pbPhoto-outer .tag-button:hover::after, body .publications-popup .pbPhoto-outer .tag-button.anim::after {
@@ -922,8 +920,7 @@ body .publications-popup .pbPhoto-outer .tag-button::after {
   position: absolute;
   width: inherit;
   height: inherit;
-  -webkit-border-radius: inherit;
-          border-radius: inherit;
+  border-radius: inherit;
   background-color: inherit;
   -webkit-animation: pulse 1.5s infinite;
           animation: pulse 1.5s infinite;
@@ -970,20 +967,17 @@ body .publications-popup .pbPhoto-outer .tag-button2 {
 body .publications-popup .pbPhoto-outer img.pbPhoto {
   vertical-align: top;
   width: 100%;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 body .publications-popup .list::-webkit-scrollbar-track {
   background-color: #E6E6E6;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
 body .publications-popup .list::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: #BDBDBD;
 }
@@ -1041,15 +1035,13 @@ body .publications-popup .list .item {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .publications-popup .list .item .item-content {
   cursor: pointer;
   padding-right: 13px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: -webkit-flex;
@@ -1066,10 +1058,8 @@ body .publications-popup .list .item .item-content {
 }
 
 body .publications-popup .list .item .item-content img {
-  -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 body .publications-popup .list .item .item-content img.preview {
@@ -1143,8 +1133,7 @@ body .publications-popup .list .item .item-content .buy-block a.btn-buy {
   width: 97px;
   height: 30px;
   line-height: 30px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #157EE1;
   text-align: center;
   font-size: 13px;
@@ -1177,8 +1166,7 @@ body .publications-popup .list .item .withThis .mGallery img {
   width: 39px;
   height: 39px;
   margin-right: 12px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body .publications-popup .list .item .withThis .btn-more {
@@ -1191,8 +1179,7 @@ body .publications-popup .list .item .withThis .btn-more {
   height: 30px;
   line-height: 26px;
   text-align: center;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -1251,8 +1238,7 @@ body .shop-map-outer .shop-map a.close-btn {
   line-height: 57px;
   text-align: center;
   background-color: #fff;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 body .shop-map-outer .shop-map .map {
@@ -1290,8 +1276,7 @@ body .feedback-form form.form-block .input-item textarea {
   width: 470px;
   height: 121px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   resize: none;
   padding-left: 9px;
   padding-top: 5px;
@@ -1330,8 +1315,7 @@ body .feedback-form form.form-block .p-policy label:before, body .LogUp-form for
   left: 0;
   width: 20px;
   height: 20px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   border: 0.5px solid #000;
 }
 
@@ -1345,8 +1329,7 @@ body .feedback-form form.form-block .p-policy label::after, body .LogUp-form for
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-image: url("../img/checkbox-img.svg");
 }
 
@@ -1422,8 +1405,7 @@ body .mk-filter-popup .btn-outer a.btn {
   line-height: 60px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   background-color: #157EE1;
   text-align: center;
 }
@@ -1467,8 +1449,7 @@ body .mk-filter-popup .links .line .img-arrow {
   background-image: url("../img/index/drop-menu-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   width: 11px;
   height: 19px;
 }
@@ -1502,8 +1483,7 @@ body .mk-filter-popup .links .line .buttonOpSw .knobs::before {
   width: 19px;
   height: 19px;
   background-color: #fff;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 body .mk-filter-popup .links .line .buttonOpSw .knobs, body .mk-filter-popup .links .line .buttonOpSw .layer {
@@ -1541,8 +1521,7 @@ body .mk-filter-popup .links .line .buttonOpSw .option-checkbox:checked ~ .layer
 }
 
 body .mk-filter-popup .links .line .buttonOpSw.r, body .mk-filter-popup .links .line .layer {
-  -webkit-border-radius: 100px;
-          border-radius: 100px;
+  border-radius: 100px;
 }
 
 body .mk-filter-popup .links .line select {
@@ -1579,8 +1558,7 @@ body .mk-filter-popup .links .line .select2-container--default .select2-selectio
   background-image: url("../img/index/drop-menu-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   width: 11px;
   height: 19px;
   top: 0;
@@ -1780,8 +1758,7 @@ body .hmenu-popup-lSettings .outer .input-outer input.input-search {
   height: 50px;
   width: 100%;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   font-size: 19px;
 }
 
@@ -1812,8 +1789,7 @@ body .hmenu-popup-lSettings .outer a.btn-submit {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #157EE1;
 }
 
@@ -1865,8 +1841,7 @@ body header .headerLine a.menu button.hamburger span.hamburger-box span.hamburge
   width: 39px;
   height: 5px;
   background-color: #808080;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body header .headerLine a.button-like.mob {
@@ -1922,8 +1897,7 @@ body header .headerLine .languageSettings .languageSettings-button {
   height: 30px;
   padding-left: 7px;
   border: 0.5px solid #f2f2f2;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
 }
 
 body header .headerLine .languageSettings .languageSettings-button img.flag {
@@ -1943,8 +1917,7 @@ body header .headerLine .languageSettings .languageSettings-button .buttonOpen {
 }
 
 body header .headerLine .languageSettings .languageSettings-button .buttonOpen .circle {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #808080;
   width: 3px;
   height: 3px;
@@ -1970,8 +1943,7 @@ body header .headerLine .languageSettings .dropmenu {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
@@ -2029,8 +2001,7 @@ body header .headerLine .input-outer input.input-search {
   height: 30px;
   padding-left: 14px;
   padding-right: 25px;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   border: none;
   background-color: #e6e6e6;
 }
@@ -2125,8 +2096,7 @@ body header .headerLine .options a.buttonLogIn {
       -ms-flex-align: center;
           align-items: center;
   background-color: #157EE1;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   width: 72px;
   height: 30px;
   -webkit-transition: 0.3s;
@@ -2144,8 +2114,7 @@ body header .headerLine .options a.buttonProfile {
   width: 32px;
   height: 32px;
   margin: 0 32.5px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #E6E6E6;
 }
 
@@ -2160,8 +2129,7 @@ body header .headerLine .options .profile-dropdown {
   right: 0;
   z-index: 99;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   width: 278px;
 }
 
@@ -2191,8 +2159,7 @@ body header .headerLine .options .profile-dropdown .track-input input.dd-search 
   width: 100%;
   height: 31px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body header .headerLine .options .profile-dropdown .track-input input.dd-search::-webkit-input-placeholder {
@@ -2259,8 +2226,7 @@ body footer .footer-content .footer-content-wrapper .applinks a {
   vertical-align: top;
   width: 76px;
   margin-left: 16px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body footer .footer-content .footer-content-wrapper .applinks a img {
@@ -2531,8 +2497,7 @@ body footer .footer-bottomLine .payments img.payment-img {
     font-size: 17px;
   }
   body .Log-form {
-    -webkit-border-radius: 0;
-            border-radius: 0;
+    border-radius: 0;
     padding-bottom: 15px;
   }
   body .Log-form img.img-close {

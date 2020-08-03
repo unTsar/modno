@@ -28,8 +28,7 @@ body section.category-links {
   margin-top: 15px;
   position: relative;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   padding-top: 16px;
   padding-bottom: 16px;
   line-height: 1;
@@ -67,8 +66,7 @@ body section.category-links .category-h2 a.btn-category {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   height: 24px;
   padding: 0 13px;
   text-align: center;
@@ -119,8 +117,7 @@ body section.category-links .category-h2 .subCategory-popup span.popup-head {
 
 body section.category-links .category-h2 .subCategory-popup .contentblock {
   text-align: left;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   background-color: #fff;
@@ -232,8 +229,7 @@ body section.swiper-block .slide {
   display: inline-block;
   height: 150px;
   width: 150px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.swiper-block .slide:hover {
@@ -246,8 +242,7 @@ body section.swiper-block .slide-more-outer img {
 }
 
 body section.swiper-block .slide-more {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   position: absolute;
   z-index: 20;
   top: 0;
@@ -291,8 +286,7 @@ body section.marketing-table .marketing-navbar {
   position: relative;
   text-align: center;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch {
@@ -307,8 +301,7 @@ body section.marketing-table .marketing-navbar .buttonSwitch {
   width: 123px;
   margin: 0 5px;
   border: 0.5px solid #ededed;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar .buttonSwitch span {
@@ -357,8 +350,7 @@ body section.marketing-table .marketing-navbar .input-outer input.input-search {
   height: 100%;
   padding-left: 14px;
   padding-right: 25px;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  border-radius: 3px;
   border: none;
   background-color: #e6e6e6;
 }
@@ -431,8 +423,7 @@ body section.marketing-table .main-content .search-items.mob input {
   padding-left: 49px;
   background-color: transparent;
   border: 0.5px solid #000000;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   font-size: 19px;
   color: #000;
 }
@@ -494,8 +485,7 @@ body section.marketing-table .main-content .sidebar .number, body section.market
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 252px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
 }
 
@@ -585,8 +575,7 @@ body section.marketing-table .main-content .sidebar .options .line .buttonOpSw .
   width: 11px;
   height: 11px;
   background-color: #fff;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 
 body section.marketing-table .main-content .sidebar .options .line .buttonOpSw .knobs, body section.marketing-table .main-content .sidebar .options .line .buttonOpSw .layer {
@@ -624,15 +613,13 @@ body section.marketing-table .main-content .sidebar .options .line .buttonOpSw .
 }
 
 body section.marketing-table .main-content .sidebar .options .line .buttonOpSw.r, body section.marketing-table .main-content .sidebar .options .line .layer {
-  -webkit-border-radius: 100px;
-          border-radius: 100px;
+  border-radius: 100px;
 }
 
 body section.marketing-table .main-content .sidebar a.img-map-link {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-top: 15px;
   display: block;
   text-align: center;
@@ -644,8 +631,7 @@ body section.marketing-table .main-content .sidebar a.img-map-link {
   background-image: url("../img/shop-page/card-item-map.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 body section.marketing-table .main-content .sidebar a.img-map-link svg {
@@ -683,8 +669,7 @@ body section.marketing-table .main-content .items-table .content .btn-more.mob {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: none;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -727,8 +712,7 @@ body section.marketing-table .main-content .items-table .content .item {
   position: relative;
   cursor: pointer;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-left: 13px;
   margin-bottom: 15px;
   width: -webkit-calc((100% / 2) - 13px);
@@ -745,10 +729,8 @@ body section.marketing-table .main-content .items-table .content .item img.shop-
 
 body section.marketing-table .main-content .items-table .content .item img.shop-preview {
   width: 80px;
-  -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 body section.marketing-table .main-content .items-table .content .item .content .head {
@@ -850,8 +832,7 @@ body section.marketing-table .main-content .items-table.mob .content .category-i
           align-items: center;
   margin-bottom: 15px;
   background-color: #fff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .main-content .items-table.mob .content .category-item img {
@@ -887,8 +868,7 @@ body section.marketing-table .main-content .items-table.mob .content .btns .btn 
   display: inline-block;
   padding: 19px 25px;
   margin: 0 7.5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 body section.marketing-table .main-content .items-table.mob .content .btns .btn span {
@@ -933,8 +913,7 @@ body section.marketing-table .marketing-navbar-bottom {
   margin-bottom: 35px;
   padding-top: 10px;
   padding-bottom: 10px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   text-align: center;
   background-color: #fff;
 }
@@ -947,8 +926,7 @@ body section.marketing-table .marketing-navbar-bottom .button {
   width: 122px;
   height: 30px;
   border: 0.5px solid #ededed;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -1006,8 +984,7 @@ body section.marketing-table .marketing-navbar-bottom .pages {
   position: relative;
   font-size: 0;
   display: inline-block;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
   margin-left: -14px;
 }
 
@@ -1034,18 +1011,14 @@ body section.marketing-table .marketing-navbar-bottom .pages .page span {
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:first-child {
-  -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border-left: 0.5px solid #ededed;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page:nth-last-child(1) {
-  -webkit-border-top-right-radius: 5px;
-          border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-          border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 body section.marketing-table .marketing-navbar-bottom .pages .page.active {
@@ -1096,8 +1069,7 @@ body section.marketing-table .marketing-navbar-bottom .pages .page:hover span {
     white-space: nowrap;
   }
   body main section.swiper-block .slide {
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
+    border-radius: 10px;
     display: inline-block;
     margin-right: 19px;
     width: 29.3%;

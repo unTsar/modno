@@ -46,12 +46,15 @@ body main .item-block {
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 body main .item-block img {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+          border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+          border-bottom-left-radius: 5px;
 }
 
 body main .item-block img.preview {
@@ -125,7 +128,8 @@ body main .item-block .buy-block a.btn-buy {
   width: 97px;
   height: 30px;
   line-height: 30px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background-color: #157EE1;
   text-align: center;
   font-size: 13px;
@@ -159,7 +163,8 @@ body main .publications .flex-table a.item img {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   vertical-align: bottom;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 body main .publications .btn-more.mob {
@@ -167,7 +172,8 @@ body main .publications .btn-more.mob {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: none;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);

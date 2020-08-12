@@ -707,17 +707,8 @@
     
     	svg4everybody();
     
-    	function existVerticalScroll() {
-    		return $('body').outerHeight() > $(window).innerHeight()
-    	}
-    
-    	let wScrollTop;
     	$('.popup-open').click(function(){
-    		if(existVerticalScroll() && $('body').css('top') === "0px"){ 
-    			wScrollTop = $(document).scrollTop();
-    			$('body').css('top', '-' + wScrollTop + 'px' )
-    			$('body').addClass('fixed')
-    		}
+    		$('body').addClass('fixed')
     		$('.popup-content').fadeOut(150);
     		setTimeout(function(){
     			$('#popup-container').fadeIn(250);
@@ -730,8 +721,6 @@
     			$('.popup-content').fadeOut(150)
     			$('#popup-container').fadeOut(150);
     			$('body').removeClass('fixed')
-    			$('body').css('top', '0')
-    			$(document).scrollTop(wScrollTop)
     		}
     	});
     
@@ -739,8 +728,6 @@
     		$('.popup-content').fadeOut(150)
     		$('#popup-container').fadeOut(150);
     		$('body').removeClass('fixed')
-    		$('body').css('top', '0')
-    		$(document).scrollTop(wScrollTop)
     	});
     
     

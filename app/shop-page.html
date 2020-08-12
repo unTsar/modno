@@ -1442,14 +1442,18 @@
     		if (!$('.popup-content').is(e.target) && $('.popup-content').has(e.target).length === 0) {
     			$('.popup-content').fadeOut(150)
     			$('#popup-container').fadeOut(150);
-    			$('body').removeClass('fixed')
+    			setTimeout(function(){
+    				$('body').removeClass('fixed')
+    			}, 200)
     		}
     	});
     
     	$('.popup-close').click(function(){
     		$('.popup-content').fadeOut(150)
     		$('#popup-container').fadeOut(150);
-    		$('body').removeClass('fixed')
+    		setTimeout(function(){
+    			$('body').removeClass('fixed')
+    		}, 200)
     	});
     
     

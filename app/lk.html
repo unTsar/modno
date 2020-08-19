@@ -579,7 +579,7 @@
               <li class="lk-sidebar-link active" onclick="lkPageID='personal-info'">Личные данные</li>
               <li class="lk-sidebar-link" onclick="lkPageID='destinations'">Адреса</li>
               <li class="lk-sidebar-link" onclick="lkPageID='orders'">Заказы<span class="value">3</span></li>
-              <li class="lk-sidebar-link" onclick="lkPageID='favorites'">Избранные товары<span class="value">6</span></li>
+              <li class="lk-sidebar-link" onclick="lkPageID='favorites'">Избранные<span class="value">6</span></li>
               <li class="lk-sidebar-link" onclick="lkPageID='messages'">Сообщения<span class="value">3</span></li>
               <li class="lk-sidebar-link" onclick="lkPageID='feedback'">Отзывы<span class="value">5</span></li>
             </ul>
@@ -1066,44 +1066,94 @@
             </div>
           </div>
           <div class="lk-page favorites">
-            <div class="table">
-              <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item1.jpg" alt="products-item1.jpg">
-                <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
-                  <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
-                  <div class="additional">
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
-                    <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
-                    <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+            <div class="navbar">
+              <div class="buttonSwitch products lk-favorites-btnSwitch active" onclick="lkFavoritesSectionID='products'"><span>Товары</span></div>
+              <div class="buttonSwitch shops lk-favorites-btnSwitch" onclick="lkFavoritesSectionID='shops'"><span>Магазины</span></div>
+            </div>
+            <div class="lk-favorites-section products" style="display: block">
+              <div class="table">
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item1.jpg" alt="products-item1.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/shop-page/products-item.jpg" alt="products-item.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item3.jpg" alt="products-item3.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item4.jpg" alt="products-item4.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/shop-page/products-item.jpg" alt="products-item.jpg">
-                <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
-                  <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
-                  <div class="additional">
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
-                    <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
-                    <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+            </div>
+            <div class="lk-favorites-section shops">
+              <div class="table">
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item1.jpg" alt="products-item1.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item3.jpg" alt="products-item3.jpg">
-                <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
-                  <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
-                  <div class="additional">
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
-                    <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
-                    <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/shop-page/products-item.jpg" alt="products-item.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item4.jpg" alt="products-item4.jpg">
-                <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
-                  <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
-                  <div class="additional">
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
-                    <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
-                    <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item3.jpg" alt="products-item3.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item favorites"><img class="new-mark" src="img/shop-page/new-mark.svg" alt="new-mark.svg"><a class="like-mark" href="#"><img src="img/shop-page/like-mark.svg" alt="like-mark.svg"><img class="fill" src="img/lk/favorites-heart.svg" alt="favorites-heart.svg"></a><img class="img-preview" src="img/lk/products-item4.jpg" alt="products-item4.jpg">
+                  <div class="content"><a class="unhidden-mark" href="#"><img src="img/shop-page/unhidden-mark.svg" alt="unhidden-mark.svg"></a>
+                    <div class="headtext"><span class="name">Кепка мужская чёрная</span><br><span class="creator">Secret artist</span></div>
+                    <div class="additional">
+                      <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-disable.svg" alt="star-disable.svg"><span class="info">(<span class="value">30</span>)</span></div>
+                      <div class="price"><span class="price-value">500 000 &#8381;</span><span class="old-price-value">1200 &#8381;</span></div>
+                      <div class="category"><img class="category-flag" src="img/shop-page/category-flag.svg" alt="category-flag.svg"><span>lady &amp; gentleman</span></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1189,7 +1239,7 @@
               </div>
               <div class="conversation-list">
                 <div class="conversation-subject"><img class="item-preview" src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="item-name">Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span></div>
-                <div class="msg-list">
+                <div class="msg-list lk-messages-conversation-msg-list">
                   <div class="msg-item"><img class="user-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
                     <div class="text-content"><span class="user-name">Мария</span><span class="date">20.11.2019</span>
                       <p class="text">Добрый день. Есть размер S?</p>
@@ -1271,7 +1321,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="conversation-input">
+                <div class="conversation-input lk-messages-conversation-input">
                   <div class="input-outer">
                     <input type="text" placeholder="Напишите сообщение..."><img class="btn" src="img/lk/input-send-btn.svg" alt="input-send-btn.svg">
                   </div>
@@ -1424,31 +1474,6 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="footer-content">
-        <div class="container">
-          <div class="footer-content-wrapper">
-            <div class="banners"><img class="b1" src="img/banner1.jpg" alt="banner1.jpg"><img class="b2" src="img/banner2.jpg" alt="banner2.jpg"></div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
-            <div class="links">
-              <div class="linkHead footer-links-btn">О компании </div>
-              <div class="list footer-links-hidden"><a href="#">О нас </a><br><a href="#">Оферта </a><br><a href="#">Политика конфидециальности </a><br><a href="#">Бонусные баллы </a><br><a href="#">Подарочные сертификаты </a><br><a href="#">Карта сайта </a><br><a href="#">Контакты </a></div>
-            </div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
-            <div class="links">
-              <div class="linkHead footer-links-btn">Оформление заказа </div>
-              <div class="list footer-links-hidden"><a href="#">Доставка и оплата </a><br><a href="#">Возврат </a><br><a href="#">Способы оплаты </a><br><a href="#">Вопросы и ответы </a></div>
-            </div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
-            <div class="links">
-              <div class="linkHead footer-links-btn">Партнёрам </div>
-              <div class="list footer-links-hidden"><a href="#">Магазинам </a><br><a href="#">Моллам </a><br><a href="#">Веб мастерам </a><br><a href="#">Войти как партнер </a></div>
-            </div><img class="separ mob" src="img/index/separ.svg" alt="separ.svg">
-            <div class="applinks"><a href="#"><img src="img/googleplay.jpg" alt="googleplay.jpg"></a><a href="#"><img src="img/appstore.jpg" alt="appstore.jpg"></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottomLine"><span>&copy; 2010 - 2019 GoGroup.  Платформа для интернет-магазинов</span>
-        <div class="payments"><img class="payment-img" src="img/paypal.jpg" alt="paypal.jpg"><img class="payment-img" src="img/mastercard.jpg" alt="mastercard.jpg"><img class="payment-img" src="img/visa.jpg" alt="visa.jpg"></div>
-      </div>
-    </footer>
   </body>
   <script src="js/jquery.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
@@ -1899,7 +1924,7 @@
     
     	$('.lk-page.messages .chats .msg-item').click(function(){
     		$('.lk-page.messages > .chats').fadeOut(250);
-    		$('.lk-page.messages > .conversation').delay(250).fadeIn(250);
+    		$('.lk-page.messages > .conversation').delay(250).fadeIn(250, msgHeightRefresh);
     	});
     	$('.lk-messages-backToChats-btn').click(function(){
     		$('.lk-page.messages > .conversation').fadeOut(250);
@@ -1907,6 +1932,31 @@
     	});
     
     
+    	$('.lk-favorites-btnSwitch').click(function(){
+    		$(this).addClass('active');
+    		$('.lk-favorites-btnSwitch').not(this).removeClass('active');
+    		$('.lk-favorites-btnSwitch').addClass('disabled');
+    		setTimeout(function(){
+    			$('.lk-favorites-btnSwitch').removeClass('disabled');
+    		}, 350);
+    
+    		$('.lk-favorites-section').removeClass('active');
+    		$('.lk-favorites-section').fadeOut(250);
+    
+    		setTimeout(function(){
+    			$('.lk-favorites-section.' + lkFavoritesSectionID).addClass('active');
+    			$('.lk-favorites-section.' + lkFavoritesSectionID).fadeIn(250);
+    		}, 250);
+    	});
     });
+    
+    function msgHeightRefresh(){
+    	let WindowHeight = $(window).height();
+    	let MsgOffsetTop = $('.lk-messages-conversation-msg-list').offset().top + 15;
+    	let ConversationInputHeight = $('.lk-messages-conversation-input').outerHeight()
+    	$('.lk-messages-conversation-msg-list').css('min-height', WindowHeight - MsgOffsetTop - ConversationInputHeight);
+    }
+    
+    $(window).on('resize', msgHeightRefresh);
   </script>
 </html>

@@ -362,6 +362,10 @@ body .lk-addDest-popup form .btns input[type='reset'] {
   width: 192px;
 }
 
+body main {
+  padding-bottom: 15px;
+}
+
 body main .container .main-content {
   display: -webkit-flex;
   display: -moz-flex;
@@ -378,6 +382,10 @@ body main .container .main-content {
 }
 
 body main .container .main-content nav.sidebar {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin-right: 10px;
   padding: 5px 0;
   max-width: 252px;
@@ -967,7 +975,7 @@ body main .container .main-content .destinations .dest-card .btns input:checked 
   opacity: 1;
 }
 
-body main .container .main-content .orders .navbar, body main .container .main-content .feedback .navbar, body main .container .main-content .messages .navbar {
+body main .container .main-content .orders .navbar, body main .container .main-content .feedback .navbar, body main .container .main-content .messages .navbar, body main .container .main-content .favorites .navbar {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
@@ -976,9 +984,10 @@ body main .container .main-content .orders .navbar, body main .container .main-c
   background-color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-body main .container .main-content .orders .navbar .buttonSwitch, body main .container .main-content .feedback .navbar .buttonSwitch, body main .container .main-content .messages .navbar .buttonSwitch {
+body main .container .main-content .orders .navbar .buttonSwitch, body main .container .main-content .feedback .navbar .buttonSwitch, body main .container .main-content .messages .navbar .buttonSwitch, body main .container .main-content .favorites .navbar .buttonSwitch {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -994,7 +1003,7 @@ body main .container .main-content .orders .navbar .buttonSwitch, body main .con
           border-radius: 5px;
 }
 
-body main .container .main-content .orders .navbar .buttonSwitch span, body main .container .main-content .feedback .navbar .buttonSwitch span, body main .container .main-content .messages .navbar .buttonSwitch span {
+body main .container .main-content .orders .navbar .buttonSwitch span, body main .container .main-content .feedback .navbar .buttonSwitch span, body main .container .main-content .messages .navbar .buttonSwitch span, body main .container .main-content .favorites .navbar .buttonSwitch span {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1005,18 +1014,18 @@ body main .container .main-content .orders .navbar .buttonSwitch span, body main
   color: #333;
 }
 
-body main .container .main-content .orders .navbar .buttonSwitch.active, body main .container .main-content .orders .navbar .buttonSwitch:hover, body main .container .main-content .feedback .navbar .buttonSwitch.active, body main .container .main-content .feedback .navbar .buttonSwitch:hover, body main .container .main-content .messages .navbar .buttonSwitch.active, body main .container .main-content .messages .navbar .buttonSwitch:hover {
+body main .container .main-content .orders .navbar .buttonSwitch.active, body main .container .main-content .orders .navbar .buttonSwitch:hover, body main .container .main-content .feedback .navbar .buttonSwitch.active, body main .container .main-content .feedback .navbar .buttonSwitch:hover, body main .container .main-content .messages .navbar .buttonSwitch.active, body main .container .main-content .messages .navbar .buttonSwitch:hover, body main .container .main-content .favorites .navbar .buttonSwitch.active, body main .container .main-content .favorites .navbar .buttonSwitch:hover {
   -webkit-box-shadow: inset 0px 4px 4px #bfbfbf;
           box-shadow: inset 0px 4px 4px #bfbfbf;
   background-color: #F0F0F0;
 }
 
-body main .container .main-content .orders .navbar .buttonSwitch.active span, body main .container .main-content .orders .navbar .buttonSwitch:hover span, body main .container .main-content .feedback .navbar .buttonSwitch.active span, body main .container .main-content .feedback .navbar .buttonSwitch:hover span, body main .container .main-content .messages .navbar .buttonSwitch.active span, body main .container .main-content .messages .navbar .buttonSwitch:hover span {
+body main .container .main-content .orders .navbar .buttonSwitch.active span, body main .container .main-content .orders .navbar .buttonSwitch:hover span, body main .container .main-content .feedback .navbar .buttonSwitch.active span, body main .container .main-content .feedback .navbar .buttonSwitch:hover span, body main .container .main-content .messages .navbar .buttonSwitch.active span, body main .container .main-content .messages .navbar .buttonSwitch:hover span, body main .container .main-content .favorites .navbar .buttonSwitch.active span, body main .container .main-content .favorites .navbar .buttonSwitch:hover span {
   color: #000;
   opacity: 1;
 }
 
-body main .container .main-content .orders .navbar .buttonSwitch.disabled, body main .container .main-content .feedback .navbar .buttonSwitch.disabled, body main .container .main-content .messages .navbar .buttonSwitch.disabled {
+body main .container .main-content .orders .navbar .buttonSwitch.disabled, body main .container .main-content .feedback .navbar .buttonSwitch.disabled, body main .container .main-content .messages .navbar .buttonSwitch.disabled, body main .container .main-content .favorites .navbar .buttonSwitch.disabled {
   pointer-events: none;
 }
 
@@ -1248,7 +1257,7 @@ body main .container .main-content .orders .lk-orders-section .order-card .deliv
 
 body main .container .main-content .orders .lk-orders-section .order-card .delivery .order-list .shop-order-head {
   grid-template-areas: "text text text sum sum";
-  background-color: #E5E5E5;
+  background-color: #F0F0F0;
   padding: 13.5px 37px;
   font-weight: normal;
   font-size: 12px;
@@ -1440,7 +1449,11 @@ body main .container .main-content .orders .lk-orders-section .order-card .btn-m
   opacity: 1;
 }
 
-body main .container .main-content .favorites .table {
+body main .container .main-content .favorites .lk-favorites-section {
+  display: none;
+}
+
+body main .container .main-content .favorites .lk-favorites-section .table {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1448,11 +1461,11 @@ body main .container .main-content .favorites .table {
   margin-left: -10px;
 }
 
-body main .container .main-content .favorites .table .item.favorites a.like-mark img.fill {
+body main .container .main-content .favorites .lk-favorites-section .table .item.favorites a.like-mark img.fill {
   opacity: 1;
 }
 
-body main .container .main-content .favorites .table .item {
+body main .container .main-content .favorites .lk-favorites-section .table .item {
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.3s;
@@ -1472,7 +1485,7 @@ body main .container .main-content .favorites .table .item {
   word-spacing: 0;
 }
 
-body main .container .main-content .favorites .table .item img.new-mark {
+body main .container .main-content .favorites .lk-favorites-section .table .item img.new-mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -1480,7 +1493,7 @@ body main .container .main-content .favorites .table .item img.new-mark {
   margin-left: 12px;
 }
 
-body main .container .main-content .favorites .table .item a.like-mark {
+body main .container .main-content .favorites .lk-favorites-section .table .item a.like-mark {
   position: absolute;
   top: 0;
   right: 0;
@@ -1488,7 +1501,7 @@ body main .container .main-content .favorites .table .item a.like-mark {
   margin-right: 7px;
 }
 
-body main .container .main-content .favorites .table .item a.like-mark img.fill {
+body main .container .main-content .favorites .lk-favorites-section .table .item a.like-mark img.fill {
   position: absolute;
   top: 1px;
   left: 0;
@@ -1498,20 +1511,20 @@ body main .container .main-content .favorites .table .item a.like-mark img.fill 
   transition: 0.3s;
 }
 
-body main .container .main-content .favorites .table .item img.img-preview {
+body main .container .main-content .favorites .lk-favorites-section .table .item img.img-preview {
   width: 100%;
   -webkit-border-radius: 5px 5px 0 0;
           border-radius: 5px 5px 0 0;
 }
 
-body main .container .main-content .favorites .table .item .content {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content {
   position: relative;
   padding-left: 18px;
   padding-right: 13px;
   padding-bottom: 12px;
 }
 
-body main .container .main-content .favorites .table .item .content a.unhidden-mark {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content a.unhidden-mark {
   position: absolute;
   top: -32px;
   right: 0;
@@ -1519,73 +1532,69 @@ body main .container .main-content .favorites .table .item .content a.unhidden-m
   margin-right: 9px;
 }
 
-body main .container .main-content .favorites .table .item .content .headtext {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .headtext {
   margin-top: 11px;
   line-height: 1.95;
   width: 100%;
 }
 
-body main .container .main-content .favorites .table .item .content .headtext span.name {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .headtext span.name {
   font-size: 12px;
   font-weight: bold;
   line-height: 1.2;
 }
 
-body main .container .main-content .favorites .table .item .content .headtext span.creator {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .headtext span.creator {
   font-size: 10px;
 }
 
-body main .container .main-content .favorites .table .item .content .additional {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional {
   margin-top: 5px;
 }
 
-body main .container .main-content .favorites .table .item .content .additional .rating img {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional .rating img {
   margin-bottom: -1px;
 }
 
-body main .container .main-content .favorites .table .item .content .additional .rating span.info {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional .rating span.info {
   font-size: 10px;
   color: #808080;
   margin-left: 7px;
 }
 
-body main .container .main-content .favorites .table .item .content .additional .category {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional .category {
   margin-top: 9px;
 }
 
-body main .container .main-content .favorites .table .item .content .additional .category span, body main .container .main-content .favorites .table .item .content .additional .category img.category-flag {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional .category span, body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional .category img.category-flag {
   display: inline-block;
   vertical-align: middle;
 }
 
-body main .container .main-content .favorites .table .item .content .additional .category span {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .additional .category span {
   font-size: 9px;
   color: #808080;
   margin-left: 4px;
 }
 
-body main .container .main-content .favorites .table .item .content .price {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .price {
   position: absolute;
   bottom: 11px;
   right: 13px;
 }
 
-body main .container .main-content .favorites .table .item .content .price span.price-value {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .price span.price-value {
   font-size: 12px;
   font-weight: bold;
 }
 
-body main .container .main-content .favorites .table .item .content .price span.old-price-value {
+body main .container .main-content .favorites .lk-favorites-section .table .item .content .price span.old-price-value {
   position: absolute;
   font-size: 10px;
   color: #808080;
   top: -21px;
   right: 0;
   text-decoration: line-through;
-}
-
-body main .container .main-content .feedback .navbar {
-  margin-bottom: 15px;
 }
 
 body main .container .main-content .feedback .lk-feedback-section {
@@ -1772,15 +1781,11 @@ body main .container .main-content .feedback .lk-feedback-section.customer-feedb
   color: #7F7F7F;
 }
 
-body main .container .main-content .messages .navbar {
-  margin-bottom: 15px;
-}
-
-body main .container .main-content .messages .lk-messages-section {
+body main .container .main-content .messages .chats .lk-messages-section {
   display: none;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list {
   background-color: #fff;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -1788,34 +1793,34 @@ body main .container .main-content .messages .lk-messages-section .msg-list {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item:not(:last-child) {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item:not(:last-child) {
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item:first-child {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item:first-child {
   -webkit-border-top-left-radius: 5px;
           border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
           border-top-right-radius: 5px;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item:last-child {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item:last-child {
   -webkit-border-bottom-left-radius: 5px;
           border-bottom-left-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
           border-bottom-right-radius: 5px;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item.unread {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item.unread {
   background-color: #e6e6e6;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item {
   padding: 16px 37px 8px 37px;
   cursor: pointer;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item img.user-preview {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item img.user-preview {
   width: 60px;
   height: 60px;
   -webkit-border-radius: 50%;
@@ -1823,41 +1828,41 @@ body main .container .main-content .messages .lk-messages-section .msg-list .msg
   margin-right: 19px;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item .text-content, body main .container .main-content .messages .lk-messages-section .msg-list .msg-item img.user-preview {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item .text-content, body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item img.user-preview {
   display: inline-block;
   vertical-align: top;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item .text-content {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item .text-content {
   margin-top: -2px;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item .text-content span.user-name {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item .text-content span.user-name {
   font-size: 15px;
   font-weight: bold;
   color: #000;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item .text-content p.msg-text {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item .text-content p.msg-text {
   font-size: 13px;
   color: #000;
   margin-bottom: 0;
   margin-top: 12px;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item span.date {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item span.date {
   font-size: 13px;
   color: #7F7F7F;
   float: right;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item .answer img.answer-preview {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item .answer img.answer-preview {
   width: 29px;
   height: 25px;
   margin-right: 8px;
 }
 
-body main .container .main-content .messages .lk-messages-section .msg-list .msg-item .answer p.answer-text {
+body main .container .main-content .messages .chats .lk-messages-section .msg-list .msg-item .answer p.answer-text {
   display: inline-block;
   font-size: 13px;
   color: #000;
@@ -1928,7 +1933,6 @@ body main .container .main-content .messages .conversation .conversation-list {
           border-radius: 5px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  min-height: 737px;
 }
 
 body main .container .main-content .messages .conversation .conversation-list .conversation-subject {
@@ -1977,7 +1981,8 @@ body main .container .main-content .messages .conversation .conversation-list .m
 }
 
 body main .container .main-content .messages .conversation .conversation-list .msg-list {
-  height: 540px;
+  height: 250px;
+  position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -2028,7 +2033,7 @@ body main .container .main-content .messages .conversation .conversation-list .m
 }
 
 body main .container .main-content .messages .conversation .conversation-list .conversation-input {
-  padding: 25px 37px;
+  padding: 25px 25px 25px 37px;
 }
 
 body main .container .main-content .messages .conversation .conversation-list .conversation-input .input-outer {

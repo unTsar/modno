@@ -574,7 +574,8 @@
     <main>
       <div class="container">
         <div class="main-content">
-          <nav class="sidebar">
+          <nav class="sidebar"><img class="close mob" src="img/close.svg" alt="close.svg">
+            <div class="head mob">Настройки</div>
             <ul>
               <li class="lk-sidebar-link active" onclick="lkPageID='personal-info'">Личные данные</li>
               <li class="lk-sidebar-link" onclick="lkPageID='destinations'">Адреса</li>
@@ -584,7 +585,7 @@
               <li class="lk-sidebar-link" onclick="lkPageID='feedback'">Отзывы<span class="value">5</span></li>
             </ul>
           </nav>
-          <div class="lk-page personal-info active" style="display: block">
+          <div class="lk-page personal-info">
             <div class="lk-article contacts-info">
               <form>
                 <p class="head">Контактные данные</p>
@@ -1843,6 +1844,10 @@
     		$('.lk-page').removeClass('active');
     		$('.lk-page').fadeOut(250);
     
+    		if($(window).width() < 1025){
+    			$('nav.sidebar').fadeOut(250);
+    		}
+    
     		setTimeout(function(){
     			$('.lk-page.' + lkPageID).addClass('active');
     			$('.lk-page.' + lkPageID).fadeIn(250);
@@ -1924,7 +1929,7 @@
     
     	$('.lk-page.messages .chats .msg-item').click(function(){
     		$('.lk-page.messages > .chats').fadeOut(250);
-    		$('.lk-page.messages > .conversation').delay(250).fadeIn(250, msgHeightRefresh);
+    		$('.lk-page.messages > .conversation').delay(250).fadeIn(10, msgHeightRefresh);
     	});
     	$('.lk-messages-backToChats-btn').click(function(){
     		$('.lk-page.messages > .conversation').fadeOut(250);

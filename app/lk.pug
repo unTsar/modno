@@ -49,6 +49,8 @@ block content
 		.container
 			.main-content
 				nav.sidebar
+					img.close.mob(src="img/close.svg", alt="close.svg")
+					.head.mob Настройки
 					ul
 						li.lk-sidebar-link.active(onclick="lkPageID='personal-info'") Личные данные
 						li.lk-sidebar-link(onclick="lkPageID='destinations'") Адреса
@@ -60,7 +62,7 @@ block content
 							span.value 3
 						li.lk-sidebar-link(onclick="lkPageID='feedback'") Отзывы
 							span.value 5
-				.lk-page.personal-info.active(style="display: block")
+				.lk-page.personal-info
 					.lk-article.contacts-info
 						form
 							p.head Контактные данные
@@ -1386,6 +1388,10 @@ block scripts
 				$('.lk-page').removeClass('active');
 				$('.lk-page').fadeOut(250);
 
+				if($(window).width() < 1025){
+					$('nav.sidebar').fadeOut(250);
+				}
+
 				setTimeout(function(){
 					$('.lk-page.' + lkPageID).addClass('active');
 					$('.lk-page.' + lkPageID).fadeIn(250);
@@ -1467,7 +1473,7 @@ block scripts
 
 			$('.lk-page.messages .chats .msg-item').click(function(){
 				$('.lk-page.messages > .chats').fadeOut(250);
-				$('.lk-page.messages > .conversation').delay(250).fadeIn(250, msgHeightRefresh);
+				$('.lk-page.messages > .conversation').delay(250).fadeIn(10, msgHeightRefresh);
 			});
 			$('.lk-messages-backToChats-btn').click(function(){
 				$('.lk-page.messages > .conversation').fadeOut(250);

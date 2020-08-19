@@ -222,6 +222,8 @@ body
 					background-color: #fff
 					border-radius: 5px
 					box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+					.mob
+						display: none
 					ul
 						padding: 0
 						margin: 0
@@ -260,6 +262,7 @@ body
 					display: none
 					flex-grow: 1
 				.personal-info
+					display: block
 					.lk-article
 						border-radius: 5px
 						background-color: #fff
@@ -1212,6 +1215,7 @@ body
 							.msg-list::-webkit-scrollbar
 								width: 8px
 							.msg-list
+								transition: 1s
 								height: 250px
 								position: relative
 								overflow-x: hidden
@@ -1269,6 +1273,85 @@ body
 										right: 0
 										padding: 9px 25px
 										cursor: pointer
+
+
+
+@media only screen and(max-width: 1024px)
+	body
+		main
+			padding: 0 15px
+			.container
+				.main-content
+					nav.sidebar
+						position: relative
+						max-width: none
+						margin: 0
+						padding: 0
+						.mob
+							display: block
+						img.close
+							position: absolute
+							top: 37px
+							right: 20px
+							width: 20px
+							height: 20px
+							cursor: pointer
+						.head
+							font-size: 30px
+							font-weight: bold
+							color: #000
+							text-align: center
+							padding: 22px 0
+						ul
+							padding: 0 35px
+							li
+								opacity: 1
+								font-size: 25px
+								height: 68px
+								line-height: 68px
+								padding: 0
+								span.value
+									display: none
+							li.active, li:hover
+								background-color: transparent
+							li:not(:last-child)
+								border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+							li::before, li.active::before, li:hover::before
+								content: url('../img/hmenu-arrow-right.svg')
+								position: absolute
+								top: 0
+								bottom: 0
+								right: 0
+								left: auto
+								width: 13px
+								height: 100%
+								background: none
+					.lk-page, .personal-info
+						display: none
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

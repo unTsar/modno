@@ -397,6 +397,10 @@ body main .container .main-content nav.sidebar {
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+body main .container .main-content nav.sidebar .mob {
+  display: none;
+}
+
 body main .container .main-content nav.sidebar ul {
   padding: 0;
   margin: 0;
@@ -451,6 +455,10 @@ body main .container .main-content .lk-page {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+body main .container .main-content .personal-info {
+  display: block;
 }
 
 body main .container .main-content .personal-info .lk-article {
@@ -1981,6 +1989,9 @@ body main .container .main-content .messages .conversation .conversation-list .m
 }
 
 body main .container .main-content .messages .conversation .conversation-list .msg-list {
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   height: 250px;
   position: relative;
   overflow-x: hidden;
@@ -2063,4 +2074,67 @@ body main .container .main-content .messages .conversation .conversation-list .c
   right: 0;
   padding: 9px 25px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  body main {
+    padding: 0 15px;
+  }
+  body main .container .main-content nav.sidebar {
+    position: relative;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  body main .container .main-content nav.sidebar .mob {
+    display: block;
+  }
+  body main .container .main-content nav.sidebar img.close {
+    position: absolute;
+    top: 37px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  body main .container .main-content nav.sidebar .head {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding: 22px 0;
+  }
+  body main .container .main-content nav.sidebar ul {
+    padding: 0 35px;
+  }
+  body main .container .main-content nav.sidebar ul li {
+    opacity: 1;
+    font-size: 25px;
+    height: 68px;
+    line-height: 68px;
+    padding: 0;
+  }
+  body main .container .main-content nav.sidebar ul li span.value {
+    display: none;
+  }
+  body main .container .main-content nav.sidebar ul li.active, body main .container .main-content nav.sidebar ul li:hover {
+    background-color: transparent;
+  }
+  body main .container .main-content nav.sidebar ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  body main .container .main-content nav.sidebar ul li::before, body main .container .main-content nav.sidebar ul li.active::before, body main .container .main-content nav.sidebar ul li:hover::before {
+    content: url("../img/hmenu-arrow-right.svg");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 13px;
+    height: 100%;
+    background: none;
+  }
+  body main .container .main-content .lk-page, body main .container .main-content .personal-info {
+    display: none;
+  }
 }

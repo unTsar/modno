@@ -646,7 +646,7 @@ body main .container .main-content .personal-info .lk-article input {
   height: 30px;
   padding-left: 13px;
   color: #000;
-  line-height: 30px;
+  line-height: 28px;
   font-size: 13px;
   background-color: #fff;
   -webkit-border-radius: 5px;
@@ -2489,7 +2489,7 @@ body main .container .main-content .messages .conversation .conversation-list .c
   body main .container .main-content .personal-info .lk-article form input {
     width: 459px;
     height: 60px;
-    line-height: 60px;
+    line-height: 58px;
     font-size: 20px;
   }
   body main .container .main-content .personal-info .lk-article form input::-moz-placeholder {
@@ -4137,6 +4137,7 @@ body main .container .main-content .messages .conversation .conversation-list .c
   }
   body main .container .main-content .personal-info .lk-article.contacts-info form input, body main .container .main-content .personal-info .lk-article.passChange form input {
     height: 40px;
+    line-height: 38px;
     font-size: 16px;
     padding-left: 16px;
   }

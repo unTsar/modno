@@ -6,19 +6,21 @@ block styles
 
 block popups
 	.popup-content.lk-addDest-popup#lk-addDest
+		img.img-close.popup-close(src="img/close.svg", alt="close.svg")
 		.topline
 			span Добавить адрес
 		form
 			label.label-adress
-				input.input-adress(type="text" onkeydown="this.classList.add('entered')" onkeyup="if(this.value.length == 0){this.classList.remove('entered')}" onfocus="this.parentNode.classList.add('active')" onblur="this.parentNode.classList.remove('active')")
+				input.input-adress#lk-addDest-fucking-input(type="text" onkeydown="this.classList.add('entered')" onkeyup="if(this.value.length == 0){this.classList.remove('entered')}" onfocus="this.parentNode.classList.add('active'); if(this.value.length == 0){this.classList.remove('entered')}" onblur="this.parentNode.classList.remove('active')")
 				|Город, улица, номер дома #[span.red *]
-			input(type="text" placeholder="Кв/офис")
-			input(type="text" placeholder="Этаж")
-			input(type="text" placeholder="Подъезд")
-			input(type="text" placeholder="Домофон")
+			.inputs-outer
+				input(type="text" placeholder="Кв/офис")
+				input(type="text" placeholder="Этаж")
+				input(type="text" placeholder="Подъезд")
+				input(type="text" placeholder="Домофон")
 			.btns
 				input(type="submit" value="Подтвердить").popup-close
-				input(type="reset" value="Отменить").popup-close
+				input(type="reset" value="Отменить" onclick="document.getElementById('lk-addDest-fucking-input').classList.remove('entered')").popup-close
 	.popup-content.lk-PickPoint#lk-PickPoint
 		img.img-close.popup-close(src="img/close.svg", alt="close.svg")
 		.topline
@@ -28,10 +30,12 @@ block popups
 			br
 			span.text-l с 6 ноября (ср)
 			.text-line
-				span.text-l.mr #[span.text-b Стоимость:] 1 руб.
-				span.text-l Способы оплаты: 
-				img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
-				img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
+				.sum
+					span.text-l #[span.text-b Стоимость:] 1 руб.
+				.payment
+					span.text-l Способы оплаты: 
+					img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
+					img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
 			p.text-block
 				span.text-b Как добраться
 				br
@@ -50,7 +54,7 @@ block content
 			.main-content
 				nav.sidebar
 					img.close.mob(src="img/close.svg", alt="close.svg")
-					.head.mob Настройки
+					.head.mob Личный кабинет
 					ul
 						li.lk-sidebar-link.active(onclick="lkPageID='personal-info'") Личные данные
 						li.lk-sidebar-link(onclick="lkPageID='destinations'") Адреса
@@ -62,7 +66,10 @@ block content
 							span.value 3
 						li.lk-sidebar-link(onclick="lkPageID='feedback'") Отзывы
 							span.value 5
-				.lk-page.personal-info
+				.lk-page.personal-info.active
+					.page-header-mob
+						img.back.page-header-mob-back(src="img/lk/arrow-back.svg", alt="arrow-back.svg")
+						span.head Личные данные
 					.lk-article.contacts-info
 						form
 							p.head Контактные данные
@@ -75,54 +82,55 @@ block content
 							.input-outer
 								input(type="text" name="Отчество" placeholder="Отчество")
 							.input-outer
-								select.custom-select2.js-states.form-control(name="state").day
-									option(value="1") 1
-									option(value="2") 2
-									option(value="3") 3
-									option(value="4") 4
-									option(value="5") 5
-									option(value="6") 6
-									option(value="7") 7
-									option(value="8") 8
-									option(value="9") 9
-									option(value="10") 10
-									option(value="11") 11
-									option(value="12") 12
-									option(value="13") 13
-									option(value="14") 14
-									option(value="15") 15
-									option(value="16") 16
-									option(value="17") 17
-									option(value="18") 18
-									option(value="19") 19
-									option(value="20") 20
-									option(value="21") 21
-									option(value="22") 22
-									option(value="23") 23
-									option(value="24") 24
-									option(value="25") 25
-									option(value="26") 26
-									option(value="27") 27
-									option(value="28") 28
-									option(value="29") 29
-									option(value="30") 30
-									option(value="31") 31
-								select.custom-select2.js-states.form-control(name="state").month
-									option(value="Январь") Январь
-									option(value="Февраль") Февраль
-									option(value="Март") Март
-									option(value="Апрель") Апрель
-									option(value="Май ") Май 
-									option(value="Июнь") Июнь
-									option(value="Июль") Июль
-									option(value="Август") Август
-									option(value="Сентябрь") Сентябрь
-									option(value="Октябрь") Октябрь
-									option(value="Ноябрь") Ноябрь
-									option(value="Декабрь") Декабрь
-								select.custom-select2.js-states.form-control(name="state").year
-									- for(i = 2020; i>1919; i--)
-										option=i
+								.select-outer
+									select.custom-select2.js-states.form-control(name="state").day
+										option(value="1") 1
+										option(value="2") 2
+										option(value="3") 3
+										option(value="4") 4
+										option(value="5") 5
+										option(value="6") 6
+										option(value="7") 7
+										option(value="8") 8
+										option(value="9") 9
+										option(value="10") 10
+										option(value="11") 11
+										option(value="12") 12
+										option(value="13") 13
+										option(value="14") 14
+										option(value="15") 15
+										option(value="16") 16
+										option(value="17") 17
+										option(value="18") 18
+										option(value="19") 19
+										option(value="20") 20
+										option(value="21") 21
+										option(value="22") 22
+										option(value="23") 23
+										option(value="24") 24
+										option(value="25") 25
+										option(value="26") 26
+										option(value="27") 27
+										option(value="28") 28
+										option(value="29") 29
+										option(value="30") 30
+										option(value="31") 31
+									select.custom-select2.js-states.form-control(name="state").month
+										option(value="Январь") Январь
+										option(value="Февраль") Февраль
+										option(value="Март") Март
+										option(value="Апрель") Апрель
+										option(value="Май ") Май 
+										option(value="Июнь") Июнь
+										option(value="Июль") Июль
+										option(value="Август") Август
+										option(value="Сентябрь") Сентябрь
+										option(value="Октябрь") Октябрь
+										option(value="Ноябрь") Ноябрь
+										option(value="Декабрь") Декабрь
+									select.custom-select2.js-states.form-control(name="state").year
+										- for(i = 2020; i>1919; i--)
+											option=i
 								span.input-name Дата рождения #[span.red *]
 								.checkbox-outer
 									span.name Пол #[span.red *]
@@ -152,12 +160,15 @@ block content
 							a.btn(href="#")
 								span Сохранить изменения
 				.lk-page.destinations
+					.page-header-mob
+						img.back.page-header-mob-back(src="img/lk/arrow-back.svg", alt="arrow-back.svg")
+						span.head Адреса
 					a.btn.addDest(href="#" onclick="popupID='#lk-addDest'").popup-open Добавить адрес
 					.dest-card
 						p.card-name Адрес получения
 						p.adress-value г. Москва, ул. Донская, д. 8 стр. 1, кв. 100
 						.btns
-							.btn
+							.btn.fav-radio
 								input.dest-input-adressDefault#dest-adressDefault1(type="radio" name="dest-adressDefault-check")
 								label(for="dest-adressDefault1") 
 									span Адрес по умолчанию
@@ -167,539 +178,285 @@ block content
 						p.card-name Адрес получения
 						p.adress-value г. Москва, ул. Кировоградская, д. 7 к. 2, кв. 45
 						.btns
-							.btn
+							.btn.fav-radio
 								input.dest-input-adressDefault#dest-adressDefault2(type="radio" name="dest-adressDefault-check")
 								label(for="dest-adressDefault2") 
 									span Адрес по умолчанию
 							a.btn(href="#").edit Редактировать
-							a.btn(href="#").delete Удалить		
+							a.btn(href="#").delete Удалить	
 				.lk-page.orders
+					.page-header-mob
+						img.back.page-header-mob-back(src="img/lk/arrow-back.svg", alt="arrow-back.svg")
+						span.head Заказы
 					.navbar
 						.buttonSwitch.all.lk-orders-btnSwitch.active(onclick="lkOrdersSectionID='all'")
 							span Все заказы
 						.buttonSwitch.completed.lk-orders-btnSwitch(onclick="lkOrdersSectionID='completed'")
-							span Завершенные заказы
+							span Завершенные #[.hide-mob заказы]
 					.lk-orders-section.all(style="display: block")
-						.order-card
-							.main-info
-								span.text-b Заказ 9934
-								span.date от 05.11.2019
-								a.btn(href="#") Повторить заказ
-								span.text-b.float-right 8081 &#8381;
-								br
-								span.text-l #[span.g Оплата:] #[br] при получении
-								.status.float-right
-									.circle-g
-									span.text-l Получен курьерской службой
-							.hidden.delivery
-								.delivery-main-info
-									span.text-b Доставка 443
-									.text-article
-										span.g.article-name Получение: 
-										p.info
-											span.text-l Постамат PickPoint
-											br 
-											span.text-l 117519, Москва, Кировоградская ул., 13А
-											br
-											span.text-l Время работы с 8:00 до 23:59
-											br
-											span.text-l 8 (800) 700-79-09
-										span.text-l с 6 ноября (ср)
-										.bottom-line
-											span.text-l.mr Стоимость: #[span.b 1 &#8381;]
-											span.text-l Способы оплаты: 
-											img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
-											img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
-											span.btn.float-right.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пунтке выдачи
-									.text-article
-										span.g.article-name Получатель:
-										p.info
-											span.text-l Ковалева Екатерина Андреевна
-											br
-											span.text-l 8 (903) 600 60-60
-									.progress-outer
-										.progress
-											.point.active
-												span Создан
-											.bar.active
-											.point.active
-												span Отправлен #[br]продавцу
-											.bar.active
-											.point.active
-												span Подтвержден #[br]продавцом
-											.bar.active
-											.point.active
-												span Получен #[br]курьерской #[br]службой
-											.bar
-											.point
-												span Доставлен в пункт выдачи
-											.bar
-											.point
-												span Получен
-											.progress-bar
-								.order-list
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Gucci]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 6060 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 2 шт.
-										span.price.sum 4040 &#8381;
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Affiction]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-										span.name Платье женское с поясом
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.delivery-item
-										.head
-											img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
-											span.name Доставка
-										span.price 1 &#8381;
-							.btn-more.lk-orders-btn-more
-								span.btn-name.btn-open Подробнее
-								span.btn-name.btn-close Свернуть
-								img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
-								.total-sum
-									span Итого:
-									span.value 8081 &#8381;
-						.order-card
-							.main-info
-								span.text-b Заказ 9965
-								span.date от 06.10.2019
-								a.btn(href="#") Повторить заказ
-								span.text-b.float-right 1450 &#8381;
-								br
-								span.text-l #[span.g Оплата:] #[br] картой онлайн
-								.status.float-right
-									.circle-g
-									span.text-l Доставлен
-							.hidden.delivery
-								.delivery-main-info
-									span.text-b Доставка 443
-									.text-article
-										span.g.article-name Получение: 
-										p.info
-											span.text-l Постамат PickPoint
-											br 
-											span.text-l 117519, Москва, Кировоградская ул., 13А
-											br
-											span.text-l Время работы с 8:00 до 23:59
-											br
-											span.text-l 8 (800) 700-79-09
-										span.text-l с 6 ноября (ср)
-										.bottom-line
-											span.text-l.mr Стоимость: #[span.b 1 &#8381;]
-											span.text-l Способы оплаты: 
-											img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
-											img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
-											span.btn.float-right.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пунтке выдачи
-									.text-article
-										span.g.article-name Получатель:
-										p.info
-											span.text-l Ковалева Екатерина Андреевна
-											br
-											span.text-l 8 (903) 600 60-60
-									.progress-outer
-										.progress
-											.point.active
-												span Создан
-											.bar.active
-											.point.active
-												span Отправлен #[br]продавцу
-											.bar.active
-											.point.active
-												span Подтвержден #[br]продавцом
-											.bar.active
-											.point.active
-												span Получен #[br]курьерской #[br]службой
-											.bar
-											.point
-												span Доставлен в пункт выдачи
-											.bar
-											.point
-												span Получен
-											.progress-bar
-								.order-list
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Gucci]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 6060 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 2 шт.
-										span.price.sum 4040 &#8381;
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Affiction]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-										span.name Платье женское с поясом
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.delivery-item
-										.head
-											img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
-											span.name Доставка
-										span.price 1 &#8381;
-							.btn-more.lk-orders-btn-more
-								span.btn-name.btn-open Подробнее
-								span.btn-name.btn-close Свернуть
-								img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
-						.order-card
-							.main-info
-								span.text-b Заказ 9990
-								span.date от 01.10.2019
-								a.btn(href="#") Повторить заказ
-								span.text-b.float-right 438 &#8381;
-								br
-								span.text-l #[span.g Оплата:] #[br] при получении
-								.status.float-right
-									.circle-g
-									span.text-l Доставлен
-							.hidden.delivery
-								.delivery-main-info
-									span.text-b Доставка 443
-									.text-article
-										span.g.article-name Получение: 
-										p.info
-											span.text-l Постамат PickPoint
-											br 
-											span.text-l 117519, Москва, Кировоградская ул., 13А
-											br
-											span.text-l Время работы с 8:00 до 23:59
-											br
-											span.text-l 8 (800) 700-79-09
-										span.text-l с 6 ноября (ср)
-										.bottom-line
-											span.text-l.mr Стоимость: #[span.b 1 &#8381;]
-											span.text-l Способы оплаты: 
-											img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
-											img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
-											span.btn.float-right.popup-open(onclick="popupID='#lk-PickPoint'")  Подробнее о пунтке выдачи
-									.text-article
-										span.g.article-name Получатель:
-										p.info
-											span.text-l Ковалева Екатерина Андреевна
-											br
-											span.text-l 8 (903) 600 60-60
-									.progress-outer
-										.progress
-											.point.active
-												span Создан
-											.bar.active
-											.point.active
-												span Отправлен #[br]продавцу
-											.bar.active
-											.point.active
-												span Подтвержден #[br]продавцом
-											.bar.active
-											.point.active
-												span Получен #[br]курьерской #[br]службой
-											.bar
-											.point
-												span Доставлен в пункт выдачи
-											.bar
-											.point
-												span Получен
-											.progress-bar
-								.order-list
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Gucci]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 6060 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 2 шт.
-										span.price.sum 4040 &#8381;
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Affiction]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-										span.name Платье женское с поясом
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.delivery-item
-										.head
-											img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
-											span.name Доставка
-										span.price 1 &#8381;
-							.btn-more.lk-orders-btn-more
-								span.btn-name.btn-open Подробнее
-								span.btn-name.btn-close Свернуть
-								img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
+						- for(i=1;i<4;i++)
+							.order-card
+								.main-info
+									span.text-b Заказ 9934
+									span.date от 05.11.2019
+									a.btn.desk(href="#") Повторить заказ
+									span.text-b.sum.float-right 8081 &#8381;
+									br
+									span.text-l.payment #[span.g Оплата:] #[br] при получении
+									.status.float-right
+										.circle-g
+										span.text-l Получен курьерской службой
+									a.btn.mob(href="#") Повторить заказ
+								.hidden.delivery
+									.delivery-main-info
+										span.text-b Доставка 443
+										.text-article
+											span.g.article-name Получение: 
+											p.info
+												span.text-l Постамат PickPoint
+												br 
+												span.text-l 117519, Москва, Кировоградская ул., 13А
+												br
+												span.text-l Время работы с 8:00 до 23:59
+												br
+												span.text-l 8 (800) 700-79-09
+											span.text-l с 6 ноября (ср)
+											.bottom-line
+												.sum
+													span.text-l Стоимость: #[span.b 1 &#8381;]
+												.payment
+													span.text-l Способы оплаты: 
+													img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
+													img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
+												span.btn.desk.float-right.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пункте выдачи
+										.text-article
+											span.g.article-name Получатель:
+											p.info
+												span.text-l Ковалева Екатерина Андреевна
+												br
+												span.text-l 8 (903) 600 60-60
+										span.btn.mob.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пункте выдачи
+										.progress-outer
+											.progress
+												.point.active
+													span Создан
+												.bar.active
+												.point.active
+													span Отправлен #[br]продавцу
+												.bar.active
+												.point.active
+													span Подтвержден #[br]продавцом
+												.bar.active
+												.point.active
+													span Получен #[br]курьерской #[br]службой
+												.bar
+												.point
+													span Доставлен в пункт выдачи
+												.bar
+												.point
+													span Получен
+												.progress-bar
+									.order-list
+										.shop-order-head
+											.text
+												span Магазин: #[span.black Gucci]
+												br
+												a(href="shop-page.html") Перейти к магазину
+											.sum
+												span Стоимость:
+												br
+												span.black.bold 6060 &#8381;
+										.list-item
+											img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
+											.head-item
+												span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
+												.subtext Ближайшая доставка 8 ноября
+											span.price 2020 &#8381;
+											.count-outer
+												.sign.lk-orders-inputN-minus -
+												input.lk-orders-inputN(type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);")
+												.sign.lk-orders-inputN-plus +
+											span.price.sum 2020 &#8381;
+											img.close(src="img/close.svg" alt="close.svg")
+										.list-item
+											img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
+											.head-item
+												span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
+												.subtext Ближайшая доставка 8 ноября
+											span.price 2020 &#8381;
+											.count-outer
+												.sign.lk-orders-inputN-minus -
+												input.lk-orders-inputN(type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);")
+												.sign.lk-orders-inputN-plus +
+											span.price.sum 4040 &#8381;
+											img.close(src="img/close.svg" alt="close.svg")
+										.shop-order-head
+											.text
+												span Магазин: #[span.black Affiction]
+												br
+												a(href="shop-page.html") Перейти к магазину
+											.sum
+												span Стоимость:
+												br
+												span.black.bold 2020 &#8381;
+										.list-item
+											img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
+											.head-item
+												span.name Платье женское с поясом
+												.subtext Ближайшая доставка 11 ноября
+											span.price 2020 &#8381;
+											.count-outer
+												.sign.lk-orders-inputN-minus -
+												input.lk-orders-inputN(type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);")
+												.sign.lk-orders-inputN-plus +
+											span.price.sum 2020 &#8381;
+											img.close(src="img/close.svg" alt="close.svg")
+										.delivery-item
+											.head
+												img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
+												span.name Доставка
+											span.price 1 &#8381;
+								.btn-more.lk-orders-btn-more
+									span.btn-name.btn-open Подробнее
+									span.btn-name.btn-close Свернуть
+									img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
+									.total-sum
+										span Итого:
+										span.value 8081 &#8381;
 					.lk-orders-section.completed
-						.order-card
-							.main-info
-								span.text-b Заказ 9965
-								span.date от 06.10.2019
-								a.btn(href="#") Повторить заказ
-								span.text-b.float-right 1450 &#8381;
-								br
-								span.text-l #[span.g Оплата:] #[br] картой онлайн
-								.status.float-right
-									.circle-g
-									span.text-l Доставлен
-							.hidden.delivery
-								.delivery-main-info
-									span.text-b Доставка 443
-									.text-article
-										span.g.article-name Получение: 
-										p.info
-											span.text-l Постамат PickPoint
-											br 
-											span.text-l 117519, Москва, Кировоградская ул., 13А
-											br
-											span.text-l Время работы с 8:00 до 23:59
-											br
-											span.text-l 8 (800) 700-79-09
-										span.text-l с 6 ноября (ср)
-										.bottom-line
-											span.text-l.mr Стоимость: #[span.b 1 &#8381;]
-											span.text-l Способы оплаты: 
-											img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
-											img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
-											span.btn.float-right.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пунтке выдачи
-									.text-article
-										span.g.article-name Получатель:
-										p.info
-											span.text-l Ковалева Екатерина Андреевна
-											br
-											span.text-l 8 (903) 600 60-60
-									.progress-outer
-										.progress
-											.point.active
-												span Создан
-											.bar.active
-											.point.active
-												span Отправлен #[br]продавцу
-											.bar.active
-											.point.active
-												span Подтвержден #[br]продавцом
-											.bar.active
-											.point.active
-												span Получен #[br]курьерской #[br]службой
-											.bar
-											.point
-												span Доставлен в пункт выдачи
-											.bar
-											.point
-												span Получен
-											.progress-bar
-								.order-list
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Gucci]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 6060 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 2 шт.
-										span.price.sum 4040 &#8381;
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Affiction]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-										span.name Платье женское с поясом
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.delivery-item
-										.head
-											img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
-											span.name Доставка
-										span.price 1 &#8381;
-							.btn-more.lk-orders-btn-more
-								span.btn-name.btn-open Подробнее
-								span.btn-name.btn-close Свернуть
-								img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
-						.order-card
-							.main-info
-								span.text-b Заказ 9990
-								span.date от 01.10.2019
-								a.btn(href="#") Повторить заказ
-								span.text-b.float-right 438 &#8381;
-								br
-								span.text-l #[span.g Оплата:] #[br] при получении
-								.status.float-right
-									.circle-g
-									span.text-l Доставлен
-							.hidden.delivery
-								.delivery-main-info
-									span.text-b Доставка 443
-									.text-article
-										span.g.article-name Получение: 
-										p.info
-											span.text-l Постамат PickPoint
-											br 
-											span.text-l 117519, Москва, Кировоградская ул., 13А
-											br
-											span.text-l Время работы с 8:00 до 23:59
-											br
-											span.text-l 8 (800) 700-79-09
-										span.text-l с 6 ноября (ср)
-										.bottom-line
-											span.text-l.mr Стоимость: #[span.b 1 &#8381;]
-											span.text-l Способы оплаты: 
-											img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
-											img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
-											span.btn.float-right.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пунтке выдачи
-									.text-article
-										span.g.article-name Получатель:
-										p.info
-											span.text-l Ковалева Екатерина Андреевна
-											br
-											span.text-l 8 (903) 600 60-60
-									.progress-outer
-										.progress
-											.point.active
-												span Создан
-											.bar.active
-											.point.active
-												span Отправлен #[br]продавцу
-											.bar.active
-											.point.active
-												span Подтвержден #[br]продавцом
-											.bar.active
-											.point.active
-												span Получен #[br]курьерской #[br]службой
-											.bar
-											.point
-												span Доставлен в пункт выдачи
-											.bar
-											.point
-												span Получен
-											.progress-bar
-								.order-list
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Gucci]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 6060 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-										span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
-										span.price 2020 &#8381;
-										span.count 2 шт.
-										span.price.sum 4040 &#8381;
-									.shop-order-head
-										.text
-											span Магазин: #[span.black Affiction]
-											br
-											a(href="shop-page.html") Перейти к магазину
-										.sum
-											span Стоимость:
-											br
-											span.black.bold 2020 &#8381;
-									.list-item
-										img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-										span.name Платье женское с поясом
-										span.price 2020 &#8381;
-										span.count 1 шт.
-										span.price.sum 2020 &#8381;
-									.delivery-item
-										.head
-											img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
-											span.name Доставка
-										span.price 1 &#8381;
-							.btn-more.lk-orders-btn-more
-								span.btn-name.btn-open Подробнее
-								span.btn-name.btn-close Свернуть
-								img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
+						- for(i=1;i<3;i++)
+							.order-card
+								.main-info
+									span.text-b Заказ 9934
+									span.date от 05.11.2019
+									a.btn.desk(href="#") Повторить заказ
+									span.text-b.sum.float-right 8081 &#8381;
+									br
+									span.text-l.payment #[span.g Оплата:] #[br] при получении
+									.status.float-right
+										.circle-g
+										span.text-l Получен курьерской службой
+									a.btn.mob(href="#") Повторить заказ
+								.hidden.delivery
+									.delivery-main-info
+										span.text-b Доставка 443
+										.text-article
+											span.g.article-name Получение: 
+											p.info
+												span.text-l Постамат PickPoint
+												br 
+												span.text-l 117519, Москва, Кировоградская ул., 13А
+												br
+												span.text-l Время работы с 8:00 до 23:59
+												br
+												span.text-l 8 (800) 700-79-09
+											span.text-l с 6 ноября (ср)
+											.bottom-line
+												.sum
+													span.text-l Стоимость: #[span.b 1 &#8381;]
+												.payment
+													span.text-l Способы оплаты: 
+													img.pay(src="img/lk/pay-card.svg", alt="pay-card.svg")
+													img.pay(src="img/lk/pay-cash.svg", alt="pay-cash.svg")
+												span.btn.desk.float-right.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пункте выдачи
+										.text-article
+											span.g.article-name Получатель:
+											p.info
+												span.text-l Ковалева Екатерина Андреевна
+												br
+												span.text-l 8 (903) 600 60-60
+										span.btn.mob.popup-open(onclick="popupID='#lk-PickPoint'") Подробнее о пункте выдачи
+										.progress-outer
+											.progress
+												.point.active
+													span Создан
+												.bar.active
+												.point.active
+													span Отправлен #[br]продавцу
+												.bar.active
+												.point.active
+													span Подтвержден #[br]продавцом
+												.bar.active
+												.point.active
+													span Получен #[br]курьерской #[br]службой
+												.bar
+												.point
+													span Доставлен в пункт выдачи
+												.bar
+												.point
+													span Получен
+												.progress-bar
+									.order-list
+										.shop-order-head
+											.text
+												span Магазин: #[span.black Gucci]
+												br
+												a(href="shop-page.html") Перейти к магазину
+											.sum
+												span Стоимость:
+												br
+												span.black.bold 6060 &#8381;
+										.list-item
+											img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
+											.head-item
+												span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
+												.subtext Ближайшая доставка 8 ноября
+											span.price 2020 &#8381;
+											.count-outer
+												.sign.lk-orders-inputN-minus -
+												input.lk-orders-inputN(type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);")
+												.sign.lk-orders-inputN-plus +
+											span.price.sum 2020 &#8381;
+											img.close(src="img/close.svg" alt="close.svg")
+										.list-item
+											img(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
+											.head-item
+												span.name Кроссовки MEN'S AIR MONARCH IV #[br]TRAINING SHOE
+												.subtext Ближайшая доставка 8 ноября
+											span.price 2020 &#8381;
+											.count-outer
+												.sign.lk-orders-inputN-minus -
+												input.lk-orders-inputN(type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);")
+												.sign.lk-orders-inputN-plus +
+											span.price.sum 4040 &#8381;
+											img.close(src="img/close.svg" alt="close.svg")
+										.shop-order-head
+											.text
+												span Магазин: #[span.black Affiction]
+												br
+												a(href="shop-page.html") Перейти к магазину
+											.sum
+												span Стоимость:
+												br
+												span.black.bold 2020 &#8381;
+										.list-item
+											img(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
+											.head-item
+												span.name Платье женское с поясом
+												.subtext Ближайшая доставка 11 ноября
+											span.price 2020 &#8381;
+											.count-outer
+												.sign.lk-orders-inputN-minus -
+												input.lk-orders-inputN(type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);")
+												.sign.lk-orders-inputN-plus +
+											span.price.sum 2020 &#8381;
+											img.close(src="img/close.svg" alt="close.svg")
+										.delivery-item
+											.head
+												img(src="img/lk/delivery-car.svg", alt="delivery-car.svg")
+												span.name Доставка
+											span.price 1 &#8381;
+								.btn-more.lk-orders-btn-more
+									span.btn-name.btn-open Подробнее
+									span.btn-name.btn-close Свернуть
+									img.arrow(src="img/lk/arrow.svg", alt="arrow.svg")
+									.total-sum
+										span Итого:
+										span.value 8081 &#8381;
 				.lk-page.favorites
+					.page-header-mob
+						img.back.page-header-mob-back(src="img/lk/arrow-back.svg", alt="arrow-back.svg")
+						span.head Избранные
 					.navbar
 						.buttonSwitch.products.lk-favorites-btnSwitch.active(onclick="lkFavoritesSectionID='products'")
 							span Товары
@@ -927,9 +684,12 @@ block content
 											span lady &amp; gentleman
 				.lk-page.messages
 					.chats
+						.page-header-mob
+							img.back.page-header-mob-back(src="img/lk/arrow-back.svg", alt="arrow-back.svg")
+							span.head Сообщения
 						.navbar
 							.buttonSwitch.all.lk-messages-btnSwitch.active(onclick="lkMessagesSectionID='all'")
-								span Все сообщения
+								span Все #[.hide-mob сообщения]
 							.buttonSwitch.unread.lk-messages-btnSwitch(onclick="lkMessagesSectionID='unread'")
 								span Непрочитанные
 						.lk-messages-section.all(style="display: block")
@@ -1018,350 +778,88 @@ block content
 								img.item-preview(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
 								span.item-name Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE
 							.msg-list.lk-messages-conversation-msg-list
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-									.text-content
-										span.user-name Мария
-										span.date 20.11.2019
-										p.text Добрый день. Есть размер S?
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-									.text-content
-										span.user-name Мария
-										span.date 20.11.2019
-										p.text Добрый день. Есть размер S?
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-									.text-content
-										span.user-name Мария
-										span.date 20.11.2019
-										p.text Добрый день. Есть размер S?
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-									.text-content
-										span.user-name Мария
-										span.date 20.11.2019
-										p.text Добрый день. Есть размер S?
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item.your
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
-								.msg-item
-									img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
-									.text-content
-										span.user-name Елена
-										span.date 20.11.2019
-										p.text Добрый. Да
+								- for(i=1;i<7;i++)
+									.msg-item
+										img.user-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
+										.text-content
+											span.user-name Мария
+											span.date 20.11.2019
+											p.text Добрый день. Есть размер S?
+									.msg-item.your
+										img.user-preview(src="img/lk/customer-preview2.png", alt="customer-preview2.png")
+										.text-content
+											span.user-name Елена
+											span.date 20.11.2019
+											p.text Добрый. Да
 							.conversation-input.lk-messages-conversation-input
 								.input-outer
 									input(type="text" placeholder="Напишите сообщение...")
 									img.btn(src="img/lk/input-send-btn.svg", alt="input-send-btn.svg")
 				.lk-page.feedback
+					.page-header-mob
+						img.back.page-header-mob-back(src="img/lk/arrow-back.svg", alt="arrow-back.svg")
+						span.head Отзывы
 					.navbar
 						.buttonSwitch.your-feedback.lk-feedback-btnSwitch.active(onclick="lkFeedbackSectionID='your-feedback'")
-							span Ваши отзывы
+							span Ваши #[.hide-mob отзывы]
 						.buttonSwitch.customer-feedback.lk-feedback-btnSwitch(onclick="lkFeedbackSectionID='customer-feedback'")
-							span Отзывы покупателей
+							span.desk Отзывы покупателей
+							span.mob Покупателей
 					.lk-feedback-section.your-feedback(style="display: block;")
 						.feedback-list
-							.feedback-item
-								img.preview(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-								.text-content
-									span.text-g Магазин: #[span.text-b GUCCI]
-									a(href="shop-page.html").shop-link Перейти к магазину
-									br
-									span.name Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE
-									br
-									.rating
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-									span Отличный магазин! Рекомендую!
-								span.date 04.11.2019
-							.feedback-item
-								img.preview(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-								.text-content
-									span.text-g Магазин: #[span.text-b GUCCI]
-									a(href="shop-page.html").shop-link Перейти к магазину
-									br
-									span.name Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE
-									br
-									.rating
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-									span Отличный магазин! Рекомендую!
-								span.date 04.11.2019
-							.feedback-item
-								img.preview(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-								.text-content
-									span.text-g Магазин: #[span.text-b GUCCI]
-									a(href="shop-page.html").shop-link Перейти к магазину
-									br
-									span.name Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE
-									br
-									.rating
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-									span Отличный магазин! Рекомендую!
-								span.date 04.11.2019
-							.feedback-item
-								img.preview(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
-								.text-content
-									span.text-g Магазин: #[span.text-b GUCCI]
-									a(href="shop-page.html").shop-link Перейти к магазину
-									br
-									span.name Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE
-									br
-									.rating
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-									span Отличный магазин! Рекомендую!
-								span.date 04.11.2019
+							- for(i=1;i<5;i++)
+								.feedback-item
+									img.preview(src="img/lk/list-item-img.jpg", alt="list-item-img.jpg")
+									.text-content
+										span.text-g Магазин: #[a(href="shop-page.html").text-b Gucci]
+										a(href="shop-page.html").shop-link Перейти к магазину
+										br
+										span.name Кроссовки Men’s Air Monarch IV training shoe
+										br
+										.rating
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										span.msg-text Отличный магазин! Рекомендую!
+									span.date 04.11.2019
 						
 					.lk-feedback-section.customer-feedback
 						.feedback-list
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
+							- for(i=1;i<9;i++)
+								.feedback-item.unread
+									img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
 									span.item-name Платье женское с поясом
 									.customer-feedback
 										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item.unread
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
+										.customer-name Екатерина 
+										.rating
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+											img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										br
+										.customer-login ekaterina777
+										p.feedback-text Отличное качество! Быстрая доставка!
+									a.send(href="#") Ответить на отзыв
+									span.date 04.11.2019
 							.feedback-item
 								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
-								a.send(href="#") Ответить на отзыв
-								span.date 04.11.2019
-							.feedback-item
-								img.item-preview(src="img/lk/list-item-img2.jpg", alt="list-item-img2.jpg")
-								.feedback-item-content.content
-									span.item-name Платье женское с поясом
-									.customer-feedback
-										img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
-										.customer-feedback-content.content
-											.customer-name Екатерина 
-											.rating
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-												img(src="img/shop-page/star-active.svg", alt="star-active.svg")
-											br
-											.customer-login ekaterina777
-											p.feedback-text Отличное качество! Быстрая доставка!
+								span.item-name Платье женское с поясом
+								.customer-feedback
+									img.customer-preview(src="img/lk/customer-preview.png", alt="customer-preview.png")
+									.customer-name Екатерина 
+									.rating
+										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+										img(src="img/shop-page/star-active.svg", alt="star-active.svg")
+									br
+									.customer-login ekaterina777
+									p.feedback-text Отличное качество! Быстрая доставка!
 								a.send(href="#") Ответить на отзыв
 								span.date 04.11.2019
 
@@ -1369,6 +867,24 @@ block scripts
 	script(src="js/jquery.maskedinput.min.js")
 	script(src="js/select2.full.min.js")
 	script.
+		function isright(obj) {
+			var value = obj.value.replace(/\D/g,'')||0;
+			var min = obj.getAttribute('min');
+			var max = obj.getAttribute('max');
+			obj.value = Math.min(max, Math.max(min, value));
+		}
+
+
+	script.
+		$(window).resize(function(){
+			if($(window).width() <= 1024){
+				$('nav.sidebar').fadeOut(250);
+				$('.lk-page.active').fadeIn(250);
+			}else{
+				$('nav.sidebar').fadeIn(250);
+				$('.lk-page').not('.lk-page.active').fadeOut(250);
+			}
+		});
 		$(document).ready(function(){
 			$(function($) {
 				$('input[type="tel"]').mask("+7 (999) 999-99-99")
@@ -1390,6 +906,7 @@ block scripts
 
 				if($(window).width() < 1025){
 					$('nav.sidebar').fadeOut(250);
+
 				}
 
 				setTimeout(function(){
@@ -1436,6 +953,16 @@ block scripts
 				$(this).toggleClass('active');
 				$(this).prev('.hidden.delivery').slideToggle(250);
 			});
+
+			$('.lk-orders-inputN-minus, .lk-orders-inputN-plus').on('click', function(e) {
+				const isNegative = $(e.target).closest('.lk-orders-inputN-minus').is('.lk-orders-inputN-minus');
+				const input = $(e.target).closest('.count-outer').find('input');
+				if (input.is('input')) {
+					input[0][isNegative ? 'stepDown' : 'stepUp']()
+				}
+			});
+
+
 
 			$('.lk-feedback-btnSwitch').click(function(){
 				$(this).addClass('active');
@@ -1507,3 +1034,11 @@ block scripts
 		}
 
 		$(window).on('resize', msgHeightRefresh);
+
+		$('.page-header-mob-back').click(function(){
+			$('.lk-page').fadeOut(150);
+			$('nav.sidebar').delay(250).fadeIn(250);
+		});
+
+
+		

@@ -67,26 +67,31 @@
     </div>
     <div class="popup-container" id="popup-container">
       <div class="wrap popup-wrap" id="popup-wrap">
-        <div class="popup-content lk-addDest-popup" id="lk-addDest">
+        <div class="popup-content lk-addDest-popup" id="lk-addDest"><img class="img-close popup-close" src="img/close.svg" alt="close.svg">
           <div class="topline"><span>Добавить адрес</span></div>
           <form>
             <label class="label-adress">
-              <input class="input-adress" type="text" onkeydown="this.classList.add('entered')" onkeyup="if(this.value.length == 0){this.classList.remove('entered')}" onfocus="this.parentNode.classList.add('active')" onblur="this.parentNode.classList.remove('active')">Город, улица, номер дома <span class="red">*</span>
+              <input class="input-adress" id="lk-addDest-fucking-input" type="text" onkeydown="this.classList.add('entered')" onkeyup="if(this.value.length == 0){this.classList.remove('entered')}" onfocus="this.parentNode.classList.add('active'); if(this.value.length == 0){this.classList.remove('entered')}" onblur="this.parentNode.classList.remove('active')">Город, улица, номер дома <span class="red">*</span>
             </label>
-            <input type="text" placeholder="Кв/офис">
-            <input type="text" placeholder="Этаж">
-            <input type="text" placeholder="Подъезд">
-            <input type="text" placeholder="Домофон">
+            <div class="inputs-outer">
+              <input type="text" placeholder="Кв/офис">
+              <input type="text" placeholder="Этаж">
+              <input type="text" placeholder="Подъезд">
+              <input type="text" placeholder="Домофон">
+            </div>
             <div class="btns">
               <input class="popup-close" type="submit" value="Подтвердить">
-              <input class="popup-close" type="reset" value="Отменить">
+              <input class="popup-close" type="reset" value="Отменить" onclick="document.getElementById('lk-addDest-fucking-input').classList.remove('entered')">
             </div>
           </form>
         </div>
         <div class="popup-content lk-PickPoint" id="lk-PickPoint"><img class="img-close popup-close" src="img/close.svg" alt="close.svg">
           <div class="topline"><span>Подробнее о пункте выдачи</span></div>
           <div class="content"><span class="text-l">Постамат PickPoint 8 (800) 700-79-09, 117519, Москва, Кировоградская ул., 13А</span><br><span class="text-l">с 6 ноября (ср)</span>
-            <div class="text-line"><span class="text-l mr"><span class="text-b">Стоимость:</span> 1 руб.</span><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div>
+            <div class="text-line">
+              <div class="sum"><span class="text-l"><span class="text-b">Стоимость:</span> 1 руб.</span></div>
+              <div class="payment"><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div>
+            </div>
             <p class="text-block"><span class="text-b">Как добраться</span><br><span class="text-l">Постамат расположен в ТРЦ Columbus. Транспорт: автобус 797. Метро Пражская.</span></p>
             <p class="text-block"><span class="text-b">Время работы</span><br><span class="text-l">пн-вс: 8:00 - 23:59</span></p>
           </div>
@@ -575,7 +580,7 @@
       <div class="container">
         <div class="main-content">
           <nav class="sidebar"><img class="close mob" src="img/close.svg" alt="close.svg">
-            <div class="head mob">Настройки</div>
+            <div class="head mob">Личный кабинет</div>
             <ul>
               <li class="lk-sidebar-link active" onclick="lkPageID='personal-info'">Личные данные</li>
               <li class="lk-sidebar-link" onclick="lkPageID='destinations'">Адреса</li>
@@ -585,7 +590,8 @@
               <li class="lk-sidebar-link" onclick="lkPageID='feedback'">Отзывы<span class="value">5</span></li>
             </ul>
           </nav>
-          <div class="lk-page personal-info">
+          <div class="lk-page personal-info active">
+            <div class="page-header-mob"><img class="back page-header-mob-back" src="img/lk/arrow-back.svg" alt="arrow-back.svg"><span class="head">Личные данные</span></div>
             <div class="lk-article contacts-info">
               <form>
                 <p class="head">Контактные данные</p>
@@ -599,156 +605,158 @@
                   <input type="text" name="Отчество" placeholder="Отчество">
                 </div>
                 <div class="input-outer">
-                  <select class="custom-select2 js-states form-control day" name="state">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                  </select>
-                  <select class="custom-select2 js-states form-control month" name="state">
-                    <option value="Январь">Январь</option>
-                    <option value="Февраль">Февраль</option>
-                    <option value="Март">Март</option>
-                    <option value="Апрель">Апрель</option>
-                    <option value="Май ">Май </option>
-                    <option value="Июнь">Июнь</option>
-                    <option value="Июль">Июль</option>
-                    <option value="Август">Август</option>
-                    <option value="Сентябрь">Сентябрь</option>
-                    <option value="Октябрь">Октябрь</option>
-                    <option value="Ноябрь">Ноябрь</option>
-                    <option value="Декабрь">Декабрь</option>
-                  </select>
-                  <select class="custom-select2 js-states form-control year" name="state">
-                    <option>2020</option>
-                    <option>2019</option>
-                    <option>2018</option>
-                    <option>2017</option>
-                    <option>2016</option>
-                    <option>2015</option>
-                    <option>2014</option>
-                    <option>2013</option>
-                    <option>2012</option>
-                    <option>2011</option>
-                    <option>2010</option>
-                    <option>2009</option>
-                    <option>2008</option>
-                    <option>2007</option>
-                    <option>2006</option>
-                    <option>2005</option>
-                    <option>2004</option>
-                    <option>2003</option>
-                    <option>2002</option>
-                    <option>2001</option>
-                    <option>2000</option>
-                    <option>1999</option>
-                    <option>1998</option>
-                    <option>1997</option>
-                    <option>1996</option>
-                    <option>1995</option>
-                    <option>1994</option>
-                    <option>1993</option>
-                    <option>1992</option>
-                    <option>1991</option>
-                    <option>1990</option>
-                    <option>1989</option>
-                    <option>1988</option>
-                    <option>1987</option>
-                    <option>1986</option>
-                    <option>1985</option>
-                    <option>1984</option>
-                    <option>1983</option>
-                    <option>1982</option>
-                    <option>1981</option>
-                    <option>1980</option>
-                    <option>1979</option>
-                    <option>1978</option>
-                    <option>1977</option>
-                    <option>1976</option>
-                    <option>1975</option>
-                    <option>1974</option>
-                    <option>1973</option>
-                    <option>1972</option>
-                    <option>1971</option>
-                    <option>1970</option>
-                    <option>1969</option>
-                    <option>1968</option>
-                    <option>1967</option>
-                    <option>1966</option>
-                    <option>1965</option>
-                    <option>1964</option>
-                    <option>1963</option>
-                    <option>1962</option>
-                    <option>1961</option>
-                    <option>1960</option>
-                    <option>1959</option>
-                    <option>1958</option>
-                    <option>1957</option>
-                    <option>1956</option>
-                    <option>1955</option>
-                    <option>1954</option>
-                    <option>1953</option>
-                    <option>1952</option>
-                    <option>1951</option>
-                    <option>1950</option>
-                    <option>1949</option>
-                    <option>1948</option>
-                    <option>1947</option>
-                    <option>1946</option>
-                    <option>1945</option>
-                    <option>1944</option>
-                    <option>1943</option>
-                    <option>1942</option>
-                    <option>1941</option>
-                    <option>1940</option>
-                    <option>1939</option>
-                    <option>1938</option>
-                    <option>1937</option>
-                    <option>1936</option>
-                    <option>1935</option>
-                    <option>1934</option>
-                    <option>1933</option>
-                    <option>1932</option>
-                    <option>1931</option>
-                    <option>1930</option>
-                    <option>1929</option>
-                    <option>1928</option>
-                    <option>1927</option>
-                    <option>1926</option>
-                    <option>1925</option>
-                    <option>1924</option>
-                    <option>1923</option>
-                    <option>1922</option>
-                    <option>1921</option>
-                    <option>1920</option>
-                  </select><span class="input-name">Дата рождения <span class="red">*</span></span>
+                  <div class="select-outer">
+                    <select class="custom-select2 js-states form-control day" name="state">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                    <select class="custom-select2 js-states form-control month" name="state">
+                      <option value="Январь">Январь</option>
+                      <option value="Февраль">Февраль</option>
+                      <option value="Март">Март</option>
+                      <option value="Апрель">Апрель</option>
+                      <option value="Май ">Май </option>
+                      <option value="Июнь">Июнь</option>
+                      <option value="Июль">Июль</option>
+                      <option value="Август">Август</option>
+                      <option value="Сентябрь">Сентябрь</option>
+                      <option value="Октябрь">Октябрь</option>
+                      <option value="Ноябрь">Ноябрь</option>
+                      <option value="Декабрь">Декабрь</option>
+                    </select>
+                    <select class="custom-select2 js-states form-control year" name="state">
+                      <option>2020</option>
+                      <option>2019</option>
+                      <option>2018</option>
+                      <option>2017</option>
+                      <option>2016</option>
+                      <option>2015</option>
+                      <option>2014</option>
+                      <option>2013</option>
+                      <option>2012</option>
+                      <option>2011</option>
+                      <option>2010</option>
+                      <option>2009</option>
+                      <option>2008</option>
+                      <option>2007</option>
+                      <option>2006</option>
+                      <option>2005</option>
+                      <option>2004</option>
+                      <option>2003</option>
+                      <option>2002</option>
+                      <option>2001</option>
+                      <option>2000</option>
+                      <option>1999</option>
+                      <option>1998</option>
+                      <option>1997</option>
+                      <option>1996</option>
+                      <option>1995</option>
+                      <option>1994</option>
+                      <option>1993</option>
+                      <option>1992</option>
+                      <option>1991</option>
+                      <option>1990</option>
+                      <option>1989</option>
+                      <option>1988</option>
+                      <option>1987</option>
+                      <option>1986</option>
+                      <option>1985</option>
+                      <option>1984</option>
+                      <option>1983</option>
+                      <option>1982</option>
+                      <option>1981</option>
+                      <option>1980</option>
+                      <option>1979</option>
+                      <option>1978</option>
+                      <option>1977</option>
+                      <option>1976</option>
+                      <option>1975</option>
+                      <option>1974</option>
+                      <option>1973</option>
+                      <option>1972</option>
+                      <option>1971</option>
+                      <option>1970</option>
+                      <option>1969</option>
+                      <option>1968</option>
+                      <option>1967</option>
+                      <option>1966</option>
+                      <option>1965</option>
+                      <option>1964</option>
+                      <option>1963</option>
+                      <option>1962</option>
+                      <option>1961</option>
+                      <option>1960</option>
+                      <option>1959</option>
+                      <option>1958</option>
+                      <option>1957</option>
+                      <option>1956</option>
+                      <option>1955</option>
+                      <option>1954</option>
+                      <option>1953</option>
+                      <option>1952</option>
+                      <option>1951</option>
+                      <option>1950</option>
+                      <option>1949</option>
+                      <option>1948</option>
+                      <option>1947</option>
+                      <option>1946</option>
+                      <option>1945</option>
+                      <option>1944</option>
+                      <option>1943</option>
+                      <option>1942</option>
+                      <option>1941</option>
+                      <option>1940</option>
+                      <option>1939</option>
+                      <option>1938</option>
+                      <option>1937</option>
+                      <option>1936</option>
+                      <option>1935</option>
+                      <option>1934</option>
+                      <option>1933</option>
+                      <option>1932</option>
+                      <option>1931</option>
+                      <option>1930</option>
+                      <option>1929</option>
+                      <option>1928</option>
+                      <option>1927</option>
+                      <option>1926</option>
+                      <option>1925</option>
+                      <option>1924</option>
+                      <option>1923</option>
+                      <option>1922</option>
+                      <option>1921</option>
+                      <option>1920</option>
+                    </select>
+                  </div><span class="input-name">Дата рождения <span class="red">*</span></span>
                   <div class="checkbox-outer"><span class="name">Пол <span class="red">*</span></span>
                     <input id="lk-form__gender_female" type="radio" name="lk-form__gender">
                     <label for="lk-form__gender_female">Женский</label>
@@ -777,12 +785,13 @@
               </form>
             </div>
           </div>
-          <div class="lk-page destinations"><a class="btn addDest popup-open" href="#" onclick="popupID='#lk-addDest'">Добавить адрес</a>
+          <div class="lk-page destinations">
+            <div class="page-header-mob"><img class="back page-header-mob-back" src="img/lk/arrow-back.svg" alt="arrow-back.svg"><span class="head">Адреса</span></div><a class="btn addDest popup-open" href="#" onclick="popupID='#lk-addDest'">Добавить адрес</a>
             <div class="dest-card">
               <p class="card-name">Адрес получения</p>
               <p class="adress-value">г. Москва, ул. Донская, д. 8 стр. 1, кв. 100</p>
               <div class="btns">
-                <div class="btn">
+                <div class="btn fav-radio">
                   <input class="dest-input-adressDefault" id="dest-adressDefault1" type="radio" name="dest-adressDefault-check">
                   <label for="dest-adressDefault1"> <span>Адрес по умолчанию</span></label>
                 </div><a class="btn edit" href="#">Редактировать</a><a class="btn delete" href="#">Удалить</a>
@@ -792,34 +801,39 @@
               <p class="card-name">Адрес получения</p>
               <p class="adress-value">г. Москва, ул. Кировоградская, д. 7 к. 2, кв. 45</p>
               <div class="btns">
-                <div class="btn">
+                <div class="btn fav-radio">
                   <input class="dest-input-adressDefault" id="dest-adressDefault2" type="radio" name="dest-adressDefault-check">
                   <label for="dest-adressDefault2"> <span>Адрес по умолчанию</span></label>
-                </div><a class="btn edit" href="#">Редактировать</a><a class="btn delete" href="#">Удалить		</a>
+                </div><a class="btn edit" href="#">Редактировать</a><a class="btn delete" href="#">Удалить	</a>
               </div>
             </div>
           </div>
           <div class="lk-page orders">
+            <div class="page-header-mob"><img class="back page-header-mob-back" src="img/lk/arrow-back.svg" alt="arrow-back.svg"><span class="head">Заказы</span></div>
             <div class="navbar">
               <div class="buttonSwitch all lk-orders-btnSwitch active" onclick="lkOrdersSectionID='all'"><span>Все заказы</span></div>
-              <div class="buttonSwitch completed lk-orders-btnSwitch" onclick="lkOrdersSectionID='completed'"><span>Завершенные заказы</span></div>
+              <div class="buttonSwitch completed lk-orders-btnSwitch" onclick="lkOrdersSectionID='completed'"><span>Завершенные 
+                  <div class="hide-mob">заказы</div></span></div>
             </div>
             <div class="lk-orders-section all" style="display: block">
               <div class="order-card">
-                <div class="main-info"><span class="text-b">Заказ 9934</span><span class="date">от 05.11.2019</span><a class="btn" href="#">Повторить заказ</a><span class="text-b float-right">8081 &#8381;</span><br><span class="text-l"><span class="g">Оплата:</span> <br> при получении</span>
+                <div class="main-info"><span class="text-b">Заказ 9934</span><span class="date">от 05.11.2019</span><a class="btn desk" href="#">Повторить заказ</a><span class="text-b sum float-right">8081 &#8381;</span><br><span class="text-l payment"><span class="g">Оплата:</span> <br> при получении</span>
                   <div class="status float-right">
                     <div class="circle-g"></div><span class="text-l">Получен курьерской службой</span>
-                  </div>
+                  </div><a class="btn mob" href="#">Повторить заказ</a>
                 </div>
                 <div class="hidden delivery">
                   <div class="delivery-main-info"><span class="text-b">Доставка 443</span>
                     <div class="text-article"><span class="g article-name">Получение: </span>
                       <p class="info"><span class="text-l">Постамат PickPoint</span><br><span class="text-l">117519, Москва, Кировоградская ул., 13А</span><br><span class="text-l">Время работы с 8:00 до 23:59</span><br><span class="text-l">8 (800) 700-79-09</span></p><span class="text-l">с 6 ноября (ср)</span>
-                      <div class="bottom-line"><span class="text-l mr">Стоимость: <span class="b">1 &#8381;</span></span><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"><span class="btn float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пунтке выдачи</span></div>
+                      <div class="bottom-line">
+                        <div class="sum"><span class="text-l">Стоимость: <span class="b">1 &#8381;</span></span></div>
+                        <div class="payment"><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div><span class="btn desk float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
+                      </div>
                     </div>
                     <div class="text-article"><span class="g article-name">Получатель:</span>
                       <p class="info"><span class="text-l">Ковалева Екатерина Андреевна</span><br><span class="text-l">8 (903) 600 60-60</span></p>
-                    </div>
+                    </div><span class="btn mob popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
                     <div class="progress-outer">
                       <div class="progress">
                         <div class="point active"><span>Создан</span></div>
@@ -842,13 +856,40 @@
                       <div class="text"><span>Магазин: <span class="black">Gucci</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">6060 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">2 шт.</span><span class="price sum">4040 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">4040 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="shop-order-head">
                       <div class="text"><span>Магазин: <span class="black">Affiction</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">2020 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="name">Платье женское с поясом</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
+                      <div class="head-item"><span class="name">Платье женское с поясом</span>
+                        <div class="subtext">Ближайшая доставка 11 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="delivery-item">
                       <div class="head"><img src="img/lk/delivery-car.svg" alt="delivery-car.svg"><span class="name">Доставка</span></div><span class="price">1 &#8381;</span>
                     </div>
@@ -859,20 +900,23 @@
                 </div>
               </div>
               <div class="order-card">
-                <div class="main-info"><span class="text-b">Заказ 9965</span><span class="date">от 06.10.2019</span><a class="btn" href="#">Повторить заказ</a><span class="text-b float-right">1450 &#8381;</span><br><span class="text-l"><span class="g">Оплата:</span> <br> картой онлайн</span>
+                <div class="main-info"><span class="text-b">Заказ 9934</span><span class="date">от 05.11.2019</span><a class="btn desk" href="#">Повторить заказ</a><span class="text-b sum float-right">8081 &#8381;</span><br><span class="text-l payment"><span class="g">Оплата:</span> <br> при получении</span>
                   <div class="status float-right">
-                    <div class="circle-g"></div><span class="text-l">Доставлен</span>
-                  </div>
+                    <div class="circle-g"></div><span class="text-l">Получен курьерской службой</span>
+                  </div><a class="btn mob" href="#">Повторить заказ</a>
                 </div>
                 <div class="hidden delivery">
                   <div class="delivery-main-info"><span class="text-b">Доставка 443</span>
                     <div class="text-article"><span class="g article-name">Получение: </span>
                       <p class="info"><span class="text-l">Постамат PickPoint</span><br><span class="text-l">117519, Москва, Кировоградская ул., 13А</span><br><span class="text-l">Время работы с 8:00 до 23:59</span><br><span class="text-l">8 (800) 700-79-09</span></p><span class="text-l">с 6 ноября (ср)</span>
-                      <div class="bottom-line"><span class="text-l mr">Стоимость: <span class="b">1 &#8381;</span></span><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"><span class="btn float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пунтке выдачи</span></div>
+                      <div class="bottom-line">
+                        <div class="sum"><span class="text-l">Стоимость: <span class="b">1 &#8381;</span></span></div>
+                        <div class="payment"><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div><span class="btn desk float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
+                      </div>
                     </div>
                     <div class="text-article"><span class="g article-name">Получатель:</span>
                       <p class="info"><span class="text-l">Ковалева Екатерина Андреевна</span><br><span class="text-l">8 (903) 600 60-60</span></p>
-                    </div>
+                    </div><span class="btn mob popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
                     <div class="progress-outer">
                       <div class="progress">
                         <div class="point active"><span>Создан</span></div>
@@ -895,35 +939,67 @@
                       <div class="text"><span>Магазин: <span class="black">Gucci</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">6060 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">2 шт.</span><span class="price sum">4040 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">4040 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="shop-order-head">
                       <div class="text"><span>Магазин: <span class="black">Affiction</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">2020 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="name">Платье женское с поясом</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
+                      <div class="head-item"><span class="name">Платье женское с поясом</span>
+                        <div class="subtext">Ближайшая доставка 11 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="delivery-item">
                       <div class="head"><img src="img/lk/delivery-car.svg" alt="delivery-car.svg"><span class="name">Доставка</span></div><span class="price">1 &#8381;</span>
                     </div>
                   </div>
                 </div>
-                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg"></div>
+                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg">
+                  <div class="total-sum"><span>Итого:</span><span class="value">8081 &#8381;</span></div>
+                </div>
               </div>
               <div class="order-card">
-                <div class="main-info"><span class="text-b">Заказ 9990</span><span class="date">от 01.10.2019</span><a class="btn" href="#">Повторить заказ</a><span class="text-b float-right">438 &#8381;</span><br><span class="text-l"><span class="g">Оплата:</span> <br> при получении</span>
+                <div class="main-info"><span class="text-b">Заказ 9934</span><span class="date">от 05.11.2019</span><a class="btn desk" href="#">Повторить заказ</a><span class="text-b sum float-right">8081 &#8381;</span><br><span class="text-l payment"><span class="g">Оплата:</span> <br> при получении</span>
                   <div class="status float-right">
-                    <div class="circle-g"></div><span class="text-l">Доставлен</span>
-                  </div>
+                    <div class="circle-g"></div><span class="text-l">Получен курьерской службой</span>
+                  </div><a class="btn mob" href="#">Повторить заказ</a>
                 </div>
                 <div class="hidden delivery">
                   <div class="delivery-main-info"><span class="text-b">Доставка 443</span>
                     <div class="text-article"><span class="g article-name">Получение: </span>
                       <p class="info"><span class="text-l">Постамат PickPoint</span><br><span class="text-l">117519, Москва, Кировоградская ул., 13А</span><br><span class="text-l">Время работы с 8:00 до 23:59</span><br><span class="text-l">8 (800) 700-79-09</span></p><span class="text-l">с 6 ноября (ср)</span>
-                      <div class="bottom-line"><span class="text-l mr">Стоимость: <span class="b">1 &#8381;</span></span><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"><span class="btn float-right popup-open" onclick="popupID='#lk-PickPoint'"> Подробнее о пунтке выдачи</span></div>
+                      <div class="bottom-line">
+                        <div class="sum"><span class="text-l">Стоимость: <span class="b">1 &#8381;</span></span></div>
+                        <div class="payment"><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div><span class="btn desk float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
+                      </div>
                     </div>
                     <div class="text-article"><span class="g article-name">Получатель:</span>
                       <p class="info"><span class="text-l">Ковалева Екатерина Андреевна</span><br><span class="text-l">8 (903) 600 60-60</span></p>
-                    </div>
+                    </div><span class="btn mob popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
                     <div class="progress-outer">
                       <div class="progress">
                         <div class="point active"><span>Создан</span></div>
@@ -946,37 +1022,69 @@
                       <div class="text"><span>Магазин: <span class="black">Gucci</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">6060 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">2 шт.</span><span class="price sum">4040 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">4040 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="shop-order-head">
                       <div class="text"><span>Магазин: <span class="black">Affiction</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">2020 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="name">Платье женское с поясом</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
+                      <div class="head-item"><span class="name">Платье женское с поясом</span>
+                        <div class="subtext">Ближайшая доставка 11 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="delivery-item">
                       <div class="head"><img src="img/lk/delivery-car.svg" alt="delivery-car.svg"><span class="name">Доставка</span></div><span class="price">1 &#8381;</span>
                     </div>
                   </div>
                 </div>
-                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg"></div>
+                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg">
+                  <div class="total-sum"><span>Итого:</span><span class="value">8081 &#8381;</span></div>
+                </div>
               </div>
             </div>
             <div class="lk-orders-section completed">
               <div class="order-card">
-                <div class="main-info"><span class="text-b">Заказ 9965</span><span class="date">от 06.10.2019</span><a class="btn" href="#">Повторить заказ</a><span class="text-b float-right">1450 &#8381;</span><br><span class="text-l"><span class="g">Оплата:</span> <br> картой онлайн</span>
+                <div class="main-info"><span class="text-b">Заказ 9934</span><span class="date">от 05.11.2019</span><a class="btn desk" href="#">Повторить заказ</a><span class="text-b sum float-right">8081 &#8381;</span><br><span class="text-l payment"><span class="g">Оплата:</span> <br> при получении</span>
                   <div class="status float-right">
-                    <div class="circle-g"></div><span class="text-l">Доставлен</span>
-                  </div>
+                    <div class="circle-g"></div><span class="text-l">Получен курьерской службой</span>
+                  </div><a class="btn mob" href="#">Повторить заказ</a>
                 </div>
                 <div class="hidden delivery">
                   <div class="delivery-main-info"><span class="text-b">Доставка 443</span>
                     <div class="text-article"><span class="g article-name">Получение: </span>
                       <p class="info"><span class="text-l">Постамат PickPoint</span><br><span class="text-l">117519, Москва, Кировоградская ул., 13А</span><br><span class="text-l">Время работы с 8:00 до 23:59</span><br><span class="text-l">8 (800) 700-79-09</span></p><span class="text-l">с 6 ноября (ср)</span>
-                      <div class="bottom-line"><span class="text-l mr">Стоимость: <span class="b">1 &#8381;</span></span><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"><span class="btn float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пунтке выдачи</span></div>
+                      <div class="bottom-line">
+                        <div class="sum"><span class="text-l">Стоимость: <span class="b">1 &#8381;</span></span></div>
+                        <div class="payment"><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div><span class="btn desk float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
+                      </div>
                     </div>
                     <div class="text-article"><span class="g article-name">Получатель:</span>
                       <p class="info"><span class="text-l">Ковалева Екатерина Андреевна</span><br><span class="text-l">8 (903) 600 60-60</span></p>
-                    </div>
+                    </div><span class="btn mob popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
                     <div class="progress-outer">
                       <div class="progress">
                         <div class="point active"><span>Создан</span></div>
@@ -999,35 +1107,67 @@
                       <div class="text"><span>Магазин: <span class="black">Gucci</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">6060 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">2 шт.</span><span class="price sum">4040 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">4040 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="shop-order-head">
                       <div class="text"><span>Магазин: <span class="black">Affiction</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">2020 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="name">Платье женское с поясом</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
+                      <div class="head-item"><span class="name">Платье женское с поясом</span>
+                        <div class="subtext">Ближайшая доставка 11 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="delivery-item">
                       <div class="head"><img src="img/lk/delivery-car.svg" alt="delivery-car.svg"><span class="name">Доставка</span></div><span class="price">1 &#8381;</span>
                     </div>
                   </div>
                 </div>
-                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg"></div>
+                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg">
+                  <div class="total-sum"><span>Итого:</span><span class="value">8081 &#8381;</span></div>
+                </div>
               </div>
               <div class="order-card">
-                <div class="main-info"><span class="text-b">Заказ 9990</span><span class="date">от 01.10.2019</span><a class="btn" href="#">Повторить заказ</a><span class="text-b float-right">438 &#8381;</span><br><span class="text-l"><span class="g">Оплата:</span> <br> при получении</span>
+                <div class="main-info"><span class="text-b">Заказ 9934</span><span class="date">от 05.11.2019</span><a class="btn desk" href="#">Повторить заказ</a><span class="text-b sum float-right">8081 &#8381;</span><br><span class="text-l payment"><span class="g">Оплата:</span> <br> при получении</span>
                   <div class="status float-right">
-                    <div class="circle-g"></div><span class="text-l">Доставлен</span>
-                  </div>
+                    <div class="circle-g"></div><span class="text-l">Получен курьерской службой</span>
+                  </div><a class="btn mob" href="#">Повторить заказ</a>
                 </div>
                 <div class="hidden delivery">
                   <div class="delivery-main-info"><span class="text-b">Доставка 443</span>
                     <div class="text-article"><span class="g article-name">Получение: </span>
                       <p class="info"><span class="text-l">Постамат PickPoint</span><br><span class="text-l">117519, Москва, Кировоградская ул., 13А</span><br><span class="text-l">Время работы с 8:00 до 23:59</span><br><span class="text-l">8 (800) 700-79-09</span></p><span class="text-l">с 6 ноября (ср)</span>
-                      <div class="bottom-line"><span class="text-l mr">Стоимость: <span class="b">1 &#8381;</span></span><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"><span class="btn float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пунтке выдачи</span></div>
+                      <div class="bottom-line">
+                        <div class="sum"><span class="text-l">Стоимость: <span class="b">1 &#8381;</span></span></div>
+                        <div class="payment"><span class="text-l">Способы оплаты: </span><img class="pay" src="img/lk/pay-card.svg" alt="pay-card.svg"><img class="pay" src="img/lk/pay-cash.svg" alt="pay-cash.svg"></div><span class="btn desk float-right popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
+                      </div>
                     </div>
                     <div class="text-article"><span class="g article-name">Получатель:</span>
                       <p class="info"><span class="text-l">Ковалева Екатерина Андреевна</span><br><span class="text-l">8 (903) 600 60-60</span></p>
-                    </div>
+                    </div><span class="btn mob popup-open" onclick="popupID='#lk-PickPoint'">Подробнее о пункте выдачи</span>
                     <div class="progress-outer">
                       <div class="progress">
                         <div class="point active"><span>Создан</span></div>
@@ -1050,23 +1190,53 @@
                       <div class="text"><span>Магазин: <span class="black">Gucci</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">6060 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
-                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span><span class="price">2020 &#8381;</span><span class="count">2 шт.</span><span class="price sum">4040 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
+                    <div class="list-item"><img src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
+                      <div class="head-item"><span class="name">Кроссовки MEN'S AIR MONARCH IV <br>TRAINING SHOE</span>
+                        <div class="subtext">Ближайшая доставка 8 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">4040 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="shop-order-head">
                       <div class="text"><span>Магазин: <span class="black">Affiction</span></span><br><a href="shop-page.html">Перейти к магазину</a></div>
                       <div class="sum"><span>Стоимость:</span><br><span class="black bold">2020 &#8381;</span></div>
                     </div>
-                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="name">Платье женское с поясом</span><span class="price">2020 &#8381;</span><span class="count">1 шт.</span><span class="price sum">2020 &#8381;</span></div>
+                    <div class="list-item"><img src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
+                      <div class="head-item"><span class="name">Платье женское с поясом</span>
+                        <div class="subtext">Ближайшая доставка 11 ноября</div>
+                      </div><span class="price">2020 &#8381;</span>
+                      <div class="count-outer">
+                        <div class="sign lk-orders-inputN-minus">-</div>
+                        <input class="lk-orders-inputN" type="number" title="Кол-во" step="1" min="1" value="1" max="99" onblur="isright(this);">
+                        <div class="sign lk-orders-inputN-plus">+</div>
+                      </div><span class="price sum">2020 &#8381;</span><img class="close" src="img/close.svg" alt="close.svg">
+                    </div>
                     <div class="delivery-item">
                       <div class="head"><img src="img/lk/delivery-car.svg" alt="delivery-car.svg"><span class="name">Доставка</span></div><span class="price">1 &#8381;</span>
                     </div>
                   </div>
                 </div>
-                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg"></div>
+                <div class="btn-more lk-orders-btn-more"><span class="btn-name btn-open">Подробнее</span><span class="btn-name btn-close">Свернуть</span><img class="arrow" src="img/lk/arrow.svg" alt="arrow.svg">
+                  <div class="total-sum"><span>Итого:</span><span class="value">8081 &#8381;</span></div>
+                </div>
               </div>
             </div>
           </div>
           <div class="lk-page favorites">
+            <div class="page-header-mob"><img class="back page-header-mob-back" src="img/lk/arrow-back.svg" alt="arrow-back.svg"><span class="head">Избранные</span></div>
             <div class="navbar">
               <div class="buttonSwitch products lk-favorites-btnSwitch active" onclick="lkFavoritesSectionID='products'"><span>Товары</span></div>
               <div class="buttonSwitch shops lk-favorites-btnSwitch" onclick="lkFavoritesSectionID='shops'"><span>Магазины</span></div>
@@ -1162,8 +1332,10 @@
           </div>
           <div class="lk-page messages">
             <div class="chats">
+              <div class="page-header-mob"><img class="back page-header-mob-back" src="img/lk/arrow-back.svg" alt="arrow-back.svg"><span class="head">Сообщения</span></div>
               <div class="navbar">
-                <div class="buttonSwitch all lk-messages-btnSwitch active" onclick="lkMessagesSectionID='all'"><span>Все сообщения</span></div>
+                <div class="buttonSwitch all lk-messages-btnSwitch active" onclick="lkMessagesSectionID='all'"><span>Все 
+                    <div class="hide-mob">сообщения</div></span></div>
                 <div class="buttonSwitch unread lk-messages-btnSwitch" onclick="lkMessagesSectionID='unread'"><span>Непрочитанные</span></div>
               </div>
               <div class="lk-messages-section all" style="display: block">
@@ -1281,14 +1453,9 @@
                       <p class="text">Добрый. Да</p>
                     </div>
                   </div>
-                  <div class="msg-item your"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
-                    <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
-                      <p class="text">Добрый. Да</p>
-                    </div>
-                  </div>
-                  <div class="msg-item"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
-                    <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
-                      <p class="text">Добрый. Да</p>
+                  <div class="msg-item"><img class="user-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="text-content"><span class="user-name">Мария</span><span class="date">20.11.2019</span>
+                      <p class="text">Добрый день. Есть размер S?</p>
                     </div>
                   </div>
                   <div class="msg-item your"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
@@ -1296,27 +1463,12 @@
                       <p class="text">Добрый. Да</p>
                     </div>
                   </div>
-                  <div class="msg-item"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
-                    <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
-                      <p class="text">Добрый. Да</p>
+                  <div class="msg-item"><img class="user-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="text-content"><span class="user-name">Мария</span><span class="date">20.11.2019</span>
+                      <p class="text">Добрый день. Есть размер S?</p>
                     </div>
                   </div>
                   <div class="msg-item your"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
-                    <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
-                      <p class="text">Добрый. Да</p>
-                    </div>
-                  </div>
-                  <div class="msg-item your"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
-                    <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
-                      <p class="text">Добрый. Да</p>
-                    </div>
-                  </div>
-                  <div class="msg-item your"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
-                    <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
-                      <p class="text">Добрый. Да</p>
-                    </div>
-                  </div>
-                  <div class="msg-item"><img class="user-preview" src="img/lk/customer-preview2.png" alt="customer-preview2.png">
                     <div class="text-content"><span class="user-name">Елена</span><span class="date">20.11.2019</span>
                       <p class="text">Добрый. Да</p>
                     </div>
@@ -1331,142 +1483,108 @@
             </div>
           </div>
           <div class="lk-page feedback">
+            <div class="page-header-mob"><img class="back page-header-mob-back" src="img/lk/arrow-back.svg" alt="arrow-back.svg"><span class="head">Отзывы</span></div>
             <div class="navbar">
-              <div class="buttonSwitch your-feedback lk-feedback-btnSwitch active" onclick="lkFeedbackSectionID='your-feedback'"><span>Ваши отзывы</span></div>
-              <div class="buttonSwitch customer-feedback lk-feedback-btnSwitch" onclick="lkFeedbackSectionID='customer-feedback'"><span>Отзывы покупателей</span></div>
+              <div class="buttonSwitch your-feedback lk-feedback-btnSwitch active" onclick="lkFeedbackSectionID='your-feedback'"><span>Ваши 
+                  <div class="hide-mob">отзывы</div></span></div>
+              <div class="buttonSwitch customer-feedback lk-feedback-btnSwitch" onclick="lkFeedbackSectionID='customer-feedback'"><span class="desk">Отзывы покупателей</span><span class="mob">Покупателей</span></div>
             </div>
             <div class="lk-feedback-section your-feedback" style="display: block;">
               <div class="feedback-list">
                 <div class="feedback-item"><img class="preview" src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
-                  <div class="text-content"><span class="text-g">Магазин: <span class="text-b">GUCCI</span></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span><br>
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span>Отличный магазин! Рекомендую!</span>
+                  <div class="text-content"><span class="text-g">Магазин: <a class="text-b" href="shop-page.html">Gucci</a></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки Men’s Air Monarch IV training shoe</span><br>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span class="msg-text">Отличный магазин! Рекомендую!</span>
                   </div><span class="date">04.11.2019</span>
                 </div>
                 <div class="feedback-item"><img class="preview" src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
-                  <div class="text-content"><span class="text-g">Магазин: <span class="text-b">GUCCI</span></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span><br>
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span>Отличный магазин! Рекомендую!</span>
+                  <div class="text-content"><span class="text-g">Магазин: <a class="text-b" href="shop-page.html">Gucci</a></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки Men’s Air Monarch IV training shoe</span><br>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span class="msg-text">Отличный магазин! Рекомендую!</span>
                   </div><span class="date">04.11.2019</span>
                 </div>
                 <div class="feedback-item"><img class="preview" src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
-                  <div class="text-content"><span class="text-g">Магазин: <span class="text-b">GUCCI</span></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span><br>
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span>Отличный магазин! Рекомендую!</span>
+                  <div class="text-content"><span class="text-g">Магазин: <a class="text-b" href="shop-page.html">Gucci</a></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки Men’s Air Monarch IV training shoe</span><br>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span class="msg-text">Отличный магазин! Рекомендую!</span>
                   </div><span class="date">04.11.2019</span>
                 </div>
                 <div class="feedback-item"><img class="preview" src="img/lk/list-item-img.jpg" alt="list-item-img.jpg">
-                  <div class="text-content"><span class="text-g">Магазин: <span class="text-b">GUCCI</span></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span><br>
-                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span>Отличный магазин! Рекомендую!</span>
+                  <div class="text-content"><span class="text-g">Магазин: <a class="text-b" href="shop-page.html">Gucci</a></span><a class="shop-link" href="shop-page.html">Перейти к магазину</a><br><span class="name">Кроссовки Men’s Air Monarch IV training shoe</span><br>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><span class="msg-text">Отличный магазин! Рекомендую!</span>
                   </div><span class="date">04.11.2019</span>
                 </div>
               </div>
             </div>
             <div class="lk-feedback-section customer-feedback">
               <div class="feedback-list">
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item unread"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
-                <div class="feedback-item"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg">
-                  <div class="feedback-item-content content"><span class="item-name">Платье женское с поясом</span>
-                    <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
-                      <div class="customer-feedback-content content">
-                        <div class="customer-name">Екатерина </div>
-                        <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
-                        <div class="customer-login">ekaterina777</div>
-                        <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
-                      </div>
-                    </div>
+                <div class="feedback-item"><img class="item-preview" src="img/lk/list-item-img2.jpg" alt="list-item-img2.jpg"><span class="item-name">Платье женское с поясом</span>
+                  <div class="customer-feedback"><img class="customer-preview" src="img/lk/customer-preview.png" alt="customer-preview.png">
+                    <div class="customer-name">Екатерина </div>
+                    <div class="rating"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"><img src="img/shop-page/star-active.svg" alt="star-active.svg"></div><br>
+                    <div class="customer-login">ekaterina777</div>
+                    <p class="feedback-text">Отличное качество! Быстрая доставка!</p>
                   </div><a class="send" href="#">Ответить на отзыв</a><span class="date">04.11.2019</span>
                 </div>
               </div>
@@ -1558,16 +1676,18 @@
     				$('#profile-dropdown').addClass('hide')
     			}
     		}else{
-    			if(existVerticalScroll() && $('body').css('top') === "0px"){ 
-    				wScrollTop = $(document).scrollTop();
-    				$('body').css('top', '-' + wScrollTop + 'px' )
-    				$('body').addClass('fixed')
-    			}
+    			$('body').addClass('fixed')
     			$('.popup-content').fadeOut(150);
-    			$('#popup-container').fadeIn(250);
     			setTimeout(function(){
+    				$('#popup-container').fadeIn(250);
     				$(popupID).fadeIn(250);
     			}, 150)
+    
+    			//- $('.popup-content').fadeOut(150);
+    			//- $('#popup-container').fadeIn(250);
+    			//- setTimeout(function(){
+    			//- 	$(popupID).fadeIn(250);
+    			//- }, 150)
     			popupID = '#popup-profile-mob'
     		}
     	});
@@ -1825,6 +1945,25 @@
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/select2.full.min.js"></script>
   <script>
+    function isright(obj) {
+    	var value = obj.value.replace(/\D/g,'')||0;
+    	var min = obj.getAttribute('min');
+    	var max = obj.getAttribute('max');
+    	obj.value = Math.min(max, Math.max(min, value));
+    }
+    
+    
+  </script>
+  <script>
+    $(window).resize(function(){
+    	if($(window).width() <= 1024){
+    		$('nav.sidebar').fadeOut(250);
+    		$('.lk-page.active').fadeIn(250);
+    	}else{
+    		$('nav.sidebar').fadeIn(250);
+    		$('.lk-page').not('.lk-page.active').fadeOut(250);
+    	}
+    });
     $(document).ready(function(){
     	$(function($) {
     		$('input[type="tel"]').mask("+7 (999) 999-99-99")
@@ -1846,6 +1985,7 @@
     
     		if($(window).width() < 1025){
     			$('nav.sidebar').fadeOut(250);
+    
     		}
     
     		setTimeout(function(){
@@ -1892,6 +2032,16 @@
     		$(this).toggleClass('active');
     		$(this).prev('.hidden.delivery').slideToggle(250);
     	});
+    
+    	$('.lk-orders-inputN-minus, .lk-orders-inputN-plus').on('click', function(e) {
+    		const isNegative = $(e.target).closest('.lk-orders-inputN-minus').is('.lk-orders-inputN-minus');
+    		const input = $(e.target).closest('.count-outer').find('input');
+    		if (input.is('input')) {
+    			input[0][isNegative ? 'stepDown' : 'stepUp']()
+    		}
+    	});
+    
+    
     
     	$('.lk-feedback-btnSwitch').click(function(){
     		$(this).addClass('active');
@@ -1963,5 +2113,10 @@
     }
     
     $(window).on('resize', msgHeightRefresh);
+    
+    $('.page-header-mob-back').click(function(){
+    	$('.lk-page').fadeOut(150);
+    	$('nav.sidebar').delay(250).fadeIn(250);
+    });
   </script>
 </html>

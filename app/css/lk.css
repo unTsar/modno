@@ -4156,6 +4156,7 @@ body main .container .main-content .messages .conversation .conversation-list .c
     padding-left: 50px;
     margin-top: 0;
     padding-top: 1px;
+    margin-right: 0;
   }
   body main .container .main-content .personal-info .lk-article.contacts-info form .input-outer .checkbox-outer label:not(:last-child) {
     margin-bottom: 14px;
